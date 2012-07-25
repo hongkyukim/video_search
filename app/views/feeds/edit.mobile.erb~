@@ -1,0 +1,6 @@
+<h1>Channel <%= @channel.name %>: Editing feed</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', channel_feed_path(@channel, @feed) %> |
+<%= link_to 'Back', channel_path(@channel) %>

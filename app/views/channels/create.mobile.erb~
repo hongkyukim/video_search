@@ -1,0 +1,6 @@
+<h1>Add New channel 12</h1>
+<h1>Add New channel 34</h1>
+
+<%= render :partial => 'form' %>
+<h1>Add New channel 67</h1>
+<!--<ul><li class="arrow"><%= link_to "Back to Channels", channels_path %></li></ul>-->

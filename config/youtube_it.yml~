@@ -1,0 +1,11 @@
+common: &common
+  dev_key: AI39si4pxDLC4pu4-Phm42E83mfbgb4DtiwQw7SfuSvIyKDGkV3QUOLjVLArjOfXhgXD6zKYH3N4saUEmGso3iMCVTPAAbLqQg
+  username:  hongkyukim.kim
+  password:  google30
+  
+test:
+  <<: *common
+development:
+  <<: *common
+production:
+  <<: *common

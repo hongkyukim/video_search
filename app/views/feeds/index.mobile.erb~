@@ -1,0 +1,17 @@
+<h1>Query Feeds for channel <%= @channel.name %></h1> 
+
+<ul>
+  <% for f in @feeds %>
+    <li class="arrow">
+      <%= link_to f.name, channel_feed_path(@channel, f) %>
+      <!--<%= channel.id %>-->
+      <!--<%= channel.name %>-->
+      <!--<%= link_to 'Show', channel %>-->
+      <%= link_to 'Destroy', channel_feed_path(@channel, f), confirm: 'Are you sure?', method: :delete %>
+      <!--<%= channel.videos.count %>-->
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Feed', new_channel_feed_path(@channel) %> |
+<%= link_to 'Back to Channel', @channel %>

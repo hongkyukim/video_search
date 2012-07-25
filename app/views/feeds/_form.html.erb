@@ -1,0 +1,53 @@
+
+<%= debug(@channel) %>
+<%= debug(@feed) %>
+
+<%= form_for([@channel, @feed]) do |f| %>
+  <% if @feed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feed.errors.count, "error") %> prohibited this feed from being saved:</h2>
+
+      <ul>
+      <% @feed.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :feedtype %><br />
+    <%= f.text_field :feedtype %>
+  </div>
+  <div class="field">
+    <%= f.label :queries %><br />
+    <%= f.text_field :queries %>
+  </div>
+  <div class="field">
+    <%= f.label :options %><br />
+    <%= f.text_field :options %>
+  </div>
+  <div class="field">
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br />
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :categories %><br />
+    <%= f.text_field :categories %>
+  </div>
+  <div class="field">
+    <%= f.label :channel_id %><br />
+    <%= f.number_field :channel_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

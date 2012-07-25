@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @channel.name %>
+</p>
+
+<p>
+  <b>Channel type:</b>
+  <%= @channel.channel_type %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @channel.tags %>
+</p>
+
+<p>
+  <b>Categories:</b>
+  <%= @channel.categories %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @channel.language %>
+</p>
+
+<h2>Feeds</h2>
+<% @channel.feeds.each do |feed| %>
+  <p>
+    <b>Feed name:</b>
+    <%= feed.name %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_channel_path(@channel) %> |
+<%= link_to 'Back', channels_path %> |
+<%= link_to 'Show Query Feeds', channel_feeds_path(@channel) %> |
+<%= link_to 'Show Videos', videos_channel_path(@channel) %> 

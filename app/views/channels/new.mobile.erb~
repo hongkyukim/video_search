@@ -1,0 +1,6 @@
+<h1>Add New channel</h1>
+
+<%= render :partial => 'form' %>
+
+<ul><li><%= link_to "Cancel: Back to Channels", channels_path %></li></ul>
+<!--<ul><li class="arrow"><%= link_to "Cancel: Back to Channels", channels_path %></li></ul>-->

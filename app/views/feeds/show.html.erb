@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @feed.name %>
+</p>
+
+<p>
+  <b>Feedtype:</b>
+  <%= @feed.feedtype %>
+</p>
+
+<p>
+  <b>Queries:</b>
+  <%= @feed.queries %>
+</p>
+
+<p>
+  <b>Options:</b>
+  <%= @feed.options %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @feed.keywords %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @feed.tags %>
+</p>
+
+<p>
+  <b>Categories:</b>
+  <%= @feed.categories %>
+</p>
+<p>
+  <b>Channel Id:</b>
+  <%= @feed.channel_id %>
+</p>
+
+<%= link_to 'Edit', edit_channel_feed_path(@channel, @feed) %> |
+<%= link_to 'Back', channel_path(@channel) %>

@@ -1,0 +1,25 @@
+<%= form_for(@channel) do |f| %>
+  
+  <% if @channel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@channel.errors.count, "error") %> prohibited this channel from being saved:</h2>
+
+      <ul>
+      <% @channel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <ul class="edit rounded">
+
+    <li><%= f.text_field :name, :placeholder => "Name" %></li>
+    <!--<li><%= f.text_field :language, :placeholder => "Language" %></li>-->
+    <li><%= f.select :language, options_for_select([["Select One",""] "en", "kr", "de"]) %>
+    </li>
+  </ul>
+
+  <%= link_to "Submit", channels_path, :class => "submit whiteButton", :method => "POST", :rel => "external" %>
+  
+<% end %>

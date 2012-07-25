@@ -1,0 +1,40 @@
+<h1>Channel <%= @channel.name %>: Listing feeds</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Feedtype</th>
+    <th>Queries</th>
+    <th>Options</th>
+    <th>Keywords</th>
+    <th>Tags</th>
+    <th>Categories</th>
+    <th>Channel Id</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @feeds.each do |feed| %>
+  <tr>
+    <td><%= feed.id %></td>
+    <td><%= feed.name %></td>
+    <td><%= feed.feedtype %></td>
+    <td><%= feed.queries %></td>
+    <td><%= feed.options %></td>
+    <td><%= feed.keywords %></td>
+    <td><%= feed.tags %></td>
+    <td><%= feed.categories %></td>
+    <td><%= feed.channel_id %></td>
+    <td><%= link_to 'Show', channel_feed_path(@channel, feed) %></td>
+    <td><%= link_to 'Edit', edit_channel_feed_path(@channel, feed) %></td>
+    <td><%= link_to 'Destroy', channel_feed_path(@channel, feed), confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Feed', new_channel_feed_path(@channel) %>
+<%= link_to 'Back to Channel', @channel %>

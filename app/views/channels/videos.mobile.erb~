@@ -1,0 +1,35 @@
+<h1>Channel <%= @channel.name %>'s videos</h1>
+<ul>
+  <% for video in @videos %>
+    <% if false %>
+      <li class="arrow">
+      <%= link_to h(video.title), video_path(video) %>
+      <%= video.id %>
+      <%= video.provider %>
+      <!--<small class="counter"><%= @videos.size %></small>-->
+      </li>
+    <% end %>
+    <li class="arrow">
+      <!--<individual2><%= image_tag video.thumbnail_url if video.thumbnail_url %></individual2>-->
+     
+      <a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></a> 
+
+      <individual2><%= link_to h(video.title), video_path(video) %>
+                   <%= video.id %>  <em><%= video.provider %></em></individual2>
+
+
+      <!--<small class="counter"><%= @videos.size %></small>-->
+    </li>
+
+  <% end %>
+</ul>
+<br />
+<ul><li class="arrow"><%= link_to "Back to Channels", channels_path %></li>
+
+     <li class="arrow"><%= link_to "Show Channel", channel_path(@channel) %></li>
+    <!--<li class="arrow"><%= link_to "Add New video", new_video_path %></li>-->
+</ul>
+
+
+
+

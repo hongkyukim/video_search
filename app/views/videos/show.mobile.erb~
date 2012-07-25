@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Title:</b>
+  <%= @video.title %>
+</p>
+
+<% if false %>
+<p>
+  <b>Description:</b>
+  <%= @video.description %>
+</p>
+<% end %>
+
+<p> <b>url:</b> </br></br>
+<h1><a href="http://www.youtube.com/watch?v=<%= @video.yt_video_id %>&feature=youtube_it" target="_blank">http://www.youtube.com/watch?v=<%= @video.yt_video_id %></a></p></h1>
+</br>
+<p>
+  <b>Provider:</b>
+  <%= @video.provider %>
+</p>
+
+<p>
+  <b>Yt video:</b>
+  <%= @video.yt_video_id %>
+</p>
+
+<% if false %>
+<p>
+  <b>Url:</b>
+  <%= @video.url %>
+</p>
+<% end %>
+
+<% if !mobile_device? %>
+<p>
+  <b>Is complete:</b>
+  <%= @video.is_complete %>
+</p>
+
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/<%= @video.yt_video_id %>" frameborder="0" allowfullscreen></iframe>
+
+<% end %>
+
+<p>
+  <b>Description:</b>
+  <%= @video.description %>
+</p>
+<p>
+  <b>Categories:</b>
+  <%= @video.categories %>
+</p>
+<p>
+  <b>Keywords:</b>
+  <%= @video.keywords %>
+</p>
+
+<% if false %>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/<%= @video.yt_video_id %>?start=110&end=119&mobile=1" frameborder="0" allowfullscreen></iframe>
+
+
+       <div style="text-align: center;">
+            <object width="320" height="320">
+                <param name="movie" value="http://www.youtube.com/v/<%= @video.yt_video_id %>?fs=1&amp;hl=en_US" />
+                <param name="allowFullScreen" value="true" />
+                <param name="allowscriptaccess" value="always" />
+                <embed src="http://www.youtube.com/v/<%= @video.yt_video_id %>?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="320" />
+            </object>
+        </div>
+<% end %>
+
+   <% if !mobile_device? %>
+     <ul>
+   
+      <li class="arrow"><%= link_to "Edit", edit_video_path(@video) %></li>
+      <li class="arrow"><%= link_to "Back", videos_channel_path(@channel) => "back" %></li>
+
+
+    </ul>
+   <% end %>
+

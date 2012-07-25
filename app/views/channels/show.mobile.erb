@@ -1,0 +1,47 @@
+<!--<p id="notice"><%= notice %></p>-->
+    
+<p>
+  <b>Channel Name:</b>
+  <%= @channel.name %>
+</p>
+
+<p>
+  <b>Channel type:</b>
+  <%= @channel.channel_type %>
+</p>
+<!--
+<p>
+  <b>Tags:</b>
+  <%= @channel.tags %>
+</p>
+
+<p>
+  <b>Categories:</b>
+  <%= @channel.categories %>
+</p>-->
+
+<p>
+  <b>Language:</b>
+  <%= @channel.language %>
+</p>
+
+<p>
+  <b>Query Feeds:</b>
+  <%= "Not defined yet" if @channel.feeds.count == 0 %>
+</p>
+
+<ul>
+  <% for f in @channel.feeds %>
+    <li class="arrow">
+      <%= link_to f.name, channel_feed_path(@channel, f) %>
+      <!--<%= link_to 'Destroy', channel_feed_path(@channel,f), confirm: 'Are you sure?', method: :delete %>-->
+    </li>
+  <% end %>
+</ul>
+
+<ul>  
+      <li class="arrow"><%= link_to "Add New Query Feed", new_channel_feed_path(@channel) %></li>
+      <li class="arrow"><%= link_to "Edit Channel Name", edit_channel_path(@channel) %></li>
+      <!--<li class="arrow"><%= link_to "Destroy This Channel", channels_path, confirm: 'Are you sure?', method: :delete %></li>-->
+      <li class="arrow"><%= link_to "Cancel: Back to Channel", videos_channel_path(@channel) %></li>
+</ul>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing <%= @channel.name %>'s videos</h1>
+
+<table>
+  <tr>
+    <th>Id</th> 
+    <th>Title</th>
+    <th>Provider</th>
+    <th>VideoId</th>
+    <!--<th>Url</th>-->
+  </tr>
+
+<% @videos.each do |v| %>
+  <tr>
+    <td><%= v.id %></td>
+    <td><%= link_to v.title, video_path(v) %></td>
+    <td><%= v.provider %></td>
+    <td><%= v.yt_video_id %></td>
+    <!--<td><%= v.url %></td>-->
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'Back', channels_path %> |
+<%= link_to 'Add New video', new_video_path %>
+
+
+
+
