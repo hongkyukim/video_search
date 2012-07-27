@@ -1,4 +1,6 @@
 class ChannelsController < InheritedResources::Base
+  before_filter :authenticate_user!, :except => [:show, :index, :videos]
+  load_and_authorize_resource
 
   def index
     @channels = Channel.all

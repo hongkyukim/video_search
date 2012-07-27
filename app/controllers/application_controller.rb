@@ -7,13 +7,27 @@ class ApplicationController < ActionController::Base
   ##helper_method :current_user
   helper_method :yt_client
   helper_method :get_languages
-  
+
+
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "Access denied."
+    redirect_to root_url
+  end
+
   def yt_client
     @yt_client ||= YouTubeIt::Client.new(:username => YouTubeITConfig.username , :password => YouTubeITConfig.password , :dev_key => YouTubeITConfig.dev_key)
   end
 
   private
-  
+
+  ##def current_user
+  ##      @current_user ||= User.find_by_id(session[:user_id])
+  ##end
+
+  ##def signed_in?
+  ##     !!current_user
+  ##end
+
   ## not needed for device 07242012
   ##def current_user_session
   ##  return @current_user_session if defined?(@current_user_session)
@@ -48,5 +62,13 @@ def prepare_for_mobile
   session[:mobile_param] = params[:mobile] if params[:mobile]
   request.format = :mobile if mobile_device?
 end 
-
+  
+  # Overwriting the sign_out redirect path method
+  def after_sign_out_path_for(resource)
+    root_path
+  end
+  # Overwriting the sign_out redirect path method
+  def after_sign_up_path_for(resource)
+    root_path
+  end
 end

@@ -4,6 +4,7 @@
 
 <table>
   <tr>
+    <th>Photo</th>
     <th>Id</th> 
     <th>Title</th>
     <th>Provider</th>
@@ -13,6 +14,7 @@
 
 <% @videos.each do |v| %>
   <tr>
+    <td><a href="http://www.youtube.com/watch?v=<%= v.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag v.thumbnail_url, :size => "60x45" if v.thumbnail_url %></a></td>
     <td><%= v.id %></td>
     <td><%= link_to v.title, video_path(v) %></td>
     <td><%= v.provider %></td>

@@ -10,13 +10,14 @@ Devise.setup do |config|
   # authenticating an user, both parameters are required. Remember that those
   # parameters are used only when authenticating and not when retrieving from
   # session. If you need permissions, you should implement that in a before filter.
-  # config.authentication_keys = [ :email ]
+  ###config.authentication_keys = [ :email ]
+  ##config.authentication_keys = [ :username]
 
   # Tell if authentication through request.params is enabled. True by default.
   # config.params_authenticatable = true
 
   # Tell if authentication through HTTP Basic Auth is enabled. True by default.
-  # config.http_authenticatable = true
+  ## config.http_authenticatable = true
 
   # The realm used in Http Basic Authentication
   # config.http_authentication_realm = "Application"
@@ -79,7 +80,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :token_authenticatable
   # Defines name of the authentication token params key
-  # config.token_authentication_key = :auth_token
+  config.token_authentication_key = :auth_token
 
   # ==> General configuration
   # Load and configure the ORM. Supports :active_record (default), :mongoid
@@ -89,7 +90,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "sessions/users/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = true
+  ###config.scoped_views = true
 
   # By default, devise detects the role accessed based on the url. So whenever
   # accessing "/users/sign_in", it knows you are accessing an User. This makes
@@ -113,4 +114,6 @@ Devise.setup do |config|
   #   end
   #   manager.default_strategies(:scope => :user).unshift :twitter_oauth
   # end
+  config.navigational_formats = [:"*/*", "*/*", :html, :mobile]
+
 end

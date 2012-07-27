@@ -1,4 +1,6 @@
 class FeedsController < InheritedResources::Base
+  before_filter :authenticate_user!, :except => [:show, :index]
+  load_and_authorize_resource
 
   def index
     @channel = Channel.find(params[:channel_id])

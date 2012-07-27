@@ -1,4 +1,15 @@
 class UsersController < ApplicationController
+  ## authentication
+  ##before_filter :authenticate_user!, :except => [:show, :index]
+  ## authorization
+  ##load_and_authorize_resource
+
+    protect_from_forgery :except => :index
+
+    # you can disable csrf protection on controller-by-controller basis:
+    skip_before_filter :verify_authenticity_token
+
+
   # GET /users
   # GET /users.json
   def index
@@ -18,6 +29,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
+      format.mobile # show.mobile.erb
     end
   end
 
@@ -25,10 +37,11 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-
+debugger
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user }
+      format.mobile # new.mobile.erb
     end
   end
 
@@ -40,15 +53,18 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+debugger
     @user = User.new(params[:user])
-
+debugger
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
+        format.mobile { redirect_to @user, notice: 'User was successfully created.' }
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.mobile { render action: "new" }
       end
     end
   end
@@ -74,7 +90,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-
+debugger
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :no_content }

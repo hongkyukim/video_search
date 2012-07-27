@@ -33,8 +33,10 @@
   </p>
 <% end %>
 
+<% if can? :update, @channel %>
+   <%= link_to 'Edit', edit_channel_path(@channel) %> |
+<% end %>
 
-<%= link_to 'Edit', edit_channel_path(@channel) %> |
-<%= link_to 'Back', channels_path %> |
+<%= link_to 'Back To Channels', channels_path %> |
 <%= link_to 'Show Query Feeds', channel_feeds_path(@channel) %> |
 <%= link_to 'Show Videos', videos_channel_path(@channel) %> 

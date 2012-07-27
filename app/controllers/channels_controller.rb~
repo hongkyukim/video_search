@@ -1,4 +1,6 @@
 class ChannelsController < InheritedResources::Base
+  before_filter :authenticate_user!, :except => [:show, :index, :videos]
+  load_and_authorize_resource
 
   def index
     @channels = Channel.all
@@ -71,7 +73,7 @@ class ChannelsController < InheritedResources::Base
   def destroy
     @channel = Channel.find(params[:id])
     @channel.destroy
-debugger
+
     respond_to do |format|
       format.html { redirect_to channels_url }
       format.json { head :no_content }

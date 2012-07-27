@@ -7,6 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 ##
 ##roles = Role.create([{name: 'super_admin'}, {name: 'staff'}, {name:'customer'}])
+
+
+
 users = User.create([{email: 'admin@admin.com', password: 'admin123', password_confirmation: 'admin123', admin: true}])
 
 ### rake db:seed

@@ -1,11 +1,19 @@
 LoginApp2::Application.routes.draw do
-  devise_for :users do
-   get "/login", :to => "devise/sessions#new"
-   get "/signup", :to => "devise/registrations#new"
-   get "/logout", :to => "devise/session#destroy"
-  end
-
+  devise_for :users, :controllers => { :sessions => "sessions" }
+  ###, :controllers => {:sessions => "sessions"}
+  ### , :path => '/', :controllers => { :sessions => "sessions" }
+  ##do
+  ## get "/login", :to => "devise/sessions#new"
+  ## get "/signup", :to => "devise/registrations#new"
+  ## get "/logout", :to => "devise/session#destroy"
+  ##end
+  resources :users
   resources :languages
+  ## root :to => 'videos#index'
+  root :to => 'channels#index'
+
+
+  ###redirect '/', :controller => 'channels', :action => 'index'
 
   ###resources :channels, :has_many => [ :feeds ]
   ###resources :channels
@@ -20,10 +28,9 @@ LoginApp2::Application.routes.draw do
   end
 
   resources :youtubevideo
-  ## root :to => 'videos#index'
-  root :to => 'channels#index'
+  
 
-  ##resources :users
+  
   ##resources :users, :user_sessions
 
   ## for autologic authentication 07242012

@@ -2,14 +2,15 @@
 
 <table>
   <tr>
+    <th>Photo</th>
     <th>ID</th>
     <th>Title</th>
     <!--<th>Description</th>-->
     <th>Provider</th>
     <th>Yt video</th>
-    <th>Url</th>
-    <th>Is complete</th>
-    <th>Continue</th>
+    <th>Thumbnail Url</th>
+    <th>Duration</th>
+    <!--<th>Continue</th>-->
     <th></th>
     <th></th>
     <th></th>
@@ -17,17 +18,22 @@
 
 <% @videos.each do |video| %>
   <tr>
+    <td><a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></a> </td>
     <td><%= video.id %></td> 
     <td><%= link_to video.title, video_path(video) %></td>
     <!--<td><%= video.description %></td>-->
     <td><%= video.provider %></td>
     <td><%= video.yt_video_id %></td>
-    <td><%= video.url %></td>
-    <td><%= video.is_complete %></td>
-    <td><%= video.continue %></td>
+    <td><%= video.thumbnail_url %></td>
+    <td><%= video.duration %></td>
+    <!--<td><%= video.continue %></td>-->
     <td><%= link_to 'Show', video %></td>
-    <td><%= link_to 'Edit', edit_video_path(video) %></td>
-    <td><%= link_to 'Destroy', video, confirm: 'Are you sure?', method: :delete %></td>
+    <% if can? :update, video %>
+       <td><%= link_to 'Edit', edit_video_path(video) %></td>
+    <% end %>
+    <% if can? :destroy, video %>
+       <td><%= link_to 'Destroy', video, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

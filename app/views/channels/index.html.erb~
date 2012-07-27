@@ -19,10 +19,14 @@
     <td><%= channel.tags %></td>
     <td><%= channel.categories %></td>
     <td><%= channel.language %></td>
-    <td><%= link_to 'Show Videos ', videos_channel(channel) %></td>
+    <td><%= link_to 'Show Videos ', videos_channel_path(channel) %></td>
     <td><%= link_to 'Show', channel %></td>
-    <td><%= link_to 'Edit', edit_channel_path(channel) %></td>
-    <td><%= link_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete %></td>
+    <% if can? :update, channel %>
+        <td><%= link_to 'Edit', edit_channel_path(channel) %></td>
+    <% end %>
+    <% if can? :destroy, channel %>
+        <td><%= link_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

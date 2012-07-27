@@ -1,0 +1,70 @@
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+                                                  ^
+: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+                                                  ^
+: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+                                                  ^
+: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+                                                  ^
+: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+                                                  ^
+: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+                                                  ^
+: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+                                                  ^
+: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
