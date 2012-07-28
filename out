@@ -1,0 +1,56 @@
+=====a key1 or a key1 key2===== grep -H -r $1 ~/start | grep $2 =========
+grep -H -r $1 ~/start | grep $2
+/home/hong/start/mysql_rails3_ubuntu11.10~:=http://cicolink.blogspot.com/2011/06/how-to-install-ruby-on rails-3with.html==========
+/home/hong/start/mysql_rails3_ubuntu11.10~:install mysql after installing rails3 and ubuntu11.10
+/home/hong/start/rails3_ruby1.9.3_u11.10~:  659  rvm install rails
+/home/hong/start/rails3_ruby1.9.3_u11.10~:  667  gem install rails
+/home/hong/start/onvis/mysql_rails3_ubuntu11.10:=http://cicolink.blogspot.com/2011/06/how-to-install-ruby-on rails-3with.html==========
+/home/hong/start/onvis/mysql_rails3_ubuntu11.10:install mysql after installing rails3 and ubuntu11.10
+/home/hong/start/onvis/rvm_ruby~:-install rvm/gitrails3.0  after installing ubuntu 11.10
+/home/hong/start/onvis/rvm_ruby~:gem install rails --version 3.0.0
+/home/hong/start/onvis/rvm_ruby~:sudo apt-get install rails
+/home/hong/start/onvis/rails3_ruby1.9.3_u11.10commands:  659  rvm install rails
+/home/hong/start/onvis/rails3_ruby1.9.3_u11.10commands:  667  gem install rails
+/home/hong/start/onvis/mongo~:-install rvm/gitrails3.0  after installing ubuntu 11.10
+/home/hong/start/onvis/mongo~:gem install rails --version 3.0.0
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:pg $ rails s 
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:web: bundle exec rails server thin -p $PORT -e $RACK_ENV
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:       Installing coffee-rails (3.2.2)
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:       Installing jquery-rails (2.0.2)
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:       Installing rails (3.2.1)
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:       Installing sass-rails (3.2.5)
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:       Injecting rails31_enable_runtime_asset_compilation
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:       http://devcenter.heroku.com/articles/rails31_heroku_cedar#troubleshooting
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:       Injecting rails_log_stdout
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install~:       Injecting rails3_serve_static_assets
+/home/hong/start/onvis/authlogic_rspec2012/authlogic:$ rails g rspec:install   //**how to install rspec
+/home/hong/start/onvis/authlogic_rspec2012/authlogic:gem 'web-app-theme', '>= 0.6.2'      # rails 3     ###add    "   gem 'therubyracer'" if bundle install failed
+/home/hong/start/onvis/authlogic_rspec2012/authlogic:4) rails generate devise_install   ///// to run the installation generator.
+/home/hong/start/onvis/authlogic_rspec2012/authlogic~:$ rails g rspec:install   //**how to install rspec
+/home/hong/start/onvis/authlogic_rspec2012/authlogic~:gem 'web-app-theme', '>= 0.6.2'      # rails 3     ###add    "   gem 'therubyracer'" if bundle install failed
+/home/hong/start/onvis/authlogic_rspec2012/authlogic~:4) rails generate devise_install   ///// to run the installation generator.
+/home/hong/start/onvis/authlogic_rspec2012/mobile-fu_rails3:rails plugin install git://github.com/brendanlim/mobile-fu.git
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:pg $ rails s 
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:web: bundle exec rails server thin -p $PORT -e $RACK_ENV
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:       Installing coffee-rails (3.2.2)
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:       Installing jquery-rails (2.0.2)
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:       Installing rails (3.2.1)
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:       Installing sass-rails (3.2.5)
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:       Injecting rails31_enable_runtime_asset_compilation
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:       http://devcenter.heroku.com/articles/rails31_heroku_cedar#troubleshooting
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:       Injecting rails_log_stdout
+/home/hong/start/onvis/authlogic_rspec2012/postgreSQL_install:       Injecting rails3_serve_static_assets
+/home/hong/start/onvis/authlogic_rspec2012/mobile-fu_rails3~:rails plugin install git://github.com/brendanlim/mobile-fu.git
+/home/hong/start/onvis/rvm_ruby:-install rvm/gitrails3.0  after installing ubuntu 11.10
+/home/hong/start/onvis/rvm_ruby:gem install rails --version 3.0.0
+/home/hong/start/onvis/rvm_ruby:sudo apt-get install rails 
+/home/hong/start/kno_back/ruby_rails3:bundle install for installing sqlite3-ruby in rails3.0/ruby 1.9.2
+/home/hong/start/onvis_back/mysql_rails3_ubuntu11.10:=http://cicolink.blogspot.com/2011/06/how-to-install-ruby-on rails-3with.html==========
+/home/hong/start/onvis_back/mysql_rails3_ubuntu11.10:install mysql after installing rails3 and ubuntu11.10
+/home/hong/start/onvis_back/rails3_ruby1.9.3_u11.10commands~:  659  rvm install rails
+/home/hong/start/onvis_back/rails3_ruby1.9.3_u11.10commands~:  667  gem install rails
+/home/hong/start/onvis_back/rails3_ruby1.9.3_u11.10commands:  659  rvm install rails
+/home/hong/start/onvis_back/rails3_ruby1.9.3_u11.10commands:  667  gem install rails
+/home/hong/start/onvis_back/rvm_ruby.doc:﻿--install rvm/gitrails3.0  after installing ubuntu 11.10
+/home/hong/start/onvis_back/rvm_ruby.doc:gem install rails --version 3.0.0
+/home/hong/start/kno/ruby_rails3:bundle install for installing sqlite3-ruby in rails3.0/ruby 1.9.2
