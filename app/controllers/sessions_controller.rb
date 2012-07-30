@@ -1,9 +1,9 @@
 class SessionsController < Devise::SessionsController
-    ##before_filter :authenticate_user!
-##protect_from_forgery :except => [:index, :new, :destroy]
+    before_filter :authenticate_user!
+    ##protect_from_forgery :except => [:index, :new, :destroy]
 
     # you can disable csrf protection on controller-by-controller basis:
-    skip_before_filter :verify_authenticity_token
+    ##skip_before_filter :verify_authenticity_token
 
   def new
    resource = build_resource(nil, :unsafe => true)

@@ -6,15 +6,17 @@
 <ul>
   <% for video in @videos %>
    
-    <li class="arrow">
-      <a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></a> 
+    <!--<li class="arrow">-->
 
+      <td><a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></a> </td>
+      <td><%= link_to h(video.title), video %></td>
+      <br />
       <!--<individual2><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></individual2>-->
-      <individual2><%= link_to h(video.title), video %>
-                   <%= video.id %>  <em><%= video.provider %></em></individual2>
+      <!--<individual2><%= link_to h(video.title), video %>
+                   <%= video.id %>  <em><%= video.provider %></em></individual2>-->
       
       <!--<small class="counter"><%= @videos.size %></small>-->
-    </li>
+    <!--</li>-->
 
     <% if false then; %>
     <li class="arrow">

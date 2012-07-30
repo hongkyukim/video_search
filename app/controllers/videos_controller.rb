@@ -3,7 +3,7 @@ class VideosController < InheritedResources::Base
 
   load_and_authorize_resource :through => :channel
 
-       #####ApplicationController
+  #####ApplicationController
   # GET /videos
   # GET /videos.json
   def index

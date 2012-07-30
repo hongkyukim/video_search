@@ -1,13 +1,15 @@
 class UsersController < ApplicationController
   ## authentication
   ##before_filter :authenticate_user!, :except => [:show, :index]
+  before_filter :authenticate_user!
   ## authorization
-  ##load_and_authorize_resource
+  load_and_authorize_resource
 
-    protect_from_forgery :except => :index
+  ##protect_from_forgery :except => :index
+  protect_from_forgery
 
-    # you can disable csrf protection on controller-by-controller basis:
-    skip_before_filter :verify_authenticity_token
+  # you can disable csrf protection on controller-by-controller basis:
+  ##skip_before_filter :verify_authenticity_token
 
 
   # GET /users
@@ -37,7 +39,7 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-debugger
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user }
@@ -89,7 +91,7 @@ debugger
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-debugger
+
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :no_content }

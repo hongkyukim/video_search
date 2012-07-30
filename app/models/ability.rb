@@ -7,8 +7,6 @@ class Ability
     if !user.email.nil?
        if user.admin?
            can :manage, :all
-       elsif !user.admin?
-          can :manage, :all
        else
            can :read, :all
            can :videos, Channel
