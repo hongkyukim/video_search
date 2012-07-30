@@ -25,21 +25,27 @@
 	<%= link_to "Channels", channels_path %>-->
       <div class="toolbar">
         <h1><%=h yield(:title) %></h1>
-        <% if current_page? root_path %>
-           <% if user_signed_in? %>
-                Signed in as <%= current_user.email %>. Not you?
-                <%= link_to "Sign out", destroy_user_session_path, %>   <!--:method => :delete %>-->
-                
+
+        <% if true %>
+           <% if current_page? channels_path %>
+		   <% if user_signed_in? %>
+		        Signed in as <%= current_user.email %>. Not you?
+		        <%= link_to "Sign out", destroy_user_session_path, %>   <!--:method => :delete %>-->
+		        
+		   <% else %>
+		         <%= link_to "Sign up", new_user_path %> or <%= link_to "sign in", new_user_session_path %>
+		   <% end %>
            <% else %>
-                 <%= link_to "Sign up", new_user_path %> or <%= link_to "sign in", new_user_session_path %>
+                   <%= link_to "Back", nil, :class => "back"  %>
            <% end %>
+
         <% else %>
-           <%= link_to "Back", nil, :class => "back"  %>
+	   <%= link_to "Sign up", new_user_path %> or <%= link_to "sign in", new_user_session_path %>
         <% end %>
 	<!--<%= link_to "Channels", channels_path, :class => "button flip" %>-->
 
         <% if mobile_device? %>
-          <%= link_to "Home", root_path, :class => "button", :rel => "external" %>
+          <%= link_to "Home", channels_path, :class => "button", :rel => "external" %>
         <% else %>
            <%= link_to "Full Site", videos_path(:mobile => 0), :class => "button", :rel => "external" %>
         <% end %>
