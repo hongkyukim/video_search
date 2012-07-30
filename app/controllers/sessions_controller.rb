@@ -21,7 +21,7 @@ class SessionsController < Devise::SessionsController
     sign_in(resource_name, resource)
 
     if mobile_device?
-       redirect_to root_url
+       redirect_to channels_url
     else
        respond_with resource, :location => after_sign_in_path_for(resource)
     end
