@@ -39,6 +39,7 @@ class SessionsController < Devise::SessionsController
     if keep_mobile_device
        ## for continuing mobile mode
        session[:mobile_param] = "1"
+       redirect_path += "channels"
        ##redirect_to channels_url
     end
 

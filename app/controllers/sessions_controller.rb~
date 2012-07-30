@@ -19,7 +19,7 @@ class SessionsController < Devise::SessionsController
     set_flash_message(:notice, :signed_in) if is_navigational_format?
 
     sign_in(resource_name, resource)
-debugger
+
     if mobile_device?
        redirect_to root_url
     else
@@ -39,6 +39,7 @@ debugger
     if keep_mobile_device
        ## for continuing mobile mode
        session[:mobile_param] = "1"
+       redirect_path += "channels"
        ##redirect_to channels_url
     end
 
