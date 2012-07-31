@@ -20,10 +20,21 @@ class Ability
            ##can :update, Article do |article|
            ##  article.try(:user) == user
            ##end
-
+           
+           can :new, User
+           can :create, User
+           can :show, User
+           can :sign_in, User
+           can :sign_out, User
+           ###can :index, User
        end
     else
        can :read, :all
+       can :new, User
+       can :create, User
+       can :show, User
+       can :sign_in, User
+       ###can :index, User
     end
   end  
 end

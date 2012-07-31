@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   ## authentication
-  ##before_filter :authenticate_user!, :except => [:show, :index]
-  before_filter :authenticate_user!
+  ##before_filter :authenticate_user!, :except => [:new, :show, :index ]
+  before_filter :authenticate_user!, :except => [:new, :create, :show ]
   ## authorization
   load_and_authorize_resource
 
