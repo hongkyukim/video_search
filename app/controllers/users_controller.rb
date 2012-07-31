@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   ## authentication
   ##before_filter :authenticate_user!, :except => [:new, :show, :index ]
+  ##  :create should be allocated by unauthorized users
   before_filter :authenticate_user!, :except => [:new, :create, :show ]
   ## authorization
   load_and_authorize_resource
@@ -10,7 +11,6 @@ class UsersController < ApplicationController
 
   # you can disable csrf protection on controller-by-controller basis:
   ##skip_before_filter :verify_authenticity_token
-
 
   # GET /users
   # GET /users.json

@@ -1,5 +1,5 @@
 class SessionsController < Devise::SessionsController
-    before_filter :authenticate_user!
+    before_filter :authenticate_user!, :except => [:new, :create ]
     ##protect_from_forgery :except => [:index, :new, :destroy]
 
     # you can disable csrf protection on controller-by-controller basis:
@@ -10,7 +10,6 @@ class SessionsController < Devise::SessionsController
     clean_up_passwords(resource)
     respond_with(resource, serialize_options(resource))
   end
-
 
   def create
 

@@ -28712,3 +28712,1846 @@ Completed 200 OK in 174ms (Views: 152.3ms | ActiveRecord: 2.2ms)
 
 Started GET "/assets/mobile.js?body=1&_=1343693149412" for 127.0.0.1 at 2012-07-30 17:05:49 -0700
 Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-07-30 22:08:43 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.7ms)
+  Rendered devise/sessions/new.mobile.erb within layouts/application (231.3ms)
+Completed 200 OK in 1184ms (Views: 586.7ms | ActiveRecord: 141.3ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:08:45 -0700
+Served asset /mobile.js - 304 Not Modified (5ms)
+
+
+Started POST "/channels.user" for 127.0.0.1 at 2012-07-30 22:08:58 -0700
+Processing by ChannelsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"soHRg8CHp3D4rPLLTWMIReG/cIoq3U7oCyelArzMdgI=", "user"=>{"email"=>"yun12@kim.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+Completed 401 Unauthorized in 3ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-30 22:10:08 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (1.3ms)[0m  [1mSELECT "channels".* FROM "channels" [0m
+  [1m[35mVideo Load (2.5ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  Rendered channels/index.mobile.erb within layouts/application (750.9ms)
+Completed 200 OK in 888ms (Views: 769.3ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:10:09 -0700
+Served asset /mobile.js - 304 Not Modified (1ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:10:43 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" [0m
+  [1m[35mVideo Load (2.3ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  Rendered channels/index.mobile.erb within layouts/application (11.4ms)
+Completed 200 OK in 98ms (Views: 60.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:10:43 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-07-30 22:10:50 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_form.mobile.erb (11.1ms)
+  Rendered users/new.mobile.erb within layouts/application (14.5ms)
+Completed 200 OK in 91ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:10:50 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-07-30 22:11:01 -0700
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"soHRg8CHp3D4rPLLTWMIReG/cIoq3U7oCyelArzMdgI=", "user"=>{"email"=>"yun7777@kim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (2.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'yun7777@kim.com' LIMIT 1
+  [1m[36mSQL (16.3ms)[0m  [1mINSERT INTO "users" ("admin", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_me", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["admin", false], ["created_at", Tue, 31 Jul 2012 05:11:01 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "yun7777@kim.com"], ["encrypted_password", "$2a$10$I8loIpheRS4SeXojCHoh.ewXosxMcG4.o3HHRIpE6u5mCS9VfEmx."], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["password_salt", ""], ["remember_created_at", nil], ["remember_me", nil], ["remember_token", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Tue, 31 Jul 2012 05:11:01 UTC +00:00]]
+  [1m[35m (119.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 593ms (ActiveRecord: 138.6ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2012-07-30 22:11:01 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1
+print message in show
+  Rendered users/show.mobile.erb within layouts/application (11.0ms)
+Completed 200 OK in 81ms (Views: 37.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343711462121" for 127.0.0.1 at 2012-07-30 22:11:02 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-07-30 22:11:08 -0700
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in.mobile" for 127.0.0.1 at 2012-07-30 22:11:08 -0700
+Processing by SessionsController#new as MOBILE
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.mobile.erb within layouts/application (8.8ms)
+Completed 200 OK in 116ms (Views: 113.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:11:08 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started POST "/channels.user" for 127.0.0.1 at 2012-07-30 22:11:14 -0700
+Processing by ChannelsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"soHRg8CHp3D4rPLLTWMIReG/cIoq3U7oCyelArzMdgI=", "user"=>{"email"=>"yun7777@kim.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/channels.user" for 127.0.0.1 at 2012-07-30 22:13:24 -0700
+Processing by ChannelsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"soHRg8CHp3D4rPLLTWMIReG/cIoq3U7oCyelArzMdgI=", "user"=>{"email"=>"yun7777@kim.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/channels.user" for 127.0.0.1 at 2012-07-30 22:14:49 -0700
+Processing by ChannelsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"soHRg8CHp3D4rPLLTWMIReG/cIoq3U7oCyelArzMdgI=", "user"=>{"email"=>"yun7777@kim.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:20:53 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.9ms)[0m  [1mSELECT "channels".* FROM "channels" [0m
+  [1m[35mVideo Load (2.4ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  Rendered channels/index.mobile.erb within layouts/application (724.4ms)
+Completed 200 OK in 1214ms (Views: 1116.1ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:20:55 -0700
+Served asset /mobile.js - 304 Not Modified (6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-07-30 22:20:59 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_form.mobile.erb (31.9ms)
+  Rendered users/new.mobile.erb within layouts/application (78.2ms)
+Completed 200 OK in 135ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:21:00 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-07-30 22:21:09 -0700
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"soHRg8CHp3D4rPLLTWMIReG/cIoq3U7oCyelArzMdgI=", "user"=>{"email"=>"yun999@kim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (3.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'yun999@kim.com' LIMIT 1
+  [1m[36mSQL (25.2ms)[0m  [1mINSERT INTO "users" ("admin", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_me", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["admin", false], ["created_at", Tue, 31 Jul 2012 05:21:09 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "yun999@kim.com"], ["encrypted_password", "$2a$10$AfZ.ztUIWU6A1AL92yPec.Btsgse0njSUL5VwIkMtM8EXSJSfGRdq"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["password_salt", ""], ["remember_created_at", nil], ["remember_me", nil], ["remember_token", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Tue, 31 Jul 2012 05:21:09 UTC +00:00]]
+  [1m[35m (90.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 488ms (ActiveRecord: 119.3ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2012-07-30 22:21:09 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1
+print message in show
+  Rendered users/show.mobile.erb within layouts/application (9.0ms)
+Completed 200 OK in 72ms (Views: 42.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712069862" for 127.0.0.1 at 2012-07-30 22:21:09 -0700
+Served asset /mobile.js - 200 OK (56ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-07-30 22:21:16 -0700
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 56ms
+
+
+Started GET "/users/sign_in.mobile" for 127.0.0.1 at 2012-07-30 22:21:16 -0700
+Processing by SessionsController#new as MOBILE
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/sessions/new.mobile.erb within layouts/application (11.3ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:21:17 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-07-30 22:21:24 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"soHRg8CHp3D4rPLLTWMIReG/cIoq3U7oCyelArzMdgI=", "user"=>{"email"=>"yun999@kim.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'yun999@kim.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2012-07-31 05:21:24.294124', "current_sign_in_at" = '2012-07-31 05:21:24.294124', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2012-07-31 05:21:24.295823' WHERE "users"."id" = 8[0m
+  [1m[35m (82.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 247ms (ActiveRecord: 84.5ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:21:24 -0700
+Processing by ChannelsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (2.4ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  Rendered channels/index.mobile.erb within layouts/application (11.6ms)
+Completed 200 OK in 126ms (Views: 39.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712084924" for 127.0.0.1 at 2012-07-30 22:21:24 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2012-07-30 22:23:28 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 50ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:23:28 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" [0m
+  [1m[35mVideo Load (1.5ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  Rendered channels/index.mobile.erb within layouts/application (7.9ms)
+Completed 200 OK in 70ms (Views: 34.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:23:29 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-07-30 22:23:30 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_form.mobile.erb (6.1ms)
+  Rendered users/new.mobile.erb within layouts/application (7.6ms)
+Completed 200 OK in 74ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:23:30 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-07-30 22:23:38 -0700
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QmAGU1y9ceyCcw2E5WLj3bC5XF4QQAMqrBTHEUtydic=", "user"=>{"email"=>"yun888@kim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'yun888@kim.com' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("admin", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_me", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["admin", false], ["created_at", Tue, 31 Jul 2012 05:23:38 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "yun888@kim.com"], ["encrypted_password", "$2a$10$qq5yboerzEuvBEcyLklXI.6IZpFmERU2ENUxp63w6miPQDGhG5lMy"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["password_salt", ""], ["remember_created_at", nil], ["remember_me", nil], ["remember_token", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Tue, 31 Jul 2012 05:23:38 UTC +00:00]]
+  [1m[35m (38.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 238ms (ActiveRecord: 40.1ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2012-07-30 22:23:39 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "9"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1
+print message in show
+  Rendered users/show.mobile.erb within layouts/application (4.9ms)
+Completed 200 OK in 58ms (Views: 36.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712219446" for 127.0.0.1 at 2012-07-30 22:23:39 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-07-30 22:23:44 -0700
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in.mobile" for 127.0.0.1 at 2012-07-30 22:23:44 -0700
+Processing by SessionsController#new as MOBILE
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.mobile.erb within layouts/application (12.1ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:23:44 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-07-30 22:23:51 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QmAGU1y9ceyCcw2E5WLj3bC5XF4QQAMqrBTHEUtydic=", "user"=>{"email"=>"yun888@kim.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'yun888@kim.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2012-07-31 05:23:51.729777', "current_sign_in_at" = '2012-07-31 05:23:51.729777', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2012-07-31 05:23:51.730810' WHERE "users"."id" = 9[0m
+  [1m[35m (91.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 203ms (ActiveRecord: 93.4ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:23:52 -0700
+Processing by ChannelsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  Rendered channels/index.mobile.erb within layouts/application (7.4ms)
+Completed 200 OK in 62ms (Views: 32.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712232626" for 127.0.0.1 at 2012-07-30 22:23:52 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/channels/new" for 127.0.0.1 at 2012-07-30 22:24:16 -0700
+Processing by ChannelsController#new as */*
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  Rendered channels/_form.mobile.erb (76.7ms)
+  Rendered channels/new.mobile.erb within layouts/application (79.3ms)
+Completed 200 OK in 131ms (Views: 107.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712256476" for 127.0.0.1 at 2012-07-30 22:24:16 -0700
+Served asset /mobile.js - 200 OK (1ms)
+
+
+Started GET "/jqtouch/themes/.png" for 127.0.0.1 at 2012-07-30 22:24:16 -0700
+
+ActionController::RoutingError (No route matches [GET] "/jqtouch/themes/.png"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.1) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.1) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.1) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.1) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/jqtouch/themes/images/chevron.png" for 127.0.0.1 at 2012-07-30 22:24:16 -0700
+
+ActionController::RoutingError (No route matches [GET] "/jqtouch/themes/images/chevron.png"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.1) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.1) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.1) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.1) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started POST "/channels" for 127.0.0.1 at 2012-07-30 22:24:32 -0700
+Processing by ChannelsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QmAGU1y9ceyCcw2E5WLj3bC5XF4QQAMqrBTHEUtydic=", "channel"=>{"name"=>"lion attack human 2012", "language"=>"en"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mChannel Exists (0.7ms)[0m  [1mSELECT 1 FROM "channels" WHERE "channels"."name" = 'lion attack human 2012' LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "channels" ("categories", "channel_type", "created_at", "language", "name", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["categories", nil], ["channel_type", nil], ["created_at", Tue, 31 Jul 2012 05:24:33 UTC +00:00], ["language", "en"], ["name", "lion attack human 2012"], ["tags", nil], ["updated_at", Tue, 31 Jul 2012 05:24:33 UTC +00:00]]
+  [1m[36m (61.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "feeds" ("categories", "channel_id", "created_at", "feedtype", "keywords", "name", "options", "queries", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["categories", nil], ["channel_id", 2], ["created_at", Tue, 31 Jul 2012 05:24:33 UTC +00:00], ["feedtype", "public"], ["keywords", ""], ["name", "lion attack human 2012"], ["options", ""], ["queries", "lion attack human 2012"], ["tags", nil], ["updated_at", Tue, 31 Jul 2012 05:24:33 UTC +00:00]]
+  [1m[35m (129.4ms)[0m  COMMIT
+video: Lion attacks man and nearly kills him!
+    d: LION ATTACK!! 2012! VERY GRAPHIC
+thumbnail url: http://i.ytimg.com/vi/-U9gaYDDfaw/default.jpg
+  [1m[36mVideo Load (0.8ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '-U9gaYDDfaw'[0m
+new video inserted:  split_video_id[3] = -U9gaYDDfaw
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:35 UTC +00:00], ["description", "LION ATTACK!! 2012! VERY GRAPHIC"], ["duration", 128], ["is_complete", nil], ["keywords", ["Man (Ethnicity)", "Lion (Animal)", "Kills (mixtape)", "Sad", "Human (Animal)", "Dog", "Old", "Cat", "Steven Old (Football Player)", "Animals", "Dogs", "Him", "Cats", "Pets", "Pet", "Crossing", "Rescue", "Cute", "Mirror", "Shelter", "Animal Crossing", "Stuffed", "Society", "Folk", "City", "Kittens", "Funny", "Funny Animals", "Puppy", "Attacks", "Massive", "City Folk", "Crossing City", "Shark", "Kansas", "Oklahoma"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/-U9gaYDDfaw/default.jpg"], ["title", "Lion attacks man and nearly kills him!"], ["updated_at", Tue, 31 Jul 2012 05:24:35 UTC +00:00], ["yt_video_id", "-U9gaYDDfaw"]]
+  [1m[35m (130.4ms)[0m  COMMIT
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 26 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 26)
+  [1m[36m (70.7ms)[0m  [1mCOMMIT[0m
+video: Lion attack human (and kills him)
+    d: RED Box Computers ( www.redboxcomputers.be ) Buy PC now from 299 euros and receive a free mouse! www.redboxcomputers.be
+thumbnail url: http://i.ytimg.com/vi/xmcXuTBO0oo/default.jpg
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'xmcXuTBO0oo'
+new video inserted:  split_video_id[3] = xmcXuTBO0oo
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "People People & Blogs"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:35 UTC +00:00], ["description", "RED Box Computers ( www.redboxcomputers.be ) Buy PC now from 299 euros and receive a free mouse! www.redboxcomputers.be"], ["duration", 90], ["is_complete", nil], ["keywords", ["red", "box", "redbox", "computers", "lion", "attack", "human", "eats", "him", "kills", "Attacks"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/xmcXuTBO0oo/default.jpg"], ["title", "Lion attack human (and kills him)"], ["updated_at", Tue, 31 Jul 2012 05:24:35 UTC +00:00], ["yt_video_id", "xmcXuTBO0oo"]]
+  [1m[36m (46.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 27 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 27)[0m
+  [1m[35m (94.3ms)[0m  COMMIT
+video: Top 10 Lions Attack On Human....!!!
+    d: •••• Join Us and Suggest Friends •••• ► www.facebook.com/hafsa.sweety ► umeed-e-shafaq.blogspot.com
+thumbnail url: http://i.ytimg.com/vi/Nc-_q7iEn9Q/default.jpg
+  [1m[36mVideo Load (0.6ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Nc-_q7iEn9Q'[0m
+new video inserted:  split_video_id[3] = Nc-_q7iEn9Q
+new video inserted: provider =  youtube
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "News News & Politics"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:35 UTC +00:00], ["description", "•••• Join Us and Suggest Friends •••• ► www.facebook.com/hafsa.sweety ► umeed-e-shafaq.blogspot.com"], ["duration", 381], ["is_complete", nil], ["keywords", ["tragedy", "epic", "weird", "attack", "accident", "Crash", "Attacks"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/Nc-_q7iEn9Q/default.jpg"], ["title", "Top 10 Lions Attack On Human....!!!"], ["updated_at", Tue, 31 Jul 2012 05:24:35 UTC +00:00], ["yt_video_id", "Nc-_q7iEn9Q"]]
+  [1m[35m (24.0ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 28 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 28)
+  [1m[36m (146.1ms)[0m  [1mCOMMIT[0m
+video: Lion attacks man with long hair!
+    d: While at the Denver Zoo this guy goes up to the glass in the lions area and the lion didn't like it. I think he didn't like his hair.
+thumbnail url: http://i.ytimg.com/vi/cmHFPno4DEU/default.jpg
+  [1m[35mVideo Load (1.0ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'cmHFPno4DEU'
+new video inserted:  split_video_id[3] = cmHFPno4DEU
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:35 UTC +00:00], ["description", "While at the Denver Zoo this guy goes up to the glass in the lions area and the lion didn't like it. I think he didn't like his hair."], ["duration", 78], ["is_complete", nil], ["keywords", ["Hair (Quotation Subject)", "Lion (Animal)", "Man (Ethnicity)", "Dog", "Human (Animal)", "rwj", "Natural", "Attacks", "Haircut", "Style", "Beauty"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/cmHFPno4DEU/default.jpg"], ["title", "Lion attacks man with long hair!"], ["updated_at", Tue, 31 Jul 2012 05:24:35 UTC +00:00], ["yt_video_id", "cmHFPno4DEU"]]
+  [1m[36m (58.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVideo Exists (1.0ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 29 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 29)[0m
+  [1m[35m (121.9ms)[0m  COMMIT
+video: Unbelievable Top 10 Lion attacks on human [ HQ ]
+    d: If you see a Big Cat nearby: - stare them in the eyes and don't look away. - shout, it can confuse them and break their concentration. - do not bend, crouch or crawl, cats like small targets. -do not run, it's a kind of attack trigger, and they can run much faster than humans.. - if there is warning growl from a mountain lion, shout and generally look as big as possible with your arms raised high. Throw sticks and rocks and shout abuse. They hate that. If they attack you: - fight back, unlike their more dangerous African cousins which are huge, the smaller mountain lion will usually take an adult human animal fairly seriously. Usually they hide and pounce or creep up on their victims, with the aim of biting the jugular and breaking the spine. Punch and grab for for their snouts and eyes, or testicles if it's a male. Shout and scream to confuse the critter, in addition to summoning help.
+thumbnail url: http://i.ytimg.com/vi/YmGPi4tBdh8/default.jpg
+  [1m[36mVideo Load (0.8ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'YmGPi4tBdh8'[0m
+new video inserted:  split_video_id[3] = YmGPi4tBdh8
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["description", "If you see a Big Cat nearby: - stare them in the eyes and don't look away. - shout, it can confuse them and break their concentration. - do not bend, crouch or crawl, cats like small targets. -do not run, it's a kind of attack trigger, and they can run much faster than humans.. - if there is warning growl from a mountain lion, shout and generally look as big as possible with your arms raised high. Throw sticks and rocks and shout abuse. They hate that. If they attack you: - fight back, unlike their more dangerous African cousins which are huge, the smaller mountain lion will usually take an adult human animal fairly seriously. Usually they hide and pounce or creep up on their victims, with the aim of biting the jugular and breaking the spine. Punch and grab for for their snouts and eyes, or testicles if it's a male. Shout and scream to confuse the critter, in addition to summoning help."], ["duration", 381], ["is_complete", nil], ["keywords", ["Human (Animal)", "attacs", "Lion (Animal)", "Top 10 (comics)", "Adventures", "Killers"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/YmGPi4tBdh8/default.jpg"], ["title", "Unbelievable Top 10 Lion attacks on human [ HQ ]"], ["updated_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["yt_video_id", "YmGPi4tBdh8"]]
+  [1m[35m (21.4ms)[0m  COMMIT
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 30 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 30)
+  [1m[36m (140.9ms)[0m  [1mCOMMIT[0m
+video: Lion attack human
+    d: Lion attack human.
+thumbnail url: http://i.ytimg.com/vi/_5SCwHzGq04/default.jpg
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '_5SCwHzGq04'
+new video inserted:  split_video_id[3] = _5SCwHzGq04
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["description", "Lion attack human."], ["duration", 152], ["is_complete", nil], ["keywords", ["lion", "attack", "human", "animal", "beast"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/_5SCwHzGq04/default.jpg"], ["title", "Lion attack human"], ["updated_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["yt_video_id", "_5SCwHzGq04"]]
+  [1m[36m (66.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (1.1ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 31 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 31)[0m
+  [1m[35m (111.9ms)[0m  COMMIT
+video: Top 11 lion attacks on People
+    d: Latest lion attack around the world , 14/07/2012, updated weekly Zimbabwe man survives 'face to face' lion attack HARARE, Zimbabwe (AP) — A Zimbabwean state-run newspaper reports a farmer is recovering after surviving a lion attack in the remote northwest of the country. The Chronicle reported Saturday that a lioness pounced on farmer Joel Ngwenya near the Hwange nature preserve, goring his arms and upper body and leaving him unconscious. Lions had been preying on livestock in the district. "The lioness looked straight into my eyes, staring and roaring," Ngwenya told the paper from a hospital. It pinned him down with its claws and continued staring at him "face to face," he said. The lioness briefly moved away toward a lion cub then turned back on him. He regained consciousness, realizing "it just left me lying down and went away," the paper further quoted him as saying.
+thumbnail url: http://i.ytimg.com/vi/pkKbhpAgjwA/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'pkKbhpAgjwA'[0m
+new video inserted:  split_video_id[3] = pkKbhpAgjwA
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["description", "Latest lion attack around the world , 14/07/2012, updated weekly Zimbabwe man survives 'face to face' lion attack HARARE, Zimbabwe (AP) — A Zimbabwean state-run newspaper reports a farmer is recovering after surviving a lion attack in the remote northwest of the country. The Chronicle reported Saturday that a lioness pounced on farmer Joel Ngwenya near the Hwange nature preserve, goring his arms and upper body and leaving him unconscious. Lions had been preying on livestock in the district. \"The lioness looked straight into my eyes, staring and roaring,\" Ngwenya told the paper from a hospital. It pinned him down with its claws and continued staring at him \"face to face,\" he said. The lioness briefly moved away toward a lion cub then turned back on him. He regained consciousness, realizing \"it just left me lying down and went away,\" the paper further quoted him as saying."], ["duration", 419], ["is_complete", nil], ["keywords", ["Lion (Animal)", "Top", "11", "lion", "attacks", "on", "People", "10", "fight", "stalk", "hunt", "kill", "killing", "person", "man", "human", "being", "Masai", "mara", "Hunting", "Zoo", "Wildlife", "Best", "Animals", "Lions", "Tiger", "Safari", "Elephant", "Whale", "Nature", "Deer", "Africa", "Favorite", "Hits", "Tigers", "Elephants", "Buck", "Crocodile", "Funny", "Archery", "Whales", "Greatest", "Watching", "Hunter", "Cat", "Zebra", "Leopard", "Bow", "Buffalo", "Seal", "Hippo", "Jaguar", "Alligator", "Species", "Endangered", "Moose", "Whitetail", "zookeeper", "baby", "attack"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/pkKbhpAgjwA/default.jpg"], ["title", "Top 11 lion attacks on People"], ["updated_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["yt_video_id", "pkKbhpAgjwA"]]
+  [1m[35m (131.0ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 32 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 32)
+  [1m[36m (35.1ms)[0m  [1mCOMMIT[0m
+video: 10 most dangerous scene lion attack on humans
+    d: 
+thumbnail url: http://i.ytimg.com/vi/bztplp2nNh4/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bztplp2nNh4'
+new video inserted:  split_video_id[3] = bztplp2nNh4
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Comedy Comedy"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["description", ""], ["duration", 358], ["is_complete", nil], ["keywords", ["Lion (Animal)", "Arizona", "Scene", "Youtube", "Cat", "Animals"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/bztplp2nNh4/default.jpg"], ["title", "10 most dangerous scene lion attack on humans"], ["updated_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["yt_video_id", "bztplp2nNh4"]]
+  [1m[36m (68.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (1.0ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 33 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 33)[0m
+  [1m[35m (113.3ms)[0m  COMMIT
+video: Lion attack human (and kills him)
+    d: RED Box Computers Buy PC now from 299 euros and receive a free mouse! www.redboxcomputers.be
+thumbnail url: http://i.ytimg.com/vi/7HC9oH37JXQ/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '7HC9oH37JXQ'[0m
+new video inserted:  split_video_id[3] = 7HC9oH37JXQ
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "People People & Blogs"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["description", "RED Box Computers Buy PC now from 299 euros and receive a free mouse! www.redboxcomputers.be"], ["duration", 113], ["is_complete", nil], ["keywords", ["red", "box", "redbox", "computers", "lion", "attack", "human", "eats", "him", "kills", "Attacks"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/7HC9oH37JXQ/default.jpg"], ["title", "Lion attack human (and kills him)"], ["updated_at", Tue, 31 Jul 2012 05:24:36 UTC +00:00], ["yt_video_id", "7HC9oH37JXQ"]]
+  [1m[35m (27.2ms)[0m  COMMIT
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 34 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 34)
+  [1m[36m (149.4ms)[0m  [1mCOMMIT[0m
+video: Crazy Lions Attack (AMAZING FOOTAGE)
+    d: ..You know when you've crossed the line with a Lion!
+thumbnail url: http://i.ytimg.com/vi/bgxplNguYm0/default.jpg
+  [1m[35mVideo Load (1.0ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bgxplNguYm0'
+new video inserted:  split_video_id[3] = bgxplNguYm0
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.5ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["description", "..You know when you've crossed the line with a Lion!"], ["duration", 332], ["is_complete", nil], ["keywords", ["Lion", "Pack", "Attack", "At", "Circus", "Lion (Animal)", "Cat", "Animals", "extreme", "human", "vs", "wild", "beast", "kids", "fun", "fair", "home", "video", "rare", "footage", "untamed", "uncut", "dam", "nature", "you", "scary", "run", "Zoo", "Wildlife", "Hunting", "Elephant", "Lions", "Tiger", "Safari", "Africa", "Russia", "Australia", "USA", "Europe", "China", "New", "Zealand", "India", "Mexico", "Japan", "live", "dead", "killed", "kills", "death", "top", "view", "best", "youtube", "win", "fail", "clowns", "America", "States", "Germany", "England", "Canada", "United States", "Kingdom", "king", "of", "the", "jungle", "Nations"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/bgxplNguYm0/default.jpg"], ["title", "Crazy Lions Attack (AMAZING FOOTAGE)"], ["updated_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["yt_video_id", "bgxplNguYm0"]]
+  [1m[36m (81.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (1.0ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 35 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 35)[0m
+  [1m[35m (130.0ms)[0m  COMMIT
+video: Lions attack elephant - Planet Earth - BBC
+    d: In this harrowing clip from the award-winning BBC Planet Earth series, Sir David Attenborough explores the danger elephants face when sharing a water hole with desperate, starving lions. Visit www.bbcearth.com for all the latest animal news and wildlife videos and watch more high quality videos on the new BBC Earth YouTube channel here www.youtube.com
+thumbnail url: http://i.ytimg.com/vi/q2ZW0EvMzSM/default.jpg
+  [1m[36mVideo Load (0.6ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'q2ZW0EvMzSM'[0m
+new video inserted:  split_video_id[3] = q2ZW0EvMzSM
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["description", "In this harrowing clip from the award-winning BBC Planet Earth series, Sir David Attenborough explores the danger elephants face when sharing a water hole with desperate, starving lions. Visit www.bbcearth.com for all the latest animal news and wildlife videos and watch more high quality videos on the new BBC Earth YouTube channel here www.youtube.com"], ["duration", 456], ["is_complete", nil], ["keywords", ["BBC", "Planet", "Earth", "elephants", "lions", "death", "food", "hunting"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/q2ZW0EvMzSM/default.jpg"], ["title", "Lions attack elephant - Planet Earth - BBC"], ["updated_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["yt_video_id", "q2ZW0EvMzSM"]]
+  [1m[35m (26.0ms)[0m  COMMIT
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 36 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 36)
+  [1m[36m (149.4ms)[0m  [1mCOMMIT[0m
+video: Las Vegas Lion Attack
+    d: Harry Smith talks to a couple who caught a lion attack on tape while honeymooning in Las Vegas.
+thumbnail url: http://i.ytimg.com/vi/dihGbVa1Dv8/default.jpg
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'dihGbVa1Dv8'
+new video inserted:  split_video_id[3] = dihGbVa1Dv8
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "News News & Politics"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["description", "Harry Smith talks to a couple who caught a lion attack on tape while honeymooning in Las Vegas."], ["duration", 172], ["is_complete", nil], ["keywords", ["lion", "attack", "mgm", "grand", "hotel", "trainer", "caught", "on", "tape", "video", "newlywed", "honeymoon"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/dihGbVa1Dv8/default.jpg"], ["title", "Las Vegas Lion Attack"], ["updated_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["yt_video_id", "dihGbVa1Dv8"]]
+  [1m[36m (74.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (1.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVideo Exists (1.0ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 37 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 37)[0m
+  [1m[35m (123.7ms)[0m  COMMIT
+video: Maneaters - Lions
+    d: The lion is the king of beasts. There isn't a more feared carnivore on land, and for good reason. About 40 lion attacks are reported every year and there aren't many survivors! All rights belong to Discovery Communications, Inc
+thumbnail url: http://i.ytimg.com/vi/XDTh6xMxYtI/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'XDTh6xMxYtI'[0m
+new video inserted:  split_video_id[3] = XDTh6xMxYtI
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["description", "The lion is the king of beasts. There isn't a more feared carnivore on land, and for good reason. About 40 lion attacks are reported every year and there aren't many survivors! All rights belong to Discovery Communications, Inc"], ["duration", 1387], ["is_complete", nil], ["keywords", ["maneaters", "lion", "attack", "on", "humans", "people", "animals", "dangerous", "wild", "nature", "documentary", "beast", "big", "cat", "man", "eaters", "animal", "planet", "eat", "africa", "caught", "video", "tape", "eating", "wildlife"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/XDTh6xMxYtI/default.jpg"], ["title", "Maneaters - Lions"], ["updated_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["yt_video_id", "XDTh6xMxYtI"]]
+  [1m[35m (23.9ms)[0m  COMMIT
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 38 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 38)
+  [1m[36m (143.9ms)[0m  [1mCOMMIT[0m
+video: David Icke - The Manipulation Of Humanity (March 22, 2012)
+    d: www.davidicke.com www.redicecreations.com British author David Icke has written 16 books and traveled to over 40 countries since 1990. His books reveal how a hidden hand is behind world-changing events like the attacks of 9/11 and the manufactured wars in the Middle East, as part of a mass mind manipulation technique he has dubbed problem-reaction-solution. While being controversial and often heavily attacked, David Icke has driven on with his unrelentless investigation into subject areas that others don't dare touch. He reveals information that has been kept from a "dumbed down" population and has allowed the establishment to treat them as nothing more than slaves to a sinister hidden agenda. David returns to Red Ice to talk about his newest book, Remember Who You Are. First, we begin the interview discussing Robert Green's campaign and ritualistic child abuse. Then, David speaks about reality within our holographic universe. Later, David gives his perspective on aliens manipulating human DNA. Lastly, we discuss archetypes as software programs. David explains how human emotion is tied to genetics and using consciousness to override manipulation from external sources.
+thumbnail url: http://i.ytimg.com/vi/Uwezi7TqXSs/default.jpg
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Uwezi7TqXSs'
+new video inserted:  split_video_id[3] = Uwezi7TqXSs
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Education Education"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["description", "www.davidicke.com www.redicecreations.com British author David Icke has written 16 books and traveled to over 40 countries since 1990. His books reveal how a hidden hand is behind world-changing events like the attacks of 9/11 and the manufactured wars in the Middle East, as part of a mass mind manipulation technique he has dubbed problem-reaction-solution. While being controversial and often heavily attacked, David Icke has driven on with his unrelentless investigation into subject areas that others don't dare touch. He reveals information that has been kept from a \"dumbed down\" population and has allowed the establishment to treat them as nothing more than slaves to a sinister hidden agenda. David returns to Red Ice to talk about his newest book, Remember Who You Are. First, we begin the interview discussing Robert Green's campaign and ritualistic child abuse. Then, David speaks about reality within our holographic universe. Later, David gives his perspective on aliens manipulating human DNA. Lastly, we discuss archetypes as software programs. David explains how human emotion is tied to genetics and using consciousness to override manipulation from external sources."], ["duration", 3765], ["is_complete", nil], ["keywords", ["David", "Icke", "WW3", "Syria", "Iran", "Afghanistan", "Pakistan", "Iraq", "Libya", "war", "middle", "east", "revolution", "Japan", "nuclear", "BBC", "The", "Moon", "Matrix", "aliens", "bloodlines", "illuminati", "Human", "Race", "Get", "Off", "Your", "Knees", "LION", "SLEEPS", "NO", "MORE", "book", "author", "illusion", "mind", "control", "chemtrails", "sex", "tits", "and", "rock", "an", "roll", "NWO", "Obama", "terror", "attack", "Reptilian", "Freemasons", "shapeshifters", "Jesuit", "Order", "9/11", "attacks", "attempt", "jay4louise"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/Uwezi7TqXSs/default.jpg"], ["title", "David Icke - The Manipulation Of Humanity (March 22, 2012)"], ["updated_at", Tue, 31 Jul 2012 05:24:37 UTC +00:00], ["yt_video_id", "Uwezi7TqXSs"]]
+  [1m[36m (63.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (1.1ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 39 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 39)[0m
+  [1m[35m (120.6ms)[0m  COMMIT
+video: Wild Animals Attacking Humans and Matador
+    d: www.dailymotion.com Wild Animals Attacking Exotic Animal Attacks Bear Lion Elephant Bull Circus Attack SeaWorld Bullfight
+thumbnail url: http://i.ytimg.com/vi/EPyEOnL8rF8/default.jpg
+  [1m[36mVideo Load (0.8ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'EPyEOnL8rF8'[0m
+new video inserted:  split_video_id[3] = EPyEOnL8rF8
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["description", "www.dailymotion.com Wild Animals Attacking Exotic Animal Attacks Bear Lion Elephant Bull Circus Attack SeaWorld Bullfight"], ["duration", 297], ["is_complete", nil], ["keywords", ["Wild", "Animal Attacks", "Exotic", "Bear", "Lion", "Elephant", "Bull", "Circus", "Attack", "seaworld", "Bullfight", "Animals", "Attacking"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/EPyEOnL8rF8/default.jpg"], ["title", "Wild Animals Attacking Humans and Matador"], ["updated_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["yt_video_id", "EPyEOnL8rF8"]]
+  [1m[35m (22.7ms)[0m  COMMIT
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 40 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 40)
+  [1m[36m (132.7ms)[0m  [1mCOMMIT[0m
+video: DAVID ICKE - HUMAN RACE GET OFF YOUR KNEES!! THE LION SLEEPS NO MORE!!!
+    d: Petition Started For David Icke to appear on the BBC's Question Time 'debate' programme which treated his work with such distain and disrespect this week.To sign petition,click this link www.change.org Feat.Heather.(v.2012) www.davidicke.com Music- Dave pearce remix(featuring Heather)
+thumbnail url: http://i.ytimg.com/vi/_jSfiBjvxlg/default.jpg
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '_jSfiBjvxlg'
+new video inserted:  split_video_id[3] = _jSfiBjvxlg
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.7ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Education Education"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["description", "Petition Started For David Icke to appear on the BBC's Question Time 'debate' programme which treated his work with such distain and disrespect this week.To sign petition,click this link www.change.org Feat.Heather.(v.2012) www.davidicke.com Music- Dave pearce remix(featuring Heather)"], ["duration", 294], ["is_complete", nil], ["keywords", ["David", "Icke", "WW3", "Syria", "Iran", "Afghanistan", "Pakistan", "Iraq", "Libya", "war", "middle", "east", "revolution", "Japan", "nuclear", "BBC", "The", "Moon", "Matrix", "aliens", "bloodlines", "illuminati", "Human", "Race", "Get", "Off", "Your", "Knees", "LION", "SLEEPS", "NO", "MORE", "book", "author", "illusion", "mind", "control", "chemtrails", "sex", "tits", "and", "rock", "an", "roll", "NWO", "Obama", "terror", "attack", "Reptilian", "Freemasons", "shapeshifters", "Jesuit", "Order", "9/11", "attacks", "jay4louise"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/_jSfiBjvxlg/default.jpg"], ["title", "DAVID ICKE - HUMAN RACE GET OFF YOUR KNEES!! THE LION SLEEPS NO MORE!!!"], ["updated_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["yt_video_id", "_jSfiBjvxlg"]]
+  [1m[36m (110.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 41 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 41)[0m
+  [1m[35m (18.4ms)[0m  COMMIT
+video: elephant attacks man india africa zoo new mysore video humans attack in sri lanka forest
+    d: More videos here: www.findeezz.com WARNING: Keep Distance from Elephants. elephant attacks man, elephant attacks man findeezz.com, ORIGINAL Elephant Painting Watch this elephant paint a beautiful image of an elephant holding a flower. You'll be amazed at how her talent unfolds as she carefully...
+thumbnail url: http://i.ytimg.com/vi/bOv8bj3XGLI/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bOv8bj3XGLI'[0m
+new video inserted:  split_video_id[3] = bOv8bj3XGLI
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "People People & Blogs"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["description", "More videos here: www.findeezz.com WARNING: Keep Distance from Elephants. elephant attacks man, elephant attacks man findeezz.com, ORIGINAL Elephant Painting Watch this elephant paint a beautiful image of an elephant holding a flower. You'll be amazed at how her talent unfolds as she carefully..."], ["duration", 595], ["is_complete", nil], ["keywords", ["elephant", "attacks", "man", "india", "in", "about", "from", "sri", "lanka", "forest", "africa", "zoo", "new", "mysore", "video", "humans", "lion", "kerala", "youtube", "2012", "car", "tiger", "thrissur", "mating", "videos", "song", "fight", "delivery", "elephants", "attack", "findeezz.com"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/bOv8bj3XGLI/default.jpg"], ["title", "elephant attacks man india africa zoo new mysore video humans attack in sri lanka forest"], ["updated_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["yt_video_id", "bOv8bj3XGLI"]]
+  [1m[35m (108.1ms)[0m  COMMIT
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.9ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 42 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 42)
+  [1m[36m (123.1ms)[0m  [1mCOMMIT[0m
+video: Lion Eats And Attacks Indians !
+    d: A lion attacks and eats a indian, lots of blood and gun fire in this video !
+thumbnail url: http://i.ytimg.com/vi/_HkdJjG9sW4/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '_HkdJjG9sW4'
+new video inserted:  split_video_id[3] = _HkdJjG9sW4
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["description", "A lion attacks and eats a indian, lots of blood and gun fire in this video !"], ["duration", 553], ["is_complete", nil], ["keywords", ["Lion attack", "attacks", "attack", "india", "indian", "indians", "eats", "kills", "animal", "animals", "Dog", "bites", "wildlife", "guns", "gun", "gunfire", "back", "up", "show", "trained", "must", "watch", "Firearm"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/_HkdJjG9sW4/default.jpg"], ["title", "Lion Eats And Attacks Indians !"], ["updated_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["yt_video_id", "_HkdJjG9sW4"]]
+  [1m[36m (36.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 43 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 43)[0m
+  [1m[35m (66.3ms)[0m  COMMIT
+video: Kiunjuri wants wildlife sanctuaries fenced
+    d: www.ntv.co.ke Laikipia East Member of Parliament Mwangi Kiunjuri has blamed the internal Security Minister Professor George Saitoti for failing to contain human wildlife conflict in Laikipia. The MP says the Minister has failed in his responsibility to ensure wildlife sanctuaries are fenced off. Kiunjuri blames the Government for giving licenses to private developers who in turn do not fence their ranches leading to increased human wildlife conflict in the area. Laikipia Nature Conservancy has been on the spot following allegations that lions that attack people in the area are from there. Kiunjuri has given a one-week ultimatum to the conservancy's director Kuki Gullaman to fence it off or face the music. He was speaking in Laikipia where his lawyers collected more signatures to compel the Government to ensure all privately owned ranches are fenced with immediate effect.
+thumbnail url: http://i.ytimg.com/vi/TJbl3JI9mGg/default.jpg
+  [1m[36mVideo Load (0.9ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'TJbl3JI9mGg'[0m
+new video inserted:  split_video_id[3] = TJbl3JI9mGg
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "News News & Politics"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["description", "www.ntv.co.ke Laikipia East Member of Parliament Mwangi Kiunjuri has blamed the internal Security Minister Professor George Saitoti for failing to contain human wildlife conflict in Laikipia. The MP says the Minister has failed in his responsibility to ensure wildlife sanctuaries are fenced off. Kiunjuri blames the Government for giving licenses to private developers who in turn do not fence their ranches leading to increased human wildlife conflict in the area. Laikipia Nature Conservancy has been on the spot following allegations that lions that attack people in the area are from there. Kiunjuri has given a one-week ultimatum to the conservancy's director Kuki Gullaman to fence it off or face the music. He was speaking in Laikipia where his lawyers collected more signatures to compel the Government to ensure all privately owned ranches are fenced with immediate effect."], ["duration", 70], ["is_complete", nil], ["keywords", ["Ntv", "kenya", "nation", "media", "news", "laikipia", "east", "human", "wildlife", "conflict", "nature", "conservancy", "sanctuary", "lion", "attack"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/TJbl3JI9mGg/default.jpg"], ["title", "Kiunjuri wants wildlife sanctuaries fenced"], ["updated_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["yt_video_id", "TJbl3JI9mGg"]]
+  [1m[35m (7.3ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.9ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 44 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 44)
+  [1m[36m (108.3ms)[0m  [1mCOMMIT[0m
+video: David Icke - Truth Warriors and Lions of Humanity.
+    d: www.davidicke.com http
+thumbnail url: http://i.ytimg.com/vi/dwhoK-sTBvU/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'dwhoK-sTBvU'
+new video inserted:  split_video_id[3] = dwhoK-sTBvU
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Education Education"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["description", "www.davidicke.com http"], ["duration", 1792], ["is_complete", nil], ["keywords", ["David", "Icke", "London", "Olympics", "9/11", "twin", "towers", "New", "York", "FALSE", "FLAG", "TERROR", "ATTACK", "Libya", "war", "middle", "east", "revolution", "Japan", "nuclear", "BBC", "The", "Moon", "Matrix", "aliens", "bloodlines", "illuminati", "Human", "Race", "Get", "Off", "Your", "Knees", "LION", "SLEEPS", "NO", "MORE", "book", "author", "illusion", "mind", "control", "chemtrails", "sex", "tits", "and", "rock", "an", "roll", "NWO", "Obama", "Reptilian", "Freemasons", "shapeshifters", "Jesuit", "Order", "jay4louise"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/dwhoK-sTBvU/default.jpg"], ["title", "David Icke - Truth Warriors and Lions of Humanity."], ["updated_at", Tue, 31 Jul 2012 05:24:38 UTC +00:00], ["yt_video_id", "dwhoK-sTBvU"]]
+  [1m[36m (119.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 45 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 45)[0m
+  [1m[35m (36.0ms)[0m  COMMIT
+video: Lion killed 3 People
+    d: Lion attacked 3 human being
+thumbnail url: http://i.ytimg.com/vi/u1pHO0bi0WQ/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'u1pHO0bi0WQ'[0m
+new video inserted:  split_video_id[3] = u1pHO0bi0WQ
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "People People & Blogs"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["description", "Lion attacked 3 human being"], ["duration", 161], ["is_complete", nil], ["keywords", ["ion", "safari", "hunt", "kill", "shoot", "track", "party", "gun", "youtube", "people", "attack", "charges"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/u1pHO0bi0WQ/default.jpg"], ["title", "Lion killed 3 People"], ["updated_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["yt_video_id", "u1pHO0bi0WQ"]]
+  [1m[35m (68.3ms)[0m  COMMIT
+  [1m[36mChannel Load (1.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (1.1ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 46 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 46)
+  [1m[36m (114.5ms)[0m  [1mCOMMIT[0m
+video: Black Mamba vs Dead Lion 01, Deadly Snake Attacks Lion
+    d: Ojatro.com http Africa's most feared snake, the elusive Black Mamba, holds the record for being the world's second longest venomous snake (after the king cobra), averaging around 10 feet in length, and sometimes growing to lengths of 15 feet. It is as well the fastest snake in the world, capable of moving at 10 - 12 mph (16--20 km/h). The Black Mamba is not named for the color of its body, which is usually a shade of grey. But for the highly pigmented interior of its mouth, which it shows at a threat display. Many people fear that the black mamba will actually chase and attack humans unprovoked, and there are evidences to support such concerns. Regardless, attacks on humans are surprisingly rare, more people die in Africa due to bites from cobras and other venomous snakes such as the puff adder. Black Mambas feed meanly on small mammal, reptiles and birds but it has been observed, that snakes sometimes prey on animals that are to large to devour. In this video I filmed how a hungry black mamba can across a dead lion. Without any hesitation, the mamba attacked the lifeless body of the lion, striking twice before trying to swallow the enormous carcass. Black Mamba vs Dead Lion, filmed by Heiko Kiera aka Ojatro in 2009. The black mamba, deadly, venomous snakes serpientes mortales, el mambo negro, cobras mortais, a mamba negra, смертельной змеи, черная мамба, tödliche Schlangen, die Schwarze Mamba, 致命的蛇，黑曼巴, งูมฤตยูดำ Mamba, 致命的なヘビ、ブラックマンバ, घातक <b>...</b>
+thumbnail url: http://i.ytimg.com/vi/i5HtlxZKOfE/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'i5HtlxZKOfE'
+new video inserted:  split_video_id[3] = i5HtlxZKOfE
+new video inserted: provider =  youtube
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (28.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["description", "Ojatro.com http Africa's most feared snake, the elusive Black Mamba, holds the record for being the world's second longest venomous snake (after the king cobra), averaging around 10 feet in length, and sometimes growing to lengths of 15 feet. It is as well the fastest snake in the world, capable of moving at 10 - 12 mph (16--20 km/h). The Black Mamba is not named for the color of its body, which is usually a shade of grey. But for the highly pigmented interior of its mouth, which it shows at a threat display. Many people fear that the black mamba will actually chase and attack humans unprovoked, and there are evidences to support such concerns. Regardless, attacks on humans are surprisingly rare, more people die in Africa due to bites from cobras and other venomous snakes such as the puff adder. Black Mambas feed meanly on small mammal, reptiles and birds but it has been observed, that snakes sometimes prey on animals that are to large to devour. In this video I filmed how a hungry black mamba can across a dead lion. Without any hesitation, the mamba attacked the lifeless body of the lion, striking twice before trying to swallow the enormous carcass. Black Mamba vs Dead Lion, filmed by Heiko Kiera aka Ojatro in 2009. The black mamba, deadly, venomous snakes serpientes mortales, el mambo negro, cobras mortais, a mamba negra, смертельной змеи, черная мамба, tödliche Schlangen, die Schwarze Mamba, 致命的蛇，黑曼巴, งูมฤตยูดำ Mamba, 致命的なヘビ、ブラックマンバ, घातक <b>...</b>"], ["duration", 142], ["is_complete", nil], ["keywords", ["black mamba vs dead lion 01", "the black mamba", "black mamba", "blackmamba", "the mamba", "black mamba snake", "snake", "snakes", "deadly snakes", "venomous snakes", "venomous", "poison", "poisonous snake", "snake bite", "dangerous animals", "kill", "animal attack", "suicide", "africa", "snake game", "games", "lion", "lions", "tiger", "tigers", "cat", "cats", "miniclip", "mini clip", "mini clips", "ojatro", "Heiko Kiera", "animal planet", "national geographic", "discovery channel", "the wildlife"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/i5HtlxZKOfE/default.jpg"], ["title", "Black Mamba vs Dead Lion 01, Deadly Snake Attacks Lion"], ["updated_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["yt_video_id", "i5HtlxZKOfE"]]
+  [1m[36m (141.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 47 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 47)[0m
+  [1m[35m (29.2ms)[0m  COMMIT
+video: Crocodiles attack humans discover
+    d: Crocodiles attack humans discover Watch thousands of our latest videos at www.jomrileks.com
+thumbnail url: http://i.ytimg.com/vi/UNiq6ud5o2M/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'UNiq6ud5o2M'[0m
+new video inserted:  split_video_id[3] = UNiq6ud5o2M
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["description", "Crocodiles attack humans discover Watch thousands of our latest videos at www.jomrileks.com"], ["duration", 511], ["is_complete", nil], ["keywords", ["crocodile", "attacks", "humans", "gnu", "zebra", "baboon", "Untamed", "Uncut", "Death", "Roll", "crocodiles", "nature", "swimming", "gills", "predator", "prey", "teeth", "resistant", "sand", "rivers", "maneater", "rofl", "Zoo", "Hunting", "Animals", "Nature (TV Series)", "Lions", "Whale", "lion", "turtle", "snake", "shark", "elephant", "Attack", "accident", "man", "escapes", "When", "human", "girl", "stunt", "show", "thailand", "sriracha"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/UNiq6ud5o2M/default.jpg"], ["title", "Crocodiles attack humans discover"], ["updated_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["yt_video_id", "UNiq6ud5o2M"]]
+  [1m[35m (57.6ms)[0m  COMMIT
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (1.2ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 48 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 48)
+  [1m[36m (88.0ms)[0m  [1mCOMMIT[0m
+video: Lion Meets Black Mamba 04, Time Lapse Speed x2
+    d: Ojatro.com http Africa's most feared snake, the elusive Black Mamba, holds the record for being the world's second longest venomous snake (after the king cobra), averaging around 10 feet in length, and sometimes growing to lengths of 15 feet. It is as well the fastest snake in the world, capable of moving at 10 - 12 mph (16--20 km/h). The Black Mamba is not named for the color of its body, which is usually a shade of grey. But for the highly pigmented interior of its mouth, which it shows at a threat display. Many people fear that the black mamba will actually chase and attack humans unprovoked, and there are evidences to support such concerns. Regardless, attacks on humans are surprisingly rare, more people die in Africa due to bites from cobras and other venomous snakes such as the puff adder. Black Mambas feed meanly on small mammal, reptiles and birds but it has been observed, that snakes sometimes prey on animals that are to large to devour. In this video I filmed how a hungry black mamba can across a dead lion. Without any hesitation, the mamba attacked the lifeless body of the lion, striking twice before trying to swallow the enormous carcass. Black Mamba vs Dead Lion, filmed by Heiko Kiera aka Ojatro in 2009. The black mamba, deadly, venomous snakes serpientes mortales, el mambo negro, cobras mortais, la mamba negra, смертельной змеи, черная мамба, tödliche Schlangen, die Schwarze Mamba, 致命的蛇，黑曼巴, งูมฤตยูดำ Mamba, 致命的なヘビ、ブラックマンバ, घातक <b>...</b>
+thumbnail url: http://i.ytimg.com/vi/eanZK88En0o/default.jpg
+  [1m[35mVideo Load (0.8ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'eanZK88En0o'
+new video inserted:  split_video_id[3] = eanZK88En0o
+new video inserted: provider =  youtube
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["description", "Ojatro.com http Africa's most feared snake, the elusive Black Mamba, holds the record for being the world's second longest venomous snake (after the king cobra), averaging around 10 feet in length, and sometimes growing to lengths of 15 feet. It is as well the fastest snake in the world, capable of moving at 10 - 12 mph (16--20 km/h). The Black Mamba is not named for the color of its body, which is usually a shade of grey. But for the highly pigmented interior of its mouth, which it shows at a threat display. Many people fear that the black mamba will actually chase and attack humans unprovoked, and there are evidences to support such concerns. Regardless, attacks on humans are surprisingly rare, more people die in Africa due to bites from cobras and other venomous snakes such as the puff adder. Black Mambas feed meanly on small mammal, reptiles and birds but it has been observed, that snakes sometimes prey on animals that are to large to devour. In this video I filmed how a hungry black mamba can across a dead lion. Without any hesitation, the mamba attacked the lifeless body of the lion, striking twice before trying to swallow the enormous carcass. Black Mamba vs Dead Lion, filmed by Heiko Kiera aka Ojatro in 2009. The black mamba, deadly, venomous snakes serpientes mortales, el mambo negro, cobras mortais, la mamba negra, смертельной змеи, черная мамба, tödliche Schlangen, die Schwarze Mamba, 致命的蛇，黑曼巴, งูมฤตยูดำ Mamba, 致命的なヘビ、ブラックマンバ, घातक <b>...</b>"], ["duration", 126], ["is_complete", nil], ["keywords", ["lion meets black mamba 04", "the black mamba", "black mamba", "blackmamba", "the mamba", "black mamba snake", "snake", "snakes", "deadly snakes", "venomous snakes", "venomous", "poison", "poisonous snake", "snake bite", "dangerous animals", "kill", "animal attack", "suicide", "africa", "snake game", "games", "lion", "lions", "tiger", "tigers", "cat", "cats", "miniclip", "mini clip", "mini clips", "ojatro", "Heiko Kiera", "animal planet", "national geographic", "discovery channel", "the wildlife", "the wild life", "bbc", "bbc news radio", "conservation", "world news", "wwf"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/eanZK88En0o/default.jpg"], ["title", "Lion Meets Black Mamba 04, Time Lapse Speed x2"], ["updated_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["yt_video_id", "eanZK88En0o"]]
+  [1m[36m (40.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (1.2ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 49 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 49)[0m
+  [1m[35m (149.1ms)[0m  COMMIT
+video: David Icke - 2012 & Beyond - The Day The World Didn`t End!
+    d: The Truth Vibrations...getting stronger and stronger! David speaking about the continued energetic change and 2012...back in 2009. www.davidicke.com
+thumbnail url: http://i.ytimg.com/vi/7_YE_MyzL3o/default.jpg
+  [1m[36mVideo Load (0.8ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '7_YE_MyzL3o'[0m
+new video inserted:  split_video_id[3] = 7_YE_MyzL3o
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (6.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Education Education"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["description", "The Truth Vibrations...getting stronger and stronger! David speaking about the continued energetic change and 2012...back in 2009. www.davidicke.com"], ["duration", 581], ["is_complete", nil], ["keywords", ["DAVID", "ICKE", "LONDON", "OLYMPICS", "Chemtrails", "Harp", "WW3", "Syria", "Iran", "Afghanistan", "Pakistan", "Iraq", "Libya", "war", "middle", "east", "revolution", "Lawful", "Rebellion", "Japan", "nuclear", "BBC", "The", "Moon", "Matrix", "aliens", "bloodlines", "illuminati", "Human", "Race", "Get", "Off", "Your", "Knees", "LION", "SLEEPS", "NO", "MORE", "book", "author", "illusion", "mind", "control", "sex", "tits", "and", "rock", "an", "roll", "NWO", "Obama", "terror", "attack", "Reptilian", "Freemasons", "shapeshifters", "Jesuit", "Order", "9/11", "attacks", "jay4louise"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/7_YE_MyzL3o/default.jpg"], ["title", "David Icke - 2012 & Beyond - The Day The World Didn`t End!"], ["updated_at", Tue, 31 Jul 2012 05:24:39 UTC +00:00], ["yt_video_id", "7_YE_MyzL3o"]]
+  [1m[35m (42.1ms)[0m  COMMIT
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (1.1ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2 AND "videos"."id" = 50 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (2, 50)
+  [1m[36m (29.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/channels/2
+Completed 302 Found in 7032ms (ActiveRecord: 4537.8ms)
+
+
+Started GET "/channels/2" for 127.0.0.1 at 2012-07-30 22:24:41 -0700
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (0.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 2[0m
+  [1m[35mFeed Load (0.6ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 2
+  Rendered channels/show.mobile.erb within layouts/application (12.2ms)
+Completed 200 OK in 61ms (Views: 37.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712282240" for 127.0.0.1 at 2012-07-30 22:24:42 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/channels/2/feeds/2" for 127.0.0.1 at 2012-07-30 22:24:55 -0700
+Processing by FeedsController#show as */*
+  Parameters: {"channel_id"=>"2", "id"=>"2"}
+  [1m[36mFeed Load (1.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mChannel Load (0.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mFeed Load (0.9ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 2 AND "feeds"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered feeds/show.mobile.erb within layouts/application (4.3ms)
+Completed 200 OK in 86ms (Views: 63.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712295634" for 127.0.0.1 at 2012-07-30 22:24:55 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/channels/2" for 127.0.0.1 at 2012-07-30 22:25:00 -0700
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 2
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 2[0m
+  Rendered channels/show.mobile.erb within layouts/application (8.0ms)
+Completed 200 OK in 55ms (Views: 33.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:25:01 -0700
+Served asset /mobile.js - 304 Not Modified (5ms)
+
+
+Started GET "/channels/2/videos" for 127.0.0.1 at 2012-07-30 22:25:03 -0700
+Processing by ChannelsController#videos as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mVideo Load (1.8ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/videos.mobile.erb within layouts/application (121.1ms)
+Completed 200 OK in 172ms (Views: 149.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712304209" for 127.0.0.1 at 2012-07-30 22:25:04 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/videos/49" for 127.0.0.1 at 2012-07-30 22:25:11 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mVideo Load (1.0ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "49"]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m
+  Rendered videos/show.mobile.erb within layouts/application (3.3ms)
+Completed 200 OK in 121ms (Views: 101.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:25:11 -0700
+Served asset /mobile.js - 304 Not Modified (1ms)
+
+
+Started GET "/videos/49" for 127.0.0.1 at 2012-07-30 22:30:03 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[35mVideo Load (0.9ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "49"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1
+  Rendered videos/show.mobile.erb within layouts/application (2.0ms)
+Completed 200 OK in 65ms (Views: 38.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:30:04 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:30:08 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (1.8ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mVideo Load (2.5ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/index.mobile.erb within layouts/application (19.9ms)
+Completed 200 OK in 84ms (Views: 49.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:30:08 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/channels/2/videos" for 127.0.0.1 at 2012-07-30 22:30:14 -0700
+Processing by ChannelsController#videos as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  Rendered channels/videos.mobile.erb within layouts/application (113.4ms)
+Completed 200 OK in 170ms (Views: 139.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712615104" for 127.0.0.1 at 2012-07-30 22:30:15 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/videos/48" for 127.0.0.1 at 2012-07-30 22:30:18 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "48"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1
+  Rendered videos/show.mobile.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 26.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:30:18 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:30:25 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/index.mobile.erb within layouts/application (13.7ms)
+Completed 200 OK in 81ms (Views: 39.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:30:25 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/channels/2/videos" for 127.0.0.1 at 2012-07-30 22:30:27 -0700
+Processing by ChannelsController#videos as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mVideo Load (2.5ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  Rendered channels/videos.mobile.erb within layouts/application (119.8ms)
+Completed 200 OK in 179ms (Views: 145.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712628064" for 127.0.0.1 at 2012-07-30 22:30:28 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:33:32 -0700
+Processing by ChannelsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mChannel Load (0.5ms)[0m  [1mSELECT "channels".* FROM "channels" [0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  Rendered channels/index.mobile.erb within layouts/application (13.6ms)
+Completed 200 OK in 77ms (Views: 38.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:33:32 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2012-07-30 22:33:35 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:33:35 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" [0m
+  [1m[35mVideo Load (3.6ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  [1m[36mVideo Load (2.4ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  Rendered channels/index.mobile.erb within layouts/application (24.0ms)
+Completed 200 OK in 162ms (Views: 132.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:33:36 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-07-30 22:33:38 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/sessions/new.mobile.erb within layouts/application (12.5ms)
+Completed 200 OK in 61ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:33:38 -0700
+Served asset /mobile.js - 304 Not Modified (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-07-30 22:33:43 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QAlPz5IIyyLJA5EMepaiCfR9/V/mktLbd5CnLNTnVQU=", "user"=>{"email"=>"yun999@kim.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'yun999@kim.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2012-07-31 05:33:43.572654', "sign_in_count" = 2, "updated_at" = '2012-07-31 05:33:43.573945' WHERE "users"."id" = 8
+  [1m[36m (84.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 202ms (ActiveRecord: 86.0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:33:43 -0700
+Processing by ChannelsController#index as */*
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" [0m
+  [1m[35mVideo Load (2.3ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  [1m[36mVideo Load (2.3ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  Rendered channels/index.mobile.erb within layouts/application (18.5ms)
+Completed 200 OK in 81ms (Views: 44.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712824123" for 127.0.0.1 at 2012-07-30 22:33:44 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/channels/2/videos" for 127.0.0.1 at 2012-07-30 22:33:51 -0700
+Processing by ChannelsController#videos as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mVideo Load (1.8ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/videos.mobile.erb within layouts/application (123.9ms)
+Completed 200 OK in 176ms (Views: 150.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712831701" for 127.0.0.1 at 2012-07-30 22:33:51 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2012-07-30 22:34:03 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:34:03 -0700
+Processing by ChannelsController#index as HTML
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/index.mobile.erb within layouts/application (13.7ms)
+Completed 200 OK in 84ms (Views: 38.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:34:03 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/channels/2/videos" for 127.0.0.1 at 2012-07-30 22:34:05 -0700
+Processing by ChannelsController#videos as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (0.5ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/videos.mobile.erb within layouts/application (119.7ms)
+Completed 200 OK in 181ms (Views: 149.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712845874" for 127.0.0.1 at 2012-07-30 22:34:05 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/videos/48" for 127.0.0.1 at 2012-07-30 22:34:17 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "48"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1
+  Rendered videos/show.mobile.erb within layouts/application (1.1ms)
+Completed 200 OK in 56ms (Views: 34.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:34:17 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:36:27 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" [0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  Rendered channels/index.mobile.erb within layouts/application (13.5ms)
+Completed 200 OK in 82ms (Views: 45.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:36:28 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/channels/2/videos" for 127.0.0.1 at 2012-07-30 22:36:29 -0700
+Processing by ChannelsController#videos as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mVideo Load (1.8ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  Rendered channels/videos.mobile.erb within layouts/application (115.5ms)
+Completed 200 OK in 166ms (Views: 143.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343712990203" for 127.0.0.1 at 2012-07-30 22:36:30 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/videos/46" for 127.0.0.1 at 2012-07-30 22:36:35 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mVideo Load (0.7ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "46"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m
+  Rendered videos/show.mobile.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 28.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:36:35 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:39:49 -0700
+Processing by ChannelsController#index as HTML
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (2.3ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/index.mobile.erb within layouts/application (15.3ms)
+Completed 200 OK in 164ms (Views: 129.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:39:49 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-07-30 22:40:03 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.mobile.erb within layouts/application (11.6ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:40:03 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-07-30 22:40:08 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fw48pgN4r0Ol4czk8ySi/zAfrMYdwB2FXftFVP51OV0=", "user"=>{"email"=>"yun999@kim.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'yun999@kim.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2012-07-31 05:33:43.572654', "current_sign_in_at" = '2012-07-31 05:40:08.543342', "sign_in_count" = 3, "updated_at" = '2012-07-31 05:40:08.544638' WHERE "users"."id" = 8[0m
+  [1m[35m (64.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 160ms (ActiveRecord: 66.1ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:40:08 -0700
+Processing by ChannelsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/index.mobile.erb within layouts/application (13.7ms)
+Completed 200 OK in 70ms (Views: 42.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343713209281" for 127.0.0.1 at 2012-07-30 22:40:09 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2012-07-30 22:40:15 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 15ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:40:15 -0700
+Processing by ChannelsController#index as HTML
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mVideo Load (2.9ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/index.mobile.erb within layouts/application (16.5ms)
+Completed 200 OK in 68ms (Views: 37.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:40:15 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-07-30 22:40:16 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.mobile.erb within layouts/application (108.5ms)
+Completed 200 OK in 157ms (Views: 154.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:40:17 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-07-30 22:40:22 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bL/sISsygKWbcN1PtP6pxFtAV+mvOsA9rMuMaP03TQM=", "user"=>{"email"=>"yun888@kim.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'yun888@kim.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2012-07-31 05:40:22.322743', "sign_in_count" = 2, "updated_at" = '2012-07-31 05:40:22.324225' WHERE "users"."id" = 9[0m
+  [1m[35m (88.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 198ms (ActiveRecord: 91.1ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:40:22 -0700
+Processing by ChannelsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (2.4ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mVideo Load (2.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  Rendered channels/index.mobile.erb within layouts/application (18.3ms)
+Completed 200 OK in 92ms (Views: 54.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343713223119" for 127.0.0.1 at 2012-07-30 22:40:23 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/channels/2/videos" for 127.0.0.1 at 2012-07-30 22:40:46 -0700
+Processing by ChannelsController#videos as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (0.5ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  Rendered channels/videos.mobile.erb within layouts/application (108.6ms)
+Completed 200 OK in 159ms (Views: 135.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343713246800" for 127.0.0.1 at 2012-07-30 22:40:46 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/channels/new" for 127.0.0.1 at 2012-07-30 22:40:56 -0700
+Processing by ChannelsController#new as */*
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  Rendered channels/_form.mobile.erb (4.0ms)
+  Rendered channels/new.mobile.erb within layouts/application (5.5ms)
+Completed 200 OK in 48ms (Views: 30.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343713256912" for 127.0.0.1 at 2012-07-30 22:40:56 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/jqtouch/themes/.png" for 127.0.0.1 at 2012-07-30 22:40:57 -0700
+
+ActionController::RoutingError (No route matches [GET] "/jqtouch/themes/.png"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.1) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.1) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.1) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.1) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/jqtouch/themes/images/chevron.png" for 127.0.0.1 at 2012-07-30 22:40:57 -0700
+
+ActionController::RoutingError (No route matches [GET] "/jqtouch/themes/images/chevron.png"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.1) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.1) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.1) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.1) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started POST "/channels" for 127.0.0.1 at 2012-07-30 22:41:18 -0700
+Processing by ChannelsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bL/sISsygKWbcN1PtP6pxFtAV+mvOsA9rMuMaP03TQM=", "channel"=>{"name"=>"2012 london summer olympics", "language"=>"en"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mChannel Exists (0.5ms)[0m  [1mSELECT 1 FROM "channels" WHERE "channels"."name" = '2012 london summer olympics' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "channels" ("categories", "channel_type", "created_at", "language", "name", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["categories", nil], ["channel_type", nil], ["created_at", Tue, 31 Jul 2012 05:41:18 UTC +00:00], ["language", "en"], ["name", "2012 london summer olympics"], ["tags", nil], ["updated_at", Tue, 31 Jul 2012 05:41:18 UTC +00:00]]
+  [1m[36m (78.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "feeds" ("categories", "channel_id", "created_at", "feedtype", "keywords", "name", "options", "queries", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["categories", nil], ["channel_id", 3], ["created_at", Tue, 31 Jul 2012 05:41:18 UTC +00:00], ["feedtype", "public"], ["keywords", ""], ["name", "2012 london summer olympics"], ["options", ""], ["queries", "2012 london summer olympics"], ["tags", nil], ["updated_at", Tue, 31 Jul 2012 05:41:18 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  COMMIT
+video: London 2012: Opening Ceremony Commences
+    d: The 2012 Summer Olympics officially kick off in London this afternoon. WSJ's David Enrich is live in the British capital to give us a sense of how Londoners are greeting the start of the games. Photo: Getty Images.
+thumbnail url: http://i.ytimg.com/vi/ZTDPO-deHbU/default.jpg
+  [1m[36mVideo Load (0.8ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'ZTDPO-deHbU'[0m
+new video inserted:  split_video_id[3] = ZTDPO-deHbU
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["description", "The 2012 Summer Olympics officially kick off in London this afternoon. WSJ's David Enrich is live in the British capital to give us a sense of how Londoners are greeting the start of the games. Photo: Getty Images."], ["duration", 248], ["is_complete", nil], ["keywords", ["Leisure", "Arts", "Living", "Lifestyle", "Sports", "Recreation", "United States", "2012 London", "2012 Olympics", "2012 Olympis Games", "2012 London Olympics", "Great Britain"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/ZTDPO-deHbU/default.jpg"], ["title", "London 2012: Opening Ceremony Commences"], ["updated_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["yt_video_id", "ZTDPO-deHbU"]]
+  [1m[35m (28.7ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 51 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 51)
+  [1m[36m (7.2ms)[0m  [1mCOMMIT[0m
+video: Ryan Lochte the "Channing Tatum" of the Olympics?
+    d: Bit.ly - Click to Subscribe! Facebook.com - Become a Fan! Twitter.com - Follow Us! Ryan Lochte might be dominating the 2012 London Olympics in the pool, but the star swimmer is stirring up buzz with female fans here in the states, who have so kindly dubbed him the Channing Tatum of the Olympics games! The stand-out athelete has managed to become this summer's sweetheart, and like actor Channing Tatum, he's constantly flashing a great smile and those rock hard abs. Lochte admits that he completely changed his diet for the 2012 games, and obviously it's working. As much as we see the Channing Tatum comparison, we're thinking that Ryan Lochte has a whole lot in common with another celebrity -- Lil Wayne! When the swimmer showed off his first 2012 Gold medal to photographers in London, the bling around his neck was outshined by the red, white and blue diamond-encrusted grill in him mouth. Sporting grills has become Lochte's trademark -- he's been photographed rocking the funky accessory dating all the way back to 2007. Let us know if you're a part of the Lochte nation by commenting below? And make sure to fill us in on whether or not you think Ryan Lochte really is the Channing Tatum of the Olympics. For more 411 from Hollywood, stick with us right here on ClevverTV. I'm Joslyn Davis -- thanks for watching! Hosted by: Joslyn Davis
+thumbnail url: http://i.ytimg.com/vi/WBvHPz2bYac/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'WBvHPz2bYac'
+new video inserted:  split_video_id[3] = WBvHPz2bYac
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Entertainment Entertainment"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["description", "Bit.ly - Click to Subscribe! Facebook.com - Become a Fan! Twitter.com - Follow Us! Ryan Lochte might be dominating the 2012 London Olympics in the pool, but the star swimmer is stirring up buzz with female fans here in the states, who have so kindly dubbed him the Channing Tatum of the Olympics games! The stand-out athelete has managed to become this summer's sweetheart, and like actor Channing Tatum, he's constantly flashing a great smile and those rock hard abs. Lochte admits that he completely changed his diet for the 2012 games, and obviously it's working. As much as we see the Channing Tatum comparison, we're thinking that Ryan Lochte has a whole lot in common with another celebrity -- Lil Wayne! When the swimmer showed off his first 2012 Gold medal to photographers in London, the bling around his neck was outshined by the red, white and blue diamond-encrusted grill in him mouth. Sporting grills has become Lochte's trademark -- he's been photographed rocking the funky accessory dating all the way back to 2007. Let us know if you're a part of the Lochte nation by commenting below? And make sure to fill us in on whether or not you think Ryan Lochte really is the Channing Tatum of the Olympics. For more 411 from Hollywood, stick with us right here on ClevverTV. I'm Joslyn Davis -- thanks for watching! Hosted by: Joslyn Davis"], ["duration", 93], ["is_complete", nil], ["keywords", ["ryan", "lochte", "2012", "summer", "olympics", "london", "channing", "tatum", "michael", "phelps", "lil", "wayne", "grill", "grillz", "gold", "medal", "swimming"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/WBvHPz2bYac/default.jpg"], ["title", "Ryan Lochte the \"Channing Tatum\" of the Olympics?"], ["updated_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["yt_video_id", "WBvHPz2bYac"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 52 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 52)[0m
+  [1m[35m (8.3ms)[0m  COMMIT
+video: Team USA Beatable?
+    d: Carmelo Anthony, Mike Krzyzewski react to Nicolas Batum's comments that Team USA is beatable and TJ Quinn talks about matchup with Tunisia.
+thumbnail url: http://i.ytimg.com/vi/mP5Tb7UNZ5k/default.jpg
+  [1m[36mVideo Load (0.8ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'mP5Tb7UNZ5k'[0m
+new video inserted:  split_video_id[3] = mP5Tb7UNZ5k
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["description", "Carmelo Anthony, Mike Krzyzewski react to Nicolas Batum's comments that Team USA is beatable and TJ Quinn talks about matchup with Tunisia."], ["duration", 175], ["is_complete", nil], ["keywords", ["Coach K", "Nicolas Batum", "sportscenter", "Mike Krzyzewski", "London Olympics", "2012 London Olympics", "Olympics", "New York Knicks", "Summer Games", "TJ Quinn", "NBA", "Basketball", "Anthony", "Carmelo"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/mP5Tb7UNZ5k/default.jpg"], ["title", "Team USA Beatable?"], ["updated_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["yt_video_id", "mP5Tb7UNZ5k"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 53 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 53)
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+video: Why so many empty seats at London games?
+    d: Organizers look for ways to fill empty seats at Olympic venues. CNN's Ben Wyatt reports. For more CNN videos, check out our YouTube channel at www.youtube.com Or visit our site at www.cnn.com
+thumbnail url: http://i.ytimg.com/vi/FUiWGcmuK4U/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'FUiWGcmuK4U'
+new video inserted:  split_video_id[3] = FUiWGcmuK4U
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "News News & Politics"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["description", "Organizers look for ways to fill empty seats at Olympic venues. CNN's Ben Wyatt reports. For more CNN videos, check out our YouTube channel at www.youtube.com Or visit our site at www.cnn.com"], ["duration", 150], ["is_complete", nil], ["keywords", ["london 2012", "summer olympics 2012", "seating london", "empty", "empty seats", "london empty seats", "CNN", "News", "CNN TV", "London Olympics", "2012 Olympics", "Summer Games"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/FUiWGcmuK4U/default.jpg"], ["title", "Why so many empty seats at London games?"], ["updated_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["yt_video_id", "FUiWGcmuK4U"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 54 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 54)[0m
+  [1m[35m (8.4ms)[0m  COMMIT
+video: London Summer Olympics 2012 - Opening Weekend: Swimming & Gymnastics
+    d: sdrl.tv - Get all your Olympics scoop on SideReel's Olympics page! www.facebook.com - Become a Fan! twitter.com - Follow Us! reeltv.sidereel.com - Get more news & buzz around the top TV shows online! London Summer Olympics 2012 - Opening Weekend Swimming & Gymnastics The 2012 London Summer Olympics are here! The first weekend of events start off with Swimming - including two-time Olympic champ in the event Michael Phelps going up against current world champ Ryan Lochte. Also, taking place this weekend are both men's, and a first look at women's, gymnastics! Transcription: The cauldron's been lit and it's time to get things started. I'm Alex and I've got your scoop on the weekend's big events, coming up on today's Olympics Buzz. Swimming dominates the first week of action in London and Saturday's main event is one of the most anticipated of the Games—two-time Olympic champ in the event Michael Phelps going up against current world champ Ryan Lochte in the men's 400-meter IM. Saturday also offers a first look at 17-year-old phenom Missy Franklin, making her Olympic debut as she leads the US 4x100-meter freestyle relay team. Men's gymnastics also gets under way Saturday, with the US team looking for its third-straight Olympic medal. John Orozco, Danell Leyva and Jonathan Horton are all capable of very big performances. And, on a temporary court set up outside of Buckingham Palace, you may want to look for Misty May-Treanor and Kerri Walsh Jennings, who are going for their <b>...</b>
+thumbnail url: http://i.ytimg.com/vi/QdRuovCBtKU/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'QdRuovCBtKU'[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 1)[0m
+  [1m[35m (8.5ms)[0m  COMMIT
+video: 2012 London Summer Olympics Opening Ceremonies Wows the World
+    d: Olympics
+thumbnail url: http://i.ytimg.com/vi/CelMqDt5EEg/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'CelMqDt5EEg'[0m
+new video inserted:  split_video_id[3] = CelMqDt5EEg
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Comedy Comedy"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["description", "Olympics"], ["duration", 186], ["is_complete", nil], ["keywords", ["2012 Summer Olympics London", "SNTV Olympic News", "Latest Olympic News", "London 2012 Opening Ceremonies", "Summer Olympics Trailer", "Move the Beat of London", "Olympic Song", "2012 Summer Olympics"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/CelMqDt5EEg/default.jpg"], ["title", "2012 London Summer Olympics Opening Ceremonies Wows the World"], ["updated_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["yt_video_id", "CelMqDt5EEg"]]
+  [1m[35m (9.5ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 55 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 55)
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+video: Muse - Survival
+    d: Olympic athlete montage video featuring Muse's London 2012 official song, Survival.
+thumbnail url: http://i.ytimg.com/vi/66molzUEkWI/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '66molzUEkWI'
+new video inserted:  split_video_id[3] = 66molzUEkWI
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Music Music"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["description", "Olympic athlete montage video featuring Muse's London 2012 official song, Survival."], ["duration", 220], ["is_complete", nil], ["keywords", ["Muse", "Survival", "Olympics", "Official Song", "london 2012", "IOC", "International Olympic Committe", "locog", "Song (Composition Type)"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/66molzUEkWI/default.jpg"], ["title", "Muse - Survival"], ["updated_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["yt_video_id", "66molzUEkWI"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 56 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 56)[0m
+  [1m[35m (8.7ms)[0m  COMMIT
+video: GYMNASTICS Junkie! (London Summer Games 2012)
+    d: ThAnKyOu SO MUCH FOR COMMENTING/SUBBIN/FAVIN/THUMBS-UP-ING!! Anything you want to do in life, you can do it!!--XoXo--BLT :P Check out Memorable Moments now on Yahoo! Sports: bit.ly Also check out London 2012 Coverage from Yahoo! Sports: bit.ly STARRING/DIRECTED/WRITTEN/EDITED BY Brittani Taylor FILMED BY Tom Campbell www.thebjc.com ANIMATIONS BY http www.thedreamboxshop.com POSTER http SHIRTS www.brittanilouisetaylor.spreadshirt.com FACEBOOK http BONUS VIDEOS www.youtube.com TWITTER www.twitter.com WEBSITE www.brittanilouisetaylor.com GOOGLE+ https MUSIC www.musicloops.com http
+thumbnail url: http://i.ytimg.com/vi/unk6tMeLT0w/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'unk6tMeLT0w'[0m
+new video inserted:  split_video_id[3] = unk6tMeLT0w
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["description", "ThAnKyOu SO MUCH FOR COMMENTING/SUBBIN/FAVIN/THUMBS-UP-ING!! Anything you want to do in life, you can do it!!--XoXo--BLT :P Check out Memorable Moments now on Yahoo! Sports: bit.ly Also check out London 2012 Coverage from Yahoo! Sports: bit.ly STARRING/DIRECTED/WRITTEN/EDITED BY Brittani Taylor FILMED BY Tom Campbell www.thebjc.com ANIMATIONS BY http www.thedreamboxshop.com POSTER http SHIRTS www.brittanilouisetaylor.spreadshirt.com FACEBOOK http BONUS VIDEOS www.youtube.com TWITTER www.twitter.com WEBSITE www.brittanilouisetaylor.com GOOGLE+ https MUSIC www.musicloops.com http"], ["duration", 90], ["is_complete", nil], ["keywords", ["Brittani Taylor", "actress", "Hollywood", "2012 summer olympic games", "gymnastics", "gymnast", "kerri strugg", "1996", "atlanta", "gold", "memorable moments", "yahoo", "happy", "silly", "fun", "funny", "random", "vlog", "video blog", "love you guys", "Olympics", "smile"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/unk6tMeLT0w/default.jpg"], ["title", "GYMNASTICS Junkie! (London Summer Games 2012)"], ["updated_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["yt_video_id", "unk6tMeLT0w"]]
+  [1m[35m (9.1ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 57 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 57)
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+video: London 2012 Summer Olympics - Trailer
+    d: Subscribe to NBC for more Olympic coverage: full.sc Games of the XXX Olympiad: July 27 - August 12, 2012 Check Out NBC's New Shows Here: www.nbc.com Get more NBC: NBC Twitter: twitter.com NBC Facebook: facebook.com NBC Pinterest: pinterest.com NBC Tumblr: nbctv.tumblr.com
+thumbnail url: http://i.ytimg.com/vi/iOIv7XaAN10/default.jpg
+  [1m[35mVideo Load (0.8ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'iOIv7XaAN10'
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 5 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 5)
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+video: London 2012 Opening Ceremony NBC Olympic Theme & Trailer - "This Dream" (HD)
+    d: ímagíneRecordings artist, ísland, created the inspiring anthem, "This Dream", featured prominently in this NBC promo spot for the London 2012 Summer Olympic Games. Also featuring special guest, Brent Kutzle of OneRepublic, on cello. So be ínspíred....ímagíne the finish line....and líve this dream... --- ímagíneRecordings --- Artist: ísland Song: "This Dream" (feat. Brent Kutzle) Prod: Colin Thomas, Skylyter ©2012 ímagíneRecordings, ©2012 NBC Universal Video courtesy of NBC Universal. LIKE ísland on Facebook --- www.facebook.com FOLLOW ísland on Twitter @islandofcolors --- www.twitter.com Hashtags: #ísland - #London2012 - #ThisDream
+thumbnail url: http://i.ytimg.com/vi/eHwUjVcfqKw/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'eHwUjVcfqKw'
+new video inserted:  split_video_id[3] = eHwUjVcfqKw
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.7ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Music Music"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["description", "ímagíneRecordings artist, ísland, created the inspiring anthem, \"This Dream\", featured prominently in this NBC promo spot for the London 2012 Summer Olympic Games. Also featuring special guest, Brent Kutzle of OneRepublic, on cello. So be ínspíred....ímagíne the finish line....and líve this dream... --- ímagíneRecordings --- Artist: ísland Song: \"This Dream\" (feat. Brent Kutzle) Prod: Colin Thomas, Skylyter ©2012 ímagíneRecordings, ©2012 NBC Universal Video courtesy of NBC Universal. LIKE ísland on Facebook --- www.facebook.com FOLLOW ísland on Twitter @islandofcolors --- www.twitter.com Hashtags: #ísland - #London2012 - #ThisDream"], ["duration", 247], ["is_complete", nil], ["keywords", ["ísland", "ímagíne", "Recordings", "island", "imagine", "Colin", "Thomas", "Brent", "Kutzle", "Skylyter", "onerepublic", "Olympic", "Games", "London", "2012", "Summer", "Olympics", "Opening", "Ceremony", "Beijing", "Gold", "Swimming", "Track", "Field", "Live", "Usain", "Bolt", "Michael", "Phelps", "Ryan", "Lochte", "Kobe", "Bryant", "Gasol", "Lebron", "James", "Dana", "Vollmer", "Nastia", "Liukin", "Athlete", "NBC", "BBC", "CTV", "Official", "Theme", "Song", "Music", "News", "World", "Championships", "Running", "Medal", "Sports", "Meet", "Team", "USA", "Britain", "Inspirational", "Inspiring", "Anthem", "Stadium", "UK", "United", "Kingdom", "Relay", "100m", "400m", "Basketball", "Mens", "Womens"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/eHwUjVcfqKw/default.jpg"], ["title", "London 2012 Opening Ceremony NBC Olympic Theme & Trailer - \"This Dream\" (HD)"], ["updated_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["yt_video_id", "eHwUjVcfqKw"]]
+  [1m[36m (5.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 58 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 58)[0m
+  [1m[35m (8.3ms)[0m  COMMIT
+video: A digital Games - London 2012
+    d: Since the last Summer Games 1/3 of the world has started using the internet. So what does #London2012 have in store for the 'digital Games'? Visit www.london2012.com to find out more
+thumbnail url: http://i.ytimg.com/vi/-wwn99MNRf8/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '-wwn99MNRf8'[0m
+new video inserted:  split_video_id[3] = -wwn99MNRf8
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (6.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["description", "Since the last Summer Games 1/3 of the world has started using the internet. So what does #London2012 have in store for the 'digital Games'? Visit www.london2012.com to find out more"], ["duration", 138], ["is_complete", nil], ["keywords", ["London", "2012", "'London", "2012'", "Olympics", "Olympic", "'Olympic", "Games'", "Paralympic", "Paralympics", "'Paralympic", "'Social", "Media'", "Facebook", "Twitter", "Google", "'Google", "Plus'", "Google+", "Wenlock", "Mandeville", "Apps", "App", "Mobile", "'Mobile", "Apps'"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/-wwn99MNRf8/default.jpg"], ["title", "A digital Games - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:20 UTC +00:00], ["yt_video_id", "-wwn99MNRf8"]]
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 59 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 59)
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+video: Summer Olympics 2012 - London
+    d: We're talking about all things 2012 Summer Olympics. QOTV - What are your favorite events at the Summer Olympics and why? ManHauls - www.youtube.com TWITTER - twitter.com INSTAGRAM - followgram.me FACEBOOK - www.facebook.com PINTEREST - pinterest.com Fashion/Makeup Blog: www.eleventhgorgeous.com Nail Polish Blog www.egnailsit.com Olympic Nails - http compulsivenails.tumblr.com "olympics 2012" olympics london "team usa" "jordyn wieber" "ryan lochte" "michael phelps" "olympic games" "medal count" "olympic diving" gymnastics "rhythmic gymnastics" "jordyn wieber elimnation" "world champion" "Aly Raisman" "Gabby Douglas" "2012 gymnastics" othersideofeg eleventhgorgeous "tracy and stefanie" "tammy lou and sally ann" Medal Count for USA Gold - 5 Silver - 7 Bronze - 5 Total - 17
+thumbnail url: http://i.ytimg.com/vi/2Vtkb2rZUJg/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '2Vtkb2rZUJg'
+new video inserted:  split_video_id[3] = 2Vtkb2rZUJg
+new video inserted: provider =  youtube
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Comedy Comedy"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "We're talking about all things 2012 Summer Olympics. QOTV - What are your favorite events at the Summer Olympics and why? ManHauls - www.youtube.com TWITTER - twitter.com INSTAGRAM - followgram.me FACEBOOK - www.facebook.com PINTEREST - pinterest.com Fashion/Makeup Blog: www.eleventhgorgeous.com Nail Polish Blog www.egnailsit.com Olympic Nails - http compulsivenails.tumblr.com \"olympics 2012\" olympics london \"team usa\" \"jordyn wieber\" \"ryan lochte\" \"michael phelps\" \"olympic games\" \"medal count\" \"olympic diving\" gymnastics \"rhythmic gymnastics\" \"jordyn wieber elimnation\" \"world champion\" \"Aly Raisman\" \"Gabby Douglas\" \"2012 gymnastics\" othersideofeg eleventhgorgeous \"tracy and stefanie\" \"tammy lou and sally ann\" Medal Count for USA Gold - 5 Silver - 7 Bronze - 5 Total - 17"], ["duration", 571], ["is_complete", nil], ["keywords", ["olympics 2012", "olympics", "london", "tiny speedos", "speedo", "swimming", "Opening", "Ceremony", "2012", "team usa", "jordyn wieber", "ryan lochte", "michael phelps", "olympic games", "medal count", "olympic diving", "gymnastics", "rhythmic gymnastics", "jordyn wieber elimnation", "world champion", "Aly Raisman", "Gabby Douglas", "2012 gymnastics", "othersideofeg", "eleventhgorgeous", "tracy and stefanie", "tammy lou and sally ann"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/2Vtkb2rZUJg/default.jpg"], ["title", "Summer Olympics 2012 - London"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "2Vtkb2rZUJg"]]
+  [1m[36m (8.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 60 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 60)[0m
+  [1m[35m (8.2ms)[0m  COMMIT
+video: Olympic Torch Relay Day 68 Highlights - London 2012
+    d: The Olympic Flame travels from Harrow to Haringey, visiting Wembley Stadium and Alexandra Palace.
+thumbnail url: http://i.ytimg.com/vi/x7PI-I-hniA/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'x7PI-I-hniA'[0m
+new video inserted:  split_video_id[3] = x7PI-I-hniA
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "The Olympic Flame travels from Harrow to Haringey, visiting Wembley Stadium and Alexandra Palace."], ["duration", 111], ["is_complete", nil], ["keywords", ["Olympic Games", "Olympic", "Olympics", "Games", "Torch", "Relay", "Torch Relay", "London", "2012", "London 2012"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/x7PI-I-hniA/default.jpg"], ["title", "Olympic Torch Relay Day 68 Highlights - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "x7PI-I-hniA"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 61 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 61)
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+video: Wenlock tries the Olympic sports - London 2012
+    d: Wenlock - the London 2012 Olympic mascot - tries out each of the Olympic sports in this new animation. Wenlock and Mandeville's adventures continue at www.london2012.com
+thumbnail url: http://i.ytimg.com/vi/vTJqjZjWdOw/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'vTJqjZjWdOw'
+new video inserted:  split_video_id[3] = vTJqjZjWdOw
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "Wenlock - the London 2012 Olympic mascot - tries out each of the Olympic sports in this new animation. Wenlock and Mandeville's adventures continue at www.london2012.com"], ["duration", 209], ["is_complete", nil], ["keywords", ["'London", "2012'", "London", "2012", "Olympics", "'Olympic", "Games'", "Games", "Olympic", "'Wenlock", "and", "Mandeville'", "Wenlock", "Mandeville"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/vTJqjZjWdOw/default.jpg"], ["title", "Wenlock tries the Olympic sports - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "vTJqjZjWdOw"]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 62 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 62)[0m
+  [1m[35m (8.3ms)[0m  COMMIT
+video: .:1080P:. 120722 EXO-K - MAMA @ 2012 London Olympic Fighting Korea Concert
+    d: Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥...
+thumbnail url: http://i.ytimg.com/vi/FGeJC_gIhDk/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'FGeJC_gIhDk'[0m
+new video inserted:  split_video_id[3] = FGeJC_gIhDk
+new video inserted: provider =  youtube
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Music Music"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥Baekhyun♥..."], ["duration", 220], ["is_complete", nil], ["keywords", ["1080p", "720p", "HD", "LIVE", "120722", "EXO-K", "MAMA", "2012", "London", "Olympic", "Fighting", "Korea", "Concer"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/FGeJC_gIhDk/default.jpg"], ["title", ".:1080P:. 120722 EXO-K - MAMA @ 2012 London Olympic Fighting Korea Concert"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "FGeJC_gIhDk"]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 63 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 63)
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+video: Olympic Torch Relay Day 66 Highlights - London 2012
+    d: On Day 66 the Olympic Flame travelled from Lewisham to Wandsworth, paying a visit to Wimbledon All England Lawn Tennis and Croquet Club as well as Battersea Dogs & Cats home. Follow the London 2012 Torch Relay at www.london2012.com
+thumbnail url: http://i.ytimg.com/vi/PPZAxFk5VrU/default.jpg
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'PPZAxFk5VrU'
+new video inserted:  split_video_id[3] = PPZAxFk5VrU
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "On Day 66 the Olympic Flame travelled from Lewisham to Wandsworth, paying a visit to Wimbledon All England Lawn Tennis and Croquet Club as well as Battersea Dogs & Cats home. Follow the London 2012 Torch Relay at www.london2012.com"], ["duration", 91], ["is_complete", nil], ["keywords", ["Olympic Games", "Olympic", "Olympics", "Games", "Torch", "Relay", "Torch Relay", "London", "2012", "London 2012"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/PPZAxFk5VrU/default.jpg"], ["title", "Olympic Torch Relay Day 66 Highlights - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "PPZAxFk5VrU"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 64 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 64)[0m
+  [1m[35m (8.4ms)[0m  COMMIT
+video: Olympic Torch Relay Day 67 Highlights - London 2012
+    d: The Olympic Flame is carried by 144 Torchbearers, it travels on the London Underground and visits Kew Gardens on its journey from Kingston upon Thames to Ealing. Follow the London 2012 Torch Relay at www.london2012.com
+thumbnail url: http://i.ytimg.com/vi/_GcbsoAm6Xk/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '_GcbsoAm6Xk'[0m
+new video inserted:  split_video_id[3] = _GcbsoAm6Xk
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "The Olympic Flame is carried by 144 Torchbearers, it travels on the London Underground and visits Kew Gardens on its journey from Kingston upon Thames to Ealing. Follow the London 2012 Torch Relay at www.london2012.com"], ["duration", 114], ["is_complete", nil], ["keywords", ["Olympic Games", "Olympic", "Olympics", "Games", "Torch", "Relay", "Torch Relay", "London", "2012", "London 2012 Kew", "Ealing"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/_GcbsoAm6Xk/default.jpg"], ["title", "Olympic Torch Relay Day 67 Highlights - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "_GcbsoAm6Xk"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 65 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 65)
+  [1m[36m (5.2ms)[0m  [1mCOMMIT[0m
+video: Olympic Torch Relay Day 65 Highlights - London 2012
+    d: The Olympic Flame travels on the London Eye and passes through the London Boroughs of Redbridge, Barking and Dagenham.
+thumbnail url: http://i.ytimg.com/vi/0-sgYvdUvpM/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '0-sgYvdUvpM'
+new video inserted:  split_video_id[3] = 0-sgYvdUvpM
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "The Olympic Flame travels on the London Eye and passes through the London Boroughs of Redbridge, Barking and Dagenham."], ["duration", 98], ["is_complete", nil], ["keywords", ["Olympic Games", "Olympic", "Olympics", "Games", "Torch", "Relay", "Torch Relay", "London", "2012", "London 2012"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/0-sgYvdUvpM/default.jpg"], ["title", "Olympic Torch Relay Day 65 Highlights - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "0-sgYvdUvpM"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 66 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 66)[0m
+  [1m[35m (7.5ms)[0m  COMMIT
+video: Olympic Torch Relay Day 64 Highlights - London 2012
+    d: The Olympic Flame spends its first full day in London, travelling in the London Boroughs of Newham, Tower Hamlets, Hackney and Waltham Forest. Follow the Relay at www.london2012.com
+thumbnail url: http://i.ytimg.com/vi/lwAL5pBVTnU/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'lwAL5pBVTnU'[0m
+new video inserted:  split_video_id[3] = lwAL5pBVTnU
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "The Olympic Flame spends its first full day in London, travelling in the London Boroughs of Newham, Tower Hamlets, Hackney and Waltham Forest. Follow the Relay at www.london2012.com"], ["duration", 144], ["is_complete", nil], ["keywords", ["Olympic Games", "Olympic", "Olympics", "Games", "Torch", "Relay", "Torch Relay", "London", "2012", "London 2012", "Hackney", "Waltham Forest"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/lwAL5pBVTnU/default.jpg"], ["title", "Olympic Torch Relay Day 64 Highlights - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "lwAL5pBVTnU"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 67 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 67)
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+video: Olympic Torch Relay Week 9 Highlights - London 2012
+    d: Watch the highlights from the last nine weeks of the London 2012 Olympic Torch Relay. In total 10.2 million people have lined the streets to see the Flame. Follow the Flame on its journey around the UK at www.london2012.com
+thumbnail url: http://i.ytimg.com/vi/Ix6fUk9VryQ/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Ix6fUk9VryQ'
+new video inserted:  split_video_id[3] = Ix6fUk9VryQ
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "Watch the highlights from the last nine weeks of the London 2012 Olympic Torch Relay. In total 10.2 million people have lined the streets to see the Flame. Follow the Flame on its journey around the UK at www.london2012.com"], ["duration", 144], ["is_complete", nil], ["keywords", ["Olympic Games", "Olympic", "Olympics", "Games", "Torch", "Relay", "Torch Relay", "London", "2012", "London 2012 week 9"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/Ix6fUk9VryQ/default.jpg"], ["title", "Olympic Torch Relay Week 9 Highlights - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "Ix6fUk9VryQ"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 68 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 68)[0m
+  [1m[35m (8.6ms)[0m  COMMIT
+video: Survival - Muse (Official Song of the London Olympic Games) [HQ] - with Lyrics
+    d: Here the latest Muse song, Survival, taken from their latest album "The 2nd Law" in high quality. This is the official song for the 2012 London Olympic Games. Enjoy ! Here the lyrics : " *First intro * *Second intro* -Race, life's a race And I'm gonna win Yes, I'm gonna win I'll light the fuse And I'll never lose And I choose to survive [So I told you ] -Whatever it takes [So I told you] You won't pull ahead [So I told you] I'll keep up the pace [So I told you] And I'll reveal my strength, [So I told you] To the whole human race [So I told you] -Yes I am prepeared [So I told you] To stay alive [So I told you] I won't forgive [So I told you] Vengeance is mine [So I told you] And I won't give in [So I told you] Because I choose to thrive [So I told you] -Yeah I'm gonna win ! *First Solo* -Race, it's a race [So I told you] But I'm gonna win [So I told you] Yes, I'm gonna win [So I told you] I will light the fuse [So I told you] I'll never lose [So I told you] I choose to survive [So I told you] -Whatever it takes [So I told you] You won't pull ahead [So I told you] Because I'll keep up the pace [So I told you] And I'll reveal my strength, [So I told you] To the whole human race [So I told you] -Yeah I'm gonna win ! *Second Solo* [Fight ! Fight ! Fight ! Win ! Win ! Win ! ] -Yes I'm gonna win !" I don't have the rights of the song. There are no copyrights infringment intent. All the rights of the song go to the Muse band.
+thumbnail url: http://i.ytimg.com/vi/68mw8AE9l_g/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '68mw8AE9l_g'[0m
+new video inserted:  split_video_id[3] = 68mw8AE9l_g
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Music Music"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "Here the latest Muse song, Survival, taken from their latest album \"The 2nd Law\" in high quality. This is the official song for the 2012 London Olympic Games. Enjoy ! Here the lyrics : \" *First intro * *Second intro* -Race, life's a race And I'm gonna win Yes, I'm gonna win I'll light the fuse And I'll never lose And I choose to survive [So I told you ] -Whatever it takes [So I told you] You won't pull ahead [So I told you] I'll keep up the pace [So I told you] And I'll reveal my strength, [So I told you] To the whole human race [So I told you] -Yes I am prepeared [So I told you] To stay alive [So I told you] I won't forgive [So I told you] Vengeance is mine [So I told you] And I won't give in [So I told you] Because I choose to thrive [So I told you] -Yeah I'm gonna win ! *First Solo* -Race, it's a race [So I told you] But I'm gonna win [So I told you] Yes, I'm gonna win [So I told you] I will light the fuse [So I told you] I'll never lose [So I told you] I choose to survive [So I told you] -Whatever it takes [So I told you] You won't pull ahead [So I told you] Because I'll keep up the pace [So I told you] And I'll reveal my strength, [So I told you] To the whole human race [So I told you] -Yeah I'm gonna win ! *Second Solo* [Fight ! Fight ! Fight ! Win ! Win ! Win ! ] -Yes I'm gonna win !\" I don't have the rights of the song. There are no copyrights infringment intent. All the rights of the song go to the Muse band."], ["duration", 316], ["is_complete", nil], ["keywords", ["muse", "song", "2012", "the", "2nd", "second", "law", "official", "olympic", "olympics", "games", "anthem", "london", "music", "musique", "great", "amazing", "wonderfull", "youtube", "google", "daylimotion", "bbc", "radio", "one", "bellamy", "you", "must", "see", "more", "than", "bieber"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/68mw8AE9l_g/default.jpg"], ["title", "Survival - Muse (Official Song of the London Olympic Games) [HQ] - with Lyrics"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "68mw8AE9l_g"]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 69 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 69)
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+video: Danny Macaskill - Olympic Torch // 2012 - London
+    d: Trials rider Danny MacAskill carries the 2012 Olympic Torch! Uploaded and edit by: Jakob Fuglsang Petersen, jakobfuglsangblog.dk 06.08.12 Rider Danny Macaskill Tv Channel: BBC ------------------------------------------- ------------------------------------------- Facebook-page for Jakob: - www.facebook.com Website: - jakobfuglsangblog.dk ------------------------------------------- ------------------------------------------- Facebook-page for Danny - https Website: - www.dannymacaskill.co.uk
+thumbnail url: http://i.ytimg.com/vi/F_PKgW4GTNY/default.jpg
+  [1m[35mVideo Load (0.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'F_PKgW4GTNY'
+new video inserted:  split_video_id[3] = F_PKgW4GTNY
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Travel Travel & Events"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "Trials rider Danny MacAskill carries the 2012 Olympic Torch! Uploaded and edit by: Jakob Fuglsang Petersen, jakobfuglsangblog.dk 06.08.12 Rider Danny Macaskill Tv Channel: BBC ------------------------------------------- ------------------------------------------- Facebook-page for Jakob: - www.facebook.com Website: - jakobfuglsangblog.dk ------------------------------------------- ------------------------------------------- Facebook-page for Danny - https Website: - www.dannymacaskill.co.uk"], ["duration", 223], ["is_complete", nil], ["keywords", ["London (City/Town/Village)"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/F_PKgW4GTNY/default.jpg"], ["title", "Danny Macaskill - Olympic Torch // 2012 - London"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "F_PKgW4GTNY"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 70 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 70)[0m
+  [1m[35m (8.5ms)[0m  COMMIT
+video: Olympic Torch Relay Day 62 Highlights - London 2012
+    d: The Olympic Flame travels from Deal to Maidstone, ending the day at Leeds Castle. Follow the Relay at www.london2012.com
+thumbnail url: http://i.ytimg.com/vi/PShevYVkf7s/default.jpg
+  [1m[36mVideo Load (0.7ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'PShevYVkf7s'[0m
+new video inserted:  split_video_id[3] = PShevYVkf7s
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "The Olympic Flame travels from Deal to Maidstone, ending the day at Leeds Castle. Follow the Relay at www.london2012.com"], ["duration", 101], ["is_complete", nil], ["keywords", ["Olympic Games", "Olympic", "Olympics", "Games", "Torch", "Relay", "Torch Relay", "London", "2012", "London 2012", "Deal", "Maidstone", "Leeds Castle"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/PShevYVkf7s/default.jpg"], ["title", "Olympic Torch Relay Day 62 Highlights - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "PShevYVkf7s"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 71 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 71)
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+video: Hangout On Air with Usain Bolt before the Olympics
+    d: On 26 July 2012 Usain Bolt joined Colin Jackson and friends for a Hangout on the official London 2012 Google Plus page. Join us on Google Plus here: l2012.cm
+thumbnail url: http://i.ytimg.com/vi/5Px3qAyxh2k/default.jpg
+  [1m[35mVideo Load (0.8ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '5Px3qAyxh2k'
+new video inserted:  split_video_id[3] = 5Px3qAyxh2k
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "On 26 July 2012 Usain Bolt joined Colin Jackson and friends for a Hangout on the official London 2012 Google Plus page. Join us on Google Plus here: l2012.cm"], ["duration", 1330], ["is_complete", nil], ["keywords", ["London", "2012", "'London", "2012'", "Olympics", "Olympic", "Games", "'Olympic", "Games'", "Usain", "Bolt", "'Usain", "Bolt'", "'Colin", "Jackson'", "'Google", "Plus'", "'Hangout'", "Plus", "Hangout'", "Jamaica", "Athletics"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/5Px3qAyxh2k/default.jpg"], ["title", "Hangout On Air with Usain Bolt before the Olympics"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "5Px3qAyxh2k"]]
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (1.1ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 72 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 72)[0m
+  [1m[35m (5.2ms)[0m  COMMIT
+video: Olympic Torch Relay Day 58 Highlights - London 2012
+    d: On Day 58 of the Torch Relay the Flame travels from Southampton to Jersey and Guernsey, ending the day in Portsmouth. Follow the Relay at www.london2012.com
+thumbnail url: http://i.ytimg.com/vi/exZH9twJSe8/default.jpg
+  [1m[36mVideo Load (0.9ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'exZH9twJSe8'[0m
+new video inserted:  split_video_id[3] = exZH9twJSe8
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "is_complete", "keywords", "provider", "thumbnail_url", "title", "updated_at", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["categories", "Sports Sports"], ["continue", nil], ["created_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["description", "On Day 58 of the Torch Relay the Flame travels from Southampton to Jersey and Guernsey, ending the day in Portsmouth. Follow the Relay at www.london2012.com"], ["duration", 109], ["is_complete", nil], ["keywords", ["Olympic", "Olympics", "Games", "Torch", "Relay", "Torch Relay", "London", "2012", "London 2012"]], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/exZH9twJSe8/default.jpg"], ["title", "Olympic Torch Relay Day 58 Highlights - London 2012"], ["updated_at", Tue, 31 Jul 2012 05:41:21 UTC +00:00], ["yt_video_id", "exZH9twJSe8"]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3 AND "videos"."id" = 73 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (3, 73)
+  [1m[36m (4.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/channels/3
+Completed 302 Found in 2635ms (ActiveRecord: 562.5ms)
+
+
+Started GET "/channels/3" for 127.0.0.1 at 2012-07-30 22:41:21 -0700
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 3[0m
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 3
+  Rendered channels/show.mobile.erb within layouts/application (7.6ms)
+Completed 200 OK in 56ms (Views: 32.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343713281712" for 127.0.0.1 at 2012-07-30 22:41:21 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/channels/3/videos" for 127.0.0.1 at 2012-07-30 22:41:24 -0700
+Processing by ChannelsController#videos as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mChannel Load (0.5ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mVideo Load (1.8ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3[0m
+  Rendered channels/videos.mobile.erb within layouts/application (111.8ms)
+Completed 200 OK in 161ms (Views: 137.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/mobile.js?body=1&_=1343713285242" for 127.0.0.1 at 2012-07-30 22:41:25 -0700
+Served asset /mobile.js - 200 OK (0ms)
+
+
+Started GET "/videos/73" for 127.0.0.1 at 2012-07-30 22:41:29 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[35mVideo Load (0.8ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "73"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1
+  Rendered videos/show.mobile.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 26.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:41:29 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:42:27 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" 
+  [1m[36mVideo Load (2.5ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mVideo Load (1.6ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  [1m[36mVideo Load (2.5ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3[0m
+  Rendered channels/index.mobile.erb within layouts/application (23.2ms)
+Completed 200 OK in 88ms (Views: 44.2ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:42:28 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2012-07-30 22:42:31 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/channels
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-07-30 22:42:31 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" [0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  [1m[35mVideo Load (1.6ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 3
+  Rendered channels/index.mobile.erb within layouts/application (19.1ms)
+Completed 200 OK in 159ms (Views: 125.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-07-30 22:42:31 -0700
+Served asset /mobile.js - 304 Not Modified (0ms)
