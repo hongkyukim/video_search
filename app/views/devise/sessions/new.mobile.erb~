@@ -14,4 +14,7 @@
   <div><%= f.submit "Sign in" %></div>
 <% end %>
 
+
+<%= link_to "Sign up for New User", new_user_path %> <br />
+
 <%= render :partial => "devise/shared/links" %>
