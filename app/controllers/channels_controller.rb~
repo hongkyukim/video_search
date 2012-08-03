@@ -8,7 +8,7 @@ class ChannelsController < InheritedResources::Base
     ##@channels = @user.channels
     ### get all channels
     @channels = Channel.all
-
+    @title = 'All Channels'
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @channels }

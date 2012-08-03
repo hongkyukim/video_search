@@ -52,5 +52,12 @@
 <% end %>
 
 
-
+<ul class="individual">
+        <li><%= link_to 'Back to All Channels', channels_path %></li>
+       <% if user_signed_in? %>
+                <li><%= link_to 'Setting Channel', user_channel_path(current_user, @channel) %> </li>
+                <li><%= link_to 'Setting Channel', user_channel_path(current_user, @channel) %> </li>
+       <% end %>
+       <li><%= link_to 'Home', channels_path %></li>
+</ul>
 

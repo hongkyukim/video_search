@@ -1,15 +1,12 @@
 
-
 <h1>All Channels</h1>
 <ul>                   
   <% for channel in @channels %>
     <li class="arrow">
       <%= link_to channel.name, videos_channel_path(channel) %>
-      <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
       <small class="counter"><%= channel.videos.size %></small>
     </li>
 
-    <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
   <% end %>
 </ul>
 
@@ -19,10 +16,11 @@
       <ul><li><%= link_to "Add My New Channel", new_user_channel_path(current_user) %></li></ul>
       <ul><li><%= link_to "Go To My Channels", channels_user_path(current_user) %></li></ul>
 <% end %>
-<% if user_signed_in? %>
-      <li><%= link_to "Add My New Channel", new_user_channel_path(current_user) %></li>
-      <li><%= link_to "Go To My Channels", channels_user_path(current_user) %></li>
-<% end %>
+
+            <div class="toolbar">
+                <h1>All Channels</h1>
+                <a class="back" href="#">Home</a>
+            </div>
 
 <% if false %>
                <div class="jqt2">

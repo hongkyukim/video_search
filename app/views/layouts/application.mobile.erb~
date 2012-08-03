@@ -23,16 +23,49 @@
       <%- if true -%>
 	<!--<%= link_to "All Videos", videos_path %> |
 	<%= link_to "Channels", channels_path %>-->
-      <div class="toolbar">
+ 
+
+
+        <% if true %>
+        <ul class="individual">
+         <% if true %>
+           <li><%= link_to "Back", :back %></li>
+           <% if current_page? channels_path %>
+	       <% if user_signed_in? %>
+		  <li><!--<%= current_user.email %>-->
+		      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </li>  
+                  <li><%= link_to "My Channels", user_channels_path(current_user) %></li>
+	       <% else %>
+                  <li><%= link_to "Sign in or Sign Up", new_user_session_path %></li>
+	       <% end %>
+                   <!--<%= link_to "Back", nil, :class => "back"  %><%= link_to "Back", href="#", :class => "back" %>-->
+           <% end %>
+
+        <% else %>
+	   <li><%= link_to "Sign up", new_user_path %></li>
+           <li><%= link_to "sign in", new_user_session_path %></li>
+        <% end %>
+	<!--<%= link_to "Channels", channels_path, :class => "title", :location => "center"%>-->
+
+        <% if mobile_device? %>
+           <li><%= link_to "Home", channels_path %></li>
+        <% else %>
+           <li><%= link_to "Full Site", videos_path(:mobile => 0) %></li>
+        <% end %>
+        </ul>
+        <% end %>
+
+     <div class="toolbar">
         <h1><%=h yield(:title) %></h1>
 
         <% if true %>
+        <% if true %>
            <% if current_page? channels_path %>
 	       <% if user_signed_in? %>
-		  <%= current_user.email %>.
+		  <%= current_user.email %>
 		  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>   
 	       <% else %>
-		  <%= link_to "Sign in or Sign Up", new_user_session_path %>
+                  <%= link_to "Sign in or Sign Up", new_user_session_path %>
 	       <% end %>
            <% else %>
                    <%= link_to "Back", href="#", :class => "back"  %>
@@ -45,10 +78,12 @@
 	<!--<%= link_to "Channels", channels_path, :class => "title", :location => "center"%>-->
 
         <% if mobile_device? %>
-           <%= link_to "Home", channels_path, :class => "button", :rel => "external" %>
+           <li><%= link_to "Home", channels_path, :class => "button", :rel => "external" %></li>
         <% else %>
            <%= link_to "Full Site", videos_path(:mobile => 0), :class => "button", :rel => "external" %>
         <% end %>
+        <% end %>
+
         <%= yield(:toolbar) %>
       </div>
       <%- end -%>

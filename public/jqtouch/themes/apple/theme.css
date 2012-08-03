@@ -604,14 +604,14 @@ ul.individual li {
     text-align: center;
     -webkit-border-radius: 8px;
     -webkit-box-sizing: border-box;
-    width: 48%;
-    float: left;
+    width: 22.5%;  /* 48% */
+    float: left;   /* left */
     display: block;
     padding: 11px 10px 14px 10px;
 }
 
 ul.individual li + li {
-    float: right;
+    float: left; /* right */
 }
 
 ul.individual li a {
