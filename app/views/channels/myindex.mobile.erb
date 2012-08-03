@@ -1,0 +1,39 @@
+
+
+<h1>Channels</h1>
+<ul>                   
+  <% for channel in @channels %>
+    <li class="arrow">
+      <%= link_to channel.name, videos_channel_path(channel) %>
+      <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
+      <small class="counter"><%= channel.videos.size %></small>
+    </li>
+
+    <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
+  <% end %>
+</ul>
+
+<!--<ul><li class="arrow"><%= link_to "Add New channel", new_channel_path %></li></ul>-->
+
+<% if user_signed_in? %>
+      <ul><li><%= link_to "Add New Channel", new_channel_path %></li></ul>
+      <ul><li><%= link_to "Go To My Channels", channels_user_path(current_user) %></li></ul>
+<% end %>
+
+<% if false %>
+               <div class="jqt2">
+                    <h2>this is a step.</h2>
+                    <ul class="videoguide">
+                        <li><a href="#">@david</a></li>
+                        <li><a href="http://twitter.com/!#/beedesk">@beedesk</a></li>
+                        <li><a target="_blank" href="http://twitter.com/!#/davidkaneda333">@david3333</a></li>
+                    </ul>
+               </div>
+<% end %>
+
+<% if false %>
+               <div class="toolbar">
+                   <a class="back" href="#videos">videos</a>
+                   <%= link_to "Add New channel", new_channel_path %>
+                </div>
+<% end %>

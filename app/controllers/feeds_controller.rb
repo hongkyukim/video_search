@@ -83,9 +83,10 @@ class FeedsController < InheritedResources::Base
     end
   end
   def destroy
+debugger
     @channel = Channel.find(params[:channel_id])
     @feed = Feed.find(params[:id])
-
+debugger
     @feed.destroy
 
     respond_to do |format|

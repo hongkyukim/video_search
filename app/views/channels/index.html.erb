@@ -1,4 +1,4 @@
-<h1>Listing channels</h1>
+<h1>All Channels</h1>
 
 <table>
   <tr>
@@ -7,6 +7,7 @@
     <th>Tags</th>
     <th>Categories</th>
     <th>Language</th>
+    <th>User_ID</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,11 +20,14 @@
     <td><%= channel.tags %></td>
     <td><%= channel.categories %></td>
     <td><%= channel.language %></td>
+    <td><%= channel.user_id %></td>
     <td><%= link_to 'Show Videos ', videos_channel_path(channel) %></td>
-    <td><%= link_to 'Show', channel %></td>
+<% if true %>
+    <td><%= link_to 'Show', channel_path(channel) %></td>
     <% if can? :update, channel %>
         <td><%= link_to 'Edit', edit_channel_path(channel) %></td>
     <% end %>
+<% end %>
     <% if can? :destroy, channel %>
         <td><%= link_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete %></td>
     <% end %>
@@ -33,4 +37,13 @@
 
 <br />
 
-<%= link_to 'New Channel', new_channel_path %>
+<!--<%= link_to 'New Channel', new_channel_path %>-->
+
+<% if user_signed_in? %>
+      <li><%= link_to "Add My New Channel", new_user_channel_path(current_user) %></li>
+      <li><%= link_to "Go To My Channels", channels_user_path(current_user) %></li>
+<% end %>
+
+
+
+

@@ -3,6 +3,10 @@ class ChannelsController < InheritedResources::Base
   load_and_authorize_resource
 
   def index
+    ## provide all channels
+    ##@user = User.find(params[:user_id])
+    ##@channels = @user.channels
+    ### get all channels
     @channels = Channel.all
 
     respond_to do |format|
@@ -11,9 +15,22 @@ class ChannelsController < InheritedResources::Base
     end
   end
 
+  def myindex
+    ## provide all channels
+    @user = User.find(params[:user_id])
+    @channels = @user.channels
+debugger
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @channels }
+    end
+  end
+
   def show
-   @channel = Channel.find(params[:id])
-   @feeds = @channel.feeds
+    ###@user = User.find(params[:user_id])
+    ##@user = User.find(params[:user_id])
+    @channel = Channel.find(params[:id])
+    @user = User.find(@channel.user_id)
 
     respond_to do |format|
       ##debugger
@@ -23,7 +40,10 @@ class ChannelsController < InheritedResources::Base
   end
 
   def new
-    @channel = Channel.new
+    ##@channel = Channel.new
+    ##@user = User.find(params[:user_id])
+    @user = User.find(params[:user_id])
+    @channel = @user.channels.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -32,13 +52,17 @@ class ChannelsController < InheritedResources::Base
   end
 
   def edit
+    ##@channel = Channel.find(params[:id])
+    ##@user = User.find(params[:user_id])
     @channel = Channel.find(params[:id])
+    @user = User.find(@channel.user_id)
   end
 
   def create
-    @channel = Channel.new(params[:channel])
+    ###@channel = Channel.new(params[:channel])
+    @user = User.find(params[:user_id])
+    @channel = @user.channels.build(params[:channel])
 
-    
     respond_to do |format|
       if @channel.save
         ## create the first query feed of this channel automatically
@@ -56,8 +80,10 @@ class ChannelsController < InheritedResources::Base
   end
 
   def update
-    @channel = Channel.find(params[:id])
-
+    ##@channel = Channel.find(params[:id])
+    @user = User.find(params[:user_id])
+    @channel = @user.channels.find(params[:id])
+debugger
     respond_to do |format|
       if @channel.update_attributes(params[:channel])
         format.html { redirect_to @channel, notice: 'Video was successfully updated.' }
@@ -71,11 +97,18 @@ class ChannelsController < InheritedResources::Base
   end
 
   def destroy
+    ##@channel = Channel.find(params[:id])
+    ##@channel.destroy
+    ##@user = User.find(params[:user_id])
+    ##@channel = Channel.find(params[:id])
+debugger    
     @channel = Channel.find(params[:id])
+    @user = User.find(@channel.user_id)
+debugger 
     @channel.destroy
 
     respond_to do |format|
-      format.html { redirect_to channels_url }
+      format.html { redirect_to user_path(@user) }
       format.json { head :no_content }
     end
   end
@@ -91,7 +124,6 @@ class ChannelsController < InheritedResources::Base
       format.json { render json: @videos }
     end
   end
-
 
 
 end

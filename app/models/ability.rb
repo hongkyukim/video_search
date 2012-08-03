@@ -10,12 +10,18 @@ class Ability
        else
            can :read, :all
            can :videos, Channel
+           can :new, Channel
            can :create, Channel
            can :update, Channel do |channel|
-               true ##channel.try(:user) == user
+               channel.try(:user) == user
            end
+           can :destroy, Channel do |channel|
+               channel.try(:user) == user
+           end
+           can :new, Feed
            can :create, Feed
            can :update, Feed
+           can :destroy, Feed
 
            ##can :update, Article do |article|
            ##  article.try(:user) == user
@@ -26,6 +32,7 @@ class Ability
            can :show, User
            can :sign_in, User
            can :sign_out, User
+           can :channels, User
            ###can :index, User
        end
     else

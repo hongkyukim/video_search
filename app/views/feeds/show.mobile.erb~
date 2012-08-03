@@ -39,6 +39,12 @@
   <%= @feed.channel_id %>
 </p>
 
-<%= link_to 'Edit', edit_channel_feed_path(@channel, @feed) %> |
-<%= link_to 'Back', channel_path(@channel) %> |
-<%= link_to 'Destroy', channel_feed_path(@channel, @feed), :method => "DELETE" %>
+<ul><li><%= link_to 'Edit', edit_channel_feed_path(@channel, @feed) %></ul></li>
+<ul><li><%= link_to 'Back To Channel', channel_path(@channel) %></ul></li>
+<ul><li><%= link_to 'Destroy', channel_feeds_path(@channel, @feed), :method => "DELETE" %></ul></li>
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+<h1>My Channels</h1>
+<p id="notice"><%= notice %></p>  
+<ul>                   
+  <% for channel in @user.channels %>
+    <li class="arrow">
+      <%= link_to channel.name, videos_channel_path(channel) %>
+      <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
+      <small class="counter"><%= channel.videos.size %></small>
+    </li>
+
+    <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
+  <% end %>
+</ul>
+
+<ul><li><%= link_to "Add My New Channel", new_user_channel_path(@user) %></li></ul>
+<ul><li><%= link_to 'Go to All Channels', channels_path %></li></ul>
+
+

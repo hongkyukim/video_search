@@ -3,4 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @channel %> |
-<%= link_to 'Back', channels_path %>
+<%= link_to 'Back To Channel', channels_path %> |
+<%= link_to 'Back To My Channels', user_channels_path(@user) %>

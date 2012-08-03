@@ -7,7 +7,15 @@ LoginApp2::Application.routes.draw do
   ## get "/signup", :to => "devise/registrations#new"
   ## get "/logout", :to => "devise/session#destroy"
   ##end
-  resources :users
+
+  resources :users do
+      member do
+         get 'channels'
+      end
+      resources :channels
+  end
+
+
   resources :languages
   ## root :to => 'videos#index'
   root :to => 'channels#index'
@@ -21,6 +29,7 @@ LoginApp2::Application.routes.draw do
   resources :channels do
       member do
          get 'videos'
+         get 'myindex'
          ###post 'video_add'
          ###post 'video_remove'
       end

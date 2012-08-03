@@ -1,5 +1,5 @@
 class FeedsController < InheritedResources::Base
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:show, :index]
   load_and_authorize_resource
 
   def index
@@ -83,9 +83,10 @@ class FeedsController < InheritedResources::Base
     end
   end
   def destroy
+debugger
     @channel = Channel.find(params[:channel_id])
     @feed = Feed.find(params[:id])
-
+debugger
     @feed.destroy
 
     respond_to do |format|

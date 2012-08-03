@@ -3,22 +3,42 @@
 
 <% "Videos" %>
 
-<ul>
+<div id="videoguide">
+<!--<ul>-->
   <% for video in @videos %>
    
-    <!--<li class="arrow">-->
 
-      <td><a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></a> </td>
-      <td><%= link_to h(video.title), video %></td>
-      <br />
+    <ul class="rounded">
+      <li>
+        <!--<a class="blog-title" href="#livetest">Post Title</a><br />
+	<div class="month">Jun</div>
+	<div class="date">30</div>-->
+        <div class="videoimage"><a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "58x38" if video.thumbnail_url %></a></div>
+
+
+	<p class="post-description"><span><%= link_to h(video.title), video %></span></p>
+	<p class="post-videoid"> <i><%= video.id %></i> <em><%= video.provider %></em></p>
+      </li>
+    </ul>
+
+
+
+    <!--<li class="arrow">-->
+    <% if false %>
+      <a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></a>
+      <!--<td class="videopost">-->
+          <span class="description"><%= link_to h(video.title), video %></span>
+          <!--<span class="videoid"><%= video.id %></span>-->
+      <!--</td>-->
+
       <!--<individual2><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></individual2>-->
       <!--<individual2><%= link_to h(video.title), video %>
                    <%= video.id %>  <em><%= video.provider %></em></individual2>-->
       
       <!--<small class="counter"><%= @videos.size %></small>-->
     <!--</li>-->
-
-    <% if false then; %>
+    <% end %>
+    <% if false  %>
     <li class="arrow">
       <td><%= image_tag video.continue if video.continue %></td>
       <small><%= link_to h(video.title), video %></small>
@@ -29,7 +49,8 @@
     <% end %>
 
   <% end %>
-</ul>
+<!--</ul>-->
+</div>
 
 <!--<ul><li class="arrow"><%= link_to "New video", new_video_path %></li></ul>-->
 

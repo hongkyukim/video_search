@@ -5,31 +5,27 @@
   <%= @channel.name %>
 </p>
 
-<p>
+<!--<p>
   <b>Channel type:</b>
   <%= @channel.channel_type %>
-</p>
-<!--
-<p>
+</p>-->
+<!--<p>
   <b>Tags:</b>
   <%= @channel.tags %>
 </p>
-
 <p>
   <b>Categories:</b>
   <%= @channel.categories %>
 </p>-->
 
 <p>
-  <b>Language:</b>
-  <%= @channel.language %>
-</p>
-
-<p>
-  <b>Query Feeds:</b>
+  <b>Queries:</b>
   <%= "Not defined yet" if @channel.feeds.count == 0 %>
 </p>
+   <ul><li><%= link_to 'Show Queries', channel_feeds_path(@channel) %></li></ul>
 
+
+<% if false %>
 <ul>
   <% for f in @channel.feeds %>
     <li class="arrow">
@@ -38,10 +34,26 @@
     </li>
   <% end %>
 </ul>
+<% end %>
 
-<ul>  
-      <li class="arrow"><%= link_to "Add New Query Feed", new_channel_feed_path(@channel) %></li>
-      <li class="arrow"><%= link_to "Edit Channel Name", edit_channel_path(@channel) %></li>
-      <li class="arrow"><%= link_to "Destroy This Channel", channels_path, confirm: 'Are you sure?', method: :delete %></li>
-      <li class="arrow"><%= link_to "Cancel: Back to Channel", videos_channel_path(@channel) %></li>
-</ul>
+<p>
+  <b>Language:</b>
+  <%= @channel.language %>
+</p>
+<br />
+
+<% if true %>
+
+<% if can? :update, Channel %>
+   <ul><li><%= link_to 'Edit Channel', edit_channel_path(@channel) %></li></ul>
+<% end %>
+
+<ul><li><%= link_to 'Destroy channel', channel_path(@channel), confirm: 'Are you sure?', method: :delete %></li></ul>
+<ul><li><%= link_to 'Back to Channel', videos_channel_path(@channel) %></li></ul>
+
+<% end %>
+
+
+
+
+

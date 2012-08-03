@@ -28,8 +28,8 @@
     <td><%= feed.categories %></td>
     <td><%= feed.channel_id %></td>
     <td><%= link_to 'Show', channel_feed_path(@channel, feed) %></td>
-    <td><%= link_to 'Edit', edit_channel_feed_path(@channel, feed) %></td>
-    <td><%= link_to 'Destroy', channel_feed_path(@channel, feed), confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Edit', edit_channel_feed_path(@channel.id, feed) %></td>
+    <td><%= link_to 'Destroy', feed, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

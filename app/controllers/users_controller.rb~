@@ -97,4 +97,16 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+ # Display all channels of an user
+  def channels
+   @user = User.find(params[:id])
+   @channels = @user.channels.reverse
+debugger
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @channels }
+    end
+  end
+
 end
