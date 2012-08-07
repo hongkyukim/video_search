@@ -1,5 +1,12 @@
+<% title "All Channels" %>
 
-<h1>All Channels</h1>
+<% form_tag channels_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <ul>                   
   <% for channel in @channels %>
     <li class="arrow">
@@ -17,10 +24,12 @@
       <ul><li><%= link_to "Go To My Channels", channels_user_path(current_user) %></li></ul>
 <% end %>
 
+<% if false %>
             <div class="toolbar">
                 <h1>All Channels</h1>
                 <a class="back" href="#">Home</a>
             </div>
+<% end %>
 
 <% if false %>
                <div class="jqt2">

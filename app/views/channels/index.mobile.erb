@@ -1,5 +1,12 @@
+<% title "All Channels" %>
 
-<h1>All Channels</h1>
+<%= form_tag channels_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <ul>                   
   <% for channel in @channels %>
     <li class="arrow">

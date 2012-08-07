@@ -7,8 +7,10 @@ class ChannelsController < InheritedResources::Base
     ##@user = User.find(params[:user_id])
     ##@channels = @user.channels
     ### get all channels
-    @channels = Channel.all
-    @title = 'All Channels'
+
+    ###@channels = Channel.all
+    @channels = Channel.search(params[:search])
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @channels }
@@ -83,7 +85,7 @@ debugger
     ##@channel = Channel.find(params[:id])
     @user = User.find(params[:user_id])
     @channel = @user.channels.find(params[:id])
-debugger
+
     respond_to do |format|
       if @channel.update_attributes(params[:channel])
         format.html { redirect_to @channel, notice: 'Video was successfully updated.' }

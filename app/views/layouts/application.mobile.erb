@@ -20,84 +20,90 @@
   </head>
   <body>
     <div class="current">
-      <%- if true -%>
-	<!--<%= link_to "All Videos", videos_path %> |
-	<%= link_to "Channels", channels_path %>-->
+      
  
-
-
         <% if true %>
-        <ul class="individual">
-         <% if true %>
+          <ul class="individual">
+           <% if true %>
 
-           <% if !current_page? channels_path %>
-              <li><%= link_to "Back", :back %></li>
-           <% end %>
+              <% if !current_page? channels_path %>
+                  <li><%= link_to "Back", :back %></li>
+              <% end %>
 
-	   <% if user_signed_in? %>
+	      <% if user_signed_in? %>
 		  <li><!--<%= current_user.email %>-->
 		      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </li>  
                   <li><%= link_to "My Channels", user_channels_path(current_user) %></li>
-	   <% else %>
+	      <% else %>
                   <li><%= link_to "Sign in or Sign Up", new_user_session_path %></li>
-	   <% end %>
+	      <% end %>
                    <!--<%= link_to "Back", nil, :class => "back"  %><%= link_to "Back", href="#", :class => "back" %>-->
            
 
-        <% else %>
-	   <li><%= link_to "Sign up", new_user_path %></li>
-           <li><%= link_to "sign in", new_user_session_path %></li>
-        <% end %>
-	<!--<%= link_to "Channels", channels_path, :class => "title", :location => "center"%>-->
-
-        <% if mobile_device? %>
-           <li><%= link_to "Home", channels_path %></li>
-        <% else %>
-           <li><%= link_to "Full Site", videos_path(:mobile => 0) %></li>
-        <% end %>
-        </ul>
-        <% end %>
-
-     <div class="toolbar">
-        <h1><%=h yield(:title) %></h1>
-
-        <% if true %>
-        <% if true %>
-           <% if current_page? channels_path %>
-	       <% if user_signed_in? %>
-		  <%= current_user.email %>
-		  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>   
-	       <% else %>
-                  <%= link_to "Sign in or Sign Up", new_user_session_path %>
-	       <% end %>
            <% else %>
-                   <%= link_to "Back", href="#", :class => "back"  %>
-                   <!--<%= link_to "Back", nil, :class => "back"  %>-->
+	      <li><%= link_to "Sign up", new_user_path %></li>
+              <li><%= link_to "sign in", new_user_session_path %></li>
            <% end %>
+	   <!--<%= link_to "Channels", channels_path, :class => "title", :location => "center"%>-->
 
-        <% else %>
-	   <%= link_to "Sign up", new_user_path %> or <%= link_to "sign in", new_user_session_path %>
-        <% end %>
-	<!--<%= link_to "Channels", channels_path, :class => "title", :location => "center"%>-->
-
-        <% if mobile_device? %>
-           <li><%= link_to "Home", channels_path, :class => "button", :rel => "external" %></li>
-        <% else %>
-           <%= link_to "Full Site", videos_path(:mobile => 0), :class => "button", :rel => "external" %>
-        <% end %>
+           <% if mobile_device? %>
+               <li><%= link_to "Home", channels_path %></li>
+           <% else %>
+               <li><%= link_to "Full Site", videos_path(:mobile => 0) %></li>
+           <% end %>
+          </ul>
         <% end %>
 
-        <%= yield(:toolbar) %>
-      </div>
-      <%- end -%>
-      
-      <% unless flash.empty? %>
-        <div class="info">
-        <%- flash.each do |name, msg| -%>
-          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <%- if show_title? -%>
+          <div class="toolbar">
+        
+            <% if true %>
+              <% if true %>
+                 <% if current_page? channels_path %>
+	               <% if user_signed_in? %>
+		            <%= current_user.email %>
+		            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>   
+	               <% end %>
+                  <% else %>
+                        <%= link_to "Back", href="#", :class => "back"  %>
+                        <!--<%= link_to "Back", nil, :class => "back"  %>-->
+                  <% end %>
+
+              <% else %>
+	          <%= link_to "Sign up", new_user_path %> or <%= link_to "sign in", new_user_session_path %>
+              <% end %>
+	      <!--<%= link_to "Channels", channels_path, :class => "title", :location => "center"%>-->
+
+              <h1><%=h yield(:title) %></h1>
+              <!--<h1><%=h yield(:title) %></h1>-->
+              <% if mobile_device? %>
+                 <% if current_page? channels_path %>
+                      <% if user_signed_in? %>
+                           <li><%= link_to "My Channels", user_channels_path(current_user), :class => "button", :rel => "external" %></li>
+                      <% else %>
+                           <li><%= link_to "Sign in or Sign Up", new_user_session_path, :class => "button", :rel => "external" %></li>
+                      <% end %>
+                 <% else %>
+                    <li><%= link_to "Home", channels_path, :class => "button", :rel => "external" %></li>
+                 <% end %>
+              <% else %>
+                    <%= link_to "Full Site", videos_path(:mobile => 0), :class => "button", :rel => "external" %>
+              <% end %>
+            <% end %>
+
+            <%= yield(:toolbar) %>
+          </div>
         <%- end -%>
-        </div>
-      <% end %>
+
+      
+      
+        <% unless flash.empty? %>
+           <div class="info">
+              <%- flash.each do |name, msg| -%>
+                <%= content_tag :div, msg, :id => "flash_#{name}" %>
+              <%- end -%>
+           </div>
+        <% end %>
 
 <% if false %>
 <%unless current_user.blank? -%>
