@@ -22,11 +22,11 @@
     <div class="current">
       
  
-        <% if true %>
+      <% if false %>
           <ul class="individual">
            <% if true %>
 
-              <% if !current_page? channels_path %>
+              <% if !current_page?(:controller => 'channels', :action => 'index') %>
                   <li><%= link_to "Back", :back %></li>
               <% end %>
 
@@ -37,7 +37,7 @@
 	      <% else %>
                   <li><%= link_to "Sign in or Sign Up", new_user_session_path %></li>
 	      <% end %>
-                   <!--<%= link_to "Back", nil, :class => "back"  %><%= link_to "Back", href="#", :class => "back" %>-->
+              <!--<%= link_to "Back", nil, :class => "back"  %><%= link_to "Back", href="#", :class => "back" %>-->
            
 
            <% else %>
@@ -52,19 +52,18 @@
                <li><%= link_to "Full Site", videos_path(:mobile => 0) %></li>
            <% end %>
           </ul>
-        <% end %>
+     <% end %>
 
-        <%- if show_title? -%>
-          <div class="toolbar">
+     <%- if show_title? -%>
+        <div class="toolbar">
         
-            <% if true %>
+           <% if true %>
               <% if true %>
-                 <% if current_page? channels_path %>
+                 <% if current_page?(:controller => 'channels', :action => 'index') ||
+                       (current_page? channels_path ) %>
 	               <% if user_signed_in? %>
-		            <%= current_user.email %>
-		            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>   
-	               <!--<% else %>
-                             <%= link_to "Sign in or Sign Up", new_user_session_path %>-->
+		            <!--<%= current_user.email %>-->
+		            <%= link_to "Sign out", destroy_user_session_path, :class => "back", :method => :delete %>  
 	               <% end %>
                   <% else %>
                         <%= link_to "Back", href="#", :class => "back"  %>
@@ -76,14 +75,15 @@
               <% end %>
 	      <!--<%= link_to "Channels", channels_path, :class => "title", :location => "center"%>-->
 
-              <h1><%=h yield(:title) %></h1>
+              <h1><small><center><%=h yield(:title) %></center></small></h1>
               <!--<h1><%=h yield(:title) %></h1>-->
               <% if mobile_device? %>
-                 <% if current_page? channels_path %>
+                 <% if current_page?(:controller => 'channels', :action => 'index') ||
+                       ( current_page? channels_path ) %>
                       <% if user_signed_in? %>
                            <li><%= link_to "My Channels", user_channels_path(current_user), :class => "button", :rel => "external" %></li>
                       <% else %>
-                           <li><%= link_to "Sign in or Sign Up", new_user_session_path, :class => "button", :rel => "external" %></li>
+                           <li><%= link_to "Sign in", new_user_session_path, :class => "button", :rel => "external" %></li>
                       <% end %>
                  <% else %>
                     <li><%= link_to "Home", channels_path, :class => "button", :rel => "external" %></li>

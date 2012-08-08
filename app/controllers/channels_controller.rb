@@ -63,6 +63,7 @@ debugger
   def create
     ###@channel = Channel.new(params[:channel])
     @user = User.find(params[:user_id])
+    params[:channel][:name] = params[:channel][:name].downcase
     @channel = @user.channels.build(params[:channel])
 
     respond_to do |format|
