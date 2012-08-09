@@ -29,7 +29,6 @@ class Ability
            
            can :new, User
            can :create, User
-           can :show, User
            can :sign_in, User
            can :sign_out, User
            can :channels, User
@@ -39,7 +38,6 @@ class Ability
        can :read, :all
        can :new, User
        can :create, User
-       can :show, User
        can :sign_in, User
        ###can :index, User
     end

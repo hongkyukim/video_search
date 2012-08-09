@@ -10,20 +10,22 @@
       </ul>
     </div>
   <% end %>
+  
+  <ul class="edit rounded">
+	  
+	    <%= f.label :email %><br />
+	    <li><%= f.text_field :email %></li>
+	  
+	  <div class="field">
+	    <%= f.label :password %><br />
+	    <%= f.password_field :password %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :password_confirmation %><br />
+	    <%= f.password_field :password_confirmation %>
+	  </div>
+  </ul>
+  <!--<div class="actions">  <%= f.submit %> </div>-->
+  <%= link_to "Create User", user_session_path, :class => "submit whiteButton", :method => "POST", :rel => "external" %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

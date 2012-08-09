@@ -1,12 +1,14 @@
 <% title "My Channels" %>
 <p id="notice"><%= notice %></p>  
 
-<%= form_tag @user.channels, :method => 'get' do %>
+<ul>
+<%= form_tag channels_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
+</ul>
 
 <ul>                   
   <% for channel in @user.channels %>

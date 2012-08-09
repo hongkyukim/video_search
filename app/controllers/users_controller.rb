@@ -100,8 +100,8 @@ class UsersController < ApplicationController
 
  # Display all channels of an user
   def channels
-   @user = User.find(params[:id])
-   @channels = @user.channels.reverse
+    @user = User.find(params[:id])
+    @channels = @user.channels.reverse
 
     respond_to do |format|
       format.html # index.html.erb

@@ -18,6 +18,6 @@
     <!--<li><%= f.number_field :user_id, :placeholder => @user.id %></li>-->
   </ul>
 
-  <%= link_to "Create New Channel", channels_path, :class => "submit whiteButton", :method => "POST", :rel => "external" %>
+  <%= link_to "Submit", channels_path, :class => "submit whiteButton", :method => "POST", :rel => "external" %>
   
 <% end %>
