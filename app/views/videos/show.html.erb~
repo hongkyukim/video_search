@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
      
-
 <p>
   <b>Title:</b>
   <%= @video.title %>
-
 </p>
-<%= debug(@video) %>
+
+<!--<%= debug(@video) %>-->
 
 
 
@@ -59,9 +58,15 @@
 
 <% end %>
 
+<% if session[:last_channel_page] %>
+   <%= link_to "Back To My Channel", session[:last_channel_page] %> |
+<% end %>
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %> 
+
+
 <iframe id="player" type="text/html" width="640" height="390"
   src="http://www.youtube.com/embed/<%= @video.yt_video_id %>" 
   frameborder="0">
 
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+

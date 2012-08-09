@@ -1,8 +1,7 @@
-<h2>Sign in</h2>
-
+<% title "Sign In" %>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
-  <%= f.text_field :email %></div>
+  <li><%= f.text_field :email %></li></div>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
@@ -15,7 +14,7 @@
 <% end %>
 
 <br />
-<%= link_to "Sign up for New User", new_user_path %> 
+<li><%= link_to "Sign up for New User", new_user_path %></li> 
 <br />
 <br />
 <%= render :partial => "devise/shared/links" %>

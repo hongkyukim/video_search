@@ -21,7 +21,7 @@ class ChannelsController < InheritedResources::Base
     ## provide all channels
     @user = User.find(params[:user_id])
     @channels = @user.channels
-debugger
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @channels }
@@ -64,8 +64,11 @@ debugger
     ###@channel = Channel.new(params[:channel])
     @user = User.find(params[:user_id])
     params[:channel][:name] = params[:channel][:name].downcase
+debugger
+    params[:channel][:language] = "en" if params[:channel][:language].nil?
+    params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
-
+debugger
     respond_to do |format|
       if @channel.save
         ## create the first query feed of this channel automatically
@@ -104,10 +107,10 @@ debugger
     ##@channel.destroy
     ##@user = User.find(params[:user_id])
     ##@channel = Channel.find(params[:id])
-debugger    
+    
     @channel = Channel.find(params[:id])
     @user = User.find(@channel.user_id)
-debugger 
+ 
     @channel.destroy
 
     respond_to do |format|
@@ -119,8 +122,12 @@ debugger
 
   # Display all videos of a channel
   def videos
-   @channel = Channel.find(params[:id])
-   @videos = Channel.find(params[:id]).videos.reverse
+    @channel = Channel.find(params[:id])
+
+    #### search and add new videos 
+    Feed.make_firstfeed(@channel)
+
+    @videos = Channel.find(params[:id]).videos.reverse
    
     respond_to do |format|
       format.html # index.html.erb

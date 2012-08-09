@@ -5,15 +5,17 @@
   <% for video in @videos %>
 
     <ul class="rounded">
-      <li>
+      <li class="arrow">
         <!--<a class="blog-title" href="#livetest">Post Title</a><br />
 	<div class="month">Jun</div>
 	<div class="date">30</div>-->
         <div class="videoimage"><a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "58x38" if video.thumbnail_url %></a></div>
+	<p class="post-description"><a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><span><%= video.title %></span></a></p>
 
+        <p class="post-videoid"> <i><%= video.id %></i> <em><%= video.provider %></em></p>
 
-	<p class="post-description"><span><%= link_to h(video.title), video_path(video) %></span></p>
-	<p class="post-videoid"> <i><%= video.id %></i> <em><%= video.provider %></em></p>
+	<!--<p class="post-description"><span><%= link_to h(video.title), video_path(video) %></span></p>-->
+	<!--<p class="post-videoid"> <i><%= video.id %></i> <em><%= video.provider %></em></p>-->
       </li>
     </ul>
 
@@ -46,10 +48,12 @@
   <% end %>
 </div>
 <br />
-<ul><li><%= link_to 'Back to My Channels', user_channels_path(current_user) %></li></ul>
 
 <% if user_signed_in? %>
+     <ul><li><%= link_to 'Back to My Channels', user_channels_path(current_user) %></li></ul>
      <ul><li><%= link_to 'Setting Channel', user_channel_path(current_user, @channel) %></li></ul>
+<% else %>
+     <ul><li><%= link_to 'Back to All Channels', channels_path %></li></ul>
 <% end %>
 
 <% if false %>

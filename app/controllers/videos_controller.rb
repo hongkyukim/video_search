@@ -18,8 +18,9 @@ class VideosController < InheritedResources::Base
   # GET /videos/1
   # GET /videos/1.json
   def show
-   @video = Video.find(params[:id])
-
+    @video = Video.find(params[:id])
+    session[:last_channel_page] = request.env['HTTP_REFERER'] || channels_url
+debugger
     respond_to do |format|
       ##debugger
       format.html # show.html.erb
