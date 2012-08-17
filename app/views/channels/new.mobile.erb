@@ -1,6 +1,26 @@
 
 <% title "Add New Channel" %>
 
-<%= render :partial => 'form' %>
+<% if @user.channels.count > 5 %>
+
+   <h2>You already created 
+   <%= @user.channels.count %> channels.</h2>
+   <h2>In Free version you can create up to 5 channels.</h2>
+   <h2>Do you need more?</h2>
+   <input type="button" value="Do you need more channels?" onClick="showAnddoSendBillRequest('Hello Android!')" />
+
+    <script type="text/javascript">
+        function showAnddoSendBillRequest(toast) {
+            Android.doSendBillRequest(toast);
+        }
+    </script>
+
+    <h2>Otherwise, remove your channels and create new channels.</h2>
+
+<% else %>
+
+    <%= render :partial => 'form' %>
+
+<% end %>
 
 <ul><li><%= link_to "Back to My Channels", user_channels_path(@user) %></li></ul>

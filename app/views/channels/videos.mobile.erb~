@@ -2,11 +2,11 @@
 
 <% title "Videos" %>
 
-<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
+<input type="button" value="Test: Say hello InAppBilling" onClick="showAnddoSendBillRequest('Hello Android!')" />
 
 <script type="text/javascript">
-    function showAndroidToast(toast) {
-        Android.showToast(toast);
+    function showAnddoSendBillRequest(toast) {
+        Android.doSendBillRequest(toast);
     }
 </script>
 
