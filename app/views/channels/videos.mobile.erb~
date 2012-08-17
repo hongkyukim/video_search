@@ -1,6 +1,15 @@
 <h1><%= @channel.name %></h1>
 
 <% title "Videos" %>
+
+<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
+
+<script type="text/javascript">
+    function showAndroidToast(toast) {
+        Android.showToast(toast);
+    }
+</script>
+
 <div id="videoguide">
   <% for video in @videos %>
 
