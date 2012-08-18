@@ -10,6 +10,14 @@
     }
 </script>
 
+
+<input type="button" value="Test: REQUEST_PURCHASE sword_001" onClick="showAnddoREQUEST_PURCHASE('sword_001')" />
+
+<script type="text/javascript">
+    function showAnddoREQUEST_PURCHASE(toast) {
+        Android.doREQUEST_PURCHASE(toast);
+    }
+</script>
 <div id="videoguide">
   <% for video in @videos %>
 
