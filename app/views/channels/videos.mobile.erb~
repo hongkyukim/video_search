@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
     function showAnddoSendBillRequest(toast) {
-        Android.doSendBillRequest(toast);
+        AndroidPart.doSendBillRequest(toast);
     }
 </script>
 
@@ -15,7 +15,7 @@
 
 <script type="text/javascript">
     function showAnddoREQUEST_PURCHASE(toast) {
-        Android.doREQUEST_PURCHASE(toast);
+        AndroidPart.doREQUEST_PURCHASE(toast);
     }
 </script>
 <div id="videoguide">

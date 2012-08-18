@@ -1,7 +1,7 @@
 
 <% title "Add New Channel" %>
 
-<% if @user.channels.count > 5 %>
+<% if @user.channels.count > 4 %>
 
    <h2>You already created 
    <%= @user.channels.count %> channels.</h2>
@@ -11,7 +11,7 @@
 
     <script type="text/javascript">
         function showAnddoSendBillRequest(toast) {
-            JavaScriptInterface.doSendBillRequest(toast);
+            AndroidPart.doSendBillRequest(toast);
         }
     </script>
 
