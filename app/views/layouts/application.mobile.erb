@@ -60,12 +60,24 @@
                  <% if current_page?(:controller => 'channels', :action => 'index') ||
                        (current_page? channels_path ) %>
 	               <% if user_signed_in? %>
-		            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>  
-	               <% end %>
+			 <% if !mobile_device? %>
+		            <%= link_to "Sign out", destroy_user_session_path, :method => :delete , :class => "back" %>  
+	                 <% end %>
+                       <% end %>
                   <% else %>
-                        <%= link_to "Back", :back %>
-                        <!--<%= link_to "Back", href="#", :class => "back" %>-->
-                        <!--<%= link_to "Back", nil, :class => "back"  %>-->
+                        <% if current_user %>
+		                <% if !(current_page? user_channels_path(current_user) ) %>
+		                        <!--<%= link_to "Back", :back %>-->
+		                        <%= link_to "Back", href="#", :class => "back" %>
+		                        <!--<%= link_to "Back", nil, :class => "back"  %>-->
+		                <% end %>
+                        <% else %>
+		                <% if !(current_page? user_session_path) %>
+		                        <!--<%= link_to "Back", :back %>-->
+		                        <%= link_to "Back", href="#", :class => "back" %>
+		                        <!--<%= link_to "Back", nil, :class => "back"  %>-->
+                                <% end %>
+                        <% end %>
                   <% end %>
               <% else %>
 	          <%= link_to "Sign up", new_user_path %> or <%= link_to "sign in", new_user_session_path %>

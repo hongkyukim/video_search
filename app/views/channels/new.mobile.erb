@@ -5,7 +5,19 @@
 
    <h2>You already created 
    <%= @user.channels.count %> channels.</h2>
-   <h2>In Free version you can create up to 5 channels.</h2>
+   <h2>In the Free version you can create up to 5 channels.</h2>
+   <h2>Please remove your own channels and create new channels.</h2>
+   <h2>In the near future,  a full version allows more channels</h2>
+<% else %>
+
+    <%= render :partial => 'form' %>
+
+<% end %>
+
+<ul><li><%= link_to "Back to My Channels", user_channels_path(@user) %></li></ul>
+
+<% if false %>
+
    <h2>Do you need more?</h2>
    <input type="button" value="Do you need more channels?" onClick="showAnddoSendBillRequest('Hello Android!')" />
 
@@ -14,13 +26,23 @@
             AndroidPart.doSendBillRequest(toast);
         }
     </script>
-
     <h2>Otherwise, remove your channels and create new channels.</h2>
 
-<% else %>
+<input type="button" value="Test: Say hello InAppBilling" onClick="showAnddoSendBillRequest('Hello Android!')" />
 
-    <%= render :partial => 'form' %>
+<script type="text/javascript">
+    function showAnddoSendBillRequest(toast) {
+        AndroidPart.doSendBillRequest(toast);
+    }
+</script>
+
+
+<input type="button" value="Test: REQUEST_PURCHASE sword_001" onClick="showAnddoREQUEST_PURCHASE('sword_001')" />
+
+<script type="text/javascript">
+    function showAnddoREQUEST_PURCHASE(toast) {
+        AndroidPart.doREQUEST_PURCHASE(toast);
+    }
+</script>
 
 <% end %>
-
-<ul><li><%= link_to "Back to My Channels", user_channels_path(@user) %></li></ul>

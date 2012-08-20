@@ -102,6 +102,7 @@ class UsersController < ApplicationController
   def channels
     @user = User.find(params[:id])
     @channels = @user.channels.reverse
+    @show_delete = 1 if params[:delete_options]
 
     respond_to do |format|
       format.html # index.html.erb

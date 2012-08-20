@@ -100,9 +100,10 @@ class UsersController < ApplicationController
 
  # Display all channels of an user
   def channels
-   @user = User.find(params[:id])
-   ##@channels = @user.channels.reverse
-    @channels = @user.channels.search(params[:search]).reverse
+    @user = User.find(params[:id])
+    @channels = @user.channels.reverse
+    @show_delete = 1 if params[:delete_options]
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @channels }

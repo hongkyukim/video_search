@@ -2,23 +2,6 @@
 
 <% title "Videos" %>
 
-<input type="button" value="Test: Say hello InAppBilling" onClick="showAnddoSendBillRequest('Hello Android!')" />
-
-<script type="text/javascript">
-    function showAnddoSendBillRequest(toast) {
-        AndroidPart.doSendBillRequest(toast);
-    }
-</script>
-
-
-<input type="button" value="Test: REQUEST_PURCHASE sword_001" onClick="showAnddoREQUEST_PURCHASE('sword_001')" />
-
-<script type="text/javascript">
-    function showAnddoREQUEST_PURCHASE(toast) {
-        AndroidPart.doREQUEST_PURCHASE(toast);
-    }
-</script>
-
 <div id="videoguide">
   <% for video in @videos %>
 

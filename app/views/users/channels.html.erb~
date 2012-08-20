@@ -34,6 +34,6 @@
 <br />
 
 <%= link_to 'Add New Channel', new_user_channel_path(@user) %> |
-<%= link_to 'Back to Channels', channels_path %>
+<%= link_to 'Back to All Channels', channels_path %>
 
 

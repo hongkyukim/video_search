@@ -1,28 +1,34 @@
 <% title "My Channels" %>
-<p id="notice"><%= notice %></p>  
 
-<ul>
-<%= form_tag channels_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
-</ul>
-
+<!--<p id="notice"><%= notice %></p>-->
+ 
+<ul><li><%= link_to "Add New Channel", new_user_channel_path(@user) %></li></ul>
+ 
 <ul>                   
-  <% for channel in @user.channels %>
-    <li class="arrow">
-      <%= link_to channel.name, videos_channel_path(channel) %>
-      <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
-      <small class="counter"><%= channel.videos.size %></small>
-    </li>
-
-    <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
+  <% for channel in @channels %>
+    <% if @show_delete %>
+       <li>
+          <%= channel.name %>
+          <!--<small class="counter"><%= channel.videos.size %></small>-->
+          <!--<%= link_to 'Destroy', user_channels_path(@user), confirm: 'Are you sure?', :method => :delete %>-->
+          <% if can? :destroy, channel %>
+               <%= button_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete  %>
+          <% end %>
+        </li>
+    <% else %>
+       <li class="arrow">
+          <%= link_to channel.name, videos_channel_path(channel) %>
+          <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
+          <small class="counter"><%= channel.videos.size %></small>
+       </li>
+     <% end %>
   <% end %>
 </ul>
 
-<ul><li><%= link_to "Add My New Channel", new_user_channel_path(@user) %></li></ul>
+<ul><li><%= link_to "Add New Channel", new_user_channel_path(@user) %></li></ul>
+<% if !@show_delete %>
+   <ul><li><%= link_to "Delete Channel", user_channels_path(@user, :delete_options => 1) %></li></ul>
+<% end %>
 <ul><li><%= link_to 'Go to All Channels', channels_path %></li></ul>
-
+<ul><li><%= link_to 'User Sign Out', destroy_user_session_path, :method => :delete %></li></ul>
 

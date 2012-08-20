@@ -64,11 +64,11 @@ class ChannelsController < InheritedResources::Base
     ###@channel = Channel.new(params[:channel])
     @user = User.find(params[:user_id])
     params[:channel][:name] = params[:channel][:name].downcase
-debugger
+
     params[:channel][:language] = "en" if params[:channel][:language].nil?
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
-debugger
+
     respond_to do |format|
       if @channel.save
         ## create the first query feed of this channel automatically
@@ -76,7 +76,7 @@ debugger
 
         format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
         format.json { render json: @channel, status: :created, location: @channel }
-        format.mobile { redirect_to @channel, notice: 'Channel was successfully created.' }
+        format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
       else
         format.html { render action: "new" }
         format.json { render json: @channel.errors, status: :unprocessable_entity }
@@ -114,8 +114,9 @@ debugger
     @channel.destroy
 
     respond_to do |format|
-      format.html { redirect_to user_path(@user) }
+      format.html { redirect_to user_channels_path(@user) }
       format.json { head :no_content }
+      format.mobile { redirect_to user_channels_path(@user) }
     end
   end
 
