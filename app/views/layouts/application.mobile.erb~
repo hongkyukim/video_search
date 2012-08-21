@@ -122,25 +122,7 @@
            </div>
         <% end %>
 
-<% if false %>
-<%unless current_user.blank? -%>
-signed in
-<%else -%>
-not signed in
-<%end-%>
-<br />
-<%= session %>
-<br />
-current user
-<%= current_user %>
 
-<br />
-cookies
-<%= cookies %>
-<br />
-params
-<%= params %>
-<% end %>
 
       <%= yield %>
     </div>

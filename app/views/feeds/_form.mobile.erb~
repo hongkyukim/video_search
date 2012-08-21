@@ -12,12 +12,14 @@
   <% end %>
 
   <ul class="edit rounded">
-    <li><%= f.text_field :name, :placeholder => "Query Feed Name" %></li>
+    
+    <li>Name<%= f.text_field :name, :placeholder => "Query Feed Name" %></li>
     <!--<li><%= f.text_field :feedtype, :placeholder => "public" %></li>-->
-    <li><%= f.text_field :queries, :placeholder => "queries: type keywords" %></li>
-    <li><%= f.text_field :options, :placeholder => "options: :time => :today" %></li>
+    
+    <li>Query</ br><%= f.text_field :queries, :placeholder => "queries: type keywords" %></li>
+    <!--<li><%= f.text_field :options, :placeholder => "options: :time => :today" %></li>-->
     <!--<li><%= f.text_field :keywords, :placeholder => "keywords" %></li>-->
-    <li><%= f.number_field :channel_id, :placeholder => @channel.id %></li>
+    <!--<li><%= f.number_field :channel_id, :placeholder => @channel.id %></li>-->
   </ul>
   <%= link_to "Submit", channel_feeds_path(@channel), :class => "submit whiteButton", :method => "POST", :rel => "external" %>
 

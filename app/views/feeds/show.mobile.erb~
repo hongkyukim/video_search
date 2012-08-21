@@ -1,3 +1,4 @@
+<% title 'Query Feed Info' %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -41,7 +42,7 @@
 
 <ul><li><%= link_to 'Edit', edit_channel_feed_path(@channel, @feed) %></ul></li>
 <ul><li><%= link_to 'Back To Channel', channel_path(@channel) %></ul></li>
-<ul><li><%= link_to 'Destroy', channel_feeds_path(@channel, @feed), :method => "DELETE" %></ul></li>
+<ul><li><%= button_to 'Destroy this query', channel_feed_path(@channel, @feed), :method => "DELETE" %></ul></li>
 
 
 

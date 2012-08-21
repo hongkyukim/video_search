@@ -3,7 +3,7 @@
 <ul>
   <% for f in @feeds %>
     <li class="arrow">
-      <em><%= f.id %></em>
+      <!--<em><%= f.id %></em>-->
       <%= link_to f.name, channel_feed_path(@channel, f) %>
       <!--<em><%= @channel.name %></em>-->
       <!--<%= link_to 'Destroy', channel_feed_path(@channel, f), confirm: 'Are you sure?', method: :delete %>-->

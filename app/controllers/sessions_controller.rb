@@ -12,13 +12,12 @@ class SessionsController < Devise::SessionsController
   end
 
   def create
-
     resource = warden.authenticate!(auth_options)
-
+debugger
     set_flash_message(:notice, :signed_in) if is_navigational_format?
 
     sign_in(resource_name, resource)
-
+debugger
     if mobile_device?
        redirect_to channels_url
     else
@@ -34,7 +33,7 @@ class SessionsController < Devise::SessionsController
     redirect_path = after_sign_out_path_for(resource_name)
     signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
     set_flash_message :notice, :signed_out if signed_out
-
+debugger
     if keep_mobile_device
        ## for continuing mobile mode
        session[:mobile_param] = "1"

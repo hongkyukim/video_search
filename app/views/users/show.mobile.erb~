@@ -14,5 +14,5 @@
 <!--<% debug(@user) if Rails.env.development? %>-->
 <!--<%= logger.info 'print message in show' %>-->
 
-<ul><li><%= link_to 'Sign In', user_session_path %></li></ul>
-<ul><li><%= link_to 'Home', channels_path %></li></ul>
+<ul><li><%= link_to 'Edit', edit_user_path(@user) %></li></ul>
+<ul><li><%= link_to 'Back', users_path %></li></ul>

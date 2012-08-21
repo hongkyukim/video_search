@@ -58,10 +58,10 @@ class FeedsController < InheritedResources::Base
     @feed = @channel.feeds.build(params[:feed])
     ### check duplication
     dup_feeds = @channel.feeds.find_by_name(@feed.name)
-debugger    
+   
     respond_to do |format|
       if dup_feeds 
-debugger
+
         format.html { render action: "new" }
         format.json { render json: @feed.errors, status: :unprocessable_entity }
         format.mobile { redirect_to channel_path(@channel), notice: 'This Query Name was already defined.' }
@@ -97,10 +97,10 @@ debugger
     end
   end
   def destroy
-debugger
+
     @channel = Channel.find(params[:channel_id])
     @feed = Feed.find(params[:id])
-debugger
+
     @feed.destroy
 
     respond_to do |format|
