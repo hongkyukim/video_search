@@ -6,7 +6,7 @@ class SessionsController < Devise::SessionsController
     ##skip_before_filter :verify_authenticity_token
 
   def new
-   resource = build_resource(nil, :unsafe => true)
+    resource = build_resource(nil, :unsafe => true)
     clean_up_passwords(resource)
     respond_with(resource, serialize_options(resource))
   end

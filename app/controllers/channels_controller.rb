@@ -63,8 +63,9 @@ class ChannelsController < InheritedResources::Base
   def create
     ###@channel = Channel.new(params[:channel])
     @user = User.find(params[:user_id])
+    ### take lower case
     params[:channel][:name] = params[:channel][:name].downcase
-
+    ### set language and user_id
     params[:channel][:language] = "en" if params[:channel][:language].nil?
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
@@ -92,13 +93,14 @@ class ChannelsController < InheritedResources::Base
 
     respond_to do |format|
       if @channel.update_attributes(params[:channel])
-        format.html { redirect_to @channel, notice: 'Video was successfully updated.' }
+        format.html { redirect_to @channel, notice: 'Channel was successfully updated.' }
         format.json { head :no_content }
-        format.mobile { redirect_to @channel, notice: 'Video was successfully updated.' }
+        format.mobile { redirect_to @channel, notice: 'Channel was successfully updated.' }
       else
         format.html { render action: "edit" }
         format.json { render json: @channel.errors, status: :unprocessable_entity }
-      end
+        format.mobile { redirect_to @channel, notice: 'Channel was not successfully updated.' }
+     end
     end
   end
 

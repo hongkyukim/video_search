@@ -1,5 +1,5 @@
 <!--<p id="notice"><%= notice %></p>-->
-    
+<% title 'Channel Info' %>    
 <p>
   <b>Channel Name:</b>
   <%= @channel.name %>
@@ -48,12 +48,10 @@
    <ul><li><%= link_to 'Edit Channel', edit_channel_path(@channel) %></li></ul>
 <% end %>
 
-<ul><li><%= link_to 'Destroy channel', @channel, confirm: 'Are you sure?', method: :delete %></li></ul>
+<!--<ul><li><%= link_to 'Destroy channel', @channel, confirm: 'Are you sure?', method: :delete %></li></ul>-->
 <ul><li><%= link_to 'Back to Channel', videos_channel_path(@channel) %></li></ul>
 
 <% end %>
-
-
 
 
 

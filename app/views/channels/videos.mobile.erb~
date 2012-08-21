@@ -64,7 +64,7 @@
      <ul><li><%= link_to 'Back to All Channels', channels_path %></li></ul>
 <% end %>
 
-<% if true %>
+<% if false %>
 <ul class="individual">
         <li><%= link_to 'Back to All Channels', channels_path %></li>
        <% if user_signed_in? %>
