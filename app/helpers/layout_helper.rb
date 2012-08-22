@@ -1,13 +1,13 @@
 module LayoutHelper
   def title22(page_title, show_title = true)
     @content_for_title = page_title.to_s
-debugger
+
     @show_title = show_title
 
   end
   
   def show_title22?
-debugger
+
     @show_title
   end
   

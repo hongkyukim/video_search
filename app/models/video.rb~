@@ -1,3 +1,6 @@
+
+require 'camideo'
+
 class Video < ActiveRecord::Base
   has_and_belongs_to_many :channels
 
@@ -69,11 +72,7 @@ class Video < ActiveRecord::Base
 
     ###return     ###YouTubeIt::Parser::VideosFeedParser.new(response).parse
   end
-
-  def self.get_OneVideoSearch(f)
-
-    channel_id = f.channel_id
-    res = yt_session.videos_by(video_ytoptions(f)) ###f.queries)
+  
 
     #@videos = Video.all
     ###request = YouTubeIt::Request::VideoSearch.new(:query => "penguin", :duration => "short")
@@ -83,9 +82,18 @@ class Video < ActiveRecord::Base
     ####Debug(response)
     ####video = response.videos.first
 
+   ###return response.videos    ###YouTubeIt::Parser::VideosFeedParser.new(response).parse
+  def self.get_OneVideoSearch(f)
+
+    channel_id = f.channel_id
+    res = yt_session.videos_by(video_ytoptions(f)) ###f.queries)
+
     res.videos.each { |v| add_video(v, channel_id) }
 
-    ###return response.videos    ###YouTubeIt::Parser::VideosFeedParser.new(response).parse
+
+    Camideo.get_OneVideoSearch(f)
+
+
   end
 
   def self.add_video(v, channel_id)
@@ -115,10 +123,15 @@ class Video < ActiveRecord::Base
        ##
        ##thumbnail_url has   v.thumbnails[0].url for thumbnails jpg
        ## categories and keywords are text type (string type - max size 256)
-
+       linkurl = 'http://www.youtube.com/watch?v=' + v.yt_video_id + '&feature=youtube_gdata'
        categories = v.categories[0].term + " " +  v.categories[0].label
 
-       @newvideo = Video.create(:title => v.title, :description => v.description, :yt_video_id => split_video_id[3],  :provider => prov, :thumbnail_url => v.thumbnails[0].url, :duration => v.duration, :categories => categories, :keywords => v.keywords)
+       @newvideo = Video.create(:title => v.title, :description => v.description,
+                     :yt_video_id => split_video_id[3],  :provider => prov,
+                     :thumbnail_url => v.thumbnails[0].url, :duration => v.duration, 
+                     :linkurl => linkurl, 
+                     #####:views => v['views'],  :embedcode => v['embedCode']
+                     :categories => categories, :keywords => v.keywords)
 
        @channel = Channel.find_by_id(channel_id)
        @newvideo.save
