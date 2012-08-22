@@ -91,7 +91,7 @@ class Video < ActiveRecord::Base
     res.videos.each { |v| add_video(v, channel_id) }
 
 
-    Camideo.get_OneVideoSearch(f)
+    Camideo.get_OneVideoSearch_camideo(f)
 
 
   end
@@ -123,7 +123,7 @@ class Video < ActiveRecord::Base
        ##
        ##thumbnail_url has   v.thumbnails[0].url for thumbnails jpg
        ## categories and keywords are text type (string type - max size 256)
-       linkurl = 'http://www.youtube.com/watch?v=' + v.yt_video_id + '&feature=youtube_gdata'
+       linkurl = 'http://www.youtube.com/watch?v=' + split_video_id[3] + '&feature=youtube_gdata'
        categories = v.categories[0].term + " " +  v.categories[0].label
 
        @newvideo = Video.create(:title => v.title, :description => v.description,

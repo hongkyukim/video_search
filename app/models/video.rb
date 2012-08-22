@@ -91,7 +91,7 @@ class Video < ActiveRecord::Base
     res.videos.each { |v| add_video(v, channel_id) }
 
 
-    Camideo.get_OneVideoSearch(f)
+    Camideo.get_OneVideoSearch_camideo(f)
 
 
   end

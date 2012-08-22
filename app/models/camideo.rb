@@ -3,15 +3,6 @@ require 'json'
 
 class Camideo
 
-
-                        ##<option value="youtube">YouTube</option>
-                        ##<option value="vimeo">Vimeo</option>
-                        ##<option value="myspace">MySpace</option>
-                        ##<option value="metacafe">MetaCafe</option>
-                        ##<option value="dailymotion">DailyMotion</option>
-                        ##<option value="soundcloud">SoundCloud</option>
-
-
   Camideo_API_KEY = '0a6e4aa28d539dd51821182be34028e1'
   Provider_list = 'youtube'
   Provider = 'youtube'
@@ -60,46 +51,54 @@ class Camideo
   def self.get_VideoSearch
 
     @feeds = Feed.all
-    ###request = YouTubeIt::Request::VideoSearch.new(:query => "penguin", :duration => "short")
-    ##request = YouTubeIt::Request::VideoSearch.new(:query => "penguin", :duration => "short")
-    
-    ##response = yt_session.videos_by(:query => "korea news kbs mbc")        #####(request.url)
-    ####Debug(response)
-	####video = response.videos.first
     @feeds.each { |f|
-        ###response = yt_session.videos_by(:query => f.queries, :max_results => 3, :time => :today) ###f.queries)
-
-
         get_OneVideoSearch(f) 
     }
 
     ###return     ###YouTubeIt::Parser::VideosFeedParser.new(response).parse
   end
 
-  def self.get_OneVideoSearch(f)
+  def self.get_OneVideoSearch_camideo(f)
+       ##self.get_OneVideoSearch(f, 'dailymotion')
+       ##self.get_OneVideoSearch(f, 'vimeo')
+       ##self.get_OneVideoSearch(f, 'myspace')     ## error
+       ##self.get_OneVideoSearch(f, 'metacafe')
+       ##self.get_OneVideoSearch(f, 'soundcloud')
+      ## self.get_OneVideoSearch(f, 'youtube')
+  end
+
+  def self.get_OneVideoSearch(f, provider)
 
     channel_id = f.channel_id
     ###res = yt_session.videos_by(video_ytoptions(f)) ###f.queries)
 
     queries = self.query_options(f)
 
-    url = "http://www.camideo.com/api/?key=" + Camideo_API_KEY + "&source=" + Provider + "&q=" + queries + "&response=json&page=1"
+    url = "http://www.camideo.com/api/?key=" + Camideo_API_KEY + "&source=" + provider + "&q=" + queries + "&response=json&page=1"
 
      #####response = Net::HTTP.get_response("example.com","/?search=thing&format=json")
      ###response = Net::HTTP.get_response(url, parameters)
 
      ####response = json_decode(jresponse, TRUE);
 
-     buffer = open(url, "UserAgent" => "Ruby-Wget").read
-     response = JSON.parse(buffer)
-
+    buffer = open(url).read
+    ###buffer = open(url, "UserAgent" => "Ruby-Wget").read
+    if ( !buffer )
+         ### error
+         return
+    end
+    response = JSON.parse(buffer)
+  
+    if response.has_key? 'Error'
+          raise "web service error in JSON.parse"
+    end
 
     if ( response &&  response['Camideo']['Error'] )
          ### error
          return
     end
 
-    response['Camideo']['videos'].each { |v| add_video(v, channel_id) }
+    response['Camideo']['videos'].each { |v| add_video(v, channel_id, provider) }
 
     ###return response.videos    ###YouTubeIt::Parser::VideosFeedParser.new(response).parse
   end
@@ -118,7 +117,7 @@ class Camideo
   ###                      "views" : "10895",
   ###                      "published" : "2012-07-11 02:22:08"
 
-  def self.add_video(v, channel_id)
+  def self.add_video(v, channel_id, prov)
 
     return if v['title'].empty?
     return if v['description'].nil?
@@ -129,7 +128,7 @@ class Camideo
     ##logger.info '    d: ' + v.description
     ###logger.info 'thumbnail url: ' + v.thumbnails[0].url
 
-    prov = Provider 
+    ###prov = Provider 
 
     split_video_id = v['videoId']
 
