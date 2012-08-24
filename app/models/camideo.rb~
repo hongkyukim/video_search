@@ -3,15 +3,6 @@ require 'json'
 
 class Camideo
 
-
-                        ##<option value="youtube">YouTube</option>
-                        ##<option value="vimeo">Vimeo</option>
-                        ##<option value="myspace">MySpace</option>
-                        ##<option value="metacafe">MetaCafe</option>
-                        ##<option value="dailymotion">DailyMotion</option>
-                        ##<option value="soundcloud">SoundCloud</option>
-
-
   Camideo_API_KEY = '0a6e4aa28d539dd51821182be34028e1'
   Provider_list = 'youtube'
   Provider = 'youtube'
@@ -60,16 +51,7 @@ class Camideo
   def self.get_VideoSearch
 
     @feeds = Feed.all
-    ###request = YouTubeIt::Request::VideoSearch.new(:query => "penguin", :duration => "short")
-    ##request = YouTubeIt::Request::VideoSearch.new(:query => "penguin", :duration => "short")
-    
-    ##response = yt_session.videos_by(:query => "korea news kbs mbc")        #####(request.url)
-    ####Debug(response)
-	####video = response.videos.first
     @feeds.each { |f|
-        ###response = yt_session.videos_by(:query => f.queries, :max_results => 3, :time => :today) ###f.queries)
-
-
         get_OneVideoSearch(f) 
     }
 
@@ -103,7 +85,6 @@ class Camideo
     ###buffer = open(url, "UserAgent" => "Ruby-Wget").read
     if ( !buffer )
          ### error
-debugger
          return
     end
     response = JSON.parse(buffer)
@@ -114,7 +95,6 @@ debugger
 
     if ( response &&  response['Camideo']['Error'] )
          ### error
-debugger
          return
     end
 

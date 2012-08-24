@@ -130,9 +130,10 @@ class Video < ActiveRecord::Base
                      :yt_video_id => split_video_id[3],  :provider => prov,
                      :thumbnail_url => v.thumbnails[0].url, :duration => v.duration, 
                      :linkurl => linkurl, 
-                     #####:views => v['views'],  :embedcode => v['embedCode']
+                     #####:views => v['views'],  
+                     :embedcode => v.media_content[0].url
                      :categories => categories, :keywords => v.keywords)
-
+debugger
        @channel = Channel.find_by_id(channel_id)
        @newvideo.save
        Channel.video_add(@channel, @newvideo)
