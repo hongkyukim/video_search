@@ -8,7 +8,7 @@
     <ul class="rounded">
       <li class="arrow">
 	<!--<a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank">-->
-	<a href="<%= video.yt_video_id %>" target="_blank">
+	<a href="<%= video.linkurl %>" target="_blank">
          <div class="videoimage"><%= image_tag video.thumbnail_url, :size => "58x38" if video.thumbnail_url %></div>
 	 <p class="post-description"><span><%= video.title %></span></p>
 

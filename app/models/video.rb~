@@ -103,9 +103,9 @@ class Video < ActiveRecord::Base
     return if v.player_url.empty?
     return if v.video_id.empty?
 
-    logger.info 'video: ' + v.title
-    logger.info '    d: ' + v.description
-    logger.info 'thumbnail url: ' + v.thumbnails[0].url
+    ##logger.info 'video: ' + v.title
+    ##logger.info '    d: ' + v.description
+    ##logger.info 'thumbnail url: ' + v.thumbnails[0].url
 
     prov = 'youtube' 
 
@@ -124,16 +124,22 @@ class Video < ActiveRecord::Base
        ##thumbnail_url has   v.thumbnails[0].url for thumbnails jpg
        ## categories and keywords are text type (string type - max size 256)
        linkurl = 'http://www.youtube.com/watch?v=' + split_video_id[3] + '&feature=youtube_gdata'
-       categories = v.categories[0].term + " " +  v.categories[0].label
+       if v.media_content[0]
+          embedlink = v.media_content[0].url ? v.media_content[0].url : null
+       end
+       if v.categories[0]
+          categories = v.categories[0].term + " " +  v.categories[0].label
+       end
+       ## duration = v.duration
 
        @newvideo = Video.create(:title => v.title, :description => v.description,
                      :yt_video_id => split_video_id[3],  :provider => prov,
                      :thumbnail_url => v.thumbnails[0].url, :duration => v.duration, 
                      :linkurl => linkurl, 
                      #####:views => v['views'],  
-                     :embedcode => v.media_content[0].url
+                     :embedcode => embedlink,
                      :categories => categories, :keywords => v.keywords)
-debugger
+
        @channel = Channel.find_by_id(channel_id)
        @newvideo.save
        Channel.video_add(@channel, @newvideo)
