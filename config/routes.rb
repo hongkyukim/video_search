@@ -1,4 +1,7 @@
 LoginApp2::Application.routes.draw do
+  ## root :to => 'videos#index'
+  root :to => 'channels#index'
+
   devise_for :users, :controllers => { :sessions => "sessions" }
   ###, :controllers => {:sessions => "sessions"}
   ### , :path => '/', :controllers => { :sessions => "sessions" }
@@ -17,8 +20,7 @@ LoginApp2::Application.routes.draw do
 
 
   resources :languages
-  ## root :to => 'videos#index'
-  root :to => 'channels#index'
+  
 
 
   ###redirect '/', :controller => 'channels', :action => 'index'

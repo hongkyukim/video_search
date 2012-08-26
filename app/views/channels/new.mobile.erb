@@ -3,11 +3,16 @@
 
 <% if @user.channels.count > 4 %>
 
-   <h2>You already created 
-   <%= @user.channels.count %> channels.</h2>
-   <h2>In the Free version you can create up to 5 channels.</h2>
-   <h2>Please remove your own channels and create new channels.</h2>
-   <h2>In the near future,  a full version allows more channels</h2>
+   <% if @user.admin || !@user.payment.nil? %>
+           <%= render :partial => 'form' %>
+   <% else %>
+	   <h2>You already created 
+	   <%= @user.channels.count %> channels.</h2>
+	   <h2>In the Free version you can create up to 5 channels.</h2>
+	   <h2>Please remove your own channels and create new channels.</h2>
+	   <h2>In the near future,  a full version allows more channels</h2>
+
+    <% end %>
 <% else %>
 
     <%= render :partial => 'form' %>
@@ -28,21 +33,21 @@
     </script>
     <h2>Otherwise, remove your channels and create new channels.</h2>
 
-<input type="button" value="Test: Say hello InAppBilling" onClick="showAnddoSendBillRequest('Hello Android!')" />
+    <input type="button" value="Test: Say hello InAppBilling" onClick="showAnddoSendBillRequest('Hello Android!')" />
 
-<script type="text/javascript">
-    function showAnddoSendBillRequest(toast) {
-        AndroidPart.doSendBillRequest(toast);
-    }
-</script>
+    <script type="text/javascript">
+        function showAnddoSendBillRequest(toast) {
+             AndroidPart.doSendBillRequest(toast);
+        }
+    </script>
 
 
-<input type="button" value="Test: REQUEST_PURCHASE sword_001" onClick="showAnddoREQUEST_PURCHASE('sword_001')" />
+    <input type="button" value="Test: REQUEST_PURCHASE sword_001" onClick="showAnddoREQUEST_PURCHASE('sword_001')" />
 
-<script type="text/javascript">
-    function showAnddoREQUEST_PURCHASE(toast) {
-        AndroidPart.doREQUEST_PURCHASE(toast);
-    }
-</script>
+    <script type="text/javascript">
+        function showAnddoREQUEST_PURCHASE(toast) {
+             AndroidPart.doREQUEST_PURCHASE(toast);
+        }
+    </script>
 
 <% end %>

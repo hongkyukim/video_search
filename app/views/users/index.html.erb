@@ -6,6 +6,7 @@
   <tr>
     <th>Email</th>
     <th>Admin</th>
+    <th>Payment</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
   <tr>
     <td><%= user.email %></td>
     <td><%= user.admin %></td>
+    <td><%= user.payment %></td>
     <td><%= link_to 'Show', user %></td>
     <% if can? :update, user %>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>

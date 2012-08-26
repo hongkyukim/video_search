@@ -81,8 +81,11 @@ class Camideo
 
      ####response = json_decode(jresponse, TRUE);
 
-    buffer = open(url).read
-    ###buffer = open(url, "UserAgent" => "Ruby-Wget").read
+
+    ### safeurl = URI.parse(URI.encode(url))
+
+    ###buffer = open(url).read
+    buffer = open(URI.encode(url), "UserAgent" => "Ruby-Wget").read
     if ( !buffer )
          ### error
          return

@@ -1,3 +1,9 @@
+
+
+
+<% if user_signed_in? %>
+<% if current_user.admin? %>
+
 <h1>All Channels</h1>
 
 <%= form_tag channels_path, :method => 'get' do %>
@@ -53,4 +59,6 @@
 
 
 
+<% end %>
+<% end %>
 

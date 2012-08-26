@@ -55,8 +55,10 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    ### ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: payment)
+    ###params[:user][:payment] = 0 if params[:user][:payment].nil?
     @user = User.new(params[:user])
-
+debugger
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }

@@ -49,7 +49,7 @@ class Video < ActiveRecord::Base
   end
 
   def self.get_VideoSearch123
-###@ytVideo = YouTubeVideo.new
+     ###@ytVideo = YouTubeVideo.new
     return YouTubeVideo.get_VideoSearch     ### youtube
 
   end
@@ -63,9 +63,9 @@ class Video < ActiveRecord::Base
     ##response = yt_session.videos_by(:query => "korea news kbs mbc")        #####(request.url)
     ####Debug(response)
 	####video = response.videos.first
+
     @feeds.each { |f|
         ###response = yt_session.videos_by(:query => f.queries, :max_results => 3, :time => :today) ###f.queries)
-
 
         get_OneVideoSearch(f) 
     }
@@ -122,6 +122,10 @@ class Video < ActiveRecord::Base
        logger.info 'new video inserted: provider =  ' + prov
        ##
        ##thumbnail_url has   v.thumbnails[0].url for thumbnails jpg
+       
+       ## convert time(seconds) to H:M:S format
+       durationHMS = Time.at(v.duration).utc.strftime("%H:%M:%S")
+
        ## categories and keywords are text type (string type - max size 256)
        linkurl = 'http://www.youtube.com/watch?v=' + split_video_id[3] + '&feature=youtube_gdata'
        if v.media_content[0]
@@ -134,7 +138,7 @@ class Video < ActiveRecord::Base
 
        @newvideo = Video.create(:title => v.title, :description => v.description,
                      :yt_video_id => split_video_id[3],  :provider => prov,
-                     :thumbnail_url => v.thumbnails[0].url, :duration => v.duration, 
+                     :thumbnail_url => v.thumbnails[0].url, :duration => durationHMS, 
                      :linkurl => linkurl, 
                      #####:views => v['views'],  
                      :embedcode => embedlink,

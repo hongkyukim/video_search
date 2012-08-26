@@ -12,6 +12,8 @@ class Feed < ActiveRecord::Base
          if @feed.save
             Video.get_OneVideoSearch(@feed)
          end
+     else
+         channel.feeds.each { |f| Video.get_OneVideoSearch(f) }
      end
   end
 

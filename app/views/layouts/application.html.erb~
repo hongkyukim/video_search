@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LoginApp2</title>
+  <title>VideoTouch</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
 
   <%= stylesheet_link_tag 'mobile' if mobile_device? %>
@@ -9,23 +9,8 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body>
-  
-    <% if false %>
-    <div id="nav">
-        <%= link_to "Register", new_user_path%> |
-        <%= link_to "Login", :login %>
-    </div>
-    <% end %>
 
-<% if false %>
-<!-- <%= form_for(@languages) do |f| %>
-<p>
-<%= f.label :language_id %><br />
-<%= f.select :language_id, Language.find(:all).collect { |s| [s.short_name, s.id]} %>
-</p>
-<% end %> -->
-<% end %>
+<body>
 
 <p>
   <% if mobile_device? %>
@@ -38,48 +23,42 @@
 
 <div id="user_nav">
   <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
-    <%= link_to "Sign out", destroy_user_session_path, %>   <!--:method => :delete %>-->
+
     <% if current_user.admin? %>
-       Admin User
+
+        Signed in as <%= current_user.email %>. Not you?
+        <%= link_to "Sign out", destroy_user_session_path, %>   <!--:method => :delete %>-->
+
+       	<br />
+	<%unless current_user.blank? -%>
+	signed in
+	<%else -%>
+	not signed in
+	<%end-%>
+	<br />
+	session:
+	<%= session %>
+	<br />
+	current user:
+	<%= current_user %>
+
+	<br />
+	cookies:
+	<%= cookies %>
+
+	<br />
+	env:
+	<%= env %>
     <% end %>
-     user_signed_in is --TRUE--
   <% else %>
     <%= link_to "Sign up", new_user_path %> or <%= link_to "sign in", new_user_session_path %>
-     user_signed_in is --FALSE--
   <% end %>
-<br />
-<%unless current_user.blank? -%>
-signed in
-<%else -%>
-not signed in
-<%end-%>
-<br />
-<%= session %>
-<br />
-current user
-<%= current_user %>
 
-<br />
-cookies
-<%= cookies %>
+
 </div>
 
 <p id="notice"><%= notice %></p>  
 
-<% if false %>
-<div id="nav">
-	<% if current_user %>
-	<%= link_to "Edit Profile", edit_user_path(current_user.id)%> |
-	<%= link_to "Logout", :logout%> |
-	<% else %>
-	<%= link_to "Register", new_user_path%> |
-	<%= link_to "Login", :login %> |
-	<% end %>
-	<%= link_to "All Videos", videos_path %> |
-	<%= link_to "Channels", channels_path %>
-</div>
-<% end %>
 
 <%= yield %>
 

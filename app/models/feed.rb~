@@ -7,9 +7,13 @@ class Feed < ActiveRecord::Base
   ## create first query feed of channel
   def self.make_firstfeed(channel)
      feedoptions = {"name"=>channel.name, "feedtype"=>"public", "queries"=>channel.name, "options"=>"", "keywords"=>"", "channel_id"=>channel.id}
-     @feed = channel.feeds.build(feedoptions)
-     if @feed.save
-        Video.get_OneVideoSearch(@feed)
+     if channel.feeds.count == 0
+         @feed = channel.feeds.build(feedoptions)
+         if @feed.save
+            Video.get_OneVideoSearch(@feed)
+         end
+     else
+         channel.feeds.each { |f| Video.get_OneVideoSearch(f) }
      end
   end
 
