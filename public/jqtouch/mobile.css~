@@ -1,4 +1,38 @@
 
+
+/* group videopost */
+td.videopost {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+  width: 40%;  /* 40%   */
+  color: #666;    /* 666 */
+}
+span.description {
+  display: block;
+  vertical-align: top;
+  font-size: 85%;  /* 85% */
+  color: #666;    /* 666 */
+  overflow: hidden;
+   /*     background-color: #ffd;  yellow*/
+  /*float: left;*/
+}
+span.videoid {
+  display: block;
+  font-size: 75%; /* 45%*/
+  color: #111;  
+  float: right;
+}
+span.timestamp {
+  /* float: right; */
+  text-align: right;
+  width: 20%;
+  float: left;
+}
+
+
+
+
 /* line 531, ../scss/include/_skeleton.scss */
 #jqt ul.li.arrow individual2 {
   font-size: 14px;
@@ -62,11 +96,13 @@
 				padding-bottom: 1px;/*10px*/
 			}
 			.post-description, .post-videoid{
-				font-size: 14px; /*12px*/
+				font-size: 16px; /*12px*/
 				margin-left: 70px; /* 75px */
 			}
 			.post-videoid{
-				margin-bottom: 1px; /* 3px*/
+				/* margin-bottom: 1px;  3px*/
+                                font-size: 12px; /*12px*/
+
 			}
 			.post, .page-videoid{
 				font-size: 13px;

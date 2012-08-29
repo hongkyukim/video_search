@@ -1,14 +1,30 @@
 
+
 <% title "Add New Channel" %>
 
-<% if @user.channels.count > 4 %>
- <% debug(@user) %>
+<% if false %>
+<!--<input type="button" value="Do you need more channels?" onClick="canCreateMyChannels(<%= @user.channels.count %>)" />-->
+<input type="button" value="Do you need more channels?" onClick="canGetMaxMyChannels()" />
+    <script type="text/javascript">
+       function canCreateMyChannels(numChannels) {
+            AndroidPart.createMyChannels(numChannels);
+        }
+       function canGetMaxMyChannels() {
+            AndroidPart.getMaxMyChannels();
+        }
+    </script>
+<% end %>
+
+           
+<% if @user.channels.count > 4  %>
+
    <% if @user.admin || !@user.payment.nil? %>
            <%= render :partial => 'form' %>
    <% else %>
+           
 	   <h2>You already created 
 	   <%= @user.channels.count %> channels.</h2>
-	   <h2>In the Free version you can create up to 5 channels.</h2>
+	   <h2>In this version you can create up to 5 channels.</h2>
 	   <h2>Please remove your own channels and create new channels.</h2>
 	   <h2>In the near future,  a full version allows more channels</h2>
 

@@ -96,11 +96,13 @@ span.timestamp {
 				padding-bottom: 1px;/*10px*/
 			}
 			.post-description, .post-videoid{
-				font-size: 14px; /*12px*/
+				font-size: 16px; /*12px*/
 				margin-left: 70px; /* 75px */
 			}
 			.post-videoid{
-				margin-bottom: 1px; /* 3px*/
+				/* margin-bottom: 1px;  3px*/
+                                font-size: 12px; /*12px*/
+
 			}
 			.post, .page-videoid{
 				font-size: 13px;

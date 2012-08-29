@@ -1,6 +1,10 @@
+
+<% if user_signed_in? %>
+<% if current_user.admin? %>
+
 <h1>Listing users</h1>
 
-<p id="notice"><%= notice %></p>     <!-- added -->
+<p id="notice"><%= notice %></p>
 
 <table>
   <tr>
@@ -33,3 +37,7 @@
 <br />
 
 <%= link_to 'New User', new_user_path %>
+
+
+<% end %>
+<% end %>
