@@ -9,7 +9,7 @@ class ChannelsController < InheritedResources::Base
     ### get all channels
 
     ###@channels = Channel.all
-    @channels = Channel.search(params[:search])
+    @channels = Channel.search(params[:search]).reverse
 
     respond_to do |format|
       format.html # index.html.erb
