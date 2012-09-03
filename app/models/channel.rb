@@ -6,7 +6,7 @@ class Channel < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => true, :length => { :maximum => 256 }
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :channel_type, :tags, :categories, :language, :user_id
+  attr_accessible :name, :channel_type, :tags, :categories, :language, :user_id, :querytime
 
   def self.check_registered?(channel, video)
     channel.videos.include?(video)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120822045522) do
+ActiveRecord::Schema.define(:version => 20120903174026) do
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20120822045522) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "user_id"
+    t.datetime "querytime"
   end
 
   create_table "channels_videos", :id => false, :force => true do |t|

@@ -6,7 +6,7 @@ class Channel < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => true, :length => { :maximum => 256 }
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :channel_type, :tags, :categories, :language, :user_id
+  attr_accessible :name, :channel_type, :tags, :categories, :language, :user_id, :querytime
 
   def self.check_registered?(channel, video)
     channel.videos.include?(video)
@@ -26,7 +26,7 @@ class Channel < ActiveRecord::Base
 
   def self.search(search)
       if search
-          ##search = search.downcase
+          search = search.downcase
           find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
       else
           find(:all)

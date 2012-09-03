@@ -9,7 +9,7 @@ class ChannelsController < InheritedResources::Base
     ### get all channels
 
     ###@channels = Channel.all
-    @channels = Channel.search(params[:search])
+    @channels = Channel.search(params[:search]).reverse
 
     respond_to do |format|
       format.html # index.html.erb
@@ -69,11 +69,16 @@ class ChannelsController < InheritedResources::Base
     params[:channel][:language] = "en" if params[:channel][:language].nil?
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
+    
 
     respond_to do |format|
       if @channel.save
         ## create the first query feed of this channel automatically
+
         Feed.make_firstfeed(@channel)
+
+        ###@channel.querytime = Time.now;
+        @channel.update_attributes({ "querytime" => DateTime.now})
 
         format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
         format.json { render json: @channel, status: :created, location: @channel }
@@ -127,8 +132,16 @@ class ChannelsController < InheritedResources::Base
   def videos
     @channel = Channel.find(params[:id])
 
-    #### search and add new videos 
-    Feed.make_firstfeed(@channel)
+    #### search and add new videos if not within 1 hour(3600 seconds)
+    newtime = DateTime.now
+    oldtime = @channel.querytime.nil? ? DateTime.now - 2.days : @channel.querytime
+    diff_time = (newtime.to_i-oldtime.to_i)/3600.00
+
+    if diff_time > 0.999
+        #### search and add new videos 
+        Feed.make_firstfeed(@channel)
+        @channel.update_attributes({ "querytime" => DateTime.now})
+    end
 
     @videos = Channel.find(params[:id]).videos.reverse
    
