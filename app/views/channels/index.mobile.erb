@@ -24,6 +24,9 @@
 <% if user_signed_in? %>
       <ul><li><%= link_to "Add My New Channel", new_user_channel_path(current_user) %></li></ul>
       <ul><li><%= link_to "Go To My Channels", channels_user_path(current_user) %></li></ul>
+      <% if current_user.admin? %>
+         <ul><li><%= link_to "View Users", users_path %></li></ul>
+      <% end %>
 <% end %>
 
 <% if false %>

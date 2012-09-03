@@ -18,7 +18,7 @@
            
 <% if @user.channels.count > 4  %>
 
-   <% if @user.admin || !@user.payment.nil? %>
+   <% if @user.admin || @user.payment.nil? ? false : @user.payment > 0 %>
            <%= render :partial => 'form' %>
    <% else %>
            
