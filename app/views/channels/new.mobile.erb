@@ -3,8 +3,8 @@
 <% title "Add New Channel" %>
 
 <% if false %>
-<!--<input type="button" value="Do you need more channels?" onClick="canCreateMyChannels(<%= @user.channels.count %>)" />-->
-<input type="button" value="Do you need more channels?" onClick="canGetMaxMyChannels()" />
+     <!--<input type="button" value="Do you need more channels?" onClick="canCreateMyChannels(<%=    @user.channels.count %>)" />-->
+    <input type="button" value="Do you need more channels?" onClick="canGetMaxMyChannels()" />
     <script type="text/javascript">
        function canCreateMyChannels(numChannels) {
             AndroidPart.createMyChannels(numChannels);
@@ -18,7 +18,9 @@
            
 <% if @user.channels.count > 4  %>
 
-   <% if @user.admin || @user.payment.nil? ? false : @user.payment > 0 %>
+   <% if @user.admin %>
+           <%= render :partial => 'form' %>
+   <% elsif !@user.payment.nil? && @user.payment > 0 %>
            <%= render :partial => 'form' %>
    <% else %>
            

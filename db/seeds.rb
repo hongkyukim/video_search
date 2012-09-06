@@ -10,7 +10,7 @@
 
 
 
-users = User.create([{email: 'admin@admin.com', password: 'admin123', password_confirmation: 'admin123', admin: true, payment: '1' }])
+users = User.create([{email: 'admin@admin.com', password: 'admin123', password_confirmation: 'admin123', admin: true, payment: '1' }, {email: 'yunjakim3@gmail.com', password: 'admin123', password_confirmation: 'admin123', admin: false, payment: '1' }])
 
 ### rake db:seed
 
