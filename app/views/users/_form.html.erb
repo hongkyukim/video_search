@@ -23,10 +23,16 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </div>
-  <div class="field">
-    <%= f.label :payment %><br />
-    <%= f.text_field :payment %>
-  </div>
+
+   <% if user_signed_in? %>
+     <% if current_user.admin? %>
+	  <div class="field">
+	    <%= f.label :payment %><br />
+	    <%= f.text_field :payment %>
+	  </div>
+   <% end %>
+   <% end %>
+
 
   <div class="actions">
     <%= f.submit %>

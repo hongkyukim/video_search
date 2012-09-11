@@ -14,6 +14,8 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @users.each do |user| %>
@@ -25,6 +27,7 @@
     <% if can? :update, user %>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <% end %>
+    <td><%= link_to 'Channels', user_channels_path(user) %></td>
     <% if can? :destroy, user %>
         <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
     <% end %>

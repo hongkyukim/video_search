@@ -2,13 +2,11 @@
 
 <p id="notice"><%= notice %></p>
 
+<% devise_error_messages123! %>
 
 <% if user_signed_in? %>
 <h3>User already signed in<h3>
 <% end %>
-
-
-
 
 <% if true %>
 
@@ -49,7 +47,8 @@
 <% end %>
 
 <!--<li><%= link_to "Sign up for New User", new_user_path %></li>-->
-<ul><li><%= link_to "Sign up for New User", new_user_path %></li></ul>
+
+<ul><li><%= link_to "Sign Up for New User", new_user_path %></li></ul>
 
 <%= render :partial => "devise/shared/links" %>
 

@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<% title 'User Info' %>
+<!--<p id="notice"><%= notice %></p>-->
 
 <p>
   <b>Email:</b>
@@ -9,9 +10,12 @@
   <%= @user.password %>
 </p>
 
-
-<%= debug(@user) if Rails.env.development? %>
-<%= logger.info 'print message in show' %>
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
+        <%= debug(@user) if Rails.env.development? %>
+        <!--<%= logger.info 'print message in show' %>-->
+  <% end %>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back to Users', users_path %>

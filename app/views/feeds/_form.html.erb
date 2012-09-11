@@ -19,13 +19,18 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :feedtype %><br />
-    <%= f.text_field :feedtype %>
-  </div>
+
   <div class="field">
     <%= f.label :queries %><br />
     <%= f.text_field :queries %>
+  </div>
+
+<% if user_signed_in? %>
+<% if current_user.admin? %>
+
+  <div class="field">
+    <%= f.label :feedtype %><br />
+    <%= f.text_field :feedtype %>
   </div>
   <div class="field">
     <%= f.label :options %><br />
@@ -47,6 +52,9 @@
     <%= f.label :channel_id %><br />
     <%= f.number_field :channel_id %>
   </div>
+<% end %>
+<% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

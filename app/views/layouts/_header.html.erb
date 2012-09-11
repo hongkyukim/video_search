@@ -1,0 +1,25 @@
+<header>
+  <!--<%= link_to logo, root_path %>-->
+  <nav class="round">
+    <ul>
+      <%= link_to "Home", channels_path %> 
+
+      <% if !(current_page? channels_path ) %>
+           | <%= link_to 'All Channels', channels_path %>
+      <% end %>
+
+      <% if signed_in? %>
+          <% if !(current_page?  channels_user_path(current_user) ) %>
+             | <%= link_to "My Channels", channels_user_path(current_user) %>
+          <% end %>
+          | <%= link_to "Sign out", destroy_user_session_path %>
+          <% if current_user.admin? %>
+               | <%= link_to "Sign up", new_user_path %> 
+          <% end %>
+      <% else %>
+        | <%= link_to "Sign in", new_user_session_path %> | <%= link_to "Sign up", new_user_path %> 
+      <% end %>
+
+    </ul>
+  </nav>
+</header>

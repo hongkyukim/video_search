@@ -16,6 +16,10 @@
     <%= f.label :name %><br />
     <%= f.text_field :name, :placeholder => "Type several keywords" %>
   </div>
+
+<% if user_signed_in? %>
+<% if current_user.admin? %>
+
   <div class="field">
     <%= f.label :channel_type %><br />
     <%= f.text_field :channel_type, :placeholder => "not used" %>
@@ -36,6 +40,10 @@
     <%= f.label :user_id %><br />
     <%= f.number_field :user_id, :placeholder => current_user.id %>
   </div>
+
+<% end %>
+<% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

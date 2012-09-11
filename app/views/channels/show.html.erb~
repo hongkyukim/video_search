@@ -1,10 +1,14 @@
+<% title 'Channel Info' %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Channel Name:</b>
   <%= @channel.name %>
 </p>
 
+<% if user_signed_in? %>
+<% if current_user.admin? %>
 <p>
   <b>Channel type:</b>
   <%= @channel.channel_type %>
@@ -24,6 +28,8 @@
   <b>Language:</b>
   <%= @channel.language %>
 </p>
+<% end %>
+<% end %>
 
 <h2>Queries</h2>
 <% @channel.feeds.each do |feed| %>
@@ -37,7 +43,7 @@
    <%= link_to 'Edit', edit_user_channel_path(@user, @channel) %> |
 <% end %>
 
-<%= link_to 'Back To All Channels', channels_path %> |
-<%= link_to 'Back To My Channels', user_channels_path(@user) %> |
+<%= link_to 'Go To All Channels', channels_path %> |
+<%= link_to 'Go To My Channels', user_channels_path(@user) %> |
 <%= link_to 'Show Queries', channel_feeds_path(@channel) %> |
 <%= link_to 'Show Videos', videos_channel_path(@channel) %> 

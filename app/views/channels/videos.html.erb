@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing <%= @channel.name %>'s videos</h1>
+<h1><%= @channel.name %></h1>
 
 <table>
   <tr>
@@ -8,7 +8,7 @@
     <th>Id</th> 
     <th>Title</th>
     <th>Provider</th>
-    <th>VideoId</th>
+    <!--<th>VideoId</th>-->
     <th>Duration</th>
   </tr>
 
@@ -18,15 +18,22 @@
     <td><%= v.id %></td>
     <td><%= link_to v.title, video_path(v) %></td>
     <td><%= v.provider %></td>
-    <td><%= v.yt_video_id %></td>
+    <!--<td><%= v.yt_video_id %></td>-->
     <td><%= v.duration %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-<%= link_to 'Back', channels_path %> |
-<%= link_to 'Add New video', new_video_path %>
+<%= link_to 'Go To All Channels', channels_path %> 
+<!--|
+<%= link_to 'Add New video', new_video_path %>-->
+
+<% if user_signed_in? %>
+<% if current_user %>
+| <%= link_to 'Go to My Channels', user_channels_path(current_user) %>
+<% end %>
+<% end %>
 
 
 

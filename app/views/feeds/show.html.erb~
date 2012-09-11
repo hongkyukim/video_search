@@ -5,14 +5,20 @@
   <%= @feed.name %>
 </p>
 
-<p>
-  <b>Feedtype:</b>
-  <%= @feed.feedtype %>
-</p>
+
 
 <p>
   <b>Queries:</b>
   <%= @feed.queries %>
+</p>
+
+
+<% if user_signed_in? %>
+<% if current_user.admin? %>
+
+<p>
+  <b>Feedtype:</b>
+  <%= @feed.feedtype %>
 </p>
 
 <p>
@@ -34,6 +40,13 @@
   <b>Categories:</b>
   <%= @feed.categories %>
 </p>
+<p>
+  <b>Channel Id:</b>
+  <%= @feed.channel_id %>
+</p>
+
+<% end %>
+<% end %>
 
 
 <%= link_to 'Edit', edit_channel_feed_path(@channel, @feed) %> |

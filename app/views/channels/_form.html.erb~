@@ -14,28 +14,36 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder => "Type several keywords" %>
   </div>
+
+<% if user_signed_in? %>
+<% if current_user.admin? %>
+
   <div class="field">
     <%= f.label :channel_type %><br />
-    <%= f.text_field :channel_type %>
+    <%= f.text_field :channel_type, :placeholder => "not used" %>
   </div>
   <div class="field">
     <%= f.label :tags %><br />
-    <%= f.text_field :tags %>
+    <%= f.text_field :tags, :placeholder => ":time => :today" %>
   </div>
   <div class="field">
     <%= f.label :categories %><br />
-    <%= f.text_field :categories %>
+    <%= f.text_field :categories, :placeholder => "Type categories" %>
   </div>
   <div class="field">
     <%= f.label :language %><br />
-    <%= f.text_field :language %>
+    <%= f.text_field :language, :placeholder => "Type language" %>
   </div>
   <div class="field">
     <%= f.label :user_id %><br />
     <%= f.number_field :user_id, :placeholder => current_user.id %>
   </div>
+
+<% end %>
+<5 end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
