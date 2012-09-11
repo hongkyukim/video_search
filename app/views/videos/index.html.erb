@@ -7,7 +7,7 @@
     <th>Title</th>
     <!--<th>Description</th>-->
     <th>Provider</th>
-    <th>Yt video</th>
+    <!--<th>Yt video</th>-->
     <!--<th>Thumbnail Url</th>-->
     <th>Duration</th>
     <!--<th>Continue</th>-->
@@ -18,21 +18,36 @@
 
 <% @videos.each do |video| %>
   <tr>
-    <td><a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></a> </td>
+
+    <!--<td><a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank"><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></a> </td>-->
+
+
+    <td><a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target="_blank"><%= image_tag video.thumbnail_url, :size => "60x45" if video.thumbnail_url %></a></td>
+
     <td><%= video.id %></td> 
-    <td><%= link_to video.title, video_path(video) %></td>
+
+    <% if user_signed_in? && current_user.admin? %>
+        <td><%= link_to video.title, video_path(video) %></td>
+    <% else %>
+        <td><a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target="_blank"><%= video.title %></a></td>
+    <% end %>
+
     <!--<td><%= video.description %></td>-->
     <td><%= video.provider %></td>
-    <td><%= video.yt_video_id %></td>
+    <!--<td><%= video.yt_video_id %></td>-->
     <!--<td><%= video.thumbnail_url %></td>-->
     <td><%= video.duration %></td>
     <!--<td><%= video.continue %></td>-->
-    <td><%= link_to 'Show', video %></td>
-    <% if can? :update, video %>
-       <td><%= link_to 'Edit', edit_video_path(video) %></td>
-    <% end %>
-    <% if can? :destroy, video %>
-       <td><%= link_to 'Destroy', video, confirm: 'Are you sure?', method: :delete %></td>
+    <% if user_signed_in? %>
+       <% if current_user.admin? %>
+	    <td><%= link_to 'Show', video %></td>
+	    <% if can? :update, video %>
+	       <td><%= link_to 'Edit', edit_video_path(video) %></td>
+	    <% end %>
+	    <% if can? :destroy, video %>
+	       <td><%= link_to 'Destroy', video, confirm: 'Are you sure?', method: :delete %></td>
+	    <% end %>
+       <% end %>
     <% end %>
   </tr>
 <% end %>
