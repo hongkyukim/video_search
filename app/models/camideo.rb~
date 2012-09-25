@@ -1,12 +1,14 @@
 require 'open-uri'
 require 'json'
+####require 'logger'
 
-class Camideo
+class Camideo < ActiveRecord::Base
 
   Camideo_API_KEY = '0a6e4aa28d539dd51821182be34028e1'
   Provider_list = 'youtube'
   Provider = 'youtube'
-
+  ###3logger = Logger.new(STDOUT)
+  MaxCount = 5;
 
   def create_comment(comment)
     begin
@@ -58,13 +60,17 @@ class Camideo
     ###return     ###YouTubeIt::Parser::VideosFeedParser.new(response).parse
   end
 
+  ### dailymotion  ->  keyword search does not work
+
   def self.get_OneVideoSearch_camideo(f)
-       ##self.get_OneVideoSearch(f, 'dailymotion')
-       ##self.get_OneVideoSearch(f, 'vimeo')
+       ### dm search is not good
+       ###self.get_OneVideoSearch(f, 'dailymotion')
+       ### vimeo is good
+       ###self.get_OneVideoSearch(f, 'vimeo')
        ##self.get_OneVideoSearch(f, 'myspace')     ## error
        ##self.get_OneVideoSearch(f, 'metacafe')
        ##self.get_OneVideoSearch(f, 'soundcloud')
-      ## self.get_OneVideoSearch(f, 'youtube')
+       ###self.get_OneVideoSearch(f, 'youtube')
   end
 
   def self.get_OneVideoSearch(f, provider)
@@ -76,6 +82,20 @@ class Camideo
 
     url = "http://www.camideo.com/api/?key=" + Camideo_API_KEY + "&source=" + provider + "&q=" + queries + "&response=json&page=1"
 
+
+    ### vimeo
+    ### &per_page=1&summaty_response=1&full_response=1
+    if provider == 'vimeo'
+        url = url + "&sort=most_played&page=1&per_page=5&summary_response=1&full_response=1"
+    end
+
+    ### vimeo
+    ### &per_page=1&summaty_response=1&full_response=1
+    if provider == 'dailymotion'
+        url = url + "&filters=featured&limit=5&page=1"
+    end
+
+    ###"http://www.camideo.com/api/?key=0a6e4aa28d539dd51821182be34028e1&source=youtube&q=chocolate&response=json&page=1"
      #####response = Net::HTTP.get_response("example.com","/?search=thing&format=json")
      ###response = Net::HTTP.get_response(url, parameters)
 
@@ -88,7 +108,8 @@ class Camideo
     buffer = open(URI.encode(url), "UserAgent" => "Ruby-Wget").read
     if ( !buffer )
          ### error
-         return
+         logger.info 'Alert camideo: provider ' + provider + ' buffer is empty'
+        return
     end
     response = JSON.parse(buffer)
   
@@ -98,10 +119,12 @@ class Camideo
 
     if ( response &&  response['Camideo']['Error'] )
          ### error
+         logger.info 'Alert camideo: ' + provider + ' failed:'
          return
     end
 
-    response['Camideo']['videos'].each { |v| add_video(v, channel_id, provider) }
+    curCount = 0;
+    response['Camideo']['videos'].each { |v| curCount = add_video(v, channel_id, provider, curCount) }
 
     ###return response.videos    ###YouTubeIt::Parser::VideosFeedParser.new(response).parse
   end
@@ -120,7 +143,7 @@ class Camideo
   ###                      "views" : "10895",
   ###                      "published" : "2012-07-11 02:22:08"
 
-  def self.add_video(v, channel_id, prov)
+  def self.add_video(v, channel_id, prov, curCounter)
 
     return if v['title'].empty?
     return if v['description'].nil?
@@ -147,9 +170,31 @@ class Camideo
 
        ##categories = v.categories[0].term + " " +  v.categories[0].label
 
+       if MaxCount < curCounter
+
+          return curCounter
+       end
+       curCounter += 1
+
+       thumbnail_url = ""
+       if prov == 'dailymotion'
+          thumbnail_url = 'dailymotion120_90.jpg'
+       elsif prov == 'vimeo'
+          
+          vimeo_video_json_url = "http://vimeo.com/api/v2/video/%s.json" % split_video_id
+          # Parse the JSON and extract the thumbnail_large url
+          thumbnail_url = JSON.parse(open(vimeo_video_json_url).read).first['thumbnail_medium'] rescue nil
+
+
+          if thumbnail_url.nil? 
+              thumbnail_url = 'dailymotion120_90.jpg'
+          end
+       end
+
+debugger
        @newvideo = Video.create(:title => v['title'], :description => v['description'],
                       :yt_video_id => split_video_id,  :provider => prov, 
-                      ####:thumbnail_url => "",
+                      :thumbnail_url => thumbnail_url,
                       :duration => v['duration'],
                       :linkurl => v['link'], :views => v['views'],
                       :embedcode => v['embedCode']
@@ -159,12 +204,14 @@ class Camideo
        @channel = Channel.find_by_id(channel_id)
        @newvideo.save
        Channel.video_add(@channel, @newvideo)
+
     else
 
        @channel = Channel.find_by_id(channel_id)
 
        mvideo.each { |m| Channel.video_add(@channel, m) }
     end 
+    curCounter
   end
 
   private

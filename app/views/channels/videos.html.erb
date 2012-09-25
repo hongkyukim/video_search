@@ -14,7 +14,7 @@
 
 <% @videos.each do |v| %>
   <tr>
-    <td><a href="<%= v.embedcode ? v.embedcode : v.linkurl %>" target="_blank"><%= image_tag v.thumbnail_url, :size => "60x45" if v.thumbnail_url %></a></td>
+    <td><a href="<%= v.embedcode ? v.embedcode : v.linkurl %>" target="_blank"><%= image_tag v.thumbnail_url, :size => "120x90" if v.thumbnail_url %></a></td>
     <td><%= v.id %></td>
 
     <% if user_signed_in? && current_user.admin? %>

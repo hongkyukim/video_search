@@ -1,24 +1,27 @@
+<% title "Videos" %>
 <h1><%= @channel.name %></h1>
 
-<% title "Videos" %>
-
 <div id="videoguide">
+
   <% for video in @videos %>
 
-    <ul class="rounded">
-      <li class="arrow">
-	<!--<a href="http://www.youtube.com/watch?v=<%= video.yt_video_id %>&feature=youtube_it" target="_blank">-->
+   <ul>
+      <li>
 	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target="_blank">
-         <div class="videoimage"><%= image_tag video.thumbnail_url, :size => "58x38" if video.thumbnail_url %></div>
-	 <p class="post-description"><span><%= video.title %></span></p>
-
-         <p class="post-videoid"> <i><%= video.id %></i> <em><%= video.provider %></em> <i><%= video.duration %></i></p>
+         <div class="videoimage"><%= image_tag video.thumbnail_url, :size => "90x60" if video.thumbnail_url %></div>
+	 <p class="post-title"><span><%= video.title %></span></p>
+	 <p class="post-description"><%= video.description %></p>
+         <p class="post-videoid"> <i>#<%= video.id %></i> <em><%= video.provider %></em> <i><%= video.duration %></i></p>
  
 	 <!--<p class="post-description"><span><%= link_to h(video.title), video_path(video) %></span></p>-->
 	 <!--<p class="post-videoid"> <i><%= video.id %></i> <em><%= video.provider %></em></p>-->
         </a>
       </li>
-    </ul>
+   
+   </ul>
+
+
+
 
 
 <% if false %>
@@ -60,9 +63,11 @@
       <!--<small class="counter"><%= @videos.size %></small>-->
     <!--</li>-->
     <% end %>
+
+
   <% end %>
 </div>
-<br />
+<!--<br />-->
 
 <% if user_signed_in? %>
      <ul><li><%= link_to 'Back to My Channels', user_channels_path(current_user) %></li></ul>

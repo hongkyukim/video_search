@@ -88,11 +88,11 @@ class Video < ActiveRecord::Base
     channel_id = f.channel_id
     res = yt_session.videos_by(video_ytoptions(f)) ###f.queries)
 
+    ### search thru youtube
     res.videos.each { |v| add_video(v, channel_id) }
 
-
+    ### search camideo: vimeo, dailymotion, ...
     Camideo.get_OneVideoSearch_camideo(f)
-
 
   end
 
@@ -136,6 +136,7 @@ class Video < ActiveRecord::Base
        end
        ## duration = v.duration
 
+###debugger
        @newvideo = Video.create(:title => v.title, :description => v.description,
                      :yt_video_id => split_video_id[3],  :provider => prov,
                      :thumbnail_url => v.thumbnails[0].url, :duration => durationHMS, 
