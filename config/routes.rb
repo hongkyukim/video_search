@@ -1,15 +1,17 @@
 LoginApp2::Application.routes.draw do
   ## root :to => 'videos#index'
-  root :to => 'channels#index'
-
+  root :to => 'channels#index', :search => 'selected'
+  
   devise_for :users, :controllers => { :sessions => "sessions" }
   ###, :controllers => {:sessions => "sessions"}
   ### , :path => '/', :controllers => { :sessions => "sessions" }
-  ##do
+
+
+  ###do
   ## get "/login", :to => "devise/sessions#new"
   ## get "/signup", :to => "devise/registrations#new"
   ## get "/logout", :to => "devise/session#destroy"
-  ##end
+  ###end
 
   resources :users do
       member do
@@ -18,11 +20,8 @@ LoginApp2::Application.routes.draw do
       resources :channels
   end
 
-
   resources :languages
   
-
-
   ###redirect '/', :controller => 'channels', :action => 'index'
 
   ###resources :channels, :has_many => [ :feeds ]
@@ -39,8 +38,6 @@ LoginApp2::Application.routes.draw do
   end
 
   resources :youtubevideo
-  
-
   
   ##resources :users, :user_sessions
 

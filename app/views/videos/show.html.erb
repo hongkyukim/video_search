@@ -13,60 +13,59 @@
 <p>
     <%= raw yt_client.my_video(@video.yt_video_id).embed_html %>
 </p>
-
 <iframe id="player" type="text/html" width="640" height="390"
   src="http://www.youtube.com/watch?v=<%= @video.yt_video_id %>&feature=youtube_it" 
   frameborder="0">
 <% end %>
 
+
+<% if false %>
+<p><b>url:</b> <a href="<%= @video.url %>" target="_blank"><%= @video.url %></a></p>
+<% end %>
+
+
+
 <p>
   <b>Description:</b>
   <%= @video.description %>
 </p>
+<p><b>url:</b> <a href="<%= @video.embedcode ? @video.embedcode : @video.linkurl %>" target="_blank">Watch with larger Window</a></p>
 
-<p><b>url:</b> <a href="http://www.youtube.com/watch?v=<%= @video.yt_video_id %>&feature=youtube_it" target="_blank">http://www.youtube.com/watch?v=<%= @video.yt_video_id %></a></p>
+<% if session[:last_channel_page] %>
+   <%= link_to "Back", session[:last_channel_page] %>
+<% end %>
+<!--<%= link_to 'Edit', edit_video_path(@video) %> |-->
+
+<iframe id="player" type="text/html" width="640" height="390"
+  src="<%= @video.embedcode ? @video.embedcode : @video.linkurl %>" 
+  frameborder="0">
 
 
 
+
+
+
+
+
+<% if false %>
 <p>
   <b>Provider:</b>
   <%= @video.provider %>
 </p>
-
 <p>
   <b>Yt video:</b>
   <%= @video.yt_video_id %>
 </p>
-
 <p>
   <b>Thumbnail Url:</b>
   <%= @video.thumbnail_url %>
 </p>
-
 <p>
   <b>Is complete:</b>
   <%= @video.is_complete %>
 </p>
-
 <p>
   <b>Continue:</b>
   <%= @video.continue %>
 </p>
-
-<% if false %>
-<p><b>url:</b> <a href="<%= @video.url %>" target="_blank"><%= @video.url %></a></p>
-
 <% end %>
-
-<% if session[:last_channel_page] %>
-   <%= link_to "Back To Channel", session[:last_channel_page] %> |
-<% end %>
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %> 
-
-
-<iframe id="player" type="text/html" width="640" height="390"
-  src="http://www.youtube.com/embed/<%= @video.yt_video_id %>" 
-  frameborder="0">
-
-

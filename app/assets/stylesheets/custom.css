@@ -247,3 +247,83 @@ form.new_micropost textarea {
   height: 4em;
   margin-bottom: 0;
 }
+
+
+
+
+
+			/*Begin Customization Here*/
+			.videoguide-title{
+				border-bottom: 0px solid #333333;
+			}
+			span.videoguide-title{
+				color: #fff;
+				width: 50%;
+				display: block;
+				padding-bottom: 1px;/*10px*/
+			}
+			.post-title{
+				font-size: 19px; /*12px*/
+				margin-left: 120px; /* 75px */
+			}
+			.post-description{
+				/*font-size: 11px; 12px*/
+				margin-left: 120px; /* 75px */
+/* color: #55f; */
+  display: block;
+  vertical-align: top;
+  font-size: 13px;  /* 85% */
+  color: #666;    /* 666 */
+  overflow: hidden;
+  
+			}
+			.post-videoid{
+				margin-bottom: 10px;  /*3px*/
+                                font-size: 11px; /*12px*/
+				margin-left: 120px; /* 75px */
+color: #797;
+			}
+			.post, .page-videoid{
+				font-size: 13px;
+				color: #fff;
+				margin-bottom: 1px;/* 5px*/
+			}
+
+			#videoguide123 ui{
+				position: relative;
+font-size: 40px;  
+float: left;
+  display: block;
+  border: 0;
+  background: none;
+  clear: both;
+  overflow: hidden;
+color: #111;
+			}
+			#videoguide123 .rounded li{
+				position: relative;
+margin-top: 0px; /*25px*/
+color: #199;
+			}
+			.month{
+				position: absolute;
+				width: 70px;
+				text-align: center;
+				background: #aa3939;
+				color: #f5f2f2;
+				line-height: 28px;
+				padding-bottom: 5px;
+				border-top-left-radius: 1px;/* 4px*/
+				border-top-right-radius: 1px;
+			}
+			.videoimage{
+				position: absolute;
+				width: 90px;  /* 70px*/
+				margin-top: 0px; /*25px*/
+				font-size: 40px; /* 40px*/
+				text-align: center;
+				background: #f5f2f2;
+				border-bottom-left-radius: 1px;/*4px*/
+				border-bottom-right-radius: 1px;/*4px*/
+			}
+

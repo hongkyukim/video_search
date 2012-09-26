@@ -25,7 +25,8 @@ class Video < ActiveRecord::Base
   
     
   def self.yt_session
-    @yt_session ||= YouTubeIt::Client.new(:username => YouTubeITConfig.username , :password => YouTubeITConfig.password , :dev_key => YouTubeITConfig.dev_key)    
+    @yt_session ||= YouTubeIt::Client.new(:username => YouTubeITConfig.username ,
+             :password => YouTubeITConfig.password , :dev_key => YouTubeITConfig.dev_key)    
   end
 
   def self.delete_video(video)
@@ -68,6 +69,9 @@ class Video < ActiveRecord::Base
         ###response = yt_session.videos_by(:query => f.queries, :max_results => 3, :time => :today) ###f.queries)
 
         get_OneVideoSearch(f) 
+
+ 
+
     }
 
     ###return     ###YouTubeIt::Parser::VideosFeedParser.new(response).parse
@@ -86,13 +90,38 @@ class Video < ActiveRecord::Base
   def self.get_OneVideoSearch(f)
 
     channel_id = f.channel_id
-    res = yt_session.videos_by(video_ytoptions(f)) ###f.queries)
+    if f.feedtype == 'selected'
+        ### for selected channels
+        ### f.feedtype: 'selected',  f.options: 'top_rated'
+        ### top_rated, top_favorites, most_viewed, most_popular, most_recent, most_discussed, most_linked, most_responded,
+        ### recently_featured, watch_on_mobile
+        ###res = yt_session.videos_by(f.options)  ### ":top_rated, :time => :today" selected
+        ### :time => :today, :max_results => 30, :page => 2  
+	case f.options
+	when 'most_viewed'
+            res = yt_session.videos_by(:most_viewed, :max_results => 10, :page => 1 )
+	when 'most_popular'
+            res = yt_session.videos_by(:most_popular, :max_results => 10, :page => 1)
+	when 'top_rated'
+            res = yt_session.videos_by(:top_rated, :max_results => 10, :page => 1)
+	when 'recently_featured'
+            res = yt_session.videos_by(:recently_featured, :max_results => 10, :page => 1)
+	when 'top_favorites'
+            res = yt_session.videos_by(:top_favorites, :max_results => 10, :page => 1)
+	else
+	    logger.alert "Alert: This option #{f.options} is not supported."
+	end
+
+    else
+        res = yt_session.videos_by(video_yt_options(f)) ###f.queries)
+    end
 
     ### search thru youtube
     res.videos.each { |v| add_video(v, channel_id) }
 
     ### search camideo: vimeo, dailymotion, ...
     Camideo.get_OneVideoSearch_camideo(f)
+
 
   end
 
@@ -164,7 +193,7 @@ class Video < ActiveRecord::Base
       params[:is_unpublished] == "1" ? opts.merge(:private => "true") : opts
     end
 
-    def self.video_ytoptions(f)
+    def self.video_yt_options(f)
       opts = {:query => f.queries}
       str = f.options
       ###debugger

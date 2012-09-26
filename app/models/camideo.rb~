@@ -8,7 +8,7 @@ class Camideo < ActiveRecord::Base
   Provider_list = 'youtube'
   Provider = 'youtube'
   ###3logger = Logger.new(STDOUT)
-  MaxCount = 5;
+  MaxCount = 3;
 
   def create_comment(comment)
     begin
@@ -45,7 +45,7 @@ class Camideo < ActiveRecord::Base
   end
 
   def self.get_VideoSearch123
-###@ytVideo = YouTubeVideo.new
+        ###@ytVideo = YouTubeVideo.new
     return YouTubeVideo.get_VideoSearch     ### youtube
 
   end
@@ -66,7 +66,7 @@ class Camideo < ActiveRecord::Base
        ### dm search is not good
        ###self.get_OneVideoSearch(f, 'dailymotion')
        ### vimeo is good
-       ###self.get_OneVideoSearch(f, 'vimeo')
+       self.get_OneVideoSearch(f, 'vimeo')
        ##self.get_OneVideoSearch(f, 'myspace')     ## error
        ##self.get_OneVideoSearch(f, 'metacafe')
        ##self.get_OneVideoSearch(f, 'soundcloud')
@@ -74,6 +74,31 @@ class Camideo < ActiveRecord::Base
   end
 
   def self.get_OneVideoSearch(f, provider)
+
+    if f.feedtype == 'selected'
+        ### for selected channels
+        ### f.feedtype: 'selected',  f.options: 'top_rated'
+        ### top_rated, top_favorites, most_viewed, most_popular, most_recent, most_discussed, most_linked, most_responded,
+        ### recently_featured, watch_on_mobile
+        ###res = yt_session.videos_by(f.options)  ### ":top_rated, :time => :today" selected
+        ### :time => :today, :max_results => 30, :page => 2  
+	###case f.options
+	###when 'most_viewed'
+        ###    res = yt_session.videos_by(:most_viewed, :max_results => 10, :page => 1 )
+	###when 'most_popular'
+        ###    res = yt_session.videos_by(:most_popular, :max_results => 10, :page => 1)
+	###when 'top_rated'
+        ###    res = yt_session.videos_by(:top_rated, :max_results => 10, :page => 1)
+	###when 'recently_featured'
+        ###    res = yt_session.videos_by(:recently_featured, :max_results => 10, :page => 1)
+	###when 'top_favorites'
+        ###    res = yt_session.videos_by(:top_favorites, :max_results => 10, :page => 1)
+	###else
+	###    logger.alert "Alert: This option #{f.options} is not supported."
+	###end
+
+        return   ### skip
+    end
 
     channel_id = f.channel_id
     ###res = yt_session.videos_by(video_ytoptions(f)) ###f.queries)
@@ -95,16 +120,16 @@ class Camideo < ActiveRecord::Base
         url = url + "&filters=featured&limit=5&page=1"
     end
 
-    ###"http://www.camideo.com/api/?key=0a6e4aa28d539dd51821182be34028e1&source=youtube&q=chocolate&response=json&page=1"
+     ###"http://www.camideo.com/api/?key=0a6e4aa28d539dd51821182be34028e1&source=youtube&q=chocolate&response=json&page=1"
      #####response = Net::HTTP.get_response("example.com","/?search=thing&format=json")
      ###response = Net::HTTP.get_response(url, parameters)
 
      ####response = json_decode(jresponse, TRUE);
 
 
-    ### safeurl = URI.parse(URI.encode(url))
+     ### safeurl = URI.parse(URI.encode(url))
 
-    ###buffer = open(url).read
+     ###buffer = open(url).read
     buffer = open(URI.encode(url), "UserAgent" => "Ruby-Wget").read
     if ( !buffer )
          ### error
@@ -191,7 +216,7 @@ class Camideo < ActiveRecord::Base
           end
        end
 
-debugger
+
        @newvideo = Video.create(:title => v['title'], :description => v['description'],
                       :yt_video_id => split_video_id,  :provider => prov, 
                       :thumbnail_url => thumbnail_url,

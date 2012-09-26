@@ -24,10 +24,20 @@ class Channel < ActiveRecord::Base
 
   end
 
+
+  ### 
+  ### search => nil   ---> all channels
+  ### search => 'selected' ---> selected channels
+  ### search => query ---> 
   def self.search(search)
       if search
           search = search.downcase
-          find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+          if search == 'selected'
+              ###find_by_channel_type(search) -- error not array
+              find_by_sql("SELECT * FROM channels c WHERE c.channel_type = '#{search}' ")
+          else
+              find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+          end
       else
           find(:all)
       end

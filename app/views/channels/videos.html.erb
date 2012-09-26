@@ -2,6 +2,8 @@
 
 <h1><%= @channel.name %></h1>
 
+
+<% if false %>
 <table>
   <tr>
     <th>Photo</th>
@@ -28,7 +30,32 @@
     <td><%= v.duration %></td>
   </tr>
 <% end %>
+
 </table>
+
+<% else %>
+
+<div id="videoguide">
+
+  <% @videos.each do |video| %>
+
+     <td>
+	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target="_blank">
+         <div class="videoimage"><%= image_tag video.thumbnail_url, :size => "115x90" if video.thumbnail_url %></div></a> </td>
+
+     <td>
+	 <li class="post-title"><span><%= link_to h(video.title), video_path(video) %></span></li>
+	 <li class="post-description"><%= video.description %></li>
+         <p class="post-videoid"> <i>#<%= video.id %></i> <em><%= video.provider %></em> <i><%= video.duration %></i></p>
+     </td>
+     <br />
+       
+ <% end %>
+</div>
+
+
+<% end %>
+
 
 <br />
 <%= link_to 'Go To All Channels', channels_path %> 

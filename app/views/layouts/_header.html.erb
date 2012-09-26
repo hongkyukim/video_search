@@ -2,11 +2,8 @@
   <%= link_to logo, root_path %>
   <nav class="round">
     <ul>
-      <%= link_to "Home", channels_path %> 
-
-      <% if !(current_page? channels_path ) %>
-           | <%= link_to 'All Channels', channels_path %>
-      <% end %>
+      <%= link_to "Home", channels_path( :search => 'selected') %> 
+      | <%= link_to 'All Channels', channels_path( :search => nil ) %>
 
       <% if signed_in? %>
           <% if !(current_page?  channels_user_path(current_user) ) %>

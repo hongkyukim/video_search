@@ -1,0 +1,71 @@
+
+<h1>All Channels</h1>
+
+<%= form_tag channels_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search channels", :name => nil %>
+  </p>
+<% end %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <!--<th>Channel type</th>
+    <th>Tags</th>
+    <th>Categories</th>
+    <th>Language</th>
+    <th>User_ID</th>-->
+    <th>Videos</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @channels.each do |channel| %>
+  <tr>
+    <td><%= channel.name %></td>
+    <!--<td><%= channel.channel_type %></td>
+    <td><%= channel.tags %></td>
+    <td><%= channel.categories %></td>
+    <td><%= channel.language %></td>
+    <td><%= channel.user_id %></td>-->
+    <td><%= link_to 'Show Videos ', videos_channel_path(channel) %></td>
+<% if false %>
+    <td><%= link_to 'Show', channel_path(channel) %></td>
+    <% if can? :update, channel %>
+        <td><%= link_to 'Edit', edit_channel_path(channel) %></td>
+    <% end %>
+<% end %>
+
+    <% if user_signed_in? %>
+    <% if current_user.admin? %>
+        <% if can? :destroy, channel %>
+            <td><%= link_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete %></td>
+        <% end %>
+    <% end %>
+    <% end %>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<!--<%= link_to 'New Channel', new_channel_path %>-->
+
+<% if user_signed_in? %>
+      <%= link_to "Add My New Channel", new_user_channel_path(current_user) %>
+      | <%= link_to "Go To My Channels", channels_user_path(current_user) %>
+      <% if current_user.admin? %>
+         | <%= link_to "View Users", users_path %>
+      <% end %>
+<% end %>
+
+
+<% if user_signed_in? %>
+<% if current_user.admin? %>
+
+
+<% end %>
+<% end %>
+

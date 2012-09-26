@@ -9,6 +9,7 @@ class ChannelsController < InheritedResources::Base
     ### get all channels
 
     ###@channels = Channel.all
+
     @channels = Channel.search(params[:search]).reverse
 
     respond_to do |format|
@@ -65,6 +66,12 @@ class ChannelsController < InheritedResources::Base
     @user = User.find(params[:user_id])
     ### take lower case
     params[:channel][:name] = params[:channel][:name].downcase
+
+    ### set channel_type, tags, and categories
+    ### channel_type's default is public
+    params[:channel][:channel_type] = "public" if params[:channel][:channel_type].nil?
+
+
     ### set language and user_id
     params[:channel][:language] = "en" if params[:channel][:language].nil?
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
@@ -151,5 +158,5 @@ class ChannelsController < InheritedResources::Base
     end
   end
 
-
+  
 end
