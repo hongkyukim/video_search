@@ -10,6 +10,15 @@ class ChannelsController < InheritedResources::Base
 
     ###@channels = Channel.all
 
+    channels = Channel.find(:all)
+    ### update thumbnail_url for channels
+    channels.each { |c|   c.update_attributes({ "thumbnail_url" => c.videos[0].thumbnail_url}) if c.thumbnail_url.blank? }
+
+    channels = Channel.find(:all)
+    ### update thumbnail_url for channels
+    channels.each { |c|    raise false if c.thumbnail_url.blank? }
+
+
     @channels = Channel.search(params[:search]).reverse
 
     respond_to do |format|
@@ -84,8 +93,11 @@ class ChannelsController < InheritedResources::Base
 
         Feed.make_firstfeed(@channel)
 
+        ### update thumbnail_url for channel with the first video's thumbnail_url
+        video = @channel.videos[0]
+
         ###@channel.querytime = Time.now;
-        @channel.update_attributes({ "querytime" => DateTime.now})
+        @channel.update_attributes({ "querytime" => DateTime.now, "thumbnail_url" => video.thumbnail_url})
 
         format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
         format.json { render json: @channel, status: :created, location: @channel }
