@@ -1,4 +1,11 @@
+
+<% if params[:search] == nil %>
 <% title "All Channels" %>
+<% elsif params[:search] == 'selected' %>
+<% title "Home" %>
+<% else %>
+<% title "Channel Search" %>
+<% end %>
 
 <ul>
 <%= form_tag channels_path, :method => 'get' do %>
@@ -24,6 +31,11 @@
 <% if user_signed_in? %>
       <ul><li><%= link_to "Add My New Channel", new_user_channel_path(current_user) %></li></ul>
       <ul><li><%= link_to "Go To My Channels", channels_user_path(current_user) %></li></ul>
+      <% if params[:search] != 'selected' %>
+          <ul><li><%= link_to "Go To Home", channels_path( :search => 'selected') %></li></ul>
+      <% else %>
+          <ul><li><%= link_to "Go To All Channels", channels_path( :search => nil) %></li></ul>
+      <% end %>
       <% if current_user.admin? %>
          <ul><li><%= link_to "View Users", users_path %></li></ul>
       <% end %>
