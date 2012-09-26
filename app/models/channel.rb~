@@ -34,7 +34,7 @@ class Channel < ActiveRecord::Base
           search = search.downcase
           if search == 'selected'
               ###find_by_channel_type(search) -- error not array
-              find_by_sql("SELECT * FROM channels c WHERE c.channel_type = '#{search}' or c.id = 76")
+              find_by_sql("SELECT * FROM channels c WHERE c.channel_type = '#{search}' or c.channel_type = 'selected2' ")
           else
               find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
           end
