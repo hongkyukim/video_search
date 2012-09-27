@@ -45,7 +45,7 @@
 
      <td>
 	 <li class="post-title"><span><%= link_to h(video.title), video_path(video) %></span></li>
-	 <li class="post-description"><%= video.description %></li>
+	 <li class="post-description"><%= truncate(video.description, :length => 200, :omission => ".....") %></li>
          <p class="post-videoid"> <i>#<%= video.id %></i> <em><%= video.provider %></em> <i><%= video.duration %></i></p>
      </td>
      <br />
