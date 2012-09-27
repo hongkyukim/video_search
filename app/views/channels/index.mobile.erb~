@@ -39,6 +39,13 @@
       <% if current_user.admin? %>
          <ul><li><%= link_to "View Users", users_path %></li></ul>
       <% end %>
+
+<% else %>
+     <% if params[:search] != 'selected' %>
+          <ul><li><%= link_to "Go To Home", channels_path( :search => 'selected') %></li></ul>
+      <% else %>
+          <ul><li><%= link_to "Go To All Channels", channels_path( :search => nil) %></li></ul>
+      <% end %>
 <% end %>
 
 <% if false %>
