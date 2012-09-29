@@ -10,13 +10,13 @@ class ChannelsController < InheritedResources::Base
 
     ###@channels = Channel.all
 
-    channels = Channel.find(:all)
+    ###channels = Channel.find(:all)
     ### update thumbnail_url for channels
-    channels.each { |c|   c.update_attributes({ "thumbnail_url" => c.videos[0].thumbnail_url}) if c.thumbnail_url.blank? }
+    ###channels.each { |c|   c.update_attributes({ "thumbnail_url" => c.videos[0].thumbnail_url}) if c.thumbnail_url.blank? }
 
-    channels = Channel.find(:all)
+    ###channels = Channel.find(:all)
     ### update thumbnail_url for channels
-    channels.each { |c|    raise false if c.thumbnail_url.blank? }
+    ###channels.each { |c|    raise false if c.thumbnail_url.blank? }
 
 
     @channels = Channel.search(params[:search]).reverse
