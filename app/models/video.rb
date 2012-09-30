@@ -196,6 +196,10 @@ class Video < ActiveRecord::Base
     def self.video_yt_options(f)
       opts = {:query => f.queries}
       str = f.options
+      if str.nil? || str == ""
+debugger
+         opts
+      end
       ###debugger
       str.split(',').each do |x| 
          v,k = x.split(/\s*=>\s*/)
