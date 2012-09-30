@@ -197,7 +197,6 @@ class Video < ActiveRecord::Base
       opts = {:query => f.queries}
       str = f.options
       if str.nil? || str == ""
-debugger
          opts
       end
       ###debugger
