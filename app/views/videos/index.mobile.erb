@@ -9,7 +9,6 @@
 	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target="_blank">
          <div class="videoimage"><%= image_tag video.thumbnail_url, :size => "58x38" if video.thumbnail_url %></div>
 	 <p class="post-description"><span><%= video.title %></span></p>
-
          <p class="post-videoid"> <i><%= video.id %></i> <em><%= video.provider %></em> <i><%= video.duration %></i></p>
  
 	 <!--<p class="post-description"><span><%= link_to h(video.title), video_path(video) %></span></p>-->

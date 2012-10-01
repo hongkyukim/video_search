@@ -17,20 +17,20 @@
 </ul>
 
 <h5>Channels:</h5>                   
-
+<div id="videoguide">
 <% for chan in @channels %>
-<ul class="rounded">
+   <ul class="rounded">
       <li class="arrow">
-	<a href="/channels/<%= chan.id %>/videos" >
+	<a href="/channels/<%= chan.id %>/videos"  target="_blank">
          <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "70x50" if chan.thumbnail_url %></div>
 	 <p class="post-channeltitle"><span><%= chan.name %></span></p>
-         <p class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i><small class="counter"><%= chan.videos.size %></small> </p>
+         <p class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i> </p>
         </a>
       </li>
     </ul>
 
   <% end %>
-
+</div>
 
 <!--<ul><li class="arrow"><%= link_to "Add New channel", new_channel_path %></li></ul>-->
 

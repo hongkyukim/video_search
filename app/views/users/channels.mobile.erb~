@@ -11,11 +11,11 @@
   <h5>Channels: </h5>
 <% end %> 
   
-<ul>   
+<ul class="rounded">   
        
   <% for chan in @channels %>
     <% if @show_delete %>
-       <li>
+       <li class="arrow">
          <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "70x50" if chan.thumbnail_url %></div>
 	 <p class="post-channeltitle"><span><%= chan.name %></span></p>
          <p class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i> </p>
@@ -29,7 +29,7 @@
 	<a href="/channels/<%= chan.id %>/videos">
          <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "70x50" if chan.thumbnail_url %></div>
 	 <p class="post-channeltitle"><span><%= chan.name %></span></p>
-         <p class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i><small class="counter"><%= chan.videos.size %></small> </p>
+         <p class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i> </p>
         </a>
       </li>
 
