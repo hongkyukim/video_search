@@ -325,7 +325,7 @@ span.videoguide-title{
 }
 .videoimage{
 	position: absolute;
-	width: 90px;  /* 70px*/
+	width: 70px;  /* 70px -- 90px*/
 	margin-top: 5px; /*25px*/
 	font-size: 40px; /* 40px*/
 	text-align: center;
@@ -334,6 +334,18 @@ span.videoguide-title{
 	border-bottom-right-radius: 1px;/*4px*/
 }
 
+
+
+.channel-image{
+	position: absolute;
+	width: 100px;  /* 70px -- 90px*/
+	margin-top: 1px; /*25px*/
+	font-size: 70px; /* 40px*/
+	text-align: center;
+	background: #f5f2f2;
+	border-bottom-left-radius: 1px;/*4px*/
+	border-bottom-right-radius: 1px;/*4px*/
+}
 .post-channeltitle{
 	font-size: 23px; /*12px*/
 	margin-left: 120px; /* 75px */
