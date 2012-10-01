@@ -11,10 +11,10 @@
   <h5>Channels: </h5>
 <% end %> 
   
-          
+ <ul>          
   <% for chan in @channels %>
     <% if @show_delete %>
-     <ul>
+ 
        <li>
          <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "70x50" if chan.thumbnail_url %></div>
 	 <p class="post-channeltitle"><span><%= chan.name %></span></p>
@@ -24,9 +24,9 @@
                <br /><%= button_to 'Destroy', chan, confirm: 'Are you sure?', method: :delete  %>
           <% end %>
         </li>
-      </ul>
+      
     <% else %>
-       <ul>
+       
        <li class="arrow">
 	 <a href="/channels/<%= chan.id %>/videos">
          <div class="channel-image"><a href="/channels/<%= chan.id %>/videos"><%= image_tag chan.thumbnail_url, :size => "70x50" if chan.thumbnail_url %></a></div>
@@ -34,10 +34,10 @@
          <p class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i> </p>
         </a>
       </li>
-      </ul>
+ 
      <% end %>
   <% end %>
-
+ </ul>
 
 
 

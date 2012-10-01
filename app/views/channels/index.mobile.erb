@@ -17,9 +17,9 @@
 </ul>
 
 <h5>Channels:</h5>                   
-
+  <ul class="rounded">
   <% for chan in @channels %>
-    <ul class="rounded">
+
       <li class="arrow">
 	<a href="/channels/<%= chan.id %>/videos">
          <div class="channel-image"><a href="/channels/<%= chan.id %>/videos"><%= image_tag chan.thumbnail_url, :size => "70x50" if chan.thumbnail_url %></a></div>
@@ -27,10 +27,9 @@
          <p class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i> </p>
         </a>
       </li>
-    </ul>
 
   <% end %>
-
+  </ul>
 
 <!--<ul><li class="arrow"><%= link_to "Add New channel", new_channel_path %></li></ul>-->
 
