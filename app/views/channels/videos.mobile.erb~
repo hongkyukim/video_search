@@ -1,20 +1,20 @@
 <% title "Videos" %>
 <h1><%= @channel.name %></h1>
 
-<div id="videoguide">
+<div>
 
   <% for video in @videos %>
 
    <ul>
       <li>
-	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target="_blank">
+	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>">
          <div class="videoimage"><%= image_tag video.thumbnail_url, :size => "85x55" if video.thumbnail_url %></div>
 	 <p class="post-title"><span><%= video.title %></span></p>
 	 <p class="post-description"><%= video.description %></p>
          <p class="post-videoid"> <i>#<%= video.id %></i> <em><%= video.provider %></em> <i><%= video.duration %></i></p>
  
-	 <!--<p class="post-description"><span><%= link_to h(video.title), video_path(video) %></span></p>-->
-	 <!--<p class="post-videoid"> <i><%= video.id %></i> <em><%= video.provider %></em></p>-->
+	 <!-- class videoguide <p class="post-description"><span><%= link_to h(video.title), video_path(video) %></span></p>-->
+	 <!-- target _blank <p class="post-videoid"> <i><%= video.id %></i> <em><%= video.provider %></em></p>-->
         </a>
       </li>
    
