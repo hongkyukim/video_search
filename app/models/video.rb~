@@ -198,8 +198,9 @@ class Video < ActiveRecord::Base
       str = f.options
       if str.nil? || str == ""
 debugger
-         opts
+         return opts
       end
+debugger
       ###debugger
       str.split(',').each do |x| 
          v,k = x.split(/\s*=>\s*/)

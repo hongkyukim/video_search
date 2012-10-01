@@ -197,7 +197,7 @@ class Video < ActiveRecord::Base
       opts = {:query => f.queries}
       str = f.options
       if str.nil? || str == ""
-         opts
+         return opts
       end
       ###debugger
       str.split(',').each do |x| 
