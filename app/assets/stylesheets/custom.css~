@@ -338,7 +338,8 @@ span.videoguide-title{
 
 .channel-image{
 	position: absolute;
-	width: 100px;  /* 70px -- 90px*/
+	width: 115px;  /* 70px -- 90px*/
+	height: 80px;  /* 70px -- 90px*/
 	margin-top: 1px; /*25px*/
 	font-size: 70px; /* 40px*/
 	text-align: center;
