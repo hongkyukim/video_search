@@ -1,9 +1,9 @@
 <% title "All Videos" %>
 <ul><li class="arrow"><%= link_to "Go To Channels", channels_path %></li></ul>
 
+
 <div id="videoguide">
   <% for video in @videos %>
-
     <ul class="rounded">
       <li class="arrow">
 	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target="_blank">
@@ -44,6 +44,7 @@
     <% end %>
 
   <% end %>
+
 <!--</ul>-->
 </div>
 

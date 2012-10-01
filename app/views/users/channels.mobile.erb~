@@ -2,30 +2,37 @@
 
 <!--<p id="notice"><%= notice %></p>-->
  
-<ul><li><%= link_to "Add New Channel", new_user_channel_path(@user) %></li></ul>
+<!--<ul><li><%= link_to "Add New Channel", new_user_channel_path(@user) %></li></ul>-->
 
-  <% if @channels.count == 0 %>      
-  <h3>My channels are not created yet. </h3>
-  <% end %> 
+
+<% if @channels.count == 0 %>      
+  <h5>My channels are not created yet. </h5>
+<% else %>
+  <h5>Channels: </h5>
+<% end %> 
   
 <ul>   
        
-  <% for channel in @channels %>
+  <% for chan in @channels %>
     <% if @show_delete %>
        <li>
-          <%= channel.name %>
-          <!--<small class="counter"><%= channel.videos.size %></small>-->
-          <!--<%= link_to 'Destroy', user_channels_path(@user), confirm: 'Are you sure?', :method => :delete %>-->
-          <% if can? :destroy, channel %>
-               <%= button_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete  %>
+         <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "70x50" if chan.thumbnail_url %></div>
+	 <p class="post-channeltitle"><span><%= chan.name %></span></p>
+         <p class="post-channelid"> <i>channel #<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i> </p>
+
+          <% if can? :destroy, chan %>
+               <br /><%= button_to 'Destroy', chan, confirm: 'Are you sure?', method: :delete  %>
           <% end %>
         </li>
     <% else %>
        <li class="arrow">
-          <%= link_to channel.name, videos_channel_path(channel) %>
-          <!--<span class="subject">Re: jQTouch Alpha 2</span>-->
-          <small class="counter"><%= channel.videos.size %></small>
-       </li>
+	<a href="/channels/<%= chan.id %>/videos" target="_blank">
+         <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "70x50" if chan.thumbnail_url %></div>
+	 <p class="post-channeltitle"><span><%= chan.name %></span></p>
+         <p class="post-channelid"> <i>channel #<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i><small class="counter"><%= chan.videos.size %></small> </p>
+        </a>
+      </li>
+
      <% end %>
   <% end %>
 </ul>

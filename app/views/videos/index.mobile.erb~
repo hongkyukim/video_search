@@ -4,7 +4,6 @@
 <div id="videoguide">
   <% for video in @videos %>
 
-    
     <ul class="rounded">
       <li class="arrow">
 	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target="_blank">
