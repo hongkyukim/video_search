@@ -1,102 +1,101 @@
-2012-10-01T19:12:24+00:00 app[web.1]: cache: [GET /channels/95/videos] miss
-2012-10-01T19:12:24+00:00 heroku[router]: GET www.videotouch.tv/channels/95/videos dyno=web.1 queue=0 wait=0ms service=832ms status=200 bytes=33752
-2012-10-01T19:12:30+00:00 app[web.1]: cache: [GET /jqtouch/themes/apple/img/toolButton.png] miss
-2012-10-01T19:12:30+00:00 heroku[router]: GET www.videotouch.tv/jqtouch/themes/apple/img/toolButton.png dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
-2012-10-01T19:12:30+00:00 app[web.1]: Started GET "/users/1/channels" for 75.18.203.143 at 2012-10-01 19:12:30 +0000
-2012-10-01T19:12:30+00:00 app[web.1]: 
-2012-10-01T19:12:30+00:00 app[web.1]: 
-2012-10-01T19:12:30+00:00 app[web.1]: cache: [GET /users/1/channels] miss
-2012-10-01T19:12:30+00:00 heroku[router]: GET www.videotouch.tv/users/1/channels dyno=web.1 queue=0 wait=0ms service=25ms status=304 bytes=0
-2012-10-01T19:12:30+00:00 heroku[router]: GET www.videotouch.tv/jqtouch/themes/apple/img/toolButton.png dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
-2012-10-01T19:12:30+00:00 app[web.1]: cache: [GET /jqtouch/themes/apple/img/toolButton.png] miss
-2012-10-01T19:12:43+00:00 app[web.1]: Started GET "/channels?search=selected" for 75.18.203.143 at 2012-10-01 19:12:43 +0000
-2012-10-01T19:12:43+00:00 app[web.1]: 
-2012-10-01T19:12:43+00:00 app[web.1]: 
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /channels?search=selected] miss
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/channels?search=selected dyno=web.1 queue=0 wait=0ms service=57ms status=200 bytes=4582
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /jqtouch/jqtouch.min.css] miss
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/jqtouch/jqtouch.min.css dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/jqtouch/themes/apple/theme.min.css dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/jqtouch/mobile.css dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /jqtouch/themes/apple/theme.min.css] miss
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /jqtouch/mobile.css] miss
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /jqtouch/jquery.1.3.2.min.js] miss
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/jqtouch/jquery.1.3.2.min.js dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /jqtouch/jqtouch.min.js] miss
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/jqtouch/jqtouch.min.js dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
-2012-10-01T19:12:43+00:00 app[web.1]: 
-2012-10-01T19:12:43+00:00 app[web.1]: 
-2012-10-01T19:12:43+00:00 app[web.1]: Started GET "/assets/mobile-e0c30023ca288f681483167a280a650a.js" for 75.18.203.143 at 2012-10-01 19:12:43 +0000
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/assets/mobile-e0c30023ca288f681483167a280a650a.js dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /assets/mobile-e0c30023ca288f681483167a280a650a.js] miss
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/jqtouch/themes/apple/img/pinstripes.png dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /jqtouch/themes/apple/img/pinstripes.png] miss
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/jqtouch/themes/apple/img/toolbar.png dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
-2012-10-01T19:12:43+00:00 heroku[router]: GET videotouch.tv/jqtouch/themes/apple/img/chevron.png dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /jqtouch/themes/apple/img/toolbar.png] miss
-2012-10-01T19:12:43+00:00 app[web.1]: cache: [GET /jqtouch/themes/apple/img/chevron.png] miss
-2012-10-01T19:12:50+00:00 app[web.1]: cache: [GET /jqtouch/themes/apple/img/selection.png] miss
-2012-10-01T19:12:50+00:00 app[web.1]: 
-2012-10-01T19:12:50+00:00 app[web.1]: Started GET "/channels" for 75.18.203.143 at 2012-10-01 19:12:50 +0000
-2012-10-01T19:12:50+00:00 app[web.1]: 
-2012-10-01T19:12:50+00:00 heroku[router]: GET videotouch.tv/jqtouch/themes/apple/img/selection.png dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=159
-2012-10-01T19:12:50+00:00 app[web.1]: cache: [GET /channels] miss
-2012-10-01T19:12:50+00:00 heroku[router]: GET videotouch.tv/channels dyno=web.1 queue=0 wait=0ms service=35ms status=200 bytes=9878
-2012-10-01T19:12:50+00:00 app[web.1]: cache: [GET /jqtouch/jquery.1.3.2.min.js?_=1349118770404] miss
-2012-10-01T19:12:50+00:00 heroku[router]: GET videotouch.tv/jqtouch/jquery.1.3.2.min.js?_=1349118770404 dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=57254
-2012-10-01T19:12:50+00:00 heroku[router]: GET videotouch.tv/jqtouch/jqtouch.min.js?_=1349118770809 dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=10035
-2012-10-01T19:12:50+00:00 app[web.1]: cache: [GET /jqtouch/jqtouch.min.js?_=1349118770809] miss
-2012-10-01T19:12:50+00:00 app[web.1]: 
-2012-10-01T19:12:50+00:00 app[web.1]: 
-2012-10-01T19:12:50+00:00 app[web.1]: Started GET "/assets/mobile-e0c30023ca288f681483167a280a650a.js?_=1349118770941" for 75.18.203.143 at 2012-10-01 19:12:50 +0000
-2012-10-01T19:12:50+00:00 app[web.1]: cache: [GET /assets/mobile-e0c30023ca288f681483167a280a650a.js?_=1349118770941] miss, store
-2012-10-01T19:12:50+00:00 heroku[router]: GET videotouch.tv/assets/mobile-e0c30023ca288f681483167a280a650a.js?_=1349118770941 dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=14
-2012-10-01T19:13:18+00:00 heroku[router]: GET videotouch.tv/users/1/channels dyno=web.1 queue=0 wait=0ms service=33ms status=200 bytes=4814
-2012-10-01T19:13:18+00:00 app[web.1]: cache: [GET /users/1/channels] miss
-2012-10-01T19:13:18+00:00 app[web.1]: 
-2012-10-01T19:13:18+00:00 app[web.1]: 
-2012-10-01T1
-9:13:18+00:00 app[web.1]: Started GET "/users/1/channels" for 75.18.203.143 at 2012-10-01 19:13:18 +0000
-2012-10-01T19:13:19+00:00 app[web.1]: 
-2012-10-01T19:13:19+00:00 app[web.1]: 
-2012-10-01T19:13:19+00:00 app[web.1]: Started GET "/assets/mobile-e0c30023ca288f681483167a280a650a.js" for 75.18.203.143 at 2012-10-01 19:13:19 +0000
-2012-10-01T19:13:19+00:00 app[web.1]: cache: [GET /assets/mobile-e0c30023ca288f681483167a280a650a.js] miss
-2012-10-01T19:13:19+00:00 heroku[router]: GET videotouch.tv/assets/mobile-e0c30023ca288f681483167a280a650a.js dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
-2012-10-01T19:13:32+00:00 app[web.1]: Started GET "/channels?search=selected" for 75.18.203.143 at 2012-10-01 19:13:32 +0000
-2012-10-01T19:13:32+00:00 app[web.1]: 
-2012-10-01T19:13:32+00:00 app[web.1]: 
-2012-10-01T19:13:32+00:00 app[web.1]: cache: [GET /channels?search=selected] miss
-2012-10-01T19:13:32+00:00 heroku[router]: GET videotouch.tv/channels?search=selected dyno=web.1 queue=0 wait=0ms service=193ms status=304 bytes=0
-2012-10-01T19:13:32+00:00 heroku[router]: GET videotouch.tv/assets/mobile-e0c30023ca288f681483167a280a650a.js dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
-2012-10-01T19:13:32+00:00 app[web.1]: 
-2012-10-01T19:13:32+00:00 app[web.1]: 
-2012-10-01T19:13:32+00:00 app[web.1]: Started GET "/assets/mobile-e0c30023ca288f681483167a280a650a.js" for 75.18.203.143 at 2012-10-01 19:13:32 +0000
-2012-10-01T19:13:32+00:00 app[web.1]: cache: [GET /assets/mobile-e0c30023ca288f681483167a280a650a.js] miss
-2012-10-01T19:13:37+00:00 app[web.1]: 
-2012-10-01T19:13:37+00:00 app[web.1]: 
-2012-10-01T19:13:37+00:00 app[web.1]: Started GET "/channels" for 75.18.203.143 at 2012-10-01 19:13:37 +0000
-2012-10-01T19:13:37+00:00 app[web.1]: cache: [GET /channels] miss
-2012-10-01T19:13:37+00:00 heroku[router]: GET videotouch.tv/channels dyno=web.1 queue=0 wait=10ms service=78ms status=304 bytes=0
-2012-10-01T19:13:37+00:00 app[web.1]: cache: [GET /jqtouch/jquery.1.3.2.min.js?_=1349118817738] miss
-2012-10-01T19:13:37+00:00 heroku[router]: GET videotouch.tv/jqtouch/jquery.1.3.2.min.js?_=1349118817738 dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=57254
-2012-10-01T19:13:38+00:00 app[web.1]: cache: [GET /jqtouch/jqtouch.min.js?_=1349118818218] miss
-2012-10-01T19:13:38+00:00 heroku[router]: GET videotouch.tv/jqtouch/jqtouch.min.js?_=1349118818218 dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=10035
-2012-10-01T19:13:38+00:00 heroku[router]: GET videotouch.tv/assets/mobile-e0c30023ca288f681483167a280a650a.js?_=1349118818350 dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=14
-2012-10-01T19:13:38+00:00 app[web.1]: 
-2012-10-01T19:13:38+00:00 app[web.1]: 
-2012-10-01T19:13:38+00:00 app[web.1]: cache: [GET /assets/mobile-e0c30023ca288f681483167a280a650a.js?_=1349118818350] miss, store
-2012-10-01T19:13:38+00:00 app[web.1]: Started GET "/assets/mobile-e0c30023ca288f681483167a280a650a.js?_=1349118818350" for 75.18.203.143 at 2012-10-01 19:13:38 +0000
-2012-10-01T19:13:56+00:00 app[web.1]: 
-2012-10-01T19:13:56+00:00 app[web.1]: 
-2012-10-01T19:13:56+00:00 app[web.1]: Started GET "/users" for 75.18.203.143 at 2012-10-01 19:13:56 +0000
-2012-10-01T19:13:56+00:00 app[web.1]: cache: [GET /users] miss
-2012-10-01T19:13:56+00:00 heroku[router]: GET videotouch.tv/users dyno=web.1 queue=0 wait=0ms service=47ms status=200 bytes=5806
-2012-10-01T19:13:56+00:00 heroku[router]: GET videotouch.tv/jqtouch/jquery.1.3.2.min.js?_=1349118836501 dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=57254
-2012-10-01T19:13:56+00:00 app[web.1]: cache: [GET /jqtouch/jquery.1.3.2.min.js?_=1349118836501] miss
-2012-10-01T19:13:57+00:00 app[web.1]: cache: [GET /jqtouch/jqtouch.min.js?_=1349118837027] miss
-2012-10-01T19:13:57+00:00 heroku[router]: GET videotouch.tv/jqtouch/jqtouch.min.js?_=1349118837027 dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=10035
-2012-10-01T19:13:57+00:00 app[web.1]: 
-2012-10-01T19:13:57+00:00 app[web.1]: 
-2012-10-01T19:13:57+00:00 app[web.1]: cache: [GET /assets/mobile-e0c30023ca288f681483167a280a650a.js?_=1349118837162] miss, store
-2012-10-01T19:13:57+00:00 app[web.1]: Started GET "/assets/mobile-e0c30023ca288f681483167a280a650a.js?_=1349118837162" for 75.18.203.143 at 2012-10-01 19:13:57 +0000
-2012-10-01T19:13:57+00:00 heroku[router]: GET videotouch.tv/assets/mobile-e0c30023ca288f681483167a280a650a.js?_=1349118837162 dyno=web.1 queue=0 wait=0ms service=10ms status=200 bytes=14
+2012-10-02T00:19:45+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
+2012-10-02T00:19:45+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:19:45 +0000
+2012-10-02T00:19:45+00:00 app[web.1]: 
+2012-10-02T00:19:45+00:00 app[web.1]: 
+2012-10-02T00:19:45+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+2012-10-02T00:19:45+00:00 app[web.1]: 
+2012-10-02T00:19:45+00:00 app[web.1]: 
+2012-10-02T00:19:45+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:19:45 +0000
+2012-10-02T00:19:45+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
+2012-10-02T00:19:45+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+2012-10-02T00:19:45+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+2012-10-02T00:19:47+00:00 app[web.1]: 
+2012-10-02T00:19:47+00:00 app[web.1]: 
+2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/users/1/channels/new" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
+2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /users/1/channels/new] miss
+2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/users/1/channels/new dyno=web.1 queue=0 wait=0ms service=65ms status=200 bytes=4558
+2012-10-02T00:19:47+00:00 app[web.1]: 
+2012-10-02T00:19:47+00:00 app[web.1]: 
+2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
+2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
+2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+2012-10-02T00:19:47+00:00 app[web.1]: 
+2012-10-02T00:19:47+00:00 app[web.1]: 
+2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
+2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-10-02T00:19:47+00:00 app[web.1]: 
+2012-10-02T00:19:47+00:00 app[web.1]: 
+2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
+2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-10-02T00:20:04+00:00 app[web.1]: 
+2012-10-02T00:20:04+00:00 app[web.1]: 
+2012-10-02T00:20:04+00:00 app[web.1]: Started POST "/users/1/channels" for 75.18.210.30 at 2012-10-02 00:20:04 +0000
+2012-10-02T00:20:04+00:00 app[web.1]: cache: [POST /users/1/channels] invalidate, pass
+2012-10-02T00:20:04+00:00 heroku[router]: POST www.videotouch.tv/users/1/channels dyno=web.1 queue=0 wait=0ms service=655ms status=302 bytes=103
+2012-10-02T00:20:05+00:00 app[web.1]: 
+2012-10-02T00:20:05+00:00 app[web.1]: 
+2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/channels/116" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
+2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /channels/116] miss
+2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/channels/116 dyno=web.1 queue=0 wait=0ms service=40ms status=200 bytes=3720
+2012-10-02T00:20:05+00:00 app[web.1]: 
+2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
+2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
+2012-10-02T00:20:05+00:00 app[web.1]: 
+2012-10-02T00:20:05+00:00 app[web.1]: 
+2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-10-02T00:20:05+00:00 app[web.1]: 
+2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
+2012-10-02T00:20:05+00:00 app[web.1]: 
+2012-10-02T00:20:05+00:00 app[web.1]: 
+2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
+2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
+2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/channels/116/videos" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
+2012-10-02T00:20:08+00:00 app[web.1]: 
+2012-10-02T00:20:08+00:00 app[web.1]: 
+2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/channels/116/videos dyno=web.1 queue=0 wait=0ms service=34ms status=200 bytes=21516
+2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /channels/116/videos] miss
+2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
+2012-10-02T00:20:08+00:00 app[web.1]: 
+2012-10-02T00:20:08+00:00 app[web.1]: 
+2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
+2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-10-02T00:20:08+00:00 app[web.1]: 
+2012-10-02T00:20:08+00:00 app[web.1]: 
+2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
+2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
+2012-10-02T00:20:08+00:00 app[web.1]: 
+2012-10-02T00:20:08+00:00 app[web.1]: 
+2012-10-02T00:20:40+00:00 app[web.1]: 
+2012-10-02T00:20:40+00:00 app[web.1]: 
+2012-10-02T00:20:40+00:00 app[web.1]: Started GET "/channels/116/videos" for 75.18.210.30 at 2012-10-02 00:20:40 +0000
+2012-10-02T00:20:40+00:00 app[web.1]: cache: [GET /channels/116/videos] miss
+2012-10-02T00:20:40+00:00 heroku[router]: GET www.videotouch.tv/channels/116/videos dyno=web.1 queue=0 wait=0ms service=92ms status=200 bytes=21373
+2012-10-02T00:20:41+00:00 app[web.1]: 
+2012-10-02T00:20:41+00:00 app[web.1]: 
+2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
+2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
+2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
+2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
+2012-10-02T00:20:41+00:00 app[web.1]: 
+2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
+2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-10-02T00:20:41+00:00 app[web.1]: 
+2012-10-02T00:20:41+00:00 app[web.1]: 
+2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+2012-10-02T00:20:41+00:00 app[web.1]: 
+2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
+2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/logo-639109b2e3678fd7fccaff0e14ee86bb.png dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
+2012-10-02T00:20:41+00:00 app[web.1]: 
+2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/logo-639109b2e3678fd7fccaff0e14ee86bb.png] miss
+2012-10-02T00:20:41+00:00 app[web.1]: 
+2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/logo-639109b2e3678fd7fccaff0e14ee86bb.png" for 75.18.210.30 at 2012-10-02 00:20:41 +0000

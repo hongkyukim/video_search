@@ -122,9 +122,12 @@ class Video < ActiveRecord::Base
    
     
     ### search camideo: vimeo, dailymotion, ...
-    ### Camideo.get_OneVideoSearch_camideo(f)
+    ### original function Camideo.get_OneVideoSearch_camideo(f)
+
     ### run more search using delayed_job
-    f.delay(queue: "feed_quieries", priority: 28, run_at: 15.seconds.from_now).search_camideo
+    ### f.delay(queue: "feed_quieries", priority: 28, run_at: 15.seconds.from_now).search_camideo
+    ### run more search without delayed_job
+    f.search_camideo
 
 
   end
