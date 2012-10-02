@@ -1,3 +1,5 @@
+require 'camideo'
+
 class Channel < ActiveRecord::Base
   has_many :feeds, :dependent => :destroy
   has_and_belongs_to_many :videos

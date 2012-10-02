@@ -119,8 +119,12 @@ class Video < ActiveRecord::Base
     ### search thru youtube
     res.videos.each { |v| add_video(v, channel_id) }
 
+   
+    
     ### search camideo: vimeo, dailymotion, ...
-    Camideo.get_OneVideoSearch_camideo(f)
+    ### Camideo.get_OneVideoSearch_camideo(f)
+    ### run more search using delayed_job
+    f.delay(queue: "feed_quieries", priority: 28, run_at: 15.seconds.from_now).search_camideo
 
 
   end
@@ -197,10 +201,8 @@ class Video < ActiveRecord::Base
       opts = {:query => f.queries}
       str = f.options
       if str.nil? || str == ""
-debugger
          return opts
       end
-debugger
       ###debugger
       str.split(',').each do |x| 
          v,k = x.split(/\s*=>\s*/)

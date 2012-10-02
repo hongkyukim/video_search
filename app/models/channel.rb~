@@ -1,3 +1,5 @@
+require 'camideo'
+
 class Channel < ActiveRecord::Base
   has_many :feeds, :dependent => :destroy
   has_and_belongs_to_many :videos
@@ -41,6 +43,14 @@ class Channel < ActiveRecord::Base
       else
           find(:all)
       end
+  end
+
+
+  def search_camideo12345tmp(f)
+    sleep 10
+   ### search camideo: vimeo, dailymotion, ...
+    Camideo.get_OneVideoSearch_camideo(f)
+
   end
 
  

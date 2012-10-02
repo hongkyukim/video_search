@@ -18,5 +18,10 @@ class Feed < ActiveRecord::Base
      end
   end
 
+  ### search video using camideo
+  def search_camideo
+     ### search camideo: vimeo, dailymotion, ...
+    Camideo.get_OneVideoSearch_camideo(self)
 
+  end
 end
