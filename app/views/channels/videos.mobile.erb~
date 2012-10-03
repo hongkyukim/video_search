@@ -6,7 +6,7 @@
   <% for video in @videos %>
       <li>
 	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target = "_blank">
-         <div class="videoimage"><%= image_tag video.thumbnail_url, :size => "85x55" if video.thumbnail_url %></div>
+         <div class="videoimage"><%= image_tag video.thumbnail_url, :size => "80x55" if video.thumbnail_url %></div>
 	 <p class="post-title"><span><%= video.title %></span></p>
 	 <p class="post-description"><%= video.description %></p>
          <p class="post-videoid"> <i>#<%= video.id %></i> <em><%= video.provider %></em> <i><%= video.duration %></i></p>
