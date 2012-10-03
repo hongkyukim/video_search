@@ -262,6 +262,17 @@ span.videoguide-title{
 	display: block;
 	padding-bottom: 1px;/*10px*/
 }
+.videoimage{
+	position: absolute;
+	width: 115px;  /* 70px -- 90px*/
+	margin-top: 5px; /*25px*/
+	font-size: 40px; /* 40px*/
+	text-align: center;
+	background: #f5f2f2;
+	border-bottom-left-radius: 1px;/*4px*/
+	border-bottom-right-radius: 1px;/*4px*/
+}
+
 .post-title{
 	font-size: 19px; /*12px*/
 	margin-left: 120px; /* 75px */
@@ -322,16 +333,6 @@ span.videoguide-title{
 	padding-bottom: 5px;
 	border-top-left-radius: 1px;/* 4px*/
 	border-top-right-radius: 1px;
-}
-.videoimage{
-	position: absolute;
-	width: 70px;  /* 70px -- 90px*/
-	margin-top: 5px; /*25px*/
-	font-size: 40px; /* 40px*/
-	text-align: center;
-	background: #f5f2f2;
-	border-bottom-left-radius: 1px;/*4px*/
-	border-bottom-right-radius: 1px;/*4px*/
 }
 
 

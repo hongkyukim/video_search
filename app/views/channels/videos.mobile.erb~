@@ -2,12 +2,10 @@
 <h1><%= @channel.name %></h1>
 
 <div>
-
+  <ul>
   <% for video in @videos %>
-
-   <ul>
       <li>
-	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>">
+	<a href="<%= video.embedcode ? video.embedcode : video.linkurl %>" target = "_blank">
          <div class="videoimage"><%= image_tag video.thumbnail_url, :size => "85x55" if video.thumbnail_url %></div>
 	 <p class="post-title"><span><%= video.title %></span></p>
 	 <p class="post-description"><%= video.description %></p>
@@ -18,13 +16,7 @@
         </a>
       </li>
    
-   </ul>
-
-
-
-
-
-<% if false %>
+ <% if false %>
     <ul class="rounded">
       <li class="arrow">
 	
@@ -38,7 +30,7 @@
 
       </li>
     </ul>
-<% end %>
+ <% end %>
 
     <% if false %>
       <li class="arrow">
@@ -66,6 +58,7 @@
 
 
   <% end %>
+  </ul>
 </div>
 <!--<br />-->
 

@@ -24,7 +24,7 @@
 	<a href="/channels/<%= chan.id %>/videos">
          <div class="channel-image"><a href="/channels/<%= chan.id %>/videos"><%= image_tag chan.thumbnail_url, :size => "70x50" if chan.thumbnail_url %></a></div>
 	 <p class="post-channeltitle"><a href="/channels/<%= chan.id %>/videos"><span><%= chan.name %></span></a></p>
-         <p class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i> </p>
+         <p class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y") %></i> <em><%= chan.videos.size %> videos</em></p>
         </a>
       </li>
 
