@@ -1,11 +1,28 @@
 
 <!--<h1>All Channels</h1>-->
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-0949416212566989";
+/* home.videotouch.tv */
+google_ad_slot = "4540411187";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+
 <%= form_tag channels_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search channels", :name => nil %>
   </p>
 <% end %>
+
+
+
 
 <% if true %>
 
@@ -15,7 +32,7 @@
 
      <td>
 	<a href="/channels/<%= chan.id %>/videos">
-         <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "110x77" if chan.thumbnail_url %></div></a> </td>
+         <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "110x75" if chan.thumbnail_url %></div></a> </td>
 
      <td>
 	 <div class="post-channeltitle"><%= link_to h(chan.name), videos_channel_path(chan) %></div>
