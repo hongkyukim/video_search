@@ -1,4 +1,9 @@
 LoginApp2::Application.routes.draw do
+
+
+
+
+
   ## root :to => 'videos#index'
   root :to => 'channels#index', :search => 'selected'
   
@@ -38,7 +43,13 @@ LoginApp2::Application.routes.draw do
   end
 
   resources :youtubevideo
-  
+
+  resources :pages    #, except: :show
+  #get ':id', to: 'pages#show', as: :page
+  #get 'pages/about', to: 'pages#show'
+  #get 'pages/privacy', to: 'pages#show'
+
+
   ##resources :users, :user_sessions
 
   ## for autologic authentication 07242012

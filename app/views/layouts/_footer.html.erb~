@@ -6,6 +6,7 @@
       <li><%= link_to "News", 'http://news.railstutorial.org/' %></li>
       <li><%= link_to "Rails Tutorial", 'http://railstutorial.org/' %></li>-->
 
+      
       <p>
             <% if mobile_device? %>
                 <%= link_to "Full Site", :mobile => 0 %>
@@ -17,6 +18,8 @@
                  | <%= link_to "Profile", current_user %>
                  <!--| <%= link_to "Users", users_path %>-->
             <% end %>
+            | <%= link_to_unless_current "About Us", page_path("about") %>
+            | <%= link_to_unless_current "Privacy Policy", page_path("privacy") %>
       </p>
 
 
