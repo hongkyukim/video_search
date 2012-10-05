@@ -1,5 +1,5 @@
 module DeviseHelper
-  def devise_error_messages123!
+  def devise_error_messages!
     return "" if resource.errors.empty?
 
     errors = Array.new
@@ -7,7 +7,7 @@ module DeviseHelper
     resource.errors.each do |field, msg|
       errors.push(msg)
     end
-    flash[:alert] = errors
+    flash.now[:alert] = errors
   end
 
   def devise_error_messages345!

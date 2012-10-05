@@ -31,6 +31,12 @@ end
 gem 'devise', '2.1.0'
 ###gem 'devise', '1.1.rc0'
 
+### add omniauth 10/04/2012
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-openid'
+
 gem 'cancan'
 gem 'therubyracer'
 

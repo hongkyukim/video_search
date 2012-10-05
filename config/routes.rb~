@@ -1,13 +1,12 @@
 LoginApp2::Application.routes.draw do
-
-
-
-
+  ### added 10/04/2012
+  match '/auth/:provider/callback' => 'authentications#create'
+  devise_for :users, :controllers => { :sessions => "sessions", :registrations => 'registrations' }
+  resources :authentications
 
   ## root :to => 'videos#index'
   root :to => 'channels#index', :search => 'selected'
   
-  devise_for :users, :controllers => { :sessions => "sessions" }
   ###, :controllers => {:sessions => "sessions"}
   ### , :path => '/', :controllers => { :sessions => "sessions" }
 
