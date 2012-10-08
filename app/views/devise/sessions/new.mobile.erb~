@@ -2,7 +2,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<% devise_error_messages123! %>
+<!-- devise_error_messages123 -->
 
 <% if user_signed_in? %>
 <h3>User already signed in<h3>
