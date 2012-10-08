@@ -21,9 +21,18 @@ class ChannelsController < InheritedResources::Base
 
     @channels = Channel.search(params[:search]).reverse
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @channels }
+    if params[:loggedin] == 'yes' && current_user
+        respond_to do |format|
+           format.html { redirect_to user_channels_path(current_user) }
+           format.json { render json: user_channels_path(current_user) }
+           format.mobile { redirect_to user_channels_path(current_user) }
+        end
+    else
+
+	respond_to do |format|
+	   format.html # index.html.erb
+	   format.json { render json: @channels }
+	end
     end
   end
 

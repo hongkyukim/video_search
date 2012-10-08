@@ -5,7 +5,7 @@ LoginApp2::Application.routes.draw do
   resources :authentications
 
   ## root :to => 'videos#index'
-  root :to => 'channels#index', :search => 'selected'
+  root :to => 'channels#index', :search => 'selected', :loggedin => 'yes'
   
   ###, :controllers => {:sessions => "sessions"}
   ### , :path => '/', :controllers => { :sessions => "sessions" }

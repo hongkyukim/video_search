@@ -14,7 +14,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 <h1>My channels</h1>
   <% if @channels.count == 0 %>      
-  <h3>My channels are not created yet. </h3>
+      <h5>Your own channels are not created yet. Please create your own channel.</h5>
+       <%= link_to 'Create New Channel', new_user_channel_path(@user) %>
   <% end %> 
 
 
@@ -97,7 +98,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <br />
 <br />
 
-<%= link_to 'Add New Channel', new_user_channel_path(@user) %> |
+<%= link_to 'Create New Channel', new_user_channel_path(@user) %> |
 <%= link_to 'Go to All Channels', channels_path %>
 
 <% if !@show_delete %>

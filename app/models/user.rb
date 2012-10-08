@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
 
   def apply_omniauth(omniauth)
 debugger
+     ### when we use OpenID
      self.email = omniauth['user_info']['email'] if email.blank? && omniauth['user_info']
 
 

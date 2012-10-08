@@ -12,7 +12,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 
   ###provider :open_id, OpenID::Store::Filesystem.new('/tmp')
   ###provider :open_id, :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
-  provider :open_id, :name => 'yahoo',  :identifier => 'yahoo.com'
+  ###provider :open_id, :name => 'yahoo',  :identifier => 'yahoo.com'
 
 end
 
