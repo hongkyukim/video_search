@@ -2,7 +2,8 @@
 # four configuration values can also be set straight in your models.
 Devise.setup do |config|
   # Configure the e-mail address which will be shown in DeviseMailer.
-  config.mailer_sender = "please-change-me@config-initializers-devise.com"
+  ###config.mailer_sender = "please-change-me@config-initializers-devise.com"
+  config.mailer_sender = "videotouch.tv@gmail.com"
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating an user. By default is
@@ -51,7 +52,7 @@ Devise.setup do |config|
   config.password_length = 4..20
 
   # Regex to use to validate the email address
-  ###config.email_regexp = /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i
+  config.email_regexp = /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
