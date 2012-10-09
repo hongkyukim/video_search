@@ -223,6 +223,7 @@ DEPENDENCIES
   devise (= 2.1.0)
   inherited_resources
   jquery-rails
+  mail (= 2.4.4)
   mobile-fu
   omniauth
   omniauth-facebook

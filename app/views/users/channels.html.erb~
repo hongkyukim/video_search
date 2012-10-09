@@ -92,9 +92,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 <% end %>
 
-
-
-
 <br />
 <br />
 
@@ -104,6 +101,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <% if !@show_delete %>
    | <%= link_to "Delete Channel", user_channels_path(@user, :delete_options => 1) %>
 <% end %>
-| <%= link_to 'User Sign Out', destroy_user_session_path, :method => :delete %>
+<br />
+Signed in as <em><%= @user.email %></em> <%= link_to 'User Sign Out', destroy_user_session_path, :method => :delete %>
 
 

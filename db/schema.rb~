@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120725165358) do
+ActiveRecord::Schema.define(:version => 20121005022819) do
+
+  create_table "authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -19,8 +27,11 @@ ActiveRecord::Schema.define(:version => 20120725165358) do
     t.string   "tags"
     t.string   "categories"
     t.string   "language"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "user_id"
+    t.datetime "querytime"
+    t.string   "thumbnail_url"
   end
 
   create_table "channels_videos", :id => false, :force => true do |t|
@@ -29,6 +40,22 @@ ActiveRecord::Schema.define(:version => 20120725165358) do
   end
 
   add_index "channels_videos", ["channel_id", "video_id"], :name => "index_channels_videos_on_channel_id_and_video_id", :unique => true
+
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0
+    t.integer  "attempts",   :default => 0
+    t.text     "handler"
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
   create_table "feeds", :force => true do |t|
     t.string   "name"
@@ -51,6 +78,16 @@ ActiveRecord::Schema.define(:version => 20120725165358) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "pages", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "pages", ["permalink"], :name => "index_pages_on_permalink"
+
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "",    :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "",    :null => false
@@ -67,6 +104,7 @@ ActiveRecord::Schema.define(:version => 20120725165358) do
     t.datetime "updated_at",                                             :null => false
     t.boolean  "admin",                               :default => false
     t.boolean  "remember_me"
+    t.integer  "payment"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
@@ -85,6 +123,9 @@ ActiveRecord::Schema.define(:version => 20120725165358) do
     t.text     "keywords"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.string   "linkurl"
+    t.integer  "views"
+    t.string   "embedcode"
   end
 
 end

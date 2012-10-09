@@ -29,6 +29,9 @@ class Ability
            
            can :new, User
            can :create, User
+           can :update, User do |theuser|
+                theuser == user
+           end
            can :sign_in, User
            can :sign_out, User
            can :channels, User

@@ -1,12 +1,15 @@
 class RegistrationsController < Devise::RegistrationsController
   def create
-    super
-    session[:omniauth] = nil unless @user.new_record? 
+    ##super
+    ##session[:omniauth] = nil unless @user.new_record? 
 
-  
     ##if registration_enabled?
-    ##  super
-      ###session[:omniauth] = nil unless @user.new_record?
+      super
+      session[:omniauth] = nil unless @user.new_record?
+debugger
+      UserMailer.registration_confirmation(@user).deliver
+debugger
+      
     ##else
     ##  flash[:alert] = I18n.t("registration_disabled")
     ##  redirect_to action: :new

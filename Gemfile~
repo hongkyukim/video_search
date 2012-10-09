@@ -72,6 +72,10 @@ gem 'jquery-rails'
 ### delayed_job
 gem 'delayed_job_active_record'
 
+### mail -- use interceptor   2.4.4       error2.1.3
+gem "mail", "2.4.4"
+
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
