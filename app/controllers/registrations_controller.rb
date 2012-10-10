@@ -6,9 +6,9 @@ class RegistrationsController < Devise::RegistrationsController
     ##if registration_enabled?
       super
       session[:omniauth] = nil unless @user.new_record?
-debugger
+
       UserMailer.registration_confirmation(@user).deliver
-debugger
+##debugger
       
     ##else
     ##  flash[:alert] = I18n.t("registration_disabled")
