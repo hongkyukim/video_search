@@ -11,6 +11,6 @@ ActionMailer::Base.smtp_settings = {
 }
 
 ActionMailer::Base.default_url_options[:host] = "localhost:3000" if Rails.env.development?
-ActionMailer::Base.default_url_options[:host] = "http://www.videotouch.tv" if Rails.env.production?
+ActionMailer::Base.default_url_options[:host] = "www.videotouch.tv" if Rails.env.production?
 
 Mail.register_interceptor(DevelopmentMailInterceptor) #### if Rails.env.development?

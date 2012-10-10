@@ -3,7 +3,7 @@ class DevelopmentMailInterceptor
 ##debugger
     message.subject = "[#{message.to}] #{message.subject}"
     message.to = "hongkyukim@yahoo.com"
-debugger
+##debugger
   end
 end
 
