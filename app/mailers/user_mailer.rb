@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def registration_confirmation(user)
     @user = user
-
+debugger
     ###attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
     mail(:to => user.email, :subject => "Registered")
   end

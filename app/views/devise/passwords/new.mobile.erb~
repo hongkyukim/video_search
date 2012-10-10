@@ -3,13 +3,12 @@
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <ul class="edit rounded">
-	  <%= f.label :email %>
-	  <li><%= f.email_field :email %></li>
-  </ul>
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
 
-  <!--<div><%= f.submit "Send me reset password instructions" %></div>-->
-  <%= link_to "Send me reset password instructions", user_session_path, :class => "submit whiteButton", :method => "POST", :rel => "external" %>
+  <div><%= f.submit "Send me reset password instructions" %></div>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+
+

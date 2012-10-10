@@ -7,6 +7,8 @@ if defined?(Bundler)
   Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
+
+  ###  config.assets.initialize_on_precompile = false
 end
 
 module LoginApp2
@@ -56,6 +58,6 @@ module LoginApp2
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.secret_token = '10bb6a2a6f026b27a4909c655ee673c63c377a9fead0e250083d0889cd813c8811aa90fa924ea3e2392a2c270aa3eaea425eaa471e24463cbf584e956d98c039'
+
   end
 end

@@ -38,7 +38,7 @@ LoginApp2::Application.configure do
   config.assets.debug = true
 
 
-  #### added when installing device
+  #### added when installing devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
 

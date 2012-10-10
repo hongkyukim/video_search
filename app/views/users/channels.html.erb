@@ -105,3 +105,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 Signed in as <em><%= @user.email %></em> <%= link_to 'Password Change', edit_user_path(@user) %>
 | <%= link_to 'User Sign Out', destroy_user_session_path, :method => :delete %>
 
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="small" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

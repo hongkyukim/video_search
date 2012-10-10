@@ -9,7 +9,7 @@
   <h5>Your channels are not created yet.</h5>
   <h5>Please create your own channels.</h5>
 <% else %>
-  <h5>Channels created by <em><%= @user.email %></em> </h5>
+  <h5>Channels <em>created by <%= @user.email %></em> </h5>
 <% end %> 
   
  <ul>          

@@ -1,9 +1,9 @@
 class DevelopmentMailInterceptor
   def self.delivering_email(message)
-debugger
+##debugger
     message.subject = "[#{message.to}] #{message.subject}"
     message.to = "hongkyukim@yahoo.com"
-debugger
+##debugger
   end
 end
 

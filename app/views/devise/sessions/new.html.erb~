@@ -15,7 +15,6 @@
 <% end %>
 
 
-<!--<p><%= link_to "forgotten password?", new_password_reset_path %></p>-->
-
-
 <%= render :partial => "devise/shared/links" %>
+<br />
+<%= link_to "Forgotten Password?", new_user_password_path %>
