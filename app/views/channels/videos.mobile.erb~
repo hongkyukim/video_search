@@ -79,7 +79,10 @@
        <li><%= link_to 'Home', channels_path %></li>
 </ul>
 <% end %>
+
+<% if false %>
 <br />
+
 <!-- Place this tag where you want the +1 button to render. -->
 <div class="g-plusone" data-size="small" data-annotation="inline" data-width="300"></div>
 
@@ -91,3 +94,5 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
 </script>
+<% end %>
+
