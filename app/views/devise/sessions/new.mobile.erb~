@@ -4,7 +4,7 @@
 
 <!--<% devise_error_messages123! %>-->
 
-<% if user_signed_in? %>
+<% if user_signed_in? || current_user %>
 <h3>User already signed in<h3>
 <% end %>
 

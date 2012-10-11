@@ -3,8 +3,8 @@
 
 <% if true %>
 <h5>Visit this website: www.videotouch.tv </h5>
-<h5>Please reset your password </h5>
-
+<h5>And then go to login section. </h5>
+<h5>Click on forgotten password button. </h5>
 <% else %>
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
