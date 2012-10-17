@@ -36,10 +36,6 @@
     <%= f.label :categories %><br />
     <%= f.text_field :categories, :placeholder => "Type categories" %>
   </div>
-  <div class="field">
-    <%= f.label :language %><br />
-    <%= f.text_field :language, :placeholder => "Type language" %>
-  </div>
 
   <div class="field">
     <%= f.label :user_id %><br />

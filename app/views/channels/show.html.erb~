@@ -1,7 +1,5 @@
 <% title 'Channel Info' %>
 
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Channel Name:</b>
   <%= @channel.name %>
@@ -31,7 +29,7 @@
 <% end %>
 <% end %>
 
-<h2>Queries</h2>
+<h3>Queries</h3>
 <% @channel.feeds.each do |feed| %>
   <p>
     <b>Feed name:</b>
