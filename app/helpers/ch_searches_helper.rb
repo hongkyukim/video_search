@@ -1,0 +1,2 @@
+module ChSearchesHelper
+end

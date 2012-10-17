@@ -1,7 +1,8 @@
 <% title "Sign In" %>
 <% if current_user %>
-Logged in as <%= current_user.email %>
+Signed in as <em><%= current_user.email %></em>
 <% end %>
+
 <% if @authentications %>
  <% unless @authentications.empty? %>
   <p><strong>You can sign in to this account using:</strong></p>

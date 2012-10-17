@@ -11,10 +11,14 @@
     </div>
   <% end %>
 
-
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, :placeholder => "Type several keywords" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.select :language,   Language.all.collect {|p| [ p.name, p.shortname ] } %>
   </div>
 
 <% if user_signed_in? %>
@@ -36,6 +40,7 @@
     <%= f.label :language %><br />
     <%= f.text_field :language, :placeholder => "Type language" %>
   </div>
+
   <div class="field">
     <%= f.label :user_id %><br />
     <%= f.number_field :user_id, :placeholder => current_user.id %>
@@ -48,3 +53,12 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+
+<% if false %>
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.select :language,  [['English', 'en'], ['Korean', 'kr'], ['Wookieespeak', 'wk']] %>
+  </div>
+<% end %>
+

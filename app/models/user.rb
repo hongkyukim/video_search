@@ -14,8 +14,13 @@ class User < ActiveRecord::Base
 
   def apply_omniauth(omniauth)
      ### when we use OpenID
-     self.email = omniauth['user_info']['email'] if email.blank? && omniauth['user_info']
-
+     if omniauth['user_info']
+         self.email = omniauth['user_info']['email'] if email.blank? && omniauth['user_info']
+debugger
+     else
+         self.email = omniauth['info']['email'] if email.blank? && omniauth['info']
+debugger
+     end
      authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
   end
 
@@ -24,5 +29,10 @@ class User < ActiveRecord::Base
       (authentications.empty? || !password.blank?) && super
   end
 
-
+   
+  def find_preferred_language
+     http_accept_language.user_preferred_languages # => [ 'nl-NL', 'nl-BE', 'nl', 'en-US', 'en' ]
+     available = %w{en en-US nl-BE}
+     http_accept_language.preferred_language_from(available) # => 'nl-BE'
+  end
 end

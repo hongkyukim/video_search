@@ -1,4 +1,8 @@
 LoginApp2::Application.routes.draw do
+  resources :searches
+
+  resources :chsearches
+
   ### added 10/04/2012
   match '/auth/:provider/callback' => 'authentications#create'
   ###devise_for :users, :controllers => { :sessions => "sessions", :registrations => 'registrations' }
@@ -49,7 +53,7 @@ LoginApp2::Application.routes.draw do
   #get 'pages/about', to: 'pages#show'
   #get 'pages/privacy', to: 'pages#show'
 
-
+  
   ##resources :users, :user_sessions
 
   ## for autologic authentication 07242012

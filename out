@@ -1,101 +1,2397 @@
-2012-10-02T00:19:45+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
-2012-10-02T00:19:45+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:19:45 +0000
-2012-10-02T00:19:45+00:00 app[web.1]: 
-2012-10-02T00:19:45+00:00 app[web.1]: 
-2012-10-02T00:19:45+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
-2012-10-02T00:19:45+00:00 app[web.1]: 
-2012-10-02T00:19:45+00:00 app[web.1]: 
-2012-10-02T00:19:45+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:19:45 +0000
-2012-10-02T00:19:45+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
-2012-10-02T00:19:45+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
-2012-10-02T00:19:45+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
-2012-10-02T00:19:47+00:00 app[web.1]: 
-2012-10-02T00:19:47+00:00 app[web.1]: 
-2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/users/1/channels/new" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
-2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /users/1/channels/new] miss
-2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/users/1/channels/new dyno=web.1 queue=0 wait=0ms service=65ms status=200 bytes=4558
-2012-10-02T00:19:47+00:00 app[web.1]: 
-2012-10-02T00:19:47+00:00 app[web.1]: 
-2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
-2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
-2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
-2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
-2012-10-02T00:19:47+00:00 app[web.1]: 
-2012-10-02T00:19:47+00:00 app[web.1]: 
-2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
-2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
-2012-10-02T00:19:47+00:00 app[web.1]: 
-2012-10-02T00:19:47+00:00 app[web.1]: 
-2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
-2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
-2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
-2012-10-02T00:20:04+00:00 app[web.1]: 
-2012-10-02T00:20:04+00:00 app[web.1]: 
-2012-10-02T00:20:04+00:00 app[web.1]: Started POST "/users/1/channels" for 75.18.210.30 at 2012-10-02 00:20:04 +0000
-2012-10-02T00:20:04+00:00 app[web.1]: cache: [POST /users/1/channels] invalidate, pass
-2012-10-02T00:20:04+00:00 heroku[router]: POST www.videotouch.tv/users/1/channels dyno=web.1 queue=0 wait=0ms service=655ms status=302 bytes=103
-2012-10-02T00:20:05+00:00 app[web.1]: 
-2012-10-02T00:20:05+00:00 app[web.1]: 
-2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/channels/116" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
-2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /channels/116] miss
-2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/channels/116 dyno=web.1 queue=0 wait=0ms service=40ms status=200 bytes=3720
-2012-10-02T00:20:05+00:00 app[web.1]: 
-2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
-2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
-2012-10-02T00:20:05+00:00 app[web.1]: 
-2012-10-02T00:20:05+00:00 app[web.1]: 
-2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
-2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
-2012-10-02T00:20:05+00:00 app[web.1]: 
-2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
-2012-10-02T00:20:05+00:00 app[web.1]: 
-2012-10-02T00:20:05+00:00 app[web.1]: 
-2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
-2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
-2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
-2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
-2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/channels/116/videos" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
-2012-10-02T00:20:08+00:00 app[web.1]: 
-2012-10-02T00:20:08+00:00 app[web.1]: 
-2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/channels/116/videos dyno=web.1 queue=0 wait=0ms service=34ms status=200 bytes=21516
-2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /channels/116/videos] miss
-2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
-2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
-2012-10-02T00:20:08+00:00 app[web.1]: 
-2012-10-02T00:20:08+00:00 app[web.1]: 
-2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
-2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
-2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
-2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
-2012-10-02T00:20:08+00:00 app[web.1]: 
-2012-10-02T00:20:08+00:00 app[web.1]: 
-2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
-2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
-2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
-2012-10-02T00:20:08+00:00 app[web.1]: 
-2012-10-02T00:20:08+00:00 app[web.1]: 
-2012-10-02T00:20:40+00:00 app[web.1]: 
-2012-10-02T00:20:40+00:00 app[web.1]: 
-2012-10-02T00:20:40+00:00 app[web.1]: Started GET "/channels/116/videos" for 75.18.210.30 at 2012-10-02 00:20:40 +0000
-2012-10-02T00:20:40+00:00 app[web.1]: cache: [GET /channels/116/videos] miss
-2012-10-02T00:20:40+00:00 heroku[router]: GET www.videotouch.tv/channels/116/videos dyno=web.1 queue=0 wait=0ms service=92ms status=200 bytes=21373
-2012-10-02T00:20:41+00:00 app[web.1]: 
-2012-10-02T00:20:41+00:00 app[web.1]: 
-2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
-2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
-2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
-2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
-2012-10-02T00:20:41+00:00 app[web.1]: 
-2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
-2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
-2012-10-02T00:20:41+00:00 app[web.1]: 
-2012-10-02T00:20:41+00:00 app[web.1]: 
-2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
-2012-10-02T00:20:41+00:00 app[web.1]: 
-2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
-2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
-2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/logo-639109b2e3678fd7fccaff0e14ee86bb.png dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
-2012-10-02T00:20:41+00:00 app[web.1]: 
-2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/logo-639109b2e3678fd7fccaff0e14ee86bb.png] miss
-2012-10-02T00:20:41+00:00 app[web.1]: 
-2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/logo-639109b2e3678fd7fccaff0e14ee86bb.png" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
+diff --git a/.gitignore b/.gitignore
+index 41c9828..98bc555 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,2 +1,3 @@
+ gitignore
+-
++*~
++log
+diff --git a/Gemfile b/Gemfile
+index 6d6b58d..ff1fefd 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -75,7 +75,7 @@ gem 'delayed_job_active_record'
+ ### mail -- use interceptor   2.4.4       error2.1.3
+ gem "mail", "2.4.4"
+ 
+-
++gem 'http_accept_language'
+ # To use ActiveModel has_secure_password
+ # gem 'bcrypt-ruby', '~> 3.0.0'
+ 
+diff --git a/Gemfile.lock b/Gemfile.lock
+index d1ec8b9..b58ef53 100644
+--- a/Gemfile.lock
++++ b/Gemfile.lock
+@@ -64,6 +64,7 @@ GEM
+     has_scope (0.5.1)
+     hashie (1.2.0)
+     hike (1.2.1)
++    http_accept_language (1.0.2)
+     httpauth (0.1)
+     i18n (0.6.0)
+     inherited_resources (1.3.1)
+@@ -221,6 +222,7 @@ DEPENDENCIES
+   coffee-rails (~> 3.2.1)
+   delayed_job_active_record
+   devise (= 2.1.0)
++  http_accept_language
+   inherited_resources
+   jquery-rails
+   mail (= 2.4.4)
+diff --git a/Gemfile~ b/Gemfile~
+deleted file mode 100644
+index 6d6b58d..0000000
+--- a/Gemfile~
++++ /dev/null
+@@ -1,91 +0,0 @@
+-source 'https://rubygems.org'
+-gem 'thin'
+-
+-group :development, :test do 
+-  ###gem 'sqlite3'
+-  ##gem 'activerecord-postgresql-adapter'
+-  ##gem 'therubyracer-heroku', '0.8.1.pre3'
+-
+-  gem "pg", "~> 0.11.0"
+-end
+-
+-gem 'rails', '3.2.1'
+-
+-# Bundle edge Rails instead:
+-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+-
+-
+-
+-group :production do
+-  ##gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+-  ##gem 'activerecord-postgresql-adapter', '>= 0'
+-  ##gem 'therubyracer-heroku', '0.8.1.pre3'
+-
+-  gem "pg", "~> 0.11.0"
+-  
+-end
+-
+-#### removed 07/23/2012  gem 'authlogic'
+-#### add device 07/23/2012
+-##gem 'devise', '1.4.7'
+-gem 'devise', '2.1.0'
+-###gem 'devise', '1.1.rc0'
+-
+-### add omniauth 10/04/2012
+-gem 'omniauth'
+-gem 'omniauth-twitter'
+-gem 'omniauth-facebook'
+-gem 'omniauth-openid'
+-
+-gem 'cancan'
+-gem 'therubyracer'
+-
+-
+-gem 'youtube_it'
+-gem 'inherited_resources'
+-gem 'acts_as_commentable'
+-
+-
+-# Gems used only for assets and not required
+-# in production environments by default.
+-group :assets do
+-  gem 'sass-rails',   '~> 3.2.3'
+-  gem 'coffee-rails', '~> 3.2.1'
+-
+-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+-  # gem 'therubyracer'
+-
+-  gem 'uglifier', '>= 1.0.3'
+-end
+-
+-group :development, :test do 
+-  gem "rspec-rails", ">= 2.0.0.beta.1"
+-  gem 'ZenTest'
+-  gem 'test_notifier'
+-  # To use debugger
+-  gem 'ruby-debug19', :require => 'ruby-debug'
+-end
+-gem 'mobile-fu'
+-gem 'jquery-rails'
+-
+-
+-### delayed_job
+-gem 'delayed_job_active_record'
+-
+-### mail -- use interceptor   2.4.4       error2.1.3
+-gem "mail", "2.4.4"
+-
+-
+-# To use ActiveModel has_secure_password
+-# gem 'bcrypt-ruby', '~> 3.0.0'
+-
+-# To use Jbuilder templates for JSON
+-# gem 'jbuilder'
+-
+-# Use unicorn as the web server
+-# gem 'unicorn'
+-
+-# Deploy with Capistrano
+-# gem 'capistrano'
+-
+-
+diff --git a/app/controllers/authentications_controller.rb b/app/controllers/authentications_controller.rb
+index 1140766..033c239 100644
+--- a/app/controllers/authentications_controller.rb
++++ b/app/controllers/authentications_controller.rb
+@@ -9,12 +9,14 @@ class AuthenticationsController < InheritedResources::Base
+ debugger
+      authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
+      if authentication
+-        flash[:notice] = "Signed in successfully."
++        flash[:notice] = "Signed in successfully with auth."
+ debugger
++        ### to authentication's user
+         sign_in_and_redirect(:user, authentication.user)
+      elsif current_user
++        ### to current user
+         current_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
+-        flash[:notice] = "Authentication successful."
++        flash[:notice] = "Authentication successful with current user."
+ debugger
+         redirect_to authentications_url
+      else
+@@ -24,12 +26,25 @@ debugger
+         user.apply_omniauth(omniauth)
+ debugger
+ 	if user.save
+-	  flash[:notice] = "Signed in successfully."
++	  flash[:notice] = "Signed up and Signed in successfully."
+ 	  sign_in_and_redirect(:user, user)
+ 	else
+           ### dont need extra key
+ 	  session[:omniauth] = omniauth.except('extra')
+-	  redirect_to new_user_registration_url
++debugger
++          if user.email
++             new_user = User.find_by_email(user.email)
++             if new_user
++                 new_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
++                 flash[:notice] = "Authentication successful with existing user."
++debugger
++                 redirect_to authentications_url
++             else
++	         redirect_to new_user_registration_url
++             end 
++          else
++	     redirect_to new_user_registration_url
++          end
+ 	end
+ debugger
+         ###user.save(:validate => false)
+diff --git a/app/controllers/authentications_controller.rb~ b/app/controllers/authentications_controller.rb~
+index 1140766..2a5b109 100644
+--- a/app/controllers/authentications_controller.rb~
++++ b/app/controllers/authentications_controller.rb~
+@@ -9,12 +9,14 @@ class AuthenticationsController < InheritedResources::Base
+ debugger
+      authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
+      if authentication
+-        flash[:notice] = "Signed in successfully."
++        flash[:notice] = "Signed in successfully with auth."
+ debugger
++        ### to authentication's user
+         sign_in_and_redirect(:user, authentication.user)
+      elsif current_user
++        ### to current user
+         current_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
+-        flash[:notice] = "Authentication successful."
++        flash[:notice] = "Authentication successful with current user."
+ debugger
+         redirect_to authentications_url
+      else
+@@ -24,12 +26,25 @@ debugger
+         user.apply_omniauth(omniauth)
+ debugger
+ 	if user.save
+-	  flash[:notice] = "Signed in successfully."
++	  flash[:notice] = "Signed up and Signed in successfully."
+ 	  sign_in_and_redirect(:user, user)
+ 	else
+           ### dont need extra key
+ 	  session[:omniauth] = omniauth.except('extra')
+-	  redirect_to new_user_registration_url
++debugger
++          if user.email
++             new_user = User.find_by_email(user.email)
++             if new_user
++                 new_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
++                 flash[:notice] = "Authentication successful."
++debugger
++                 redirect_to authentications_url
++             else
++	         redirect_to new_user_registration_url
++             end 
++          else
++	     redirect_to new_user_registration_url
++          end
+ 	end
+ debugger
+         ###user.save(:validate => false)
+diff --git a/app/controllers/channels_controller.rb b/app/controllers/channels_controller.rb
+index 9aa7578..286ec57 100644
+--- a/app/controllers/channels_controller.rb
++++ b/app/controllers/channels_controller.rb
+@@ -1,3 +1,5 @@
++require 'http_accept_language'
++
+ class ChannelsController < InheritedResources::Base
+   before_filter :authenticate_user!, :except => [:show, :index, :videos]
+   load_and_authorize_resource
+@@ -89,6 +91,21 @@ class ChannelsController < InheritedResources::Base
+     ### channel_type's default is public
+     params[:channel][:channel_type] = "public" if params[:channel][:channel_type].nil?
+ 
++    ### set languages
++    ##params[:channel][:language] = Channel.find_preferred_language
++    renv = request.env["HTTP_ACCEPT_LANGUAGE"]
++debugger
++    languages = request.user_preferred_languages
++debugger
++    rhost = request.host
++debugger
++    iavailable = I18n.available_locales
++debugger
++    available = %w{en en-US nl-BE kr}
++http_accept_language = env['http_accept_language']
++debugger
++    preferred = request.preferred_language_from(available) # => 'nl-BE'
++debugger
+ 
+     ### set language and user_id
+     params[:channel][:language] = "en" if params[:channel][:language].nil?
+@@ -108,9 +125,12 @@ class ChannelsController < InheritedResources::Base
+         ###@channel.querytime = Time.now;
+         @channel.update_attributes({ "querytime" => DateTime.now, "thumbnail_url" => video.thumbnail_url})
+ 
+-        format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
++        ###format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
++        ### create a channel and video list and then go to video list
++        format.html { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
+         format.json { render json: @channel, status: :created, location: @channel }
+-        format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
++        ###format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
++        format.mobile { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
+       else
+         format.html { render action: "new" }
+         format.json { render json: @channel.errors, status: :unprocessable_entity }
+diff --git a/app/controllers/channels_controller.rb~ b/app/controllers/channels_controller.rb~
+index 9aa7578..286ec57 100644
+--- a/app/controllers/channels_controller.rb~
++++ b/app/controllers/channels_controller.rb~
+@@ -1,3 +1,5 @@
++require 'http_accept_language'
++
+ class ChannelsController < InheritedResources::Base
+   before_filter :authenticate_user!, :except => [:show, :index, :videos]
+   load_and_authorize_resource
+@@ -89,6 +91,21 @@ class ChannelsController < InheritedResources::Base
+     ### channel_type's default is public
+     params[:channel][:channel_type] = "public" if params[:channel][:channel_type].nil?
+ 
++    ### set languages
++    ##params[:channel][:language] = Channel.find_preferred_language
++    renv = request.env["HTTP_ACCEPT_LANGUAGE"]
++debugger
++    languages = request.user_preferred_languages
++debugger
++    rhost = request.host
++debugger
++    iavailable = I18n.available_locales
++debugger
++    available = %w{en en-US nl-BE kr}
++http_accept_language = env['http_accept_language']
++debugger
++    preferred = request.preferred_language_from(available) # => 'nl-BE'
++debugger
+ 
+     ### set language and user_id
+     params[:channel][:language] = "en" if params[:channel][:language].nil?
+@@ -108,9 +125,12 @@ class ChannelsController < InheritedResources::Base
+         ###@channel.querytime = Time.now;
+         @channel.update_attributes({ "querytime" => DateTime.now, "thumbnail_url" => video.thumbnail_url})
+ 
+-        format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
++        ###format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
++        ### create a channel and video list and then go to video list
++        format.html { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
+         format.json { render json: @channel, status: :created, location: @channel }
+-        format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
++        ###format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
++        format.mobile { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
+       else
+         format.html { render action: "new" }
+         format.json { render json: @channel.errors, status: :unprocessable_entity }
+diff --git a/app/controllers/registrations_controller.rb b/app/controllers/registrations_controller.rb
+index 51b40de..e2805f6 100644
+--- a/app/controllers/registrations_controller.rb
++++ b/app/controllers/registrations_controller.rb
+@@ -6,7 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
+     ##if registration_enabled?
+       super
+       session[:omniauth] = nil unless @user.new_record?
+-
++debugger
+       UserMailer.registration_confirmation(@user).deliver
+ debugger
+       
+diff --git a/app/controllers/registrations_controller.rb~ b/app/controllers/registrations_controller.rb~
+index 7ab4368..e2805f6 100644
+--- a/app/controllers/registrations_controller.rb~
++++ b/app/controllers/registrations_controller.rb~
+@@ -6,9 +6,9 @@ class RegistrationsController < Devise::RegistrationsController
+     ##if registration_enabled?
+       super
+       session[:omniauth] = nil unless @user.new_record?
+-
++debugger
+       UserMailer.registration_confirmation(@user).deliver
+-##debugger
++debugger
+       
+     ##else
+     ##  flash[:alert] = I18n.t("registration_disabled")
+diff --git a/app/models/channel.rb b/app/models/channel.rb
+index 7de45dd..3c9b4a1 100644
+--- a/app/models/channel.rb
++++ b/app/models/channel.rb
+@@ -1,4 +1,5 @@
+ require 'camideo'
++require 'http_accept_language'
+ 
+ class Channel < ActiveRecord::Base
+   has_many :feeds, :dependent => :destroy
+@@ -45,5 +46,9 @@ class Channel < ActiveRecord::Base
+       end
+   end
+ 
+- 
++  def self.find_preferred_language
++     ###http_accept_language.user_preferred_languages # => [ 'nl-NL', 'nl-BE', 'nl', 'en-US', 'en' ]
++     available = %w{en en-US nl-BE}
++     env.http_accept_language.preferred_language_from(available) # => 'nl-BE'
++  end 
+ end
+diff --git a/app/models/channel.rb~ b/app/models/channel.rb~
+index 7403deb..0464c4f 100644
+--- a/app/models/channel.rb~
++++ b/app/models/channel.rb~
+@@ -1,4 +1,5 @@
+ require 'camideo'
++require 'http_accept_language'
+ 
+ class Channel < ActiveRecord::Base
+   has_many :feeds, :dependent => :destroy
+@@ -45,13 +46,9 @@ class Channel < ActiveRecord::Base
+       end
+   end
+ 
+-
+-  def search_camideo12345tmp(f)
+-    sleep 10
+-   ### search camideo: vimeo, dailymotion, ...
+-    Camideo.get_OneVideoSearch_camideo(f)
+-
+-  end
+-
+- 
++  def self.find_preferred_language
++     ###http_accept_language.user_preferred_languages # => [ 'nl-NL', 'nl-BE', 'nl', 'en-US', 'en' ]
++     available = %w{en en-US nl-BE}
++     http_accept_language.preferred_language_from(available) # => 'nl-BE'
++  end 
+ end
+diff --git a/app/models/user.rb b/app/models/user.rb
+index f221984..6586497 100644
+--- a/app/models/user.rb
++++ b/app/models/user.rb
+@@ -14,8 +14,13 @@ class User < ActiveRecord::Base
+ 
+   def apply_omniauth(omniauth)
+      ### when we use OpenID
+-     self.email = omniauth['user_info']['email'] if email.blank? && omniauth['user_info']
+-
++     if omniauth['user_info']
++         self.email = omniauth['user_info']['email'] if email.blank? && omniauth['user_info']
++debugger
++     else
++         self.email = omniauth['info']['email'] if email.blank? && omniauth['info']
++debugger
++     end
+      authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+   end
+ 
+@@ -24,5 +29,10 @@ class User < ActiveRecord::Base
+       (authentications.empty? || !password.blank?) && super
+   end
+ 
+-
++   
++  def find_preferred_language
++     http_accept_language.user_preferred_languages # => [ 'nl-NL', 'nl-BE', 'nl', 'en-US', 'en' ]
++     available = %w{en en-US nl-BE}
++     http_accept_language.preferred_language_from(available) # => 'nl-BE'
++  end
+ end
+diff --git a/app/models/user.rb~ b/app/models/user.rb~
+index c234b8a..bdc483a 100644
+--- a/app/models/user.rb~
++++ b/app/models/user.rb~
+@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
+   # Include default devise modules. Others available are:
+   # :token_authenticatable, :lockable, :timeoutable, :confirmable and :activatable
+   ### :registerable, -- removed to add users, delete users
+-  devise :database_authenticatable,
++  devise :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :trackable, :validatable
+ 
+   # Setup accessible (or protected) attributes for your model
+@@ -14,8 +14,13 @@ class User < ActiveRecord::Base
+ 
+   def apply_omniauth(omniauth)
+      ### when we use OpenID
+-     self.email = omniauth['user_info']['email'] if email.blank? && omniauth['user_info']
+-
++     if omniauth['user_info']
++         self.email = omniauth['user_info']['email'] if email.blank? && omniauth['user_info']
++debugger
++     else
++         self.email = omniauth['info']['email'] if email.blank? && omniauth['info']
++debugger
++     end
+      authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+   end
+ 
+diff --git a/app/views/authentications/index.html.erb b/app/views/authentications/index.html.erb
+index 37135cb..2de1dd7 100644
+--- a/app/views/authentications/index.html.erb
++++ b/app/views/authentications/index.html.erb
+@@ -2,6 +2,7 @@
+ <% if current_user %>
+ Signed in as <em><%= current_user.email %></em>
+ <% end %>
++
+ <% if @authentications %>
+  <% unless @authentications.empty? %>
+   <p><strong>You can sign in to this account using:</strong></p>
+diff --git a/app/views/authentications/index.html.erb~ b/app/views/authentications/index.html.erb~
+index 9dec970..2de1dd7 100644
+--- a/app/views/authentications/index.html.erb~
++++ b/app/views/authentications/index.html.erb~
+@@ -1,7 +1,8 @@
+ <% title "Sign In" %>
+ <% if current_user %>
+-Logged in as <%= current_user.email %>
++Signed in as <em><%= current_user.email %></em>
+ <% end %>
++
+ <% if @authentications %>
+  <% unless @authentications.empty? %>
+   <p><strong>You can sign in to this account using:</strong></p>
+diff --git a/app/views/devise/sessions/new.html.erb b/app/views/devise/sessions/new.html.erb
+index 7e74c7b..53869a3 100644
+--- a/app/views/devise/sessions/new.html.erb
++++ b/app/views/devise/sessions/new.html.erb
+@@ -13,8 +13,17 @@
+ 
+   <div><%= f.submit "Sign in" %></div>
+ <% end %>
++<br />
++-- OR --
++<br />
++
++<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in_with_facebook" %>
++<a href="/auth/facebook" class="auth_provider">
++  <%= image_tag "facebook_32.png", :size => "32x32", :alt => "Facebook" %></a>
++<br />
+ 
+ 
+ <%= render :partial => "devise/shared/links" %>
++
+ <br />
+ <%= link_to "Forgotten Password?", new_user_password_path %>
+diff --git a/app/views/devise/sessions/new.html.erb~ b/app/views/devise/sessions/new.html.erb~
+index 7e74c7b..53869a3 100644
+--- a/app/views/devise/sessions/new.html.erb~
++++ b/app/views/devise/sessions/new.html.erb~
+@@ -13,8 +13,17 @@
+ 
+   <div><%= f.submit "Sign in" %></div>
+ <% end %>
++<br />
++-- OR --
++<br />
++
++<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in_with_facebook" %>
++<a href="/auth/facebook" class="auth_provider">
++  <%= image_tag "facebook_32.png", :size => "32x32", :alt => "Facebook" %></a>
++<br />
+ 
+ 
+ <%= render :partial => "devise/shared/links" %>
++
+ <br />
+ <%= link_to "Forgotten Password?", new_user_password_path %>
+diff --git a/app/views/registrations/new.html.erb b/app/views/registrations/new.html.erb
+index c9dd675..1e10091 100644
+--- a/app/views/registrations/new.html.erb
++++ b/app/views/registrations/new.html.erb
+@@ -1,7 +1,6 @@
+ <h2>Sign up</h2>
+-<!--:url => registration_path(resource_name)-->
+-<%= resource_name %>
+-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
++
++<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name) ) do |f| %>
+   <%= devise_error_messages! %>
+ 
+   <div><%= f.label :email %><br />
+@@ -19,3 +18,5 @@
+ <% end %>
+ 
+ <%= render :partial => "devise/shared/links" %>
++
++<!--(resource_name)-->
+diff --git a/app/views/registrations/new.html.erb~ b/app/views/registrations/new.html.erb~
+index c9dd675..f0db4f1 100644
+--- a/app/views/registrations/new.html.erb~
++++ b/app/views/registrations/new.html.erb~
+@@ -1,7 +1,6 @@
+ <h2>Sign up</h2>
+-<!--:url => registration_path(resource_name)-->
+-<%= resource_name %>
+-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
++
++<%= form_for(resource, :as => resource_name, :url => new_user_registration_path ) do |f| %>
+   <%= devise_error_messages! %>
+ 
+   <div><%= f.label :email %><br />
+@@ -19,3 +18,5 @@
+ <% end %>
+ 
+ <%= render :partial => "devise/shared/links" %>
++
++<!--(resource_name)-->
+diff --git a/app/views/users/channels.mobile.erb b/app/views/users/channels.mobile.erb
+index dbaf0c1..63cd177 100644
+--- a/app/views/users/channels.mobile.erb
++++ b/app/views/users/channels.mobile.erb
+@@ -1,5 +1,5 @@
+ 
+-<% if false %>
++<% if true %>
+ <script type="text/javascript"><!--
+ google_ad_client = "ca-pub-0949416212566989";
+ /* android home */
+@@ -8,9 +8,7 @@ google_ad_width = 320;
+ google_ad_height = 50;
+ //-->
+ </script>
+-<script type="text/javascript"
+-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+-</script>
++
+ <% end %>
+ 
+ <% title "My Channels" %>
+@@ -76,3 +74,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+   })();
+ </script>
+ <% end %>
++
++
++<script type="text/javascript"
++src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
++</script>
++
+diff --git a/app/views/users/channels.mobile.erb~ b/app/views/users/channels.mobile.erb~
+index dbaf0c1..63cd177 100644
+--- a/app/views/users/channels.mobile.erb~
++++ b/app/views/users/channels.mobile.erb~
+@@ -1,5 +1,5 @@
+ 
+-<% if false %>
++<% if true %>
+ <script type="text/javascript"><!--
+ google_ad_client = "ca-pub-0949416212566989";
+ /* android home */
+@@ -8,9 +8,7 @@ google_ad_width = 320;
+ google_ad_height = 50;
+ //-->
+ </script>
+-<script type="text/javascript"
+-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+-</script>
++
+ <% end %>
+ 
+ <% title "My Channels" %>
+@@ -76,3 +74,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+   })();
+ </script>
+ <% end %>
++
++
++<script type="text/javascript"
++src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
++</script>
++
+diff --git a/checkout b/checkout
+deleted file mode 100644
+index 713314a..0000000
+--- a/checkout
++++ /dev/null
+@@ -1,1000 +0,0 @@
+- 1092  ls -l
+- 1093  vi kepcLove.txt
+- 1094  adb uninstall com.example.android.apis
+- 1095  cd cpp
+- 1096  ls -l
+- 1097  cd cplusplus
+- 1098  ls -l
+- 1099  g++ static.cpp -o s1
+- 1100  ls -l
+- 1101  s1
+- 1102  ./s1
+- 1103  g++ test.cpp -o t1
+- 1104  g++ static.cpp -o s2
+- 1105  ./s2
+- 1106  ls -i
+- 1107  find kk .
+- 1108  find a.out
+- 1109  find a.out .
+- 1110  man find
+- 1111  ls -l
+- 1112  vi test.txt
+- 1113  ls
+- 1114  cd
+- 1115  ls -l
+- 1116  sudo apt-get install gimp
+- 1117  gimp
+- 1118  ls -l
+- 1119  pwd
+- 1120  mkdir toptens
+- 1121  cd toptens
+- 1122  git 
+- 1123  git clone github.com/mxcl/lastfm-android
+- 1124  git clone http://github.com/mxcl/lastfm-android
+- 1125  ls -l
+- 1126  git clone http://github.com/kaeppler/droid-fu
+- 1127  hg clone https://code.google.com/p/foursquared/
+- 1128  sudo apt-get install mercurial
+- 1129  hg clone https://code.google.com/p/foursquared/
+- 1130  adb shell
+- 1131  adb
+- 1132  adb | grep start
+- 1133  adb shell
+- 1134  adb -e pull /system/app/networkactivity.apk ./networkactivity.apk
+- 1135  adb -e pull /system/app/NetworkActivity.apk ./NetworkActivity.apk
+- 1136  cd /system/app
+- 1137  adb shell
+- 1138  adb -e pull /system/app/Development.apk ./Development.apk
+- 1139  ls
+- 1140  adn -d install development.apk
+- 1141  adb -d install Development.apk
+- 1142  adb shell
+- 1143  ls
+- 1144  adb shell
+- 1145  iostat
+- 1146  sudo apt-get install sysstat
+- 1147  iostat
+- 1148  netstat
+- 1149  netstat | ls -p
+- 1150  netstat | more
+- 1151  traceroute
+- 1152  tcodump
+- 1153  tcpdump
+- 1154  rvm list
+- 1155  ls
+- 1156  mkdir ror_start
+- 1157  cd ror_start
+- 1158  ls -l
+- 1159  rails new login_app
+- 1160  bundle show
+- 1161  bundle show rack
+- 1162  bundle show json
+- 1163  ls -l
+- 1164  cd login_app
+- 1165  bundle show
+- 1166  bundle show json
+- 1167  rvm list
+- 1168  ls -l
+- 1169  vim Gemfile
+- 1170  vi Gemfile
+- 1171  bundle install
+- 1172  bundle show authlogic
+- 1173  bundle show omniauth
+- 1174  rails g scafford user username:string email:string
+- 1175  bundle show execjs
+- 1176  bundle show autodetect
+- 1177  vi Gemfile
+- 1178  bundle install
+- 1179  rails g scafford user username:string email:string
+- 1180  vi Gemfile
+- 1181  bundle install
+- 1182  rails g scafford user username:string email:string
+- 1183  rails g scaffold user username:string email:string
+- 1184  rake db:migrate
+- 1185  ls
+- 1186  rails s
+- 1187  rake route
+- 1188  rake routes
+- 1189  rails s --trace
+- 1190  rake routes --trace
+- 1191  rails s
+- 1192  ls
+- 1193  cd ror_start
+- 1194  ls
+- 1195  cd login_app/
+- 1196  ls
+- 1197  rails s
+- 1198  ls
+- 1199  ls -l
+- 1200  rake db:migrate
+- 1201  rails s
+- 1202  cd ..
+- 1203  ls -l
+- 1204  rm -rf login_app
+- 1205  ls -l
+- 1206  rails new login_app2
+- 1207  cd login_app2/
+- 1208  ls -l
+- 1209  vi gemfile
+- 1210  vi Gemfile
+- 1211  bundle install
+- 1212  rails g scaffild user username:string email:string crypted_password:string password_salt:string persistence_token:string
+- 1213  rails g scaffold user username:string email:string crypted_password:string password_salt:string persistence_token:string
+- 1214  rake db:migrate
+- 1215  ls -l
+- 1216  rails s
+- 1217  bundle install
+- 1218  rails s
+- 1219  ls
+- 1220  cd ror_start
+- 1221  ls
+- 1222  cd login_app2/
+- 1223  ls -l
+- 1224  rails s
+- 1225  bundle show autotest
+- 1226  bundle show
+- 1227  autotest
+- 1228  cd
+- 1229  autotest
+- 1230  sudo gem autotest -v 4.3.2
+- 1231  sudo gem install autotest -v 4.3.2
+- 1232  sudo gem install autotest-rails-pure -v 4.1.0
+- 1233  autotest
+- 1234  ls
+- 1235  cd ror_start
+- 1236  ls
+- 1237  cd login_app2/
+- 1238  autotest
+- 1239  cd
+- 1240  sudo gem install autotest-fsevent -v 0.2.2
+- 1241  sudo gem install autotest-fsevent
+- 1242  vi ~/.autotest
+- 1243  vi .autotest
+- 1244  sudo gem install autotest-growl
+- 1245  vi .autotest
+- 1246  libnotify
+- 1247  sudo gem install libnotify
+- 1248  ls -l
+- 1249  cd ror_start
+- 1250  cd login_app2/
+- 1251  ls -l
+- 1252  autotest
+- 1253  bundle install
+- 1254  autotest
+- 1255  bundle exec autotest
+- 1256  vi ~/autotest
+- 1257  vi ~/.autotest
+- 1258  bundle exec autotest
+- 1259  bundle install
+- 1260  autotest
+- 1261  bundle exec autotest
+- 1262  cd
+- 1263  sudo gem uninstall  autotest-growl autotest-fsevent
+- 1264  sudo gem uninstall  autotest
+- 1265  sudo gem install  Zentest autotest-growl autotest-fsevent
+- 1266  sudo gem install  ZenTest
+- 1267  vi .autotest
+- 1268  cd ror_start/
+- 1269  cd login_app2/
+- 1270  ls -l
+- 1271  autotest
+- 1272  ls -l
+- 1273  bundle install
+- 1274  bundle show ZenTest
+- 1275  bundle show autotest
+- 1276  autotest
+- 1277  ls
+- 1278  vi Gemfile
+- 1279  bundle install
+- 1280  autotest
+- 1281  bundle exec autotest
+- 1282  ls -l
+- 1283  rails s
+- 1284  bundle install
+- 1285  rails s
+- 1286  cd ror_start/
+- 1287  cd login_app2/
+- 1288  rails s
+- 1289  ls -l
+- 1290  vi Gemfile
+- 1291  bundle install
+- 1292  rails s
+- 1293  vi Gemfile
+- 1294  bundle install
+- 1295  rails s
+- 1296  bundle install
+- 1297  autotest
+- 1298  curl --head www.google.com
+- 1299  curl  www.google.com
+- 1300  rspec spec/
+- 1301  rspec 
+- 1302  ls
+- 1303  bundle show
+- 1304  rails g rspec:install
+- 1305  rspec spec
+- 1306  rspec spec/
+- 1307  autotest
+- 1308  curl --head tv.sohu.com
+- 1309  cd
+- 1310  ls
+- 1311  cd start
+- 1312  ls
+- 1313  cd build
+- 1314  ls -l
+- 1315  cd linux_bash
+- 1316  ls -l
+- 1317  cd ..
+- 1318  ls
+- 1319  cd ..
+- 1320  ls -l
+- 1321  cd kno
+- 1322  ls -l
+- 1323  grep -H -r mongo .
+- 1324  cd
+- 1325  ls -l
+- 1326  ls -al
+- 1327  vi .bashrc
+- 1328  ~/start/build/ubuntu_bash/findstringO.sh
+- 1329  cd start/build
+- 1330  ls -l
+- 1331  cd ubuntu_bash/
+- 1332  ls -l
+- 1333  chmod 0755 *
+- 1334  ls -l
+- 1335  findstringO.sh
+- 1336  ./findstringO.sh fff
+- 1337  .\findstringO.sh kkk
+- 1338  ./findstringO.sh kkk
+- 1339  bash findstringO.sh kkk
+- 1340  bash findstringO.sh on
+- 1341  bash findstringO.sh mysql
+- 1342  cd ~/start/onvis
+- 1343  ls -l
+- 1344  grep -H -r mysql .
+- 1345  cd
+- 1346  start/build/ubuntu_bash/findstringO.sh mysql
+- 1347  pwd
+- 1348  ls
+- 1349  start/build/ubuntu_bash/findstringO.sh mysql
+- 1350  pwd
+- 1351  cd start
+- 1352  ls -l
+- 1353  cd onvislog
+- 1354  grep -H -r mysql onvis
+- 1355  grep -H -r mysql ~/start/onvis
+- 1356  grep -H -r mysql ~/start/onvis/
+- 1357  ls
+- 1358  cd build
+- 1359  ls
+- 1360  cd ubuntu_bash
+- 1361  ls
+- 1362  ls -l
+- 1363  ./fingstringO.sh
+- 1364  bash ./fingstringO.sh
+- 1365  ls -l
+- 1366  ./findstringO.sh
+- 1367  bash ./findstringO.sh
+- 1368  bash ./findstringO.sh mysql
+- 1369  ./findstringO.sh mysql
+- 1370  bash ./findstringO.sh mysql
+- 1371  ls -l
+- 1372  bash ./findstringO.sh mysql
+- 1373  pwd
+- 1374  bash ./findstringO.sh mysql
+- 1375  ./findstringO.sh mysql
+- 1376  sh ./findstringO.sh mysql
+- 1377  ls -l
+- 1378  cd ..
+- 1379  ls -l
+- 1380  cd ..
+- 1381  ls
+- 1382  vi test.sh
+- 1383  ./test.sh
+- 1384  ls -l
+- 1385  chmod 0755 test.sh
+- 1386  ls -l
+- 1387  ./test.sh
+- 1388  vi test.sh
+- 1389  ./test.sh
+- 1390  vi test.sh
+- 1391  ./test.sh
+- 1392  grep mysql onvis
+- 1393  grep mysql kno
+- 1394  grep -H -r mysql kno
+- 1395  cd kno
+- 1396  ls -l
+- 1397  grep mysql .
+- 1398  grep mysql *.*
+- 1399  grep mongo .
+- 1400  grep -H -r mongo .
+- 1401  grep -H -r mongo *
+- 1402  grep -H -r mongo .
+- 1403  grep mongo .
+- 1404  cd ..
+- 1405  ls -l
+- 1406  grep -H -r mongo kno
+- 1407  ls
+- 1408  vi test.sh
+- 1409  ./test.sh
+- 1410  ls -l
+- 1411  grep -H -r mysql kno
+- 1412  grep -H -r mongo kno
+- 1413  ./test.sh
+- 1414  ./test.sh mongo
+- 1415  ls -l
+- 1416  ./test.sh mongo
+- 1417  cd
+- 1418  vi .bashrc
+- 1419  a mongo
+- 1420  a rails
+- 1421  a rails new
+- 1422  a rails
+- 1423  a mongo
+- 1424  a
+- 1425  a mongo db
+- 1426  a xoom
+- 1427  a grep
+- 1428  a grep H
+- 1429  a grep echo
+- 1430  a scafflod
+- 1431  a scaffold
+- 1432  a ls pwd
+- 1433  a ls
+- 1434  a ls first
+- 1435  a ls first new
+- 1436  cd
+- 1437  ls -l
+- 1438  vi .bashrc
+- 1439  a rvm ruby
+- 1440  cd ror_start/
+- 1441  cd login_app2/
+- 1442  ls
+- 1443  rails s
+- 1444  rails g model user_session
+- 1445  rails g scaffold_controller user_session username:string password:string
+- 1446  a comment
+- 1447  a !
+- 1448  rails s
+- 1449  cd ..
+- 1450  ls -l
+- 1451  cd you
+- 1452  ls -l
+- 1453  youtube_it_rails_app_example/
+- 1454  ls -l
+- 1455  cd youtube_it_rails_app_example/
+- 1456  ls -l
+- 1457  cd config
+- 1458  ls -l
+- 1459  cd ..
+- 1460  ls -l
+- 1461  rake db:migrate
+- 1462  bundle install
+- 1463  rake db:migrate
+- 1464  bundle exec
+- 1465  bundle exec rake
+- 1466  rake db:migrate
+- 1467  bundle exec rake
+- 1468  rails s
+- 1469  ls -l
+- 1470  rake db:migrate
+- 1471  bundle exec rake db:migrate
+- 1472  rails s
+- 1473  ls
+- 1474  cd ror_start/
+- 1475  ls -l
+- 1476  git clone git://github.com/chebyte/youtube_it_rails_app_example.git
+- 1477  ls -l
+- 1478  ls
+- 1479  cd ror_start/
+- 1480  ls
+- 1481  cd youtube_it_rails_app_example/
+- 1482  ls -l
+- 1483  rails s
+- 1484  ls -l
+- 1485  cd ..
+- 1486  ls -l
+- 1487  git clone https://github.com/kylejginavan/youtube_it.git
+- 1488  ls -l
+- 1489  pwd
+- 1490  ls -l
+- 1491  cd youtube_it
+- 1492  ls -l
+- 1493  cd lib
+- 1494  ls -l
+- 1495  curl --head http://gdata.youtube.com/feeds/api/videos?
+- 1496  curl --head http://gdata.youtube.com/feeds/projection/videos?v=2
+- 1497  curl --head http://gdata.youtube.com/feeds/api/videos?v=2
+- 1498  curl http://gdata.youtube.com/feeds/api/videos?v=2
+- 1499  curl http://gdata.youtube.com/feeds/api/videos?v=2 >out
+- 1500  vi out
+- 1501  a mongodb
+- 1502  a mysql
+- 1503  cd /etc/ssl
+- 1504  ls
+- 1505  cd certs
+- 1506  ls
+- 1507  ls cert.pem
+- 1508  ls cert
+- 1509  ls pem
+- 1510  ls
+- 1511  ls | grep cert
+- 1512  cd ca-certificates.crt
+- 1513  cd
+- 1514  vi .bashrc
+- 1515  export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+- 1516  echo $SSL_CERT_FILE
+- 1517  irb
+- 1518  sudo port install curl-ca-bundle
+- 1519  hongkim123
+- 1520  sudo port install curl-ca-bundle
+- 1521  irb
+- 1522  echo $SSL_CERT_FILE
+- 1523  ls
+- 1524  cd ror_start
+- 1525  ls
+- 1526  cd youtube_it_rails_app_example
+- 1527  ls -l
+- 1528  bundle show openssl
+- 1529  bundle show ssl
+- 1530  cd ror_start/
+- 1531  ls
+- 1532  cd youtube_it_rails_app_example/
+- 1533  ls -l
+- 1534  rails s
+- 1535  cd ror_start/
+- 1536  ls
+- 1537  cd youtube_it_rails_app_example/
+- 1538  rails s
+- 1539  rake router
+- 1540  rails r
+- 1541  rails s
+- 1542  bundle install
+- 1543  rails -v
+- 1544  bundle install
+- 1545  rails -s
+- 1546  rails s
+- 1547  rails -v
+- 1548  a theme
+- 1549  a css
+- 1550  a web
+- 1551  a git
+- 1552  rake -v
+- 1553  rake --version
+- 1554  a rspec
+- 1555  a Rspec
+- 1556  cd ror_start/
+- 1557  ls
+- 1558  cd youtube_it_rails_app_example/
+- 1559  ls -l
+- 1560  rails g web_app_theme:theme admin
+- 1561  ls -l
+- 1562  cd ..
+- 1563  ls -l
+- 1564  rails test_wat
+- 1565  pwd
+- 1566  ls
+- 1567  rails new test_wat
+- 1568  ls -l
+- 1569  cd test_wat
+- 1570  ls -l
+- 1571  a scafflod
+- 1572  a scaffold
+- 1573  rails g scaffold User name:string email:string
+- 1574  bundle install
+- 1575  rake db:migrate
+- 1576  rails s
+- 1577  rails g web_app_theme:theme
+- 1578  rake db:migrate
+- 1579  rails s
+- 1580  cd ..
+- 1581  ls -l
+- 1582  rm -rf test_wat
+- 1583  rails new test_wat2
+- 1584  cd test_wat2/
+- 1585  ls -l
+- 1586  bundle install
+- 1587  rails g web_app_theme:theme
+- 1588  rails s
+- 1589  a scaffold
+- 1590  rails g scaffold User name:string email:string
+- 1591  rake db:migrate
+- 1592  rails s
+- 1593  cd ..
+- 1594  ls -l
+- 1595  rm -rf test_wat2
+- 1596  ls -l
+- 1597  rails new test_wat3
+- 1598  bundle install
+- 1599  ls
+- 1600  cd test_wat3
+- 1601  bundle install
+- 1602  rails g web_app_theme:theme
+- 1603  rails s
+- 1604  ls -l
+- 1605  cd ..
+- 1606  ls -ol
+- 1607  rails --version
+- 1608  rails new test_wat4
+- 1609  ls -l
+- 1610  rm -rf test_wat4
+- 1611  rails new pro-template-app-31 -d mysql -T
+- 1612  ls
+- 1613  cd pro-template-app-31/
+- 1614  ls -l
+- 1615  bundle install
+- 1616  rails g controller home index
+- 1617  bundle install
+- 1618  rails g controller home index
+- 1619  rake db:create
+- 1620  a mysql
+- 1621  mysql -u root -p
+- 1622  rake db:create
+- 1623  rake db:create --trace
+- 1624  rake db:migrate
+- 1625  a mysql
+- 1626  rake db:create --trace
+- 1627  sudo mysql -u root -p
+- 1628  rake db:create --trace
+- 1629  rake db:migrate
+- 1630  sudo rake db:migrate
+- 1631  rails g web_app_theme:theme --engine=haml --app-name="My Latest Web App"
+- 1632  ls
+- 1633  rm app/views/layouts/application.html.erb
+- 1634  rails s
+- 1635  rails g web_app_theme:themed home --themed-type=text --engine=haml
+- 1636  mv app/views/home/show.html.haml app/views/home/index.html.haml
+- 1637  cd ..
+- 1638  ls -l
+- 1639  rm -rf pro-template-app-31
+- 1640  ls -l
+- 1641  rails new pro-template-app-33 -T
+- 1642  bundle install
+- 1643  ls -l
+- 1644  cd pro-template-app-33
+- 1645  bundle install
+- 1646  rails g controller home index
+- 1647  rm public/index.html
+- 1648  rake db:create
+- 1649  rails s
+- 1650  rails g web_app_theme:theme --engine=haml --app-name="My Latest Web App"
+- 1651  rm app/views/layouts/application.html.erb
+- 1652  rails s
+- 1653  rails g web_app_theme:themed home --themed-type=text --engine=haml
+- 1654  mv app/views/home/show.html.haml app/views/home/index.html.haml
+- 1655  `rails s
+- 1656  rails s
+- 1657  cd ..
+- 1658  ls -l
+- 1659  cp -r login_app2 login_app2backup
+- 1660  cd login_app2backup
+- 1661  ls -l
+- 1662  rails s
+- 1663  a debugger
+- 1664  a logger
+- 1665  a debug
+- 1666  a Debug
+- 1667  cd ror_start/
+- 1668  ls
+- 1669  cd youtube_it_rails_app_example/
+- 1670  RAILS S
+- 1671  rails s
+- 1672  s grant
+- 1673  a grant
+- 1674  a mysql grant
+- 1675  a mysql 
+- 1676  cd ror_start/
+- 1677  ls
+- 1678  cd login_app2backup/
+- 1679  ls -l
+- 1680  a scaffold
+- 1681  rails g scaffold Video title:string description:string provider:string yt_video_id:string url:string is_complete:boolean continue:string
+- 1682  rake db:migrate
+- 1683  rails s
+- 1684  bundle install
+- 1685  rails s
+- 1686  bundle install
+- 1687  rails s
+- 1688  bundle show debug
+- 1689  bundle install
+- 1690  rails s
+- 1691  bundle install
+- 1692  rails s
+- 1693  a Debug
+- 1694  rails s
+- 1695  sudo gem  install ruby-debug
+- 1696  bundle install
+- 1697  rails s
+- 1698  rails c --sandbox
+- 1699  ls
+- 1700  script/console --sandbox
+- 1701  ./script/console --sandbox
+- 1702  cd script
+- 1703  ls
+- 1704  cd ror
+- 1705  ls
+- 1706  cd ror_start/
+- 1707  ls
+- 1708  cd login_app2backup/
+- 1709  ls -l
+- 1710  irb
+- 1711  ls -l
+- 1712  rails c --sandbox
+- 1713  sudo apt-get install readline
+- 1714  rails c --sandbox
+- 1715  a apt-get
+- 1716  ls -l
+- 1717  pwd
+- 1718  ls -l
+- 1719  rails s
+- 1720  cd ror_start/
+- 1721  cd login_app2backup/
+- 1722  ls -l
+- 1723  rails s
+- 1724  cd ror_start/
+- 1725  cd login_app2backup/
+- 1726  ls -l
+- 1727  raols s
+- 1728  rails s
+- 1729  cd ..
+- 1730  ls
+- 1731  cd youtube_it_rails_app_example
+- 1732  rails s
+- 1733  cd ..
+- 1734  ls
+- 1735  cd login_app2backup
+- 1736  ls -l
+- 1737  rails s
+- 1738  wget -qO- https://toolbelt.heroku.com/install.sh | sh
+- 1739  heroku login
+- 1740  cd ror_start/
+- 1741  ls
+- 1742  cd login_app2backup/
+- 1743  ls -l
+- 1744  heroku create
+- 1745  git init
+- 1746  git add .
+- 1747  git commit -m "init"
+- 1748  git push heroku master
+- 1749  heroku create
+- 1750  git push heroku master
+- 1751  git log
+- 1752  git push heroku master
+- 1753  heroku login
+- 1754  git push heroku master
+- 1755  ls -l
+- 1756  git log
+- 1757  git add .
+- 1758  git commit -m "init2"
+- 1759  ls -l
+- 1760  git push heroku master
+- 1761  heroku keys:add ~/.ssh/id_rsa.pub
+- 1762  ls -l
+- 1763  pwd
+- 1764  heroku login
+- 1765  ls
+- 1766  ls -l
+- 1767  pwd
+- 1768  ls -l
+- 1769  git log
+- 1770  ls -l
+- 1771  a key
+- 1772  a key ssl
+- 1773  a key ssh
+- 1774  a key keysh
+- 1775  a key apt-key
+- 1776  heroku log -t
+- 1777  heroku logs -t
+- 1778  heroku logs -ps
+- 1779  heroku logs --ps
+- 1780  ls
+- 1781  cd .ssh
+- 1782  ls -l
+- 1783  vi known_hosts
+- 1784  cd
+- 1785  ls -l
+- 1786  heroku login
+- 1787  a key apt
+- 1788  cd .ssh
+- 1789  ls -l
+- 1790  heroku keys
+- 1791  ls -al
+- 1792  ssh-keygen -t rsa
+- 1793  ls -al
+- 1794  cd ..
+- 1795  heroku keys:add
+- 1796  ls -l
+- 1797  cd ror_start/
+- 1798  ls
+- 1799  cd login_app2b
+- 1800  cd login_app2backup/
+- 1801  ls -l
+- 1802  heroku login
+- 1803  heroku create
+- 1804  git init
+- 1805  git add .
+- 1806  git admit -m "init2"
+- 1807  git commit -m "init2"
+- 1808  ls -l
+- 1809  git logs
+- 1810  git log
+- 1811  heroku --version
+- 1812  heroku update
+- 1813  heroku --version
+- 1814  heroku releases
+- 1815  heroku logs -t
+- 1816  heroku ps
+- 1817  git push heroku master
+- 1818  git add .
+- 1819  ls -l
+- 1820  git log
+- 1821  git logs
+- 1822  ls -l
+- 1823  git push heroku master
+- 1824  ls -l
+- 1825  bundle install
+- 1826  heroku ps
+- 1827  a heroku
+- 1828  heroku run console
+- 1829  a git 
+- 1830  git push
+- 1831  git commit -m "init3"
+- 1832  git config --global hongkyukim@yahoo.com "hong kim"
+- 1833  git config --global hong "hong kim"
+- 1834  git config --global usr,name "hong kim"
+- 1835  git config --global user.name "hong kim"
+- 1836  git config --global user.email "hongkyukim@yahoo.com"
+- 1837  git commit -m "init3"
+- 1838  git push Gemfile
+- 1839  git commit -m "gemfile"
+- 1840  git logs
+- 1841  git status -s
+- 1842  git status s
+- 1843  git status -s
+- 1844  ls
+- 1845  git pull
+- 1846  ls -l
+- 1847  vi gemfile
+- 1848  ls -l
+- 1849  vi Gemfile
+- 1850  git commit -m "add"
+- 1851  cd ror_start/
+- 1852  cd login_app2backup/
+- 1853  ls -l
+- 1854  git commit -m "gemfile"
+- 1855  git co Gemfile
+- 1856  git checkout Gemfile
+- 1857  git status -s
+- 1858  vi Gemfile
+- 1859  git status -s
+- 1860  git commit -m "Gemfile"
+- 1861  git commit -a
+- 1862  ls -l
+- 1863  git push
+- 1864  git push Gemfile
+- 1865  git commit -m "Gemfile"
+- 1866  heroku ps
+- 1867  heroku help
+- 1868  heroku logs
+- 1869  cd ror_start/
+- 1870  cd login_app2backup/
+- 1871  heroku logs
+- 1872  heroku apps
+- 1873  heroku apps;info
+- 1874  heroku apps:info
+- 1875  heroku info
+- 1876  heroku info --app gentle-night-9420
+- 1877  heroku info --app strong-cloud-44
+- 1878  heroku apps destroy --app strong-cloud-44
+- 1879  heroku apps:destroy --app strong-cloud-44
+- 1880  heroku apps
+- 1881  heroku apps:destroy --confirm stormy-moon-9161
+- 1882  heroku apps:destroy --confirm smooth-flower-9101
+- 1883  ls -l
+- 1884  pwd
+- 1885  ls -l
+- 1886  heroku apps:destroy --confirm gentle-night-9420
+- 1887  heroku apps
+- 1888  git logs
+- 1889  git log
+- 1890  ls -l
+- 1891  heroku apps:create videoguide
+- 1892  git push heroku master
+- 1893  git status -s
+- 1894  vi Gemfile
+- 1895  cat .netrc
+- 1896  cd
+- 1897  cat .netrc
+- 1898  cat .curlrc
+- 1899  vi .curlrc
+- 1900  curl https://api.heroku.com/apps
+- 1901  heroku apps
+- 1902  heroku apps:info
+- 1903  heroku apps:info all
+- 1904  heroku logs
+- 1905  cd ror_start/login_app2backup/
+- 1906  heroku logs
+- 1907  heroku keys
+- 1908  git remote -v
+- 1909  git remote
+- 1910  gem envirnonment
+- 1911  gem environment
+- 1912  heroku --version
+- 1913  heroku update
+- 1914  ruby -v
+- 1915  rvm 
+- 1916  a rvm
+- 1917  rvm list
+- 1918  rvm --default 1.9.2
+- 1919  rvm list
+- 1920  bundle install
+- 1921  gem install pg -v '0.10.0'
+- 1922  bundle install
+- 1923  gem install pg_config
+- 1924  a apt-get
+- 1925  sudo apt-get install libpq-dev
+- 1926  bundle install
+- 1927  rake db:migrate
+- 1928  bundle install
+- 1929  rake db:migrate
+- 1930  rake db:migrate --trace
+- 1931  rake db:create
+- 1932  bundle install
+- 1933  rake db:create
+- 1934  sudo apt-get install postgresql-9.1
+- 1935  heroku pg:info
+- 1936  rake db:create
+- 1937  rake db:create:all
+- 1938  bundle install
+- 1939  rake db:create:all
+- 1940  gem uninstall pg-0.10.0
+- 1941  gem uninstall pg
+- 1942  bundle install
+- 1943  rake db:create:all
+- 1944  bundle install
+- 1945  rake db:create:all
+- 1946  rails s
+- 1947  bundle install
+- 1948  rails s
+- 1949  sudo gem install activerecord-postgresql-adapter
+- 1950  bundle install
+- 1951  bundle install --without production
+- 1952  rails s
+- 1953  bundle install --without production
+- 1954  rails s
+- 1955  gem install activerecord-postgresql-adapter
+- 1956  bundle install --without production
+- 1957  rails s
+- 1958  bundle install --without production
+- 1959  rake db:create
+- 1960  sudo gem install activerecord-postgresql-adapter
+- 1961  bundle install --without production
+- 1962  rails s
+- 1963  cd ror_start/login_app2backup/
+- 1964  ls
+- 1965  bundle install
+- 1966  rails s
+- 1967  gem uninstall activerecord-postgresql-adapter
+- 1968  sudo gem uninstall activerecord-postgresql-adapter
+- 1969  gem install activerecord-postgresql-adapter
+- 1970  bundle install
+- 1971  rails s
+- 1972  bundle install
+- 1973  rails s
+- 1974  gem install activerecord-postrgresql-adapter
+- 1975  sudo gem install activerecord-postrgresql-adapter
+- 1976  gem install activerecord-postrgesql-adapter
+- 1977  gem install activerecord-postgresql-adapter
+- 1978  rails s
+- 1979  rake db:migrate
+- 1980  gem install postgres-pr
+- 1981  bundle install
+- 1982  rails s
+- 1983  gem install ruby-pg
+- 1984  rails s
+- 1985  bundle install
+- 1986  rails s
+- 1987  gem install activerecord-postgresql-adapter
+- 1988  rails s
+- 1989  gem install pg
+- 1990  bundle install
+- 1991  rails s
+- 1992  rvm ruby
+- 1993  rvm list
+- 1994  rvm --default 1.9.2
+- 1995  rvm list
+- 1996  rvm --default 1.9.3
+- 1997  rvm list
+- 1998  bundle install
+- 1999  rails s
+- 2000  exec bundle install
+- 2001  a postgresql
+- 2002  sudo su postgres
+- 2003  psql template1
+- 2004  ls -l
+- 2005  psql -U hong -d vg_dev
+- 2006  ls -l
+- 2007  cd ror_start/login_app2backup/
+- 2008  ls -l
+- 2009  bundle install
+- 2010  rails s
+- 2011  rvm list
+- 2012  rvm --default 1.9.2
+- 2013  rvm list
+- 2014  bundle install
+- 2015  vi .env
+- 2016  cd
+- 2017  vi .env
+- 2018  echo "RACK_ENV=development" >>.env
+- 2019  vi .env
+- 2020  foreman start
+- 2021  cd ror_start/login_app2backup/
+- 2022  foreman start
+- 2023  cp ~/.env .
+- 2024  cp ~/Procfile .
+- 2025  foreman start
+- 2026  sudo apt-get install libpq-dev
+- 2027  bundle install
+- 2028  foreman start
+- 2029  foreman start --trace
+- 2030  gem uninstall pg
+- 2031  bundle install
+- 2032  foreman start
+- 2033  gem uninstall activerecord-postgresql-adapter
+- 2034  gem install postgres-pr
+- 2035  bundle install
+- 2036  foreman start
+- 2037  bundle install
+- 2038  foreman start
+- 2039  gem uninstall postgres-pr
+- 2040  gem uninstall pg
+- 2041  gem install ruby-pg
+- 2042  bundle install
+- 2043  foreman start
+- 2044  bundle install
+- 2045  gem uninstall pg
+- 2046  bundle install
+- 2047  foreman start
+- 2048  rails s
+- 2049  rake dB:rollback
+- 2050  rake db:rollback
+- 2051  bundle install
+- 2052  gem uninstall pg
+- 2053  bundle install
+- 2054  foreman start
+- 2055  rake db:migrate
+- 2056  foreman start
+- 2057  git add .
+- 2058  git commit -m "use thin via procfile"
+- 2059  git push heroku
+- 2060  git push heroku master
+- 2061  heroku ps
+- 2062  heroku logs
+- 2063  heroku restart
+- 2064  heroku ps
+- 2065  heroku logs
+- 2066  heroku ps
+- 2067  heroku logs
+- 2068  git add .
+- 2069  git commit -m "user defined for pg"
+- 2070  git push heroku
+- 2071  heroku restart
+- 2072  heroku ps
+- 2073  heroku logs
+- 2074  heroku psql template1
+- 2075  heroku rake db:migrate 
+- 2076  heroku restart
+- 2077  heroku ps
+- 2078  heroku apps
+- 2079  heroku ps
+- 2080  heroku logs
+- 2081  curl http://videoguide.herokuapp.com/videos
+- 2082  curl http://videoguide.herokuapp.com/users
+- 2083  curl http://videoguide.herokuapp.com/users/1
+- 2084  curl http://videoguide.herokuapp.com/users/1&alt=json
+- 2085  curl http://videoguide.herokuapp.com/users/1&alt=json > out
+- 2086  curl http://videoguide.herokuapp.com/videos/1&alt=json > out
+- 2087  heroku run console
+- 2088  heroku ps
+- 2089* 
+- 2090  heroku ps
+- 2091  history > out
+diff --git a/config/initializers/omniauth.rb b/config/initializers/omniauth.rb
+index f9d277d..0da23f4 100644
+--- a/config/initializers/omniauth.rb
++++ b/config/initializers/omniauth.rb
+@@ -3,11 +3,15 @@ require 'openid/store/filesystem'
+ 
+ Rails.application.config.middleware.use OmniAuth::Builder do
+   ###provider :twitter, 'CONSUMER_KEY', 'CONSUMER_SECRET'
+-  provider :twitter, 'YoNWklBzW9Au3OG7AlG1w', 'UaU15OPzBtBGVpv03HDcHlFcTXbO9EPLweWro2fMgY'
++  provider :twitter, 'YoNWklBzW9Au3OG7AlG1w', 'UaU15OPzBtBGVpv03HDcHlFcTXbO9EPLweWro2fMgY' if Rails.env.development?
++  provider :twitter, 'YoNWklBzW9Au3OG7AlG1w', 'UaU15OPzBtBGVpv03HDcHlFcTXbO9EPLweWro2fMgY' if Rails.env.production?
+ 
+   ###provider :facebook, 'APP_ID', 'APP_SECRET'
++  provider :facebook, '447068042001239', '57ef12026f217b7adb96d3dc58f451e1',
++               :scope => 'email', :display => 'popup' if Rails.env.development?
++
+   provider :facebook, '484584161559849', '601f43f68d06d46aaa37bfb2f4b95e62',
+-               :scope => 'email', :display => 'popup'
++               :scope => 'email', :display => 'popup' if Rails.env.production?
+   ###provider :linked_in, 'CONSUMER_KEY', 'CONSUMER_SECRET'
+ 
+   ###provider :open_id, OpenID::Store::Filesystem.new('/tmp')
+diff --git a/config/initializers/omniauth.rb~ b/config/initializers/omniauth.rb~
+index f9d277d..0da23f4 100644
+--- a/config/initializers/omniauth.rb~
++++ b/config/initializers/omniauth.rb~
+@@ -3,11 +3,15 @@ require 'openid/store/filesystem'
+ 
+ Rails.application.config.middleware.use OmniAuth::Builder do
+   ###provider :twitter, 'CONSUMER_KEY', 'CONSUMER_SECRET'
+-  provider :twitter, 'YoNWklBzW9Au3OG7AlG1w', 'UaU15OPzBtBGVpv03HDcHlFcTXbO9EPLweWro2fMgY'
++  provider :twitter, 'YoNWklBzW9Au3OG7AlG1w', 'UaU15OPzBtBGVpv03HDcHlFcTXbO9EPLweWro2fMgY' if Rails.env.development?
++  provider :twitter, 'YoNWklBzW9Au3OG7AlG1w', 'UaU15OPzBtBGVpv03HDcHlFcTXbO9EPLweWro2fMgY' if Rails.env.production?
+ 
+   ###provider :facebook, 'APP_ID', 'APP_SECRET'
++  provider :facebook, '447068042001239', '57ef12026f217b7adb96d3dc58f451e1',
++               :scope => 'email', :display => 'popup' if Rails.env.development?
++
+   provider :facebook, '484584161559849', '601f43f68d06d46aaa37bfb2f4b95e62',
+-               :scope => 'email', :display => 'popup'
++               :scope => 'email', :display => 'popup' if Rails.env.production?
+   ###provider :linked_in, 'CONSUMER_KEY', 'CONSUMER_SECRET'
+ 
+   ###provider :open_id, OpenID::Store::Filesystem.new('/tmp')
+diff --git a/db/schema.rb b/db/schema.rb
+index 9ea324d..3067718 100644
+--- a/db/schema.rb
++++ b/db/schema.rb
+@@ -11,7 +11,7 @@
+ #
+ # It's strongly recommended to check this file into your version control system.
+ 
+-ActiveRecord::Schema.define(:version => 20121010180006) do
++ActiveRecord::Schema.define(:version => 20121015015818) do
+ 
+   create_table "authentications", :force => true do |t|
+     t.integer  "user_id"
+@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(:version => 20121010180006) do
+     t.boolean  "remember_me"
+     t.integer  "payment"
+     t.datetime "reset_password_sent_at"
++    t.string   "language"
+   end
+ 
+   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+diff --git a/log/.gitkeep b/log/.gitkeep
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/log/delayed_job.log b/log/delayed_job.log
+deleted file mode 100644
+index 27f5a29..0000000
+--- a/log/delayed_job.log
++++ /dev/null
+@@ -1,5 +0,0 @@
+-# Logfile created on 2012-10-01 16:58:12 -0700 by logger.rb/25413
+-2012-10-01T16:58:12-0700: [Worker(delayed_job host:hong-OptiPlex-GX520 pid:7213)] Starting job worker
+-2012-10-01T17:01:11-0700: [Worker(delayed_job host:hong-OptiPlex-GX520 pid:7213)] Feed#search_camideo completed after 13.3386
+-2012-10-01T17:01:11-0700: [Worker(delayed_job host:hong-OptiPlex-GX520 pid:7213)] 1 jobs processed at 0.0748 j/s, 0 failed ...
+-2012-10-01T17:10:23-0700: [Worker(delayed_job host:hong-OptiPlex-GX520 pid:7213)] Exiting...
+diff --git a/log/development.log b/log/development.log
+deleted file mode 100644
+index b6efb68..0000000
+--- a/log/development.log
++++ /dev/null
+@@ -1,140 +0,0 @@
+-
+-
+-Started GET "/" for 127.0.0.1 at 2012-10-10 17:39:26 -0700
+-Processing by ChannelsController#index as HTML
+-  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+-  [1m[36mChannel Load (2.1ms)[0m  [1mSELECT * FROM channels c WHERE c.channel_type = 'selected' or c.channel_type = 'selected2' [0m
+-  Rendered channels/index.html.erb within layouts/application (130.8ms)
+-Compiled authentications.css  (337ms)  (pid 6204)
+-Compiled blueprint/ie.css  (1ms)  (pid 6204)
+-Compiled blueprint/plugins/buttons/screen.css  (0ms)  (pid 6204)
+-Compiled blueprint/plugins/fancy-type/screen.css  (0ms)  (pid 6204)
+-Compiled blueprint/plugins/link-icons/screen.css  (0ms)  (pid 6204)
+-Compiled blueprint/plugins/rtl/screen.css  (0ms)  (pid 6204)
+-Compiled blueprint/print.css  (0ms)  (pid 6204)
+-Compiled blueprint/screen.css  (1ms)  (pid 6204)
+-Compiled blueprint/src/forms.css  (0ms)  (pid 6204)
+-Compiled blueprint/src/grid.css  (0ms)  (pid 6204)
+-Compiled blueprint/src/ie.css  (0ms)  (pid 6204)
+-Compiled blueprint/src/print.css  (0ms)  (pid 6204)
+-Compiled blueprint/src/reset.css  (0ms)  (pid 6204)
+-Compiled blueprint/src/typography.css  (0ms)  (pid 6204)
+-Compiled channels.css  (2ms)  (pid 6204)
+-Compiled custom.css  (0ms)  (pid 6204)
+-Compiled feeds.css  (2ms)  (pid 6204)
+-Compiled languages.css  (2ms)  (pid 6204)
+-Compiled registrations.css  (2ms)  (pid 6204)
+-Compiled scaffolds.css  (32ms)  (pid 6204)
+-Compiled users.css  (2ms)  (pid 6204)
+-Compiled videos.css  (2ms)  (pid 6204)
+-Compiled application.css  (1612ms)  (pid 6204)
+-  Rendered layouts/_stylesheets.html.erb (52.9ms)
+-  Rendered layouts/_header.html.erb (4.4ms)
+-  Rendered layouts/_footer.html.erb (80.9ms)
+-Completed 200 OK in 2788ms (Views: 2614.3ms | ActiveRecord: 95.5ms)
+-
+-
+-Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-10 17:39:29 -0700
+-Served asset /blueprint/screen.css - 304 Not Modified (9ms)
+-
+-
+-Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-10 17:39:30 -0700
+-Served asset /blueprint/print.css - 304 Not Modified (6ms)
+-
+-
+-Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-10 17:39:30 -0700
+-Served asset /custom.css - 304 Not Modified (10ms)
+-
+-
+-Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-10 17:39:30 -0700
+-Served asset /logo.png - 304 Not Modified (165ms)
+-
+-
+-Started GET "/?mobile=1" for 127.0.0.1 at 2012-10-10 17:39:44 -0700
+-Processing by ChannelsController#index as HTML
+-  Parameters: {"mobile"=>"1", "search"=>"selected", "loggedin"=>"yes"}
+-  [1m[35mChannel Load (0.7ms)[0m  SELECT * FROM channels c WHERE c.channel_type = 'selected' or c.channel_type = 'selected2' 
+-  Rendered channels/index.mobile.erb within layouts/application (9.2ms)
+-Compiled mobile.js  (0ms)  (pid 6204)
+-Completed 200 OK in 98ms (Views: 69.4ms | ActiveRecord: 0.7ms)
+-
+-
+-Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-10-10 17:39:44 -0700
+-Served asset /mobile.js - 304 Not Modified (6ms)
+-
+-
+-Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-10 17:39:54 -0700
+-Processing by SessionsController#new as HTML
+-  Rendered devise/shared/_linksmobile.erb (2.6ms)
+-  Rendered devise/sessions/new.mobile.erb within layouts/application (28.1ms)
+-Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+-
+-
+-Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-10-10 17:39:55 -0700
+-Served asset /mobile.js - 304 Not Modified (0ms)
+-
+-
+-Started GET "/users/password/new?mobile=0" for 127.0.0.1 at 2012-10-10 17:40:00 -0700
+-Processing by Devise::PasswordsController#new as HTML
+-  Parameters: {"mobile"=>"0"}
+-  Rendered devise/shared/_links.erb (5.5ms)
+-  Rendered devise/passwords/new.html.erb within layouts/application (12.5ms)
+-  Rendered layouts/_stylesheets.html.erb (6.1ms)
+-  Rendered layouts/_header.html.erb (2.9ms)
+-  Rendered layouts/_footer.html.erb (2.8ms)
+-Completed 200 OK in 220ms (Views: 216.5ms | ActiveRecord: 0.0ms)
+-
+-
+-Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-10 17:40:00 -0700
+-Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+-
+-
+-Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-10 17:40:00 -0700
+-Served asset /blueprint/print.css - 304 Not Modified (0ms)
+-
+-
+-Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-10 17:40:00 -0700
+-Served asset /custom.css - 304 Not Modified (0ms)
+-
+-
+-Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-10 17:40:00 -0700
+-Served asset /logo.png - 304 Not Modified (0ms)
+-
+-
+-Started GET "/users/password/new?mobile=1" for 127.0.0.1 at 2012-10-10 17:40:10 -0700
+-Processing by Devise::PasswordsController#new as HTML
+-  Parameters: {"mobile"=>"1"}
+-  Rendered devise/shared/_links.erb (111.0ms)
+-  Rendered devise/passwords/new.mobile.erb within layouts/application (114.6ms)
+-Completed 200 OK in 150ms (Views: 148.3ms | ActiveRecord: 0.0ms)
+-
+-
+-Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-10-10 17:40:10 -0700
+-Served asset /mobile.js - 304 Not Modified (0ms)
+-
+-
+-Started GET "/users/password/new?mobile=0" for 127.0.0.1 at 2012-10-10 17:41:05 -0700
+-Processing by Devise::PasswordsController#new as HTML
+-  Parameters: {"mobile"=>"0"}
+-  Rendered devise/shared/_links.erb (2.2ms)
+-  Rendered devise/passwords/new.html.erb within layouts/application (8.9ms)
+-  Rendered layouts/_stylesheets.html.erb (7.6ms)
+-  Rendered layouts/_header.html.erb (4.1ms)
+-  Rendered layouts/_footer.html.erb (4.8ms)
+-Completed 200 OK in 88ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+-
+-
+-Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-10 17:41:05 -0700
+-Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+-
+-
+-Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-10 17:41:05 -0700
+-Served asset /blueprint/print.css - 304 Not Modified (0ms)
+-
+-
+-Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-10 17:41:05 -0700
+-Served asset /custom.css - 304 Not Modified (0ms)
+-
+-
+-Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-10 17:41:05 -0700
+-Served asset /logo.png - 304 Not Modified (0ms)
+diff --git a/log/production.log b/log/production.log
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/log/test.log b/log/test.log
+deleted file mode 100644
+index 1d3e2be..0000000
+--- a/log/test.log
++++ /dev/null
+@@ -1,70 +0,0 @@
+-  [1m[36m (1.2ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+-  [1m[35m (0.2ms)[0m  BEGIN
+-  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+-  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+-LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+-                                                  ^
+-: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+-  [1m[35m (0.5ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+-  [1m[36m (0.5ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+-  [1m[35m (0.2ms)[0m  BEGIN
+-  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+-  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+-LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+-                                                  ^
+-: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+-  [1m[35m (0.7ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+-  [1m[36m (0.5ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+-  [1m[35m (0.1ms)[0m  BEGIN
+-  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+-  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+-LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+-                                                  ^
+-: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+-  [1m[35m (0.6ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+-  [1m[36m (0.7ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+-  [1m[35m (0.2ms)[0m  BEGIN
+-  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+-  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+-LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+-                                                  ^
+-: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+-  [1m[35m (0.5ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+-  [1m[36m (0.5ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+-  [1m[35m (0.2ms)[0m  BEGIN
+-  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+-  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+-LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+-                                                  ^
+-: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+-  [1m[35m (0.5ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+-  [1m[36m (0.4ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+-  [1m[35m (0.2ms)[0m  BEGIN
+-  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+-  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+-LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+-                                                  ^
+-: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+-  [1m[35m (0.7ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+-  [1m[36m (0.5ms)[0m  [1mALTER TABLE "channels" DISABLE TRIGGER ALL;ALTER TABLE "channels_videos" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "languages" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "videos" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+-  [1m[35m (0.2ms)[0m  BEGIN
+-  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+-  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-PGError: ERROR:  column "crypted_password" of relation "users" does not exist
+-LINE 1: INSERT INTO "users" ("username", "email", "crypted_password"...
+-                                                  ^
+-: INSERT INTO "users" ("username", "email", "crypted_password", "password_salt", "persistence_token", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2012-07-26 07:18:35', '2012-07-26 07:18:35', 980190962)
+-  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+-  [1m[35m (0.5ms)[0m  ALTER TABLE "channels" ENABLE TRIGGER ALL;ALTER TABLE "channels_videos" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "languages" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "videos" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+diff --git a/out b/out
+index 30b85fc..f65a794 100644
+--- a/out
++++ b/out
+@@ -1,101 +0,0 @@
+-2012-10-02T00:19:45+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
+-2012-10-02T00:19:45+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:19:45 +0000
+-2012-10-02T00:19:45+00:00 app[web.1]: 
+-2012-10-02T00:19:45+00:00 app[web.1]: 
+-2012-10-02T00:19:45+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+-2012-10-02T00:19:45+00:00 app[web.1]: 
+-2012-10-02T00:19:45+00:00 app[web.1]: 
+-2012-10-02T00:19:45+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:19:45 +0000
+-2012-10-02T00:19:45+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
+-2012-10-02T00:19:45+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+-2012-10-02T00:19:45+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+-2012-10-02T00:19:47+00:00 app[web.1]: 
+-2012-10-02T00:19:47+00:00 app[web.1]: 
+-2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/users/1/channels/new" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
+-2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /users/1/channels/new] miss
+-2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/users/1/channels/new dyno=web.1 queue=0 wait=0ms service=65ms status=200 bytes=4558
+-2012-10-02T00:19:47+00:00 app[web.1]: 
+-2012-10-02T00:19:47+00:00 app[web.1]: 
+-2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
+-2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+-2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
+-2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+-2012-10-02T00:19:47+00:00 app[web.1]: 
+-2012-10-02T00:19:47+00:00 app[web.1]: 
+-2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
+-2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+-2012-10-02T00:19:47+00:00 app[web.1]: 
+-2012-10-02T00:19:47+00:00 app[web.1]: 
+-2012-10-02T00:19:47+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:19:47 +0000
+-2012-10-02T00:19:47+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+-2012-10-02T00:19:47+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+-2012-10-02T00:20:04+00:00 app[web.1]: 
+-2012-10-02T00:20:04+00:00 app[web.1]: 
+-2012-10-02T00:20:04+00:00 app[web.1]: Started POST "/users/1/channels" for 75.18.210.30 at 2012-10-02 00:20:04 +0000
+-2012-10-02T00:20:04+00:00 app[web.1]: cache: [POST /users/1/channels] invalidate, pass
+-2012-10-02T00:20:04+00:00 heroku[router]: POST www.videotouch.tv/users/1/channels dyno=web.1 queue=0 wait=0ms service=655ms status=302 bytes=103
+-2012-10-02T00:20:05+00:00 app[web.1]: 
+-2012-10-02T00:20:05+00:00 app[web.1]: 
+-2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/channels/116" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
+-2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /channels/116] miss
+-2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/channels/116 dyno=web.1 queue=0 wait=0ms service=40ms status=200 bytes=3720
+-2012-10-02T00:20:05+00:00 app[web.1]: 
+-2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
+-2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
+-2012-10-02T00:20:05+00:00 app[web.1]: 
+-2012-10-02T00:20:05+00:00 app[web.1]: 
+-2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+-2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+-2012-10-02T00:20:05+00:00 app[web.1]: 
+-2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
+-2012-10-02T00:20:05+00:00 app[web.1]: 
+-2012-10-02T00:20:05+00:00 app[web.1]: 
+-2012-10-02T00:20:05+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:20:05 +0000
+-2012-10-02T00:20:05+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+-2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+-2012-10-02T00:20:05+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
+-2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/channels/116/videos" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
+-2012-10-02T00:20:08+00:00 app[web.1]: 
+-2012-10-02T00:20:08+00:00 app[web.1]: 
+-2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/channels/116/videos dyno=web.1 queue=0 wait=0ms service=34ms status=200 bytes=21516
+-2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /channels/116/videos] miss
+-2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+-2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
+-2012-10-02T00:20:08+00:00 app[web.1]: 
+-2012-10-02T00:20:08+00:00 app[web.1]: 
+-2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+-2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+-2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
+-2012-10-02T00:20:08+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+-2012-10-02T00:20:08+00:00 app[web.1]: 
+-2012-10-02T00:20:08+00:00 app[web.1]: 
+-2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
+-2012-10-02T00:20:08+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+-2012-10-02T00:20:08+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:20:08 +0000
+-2012-10-02T00:20:08+00:00 app[web.1]: 
+-2012-10-02T00:20:08+00:00 app[web.1]: 
+-2012-10-02T00:20:40+00:00 app[web.1]: 
+-2012-10-02T00:20:40+00:00 app[web.1]: 
+-2012-10-02T00:20:40+00:00 app[web.1]: Started GET "/channels/116/videos" for 75.18.210.30 at 2012-10-02 00:20:40 +0000
+-2012-10-02T00:20:40+00:00 app[web.1]: cache: [GET /channels/116/videos] miss
+-2012-10-02T00:20:40+00:00 heroku[router]: GET www.videotouch.tv/channels/116/videos dyno=web.1 queue=0 wait=0ms service=92ms status=200 bytes=21373
+-2012-10-02T00:20:41+00:00 app[web.1]: 
+-2012-10-02T00:20:41+00:00 app[web.1]: 
+-2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css] miss
+-2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
+-2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/screen-bbc8615e82e64a5a42b9c1dab2f2b182.css dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
+-2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
+-2012-10-02T00:20:41+00:00 app[web.1]: 
+-2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
+-2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/custom-b9c7a489fe110729230a4d14e4082095.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+-2012-10-02T00:20:41+00:00 app[web.1]: 
+-2012-10-02T00:20:41+00:00 app[web.1]: 
+-2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/custom-b9c7a489fe110729230a4d14e4082095.css] miss
+-2012-10-02T00:20:41+00:00 app[web.1]: 
+-2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/blueprint/print-3143d7e1b75e3e1d5b6a3c45c90c4cfc.css] miss
+-2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/custom-b9c7a489fe110729230a4d14e4082095.css" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
+-2012-10-02T00:20:41+00:00 heroku[router]: GET www.videotouch.tv/assets/logo-639109b2e3678fd7fccaff0e14ee86bb.png dyno=web.1 queue=0 wait=0ms service=4ms status=304 bytes=0
+-2012-10-02T00:20:41+00:00 app[web.1]: 
+-2012-10-02T00:20:41+00:00 app[web.1]: cache: [GET /assets/logo-639109b2e3678fd7fccaff0e14ee86bb.png] miss
+-2012-10-02T00:20:41+00:00 app[web.1]: 
+-2012-10-02T00:20:41+00:00 app[web.1]: Started GET "/assets/logo-639109b2e3678fd7fccaff0e14ee86bb.png" for 75.18.210.30 at 2012-10-02 00:20:41 +0000
+diff --git a/tmp/cache/assets/C64/C00/sprockets%2F8950b9869c939e3c13a901f257185d62 b/tmp/cache/assets/C64/C00/sprockets%2F8950b9869c939e3c13a901f257185d62
+index e8cd6e9..1560047 100644
+Binary files a/tmp/cache/assets/C64/C00/sprockets%2F8950b9869c939e3c13a901f257185d62 and b/tmp/cache/assets/C64/C00/sprockets%2F8950b9869c939e3c13a901f257185d62 differ
+diff --git a/tmp/cache/assets/C74/7D0/sprockets%2Fc6a3504a0ac379d842765b6390c50082 b/tmp/cache/assets/C74/7D0/sprockets%2Fc6a3504a0ac379d842765b6390c50082
+deleted file mode 100644
+index d93d5fa..0000000
+Binary files a/tmp/cache/assets/C74/7D0/sprockets%2Fc6a3504a0ac379d842765b6390c50082 and /dev/null differ
+diff --git a/tmp/cache/assets/C85/FB0/sprockets%2F23544ac0d2d94c299893c700c862707f b/tmp/cache/assets/C85/FB0/sprockets%2F23544ac0d2d94c299893c700c862707f
+index 0e411a7..7082d1d 100644
+Binary files a/tmp/cache/assets/C85/FB0/sprockets%2F23544ac0d2d94c299893c700c862707f and b/tmp/cache/assets/C85/FB0/sprockets%2F23544ac0d2d94c299893c700c862707f differ
+diff --git a/tmp/cache/assets/C8C/E30/sprockets%2F628c7dc5bb1208eb9665951136926b86 b/tmp/cache/assets/C8C/E30/sprockets%2F628c7dc5bb1208eb9665951136926b86
+deleted file mode 100644
+index c4bef5d..0000000
+Binary files a/tmp/cache/assets/C8C/E30/sprockets%2F628c7dc5bb1208eb9665951136926b86 and /dev/null differ
+diff --git a/tmp/cache/assets/CA0/DB0/sprockets%2Fb8d42949e061501a753d0e3a8be12522 b/tmp/cache/assets/CA0/DB0/sprockets%2Fb8d42949e061501a753d0e3a8be12522
+index 21afa2a..01446e1 100644
+Binary files a/tmp/cache/assets/CA0/DB0/sprockets%2Fb8d42949e061501a753d0e3a8be12522 and b/tmp/cache/assets/CA0/DB0/sprockets%2Fb8d42949e061501a753d0e3a8be12522 differ
+diff --git a/tmp/cache/assets/CA5/040/sprockets%2F33d2a65459b3070fa1044b6f6466f12f b/tmp/cache/assets/CA5/040/sprockets%2F33d2a65459b3070fa1044b6f6466f12f
+index 83e2eb2..5d8854b 100644
+Binary files a/tmp/cache/assets/CA5/040/sprockets%2F33d2a65459b3070fa1044b6f6466f12f and b/tmp/cache/assets/CA5/040/sprockets%2F33d2a65459b3070fa1044b6f6466f12f differ
+diff --git a/tmp/cache/assets/CA5/5B0/sprockets%2F738087a01a31135539eab189ac7bd129 b/tmp/cache/assets/CA5/5B0/sprockets%2F738087a01a31135539eab189ac7bd129
+deleted file mode 100644
+index b699d4c..0000000
+Binary files a/tmp/cache/assets/CA5/5B0/sprockets%2F738087a01a31135539eab189ac7bd129 and /dev/null differ
+diff --git a/tmp/cache/assets/CA5/B20/sprockets%2F4d5651401f219f4bb508270ab3f8087b b/tmp/cache/assets/CA5/B20/sprockets%2F4d5651401f219f4bb508270ab3f8087b
+deleted file mode 100644
+index 19b0fd7..0000000
+Binary files a/tmp/cache/assets/CA5/B20/sprockets%2F4d5651401f219f4bb508270ab3f8087b and /dev/null differ
+diff --git a/tmp/cache/assets/CBF/780/sprockets%2F49d0340d3a1678e06737f8e84f7472dd b/tmp/cache/assets/CBF/780/sprockets%2F49d0340d3a1678e06737f8e84f7472dd
+index 86fc905..fc875ce 100644
+Binary files a/tmp/cache/assets/CBF/780/sprockets%2F49d0340d3a1678e06737f8e84f7472dd and b/tmp/cache/assets/CBF/780/sprockets%2F49d0340d3a1678e06737f8e84f7472dd differ
+diff --git a/tmp/cache/assets/CC2/470/sprockets%2Febb3f55e64516368bc9c65a519269566 b/tmp/cache/assets/CC2/470/sprockets%2Febb3f55e64516368bc9c65a519269566
+deleted file mode 100644
+index ad8ed2b..0000000
+Binary files a/tmp/cache/assets/CC2/470/sprockets%2Febb3f55e64516368bc9c65a519269566 and /dev/null differ
+diff --git a/tmp/cache/assets/CC4/910/sprockets%2Ff134267e498d19938768c4fbb6c24a54 b/tmp/cache/assets/CC4/910/sprockets%2Ff134267e498d19938768c4fbb6c24a54
+index d0f95cf..fee30a3 100644
+Binary files a/tmp/cache/assets/CC4/910/sprockets%2Ff134267e498d19938768c4fbb6c24a54 and b/tmp/cache/assets/CC4/910/sprockets%2Ff134267e498d19938768c4fbb6c24a54 differ
+diff --git a/tmp/cache/assets/CCD/310/sprockets%2F11c1306b10b15e8d8986a74444bfba40 b/tmp/cache/assets/CCD/310/sprockets%2F11c1306b10b15e8d8986a74444bfba40
+index 2df86ef..8a840d4 100644
+Binary files a/tmp/cache/assets/CCD/310/sprockets%2F11c1306b10b15e8d8986a74444bfba40 and b/tmp/cache/assets/CCD/310/sprockets%2F11c1306b10b15e8d8986a74444bfba40 differ
+diff --git a/tmp/cache/assets/CD4/520/sprockets%2Fd0dc71ba76d391617c13d2624903bb58 b/tmp/cache/assets/CD4/520/sprockets%2Fd0dc71ba76d391617c13d2624903bb58
+deleted file mode 100644
+index f78f2ff..0000000
+Binary files a/tmp/cache/assets/CD4/520/sprockets%2Fd0dc71ba76d391617c13d2624903bb58 and /dev/null differ
+diff --git a/tmp/cache/assets/CD6/210/sprockets%2Fc810e62b057b6935ee4383bb0d4a4058 b/tmp/cache/assets/CD6/210/sprockets%2Fc810e62b057b6935ee4383bb0d4a4058
+index ab79884..1673a66 100644
+Binary files a/tmp/cache/assets/CD6/210/sprockets%2Fc810e62b057b6935ee4383bb0d4a4058 and b/tmp/cache/assets/CD6/210/sprockets%2Fc810e62b057b6935ee4383bb0d4a4058 differ
+diff --git a/tmp/cache/assets/CD7/6F0/sprockets%2Fbd3936370d0f952ada5774e2230046ed b/tmp/cache/assets/CD7/6F0/sprockets%2Fbd3936370d0f952ada5774e2230046ed
+index 0f92a29..32e1a15 100644
+Binary files a/tmp/cache/assets/CD7/6F0/sprockets%2Fbd3936370d0f952ada5774e2230046ed and b/tmp/cache/assets/CD7/6F0/sprockets%2Fbd3936370d0f952ada5774e2230046ed differ
+diff --git a/tmp/cache/assets/CD8/2E0/sprockets%2F05e74c6141a7ae7d54a26824cd1d4087 b/tmp/cache/assets/CD8/2E0/sprockets%2F05e74c6141a7ae7d54a26824cd1d4087
+index 31aa798..ca0fc8c 100644
+Binary files a/tmp/cache/assets/CD8/2E0/sprockets%2F05e74c6141a7ae7d54a26824cd1d4087 and b/tmp/cache/assets/CD8/2E0/sprockets%2F05e74c6141a7ae7d54a26824cd1d4087 differ
+diff --git a/tmp/cache/assets/CD8/370/sprockets%2F357970feca3ac29060c1e3861e2c0953 b/tmp/cache/assets/CD8/370/sprockets%2F357970feca3ac29060c1e3861e2c0953
+index fb10430..ce6dabd 100644
+Binary files a/tmp/cache/assets/CD8/370/sprockets%2F357970feca3ac29060c1e3861e2c0953 and b/tmp/cache/assets/CD8/370/sprockets%2F357970feca3ac29060c1e3861e2c0953 differ
+diff --git a/tmp/cache/assets/CDB/910/sprockets%2F26098b294d10eec3e946bb124334e5e4 b/tmp/cache/assets/CDB/910/sprockets%2F26098b294d10eec3e946bb124334e5e4
+index 06183cf..091629c 100644
+Binary files a/tmp/cache/assets/CDB/910/sprockets%2F26098b294d10eec3e946bb124334e5e4 and b/tmp/cache/assets/CDB/910/sprockets%2F26098b294d10eec3e946bb124334e5e4 differ
+diff --git a/tmp/cache/assets/CE9/8F0/sprockets%2F47383471d24eef93d42c58874d1de10f b/tmp/cache/assets/CE9/8F0/sprockets%2F47383471d24eef93d42c58874d1de10f
+index 354497b..e4b42d4 100644
+Binary files a/tmp/cache/assets/CE9/8F0/sprockets%2F47383471d24eef93d42c58874d1de10f and b/tmp/cache/assets/CE9/8F0/sprockets%2F47383471d24eef93d42c58874d1de10f differ
+diff --git a/tmp/cache/assets/CEE/FB0/sprockets%2Fb7f8e824e66c47502ff621a9298ed313 b/tmp/cache/assets/CEE/FB0/sprockets%2Fb7f8e824e66c47502ff621a9298ed313
+index 3b3e0b6..751c592 100644
+Binary files a/tmp/cache/assets/CEE/FB0/sprockets%2Fb7f8e824e66c47502ff621a9298ed313 and b/tmp/cache/assets/CEE/FB0/sprockets%2Fb7f8e824e66c47502ff621a9298ed313 differ
+diff --git a/tmp/cache/assets/CF0/DA0/sprockets%2Fd7d5b37686831d37c4dd75e645f5e016 b/tmp/cache/assets/CF0/DA0/sprockets%2Fd7d5b37686831d37c4dd75e645f5e016
+deleted file mode 100644
+index 4e49a82..0000000
+Binary files a/tmp/cache/assets/CF0/DA0/sprockets%2Fd7d5b37686831d37c4dd75e645f5e016 and /dev/null differ
+diff --git a/tmp/cache/assets/CF6/790/sprockets%2F4826cf7ab1460059ba4f4ca0b51b2405 b/tmp/cache/assets/CF6/790/sprockets%2F4826cf7ab1460059ba4f4ca0b51b2405
+deleted file mode 100644
+index 12af84c..0000000
+Binary files a/tmp/cache/assets/CF6/790/sprockets%2F4826cf7ab1460059ba4f4ca0b51b2405 and /dev/null differ
+diff --git a/tmp/cache/assets/CFF/EE0/sprockets%2F06ab5056ed57505116e8bd12ad52ee07 b/tmp/cache/assets/CFF/EE0/sprockets%2F06ab5056ed57505116e8bd12ad52ee07
+deleted file mode 100644
+index 4824de1..0000000
+Binary files a/tmp/cache/assets/CFF/EE0/sprockets%2F06ab5056ed57505116e8bd12ad52ee07 and /dev/null differ
+diff --git a/tmp/cache/assets/D02/0A0/sprockets%2F4ad413f3e3326481d2f5f9327bbd0e12 b/tmp/cache/assets/D02/0A0/sprockets%2F4ad413f3e3326481d2f5f9327bbd0e12
+deleted file mode 100644
+index 230439c..0000000
+Binary files a/tmp/cache/assets/D02/0A0/sprockets%2F4ad413f3e3326481d2f5f9327bbd0e12 and /dev/null differ
+diff --git a/tmp/cache/assets/D03/670/sprockets%2F6c0f2a2c7346b84a92e2cb81473e251b b/tmp/cache/assets/D03/670/sprockets%2F6c0f2a2c7346b84a92e2cb81473e251b
+index a9d28e1..e33c704 100644
+Binary files a/tmp/cache/assets/D03/670/sprockets%2F6c0f2a2c7346b84a92e2cb81473e251b and b/tmp/cache/assets/D03/670/sprockets%2F6c0f2a2c7346b84a92e2cb81473e251b differ
+diff --git a/tmp/cache/assets/D04/E80/sprockets%2F0a64ee764ed314326c28723638adaca2 b/tmp/cache/assets/D04/E80/sprockets%2F0a64ee764ed314326c28723638adaca2
+index 3fe9215..d921e0e 100644
+Binary files a/tmp/cache/assets/D04/E80/sprockets%2F0a64ee764ed314326c28723638adaca2 and b/tmp/cache/assets/D04/E80/sprockets%2F0a64ee764ed314326c28723638adaca2 differ
+diff --git a/tmp/cache/assets/D06/020/sprockets%2Ffc17c3503df0cc485201f842c530cc99 b/tmp/cache/assets/D06/020/sprockets%2Ffc17c3503df0cc485201f842c530cc99
+deleted file mode 100644
+index 7d1a62e..0000000
+Binary files a/tmp/cache/assets/D06/020/sprockets%2Ffc17c3503df0cc485201f842c530cc99 and /dev/null differ
+diff --git a/tmp/cache/assets/D0B/110/sprockets%2Fd00b1cd9c34787df59623d01eeb80075 b/tmp/cache/assets/D0B/110/sprockets%2Fd00b1cd9c34787df59623d01eeb80075
+index 9ef80f6..2c07d98 100644
+Binary files a/tmp/cache/assets/D0B/110/sprockets%2Fd00b1cd9c34787df59623d01eeb80075 and b/tmp/cache/assets/D0B/110/sprockets%2Fd00b1cd9c34787df59623d01eeb80075 differ
+diff --git a/tmp/cache/assets/D12/B70/sprockets%2F85252ef1e72c698a031e5ce2b78ce028 b/tmp/cache/assets/D12/B70/sprockets%2F85252ef1e72c698a031e5ce2b78ce028
+index 388a067..43050ef 100644
+Binary files a/tmp/cache/assets/D12/B70/sprockets%2F85252ef1e72c698a031e5ce2b78ce028 and b/tmp/cache/assets/D12/B70/sprockets%2F85252ef1e72c698a031e5ce2b78ce028 differ
+diff --git a/tmp/cache/assets/D13/2C0/sprockets%2F9eb1a9e7da95b7c13265b471907cb445 b/tmp/cache/assets/D13/2C0/sprockets%2F9eb1a9e7da95b7c13265b471907cb445
+index d8696e1..444ca1f 100644
+Binary files a/tmp/cache/assets/D13/2C0/sprockets%2F9eb1a9e7da95b7c13265b471907cb445 and b/tmp/cache/assets/D13/2C0/sprockets%2F9eb1a9e7da95b7c13265b471907cb445 differ
+diff --git a/tmp/cache/assets/D24/DD0/sprockets%2Ffc0594e10cf7179767931cf4f6088fcc b/tmp/cache/assets/D24/DD0/sprockets%2Ffc0594e10cf7179767931cf4f6088fcc
+index 710773d..752eef1 100644
+Binary files a/tmp/cache/assets/D24/DD0/sprockets%2Ffc0594e10cf7179767931cf4f6088fcc and b/tmp/cache/assets/D24/DD0/sprockets%2Ffc0594e10cf7179767931cf4f6088fcc differ
+diff --git a/tmp/cache/assets/D2A/050/sprockets%2Fb0fbac3504c95d320113672c935d3afd b/tmp/cache/assets/D2A/050/sprockets%2Fb0fbac3504c95d320113672c935d3afd
+index 9607246..350c0e8 100644
+Binary files a/tmp/cache/assets/D2A/050/sprockets%2Fb0fbac3504c95d320113672c935d3afd and b/tmp/cache/assets/D2A/050/sprockets%2Fb0fbac3504c95d320113672c935d3afd differ
+diff --git a/tmp/cache/assets/D2F/8A0/sprockets%2F6fad04bfc6f657170023030f3a905cfd b/tmp/cache/assets/D2F/8A0/sprockets%2F6fad04bfc6f657170023030f3a905cfd
+index 96ed73c..2c2462f 100644
+Binary files a/tmp/cache/assets/D2F/8A0/sprockets%2F6fad04bfc6f657170023030f3a905cfd and b/tmp/cache/assets/D2F/8A0/sprockets%2F6fad04bfc6f657170023030f3a905cfd differ
+diff --git a/tmp/cache/assets/D30/7E0/sprockets%2Fe5617b8541f015df30ef2223fdc1d44a b/tmp/cache/assets/D30/7E0/sprockets%2Fe5617b8541f015df30ef2223fdc1d44a
+deleted file mode 100644
+index ce46f3a..0000000
+Binary files a/tmp/cache/assets/D30/7E0/sprockets%2Fe5617b8541f015df30ef2223fdc1d44a and /dev/null differ
+diff --git a/tmp/cache/assets/D32/A10/sprockets%2F13fe41fee1fe35b49d145bcc06610705 b/tmp/cache/assets/D32/A10/sprockets%2F13fe41fee1fe35b49d145bcc06610705
+index 900a8d2..f221ba5 100644
+Binary files a/tmp/cache/assets/D32/A10/sprockets%2F13fe41fee1fe35b49d145bcc06610705 and b/tmp/cache/assets/D32/A10/sprockets%2F13fe41fee1fe35b49d145bcc06610705 differ
+diff --git a/tmp/cache/assets/D35/0B0/sprockets%2F07fc79ad9b462e2448cbb5b014428bc0 b/tmp/cache/assets/D35/0B0/sprockets%2F07fc79ad9b462e2448cbb5b014428bc0
+index eb2a011..b6ee795 100644
+Binary files a/tmp/cache/assets/D35/0B0/sprockets%2F07fc79ad9b462e2448cbb5b014428bc0 and b/tmp/cache/assets/D35/0B0/sprockets%2F07fc79ad9b462e2448cbb5b014428bc0 differ
+diff --git a/tmp/cache/assets/D37/330/sprockets%2Fe9d34eb574e311caca07f10387ee2517 b/tmp/cache/assets/D37/330/sprockets%2Fe9d34eb574e311caca07f10387ee2517
+index 5da4f01..94e7223 100644
+Binary files a/tmp/cache/assets/D37/330/sprockets%2Fe9d34eb574e311caca07f10387ee2517 and b/tmp/cache/assets/D37/330/sprockets%2Fe9d34eb574e311caca07f10387ee2517 differ
+diff --git a/tmp/cache/assets/D39/8E0/sprockets%2Fc0716d820276a7589dc13f4ae0ace3d6 b/tmp/cache/assets/D39/8E0/sprockets%2Fc0716d820276a7589dc13f4ae0ace3d6
+deleted file mode 100644
+index 82cb50f..0000000
+Binary files a/tmp/cache/assets/D39/8E0/sprockets%2Fc0716d820276a7589dc13f4ae0ace3d6 and /dev/null differ
+diff --git a/tmp/cache/assets/D39/AD0/sprockets%2F3a04499d3e714b9540fdd0be441c48db b/tmp/cache/assets/D39/AD0/sprockets%2F3a04499d3e714b9540fdd0be441c48db
+index 788f762..5afa8d8 100644
+Binary files a/tmp/cache/assets/D39/AD0/sprockets%2F3a04499d3e714b9540fdd0be441c48db and b/tmp/cache/assets/D39/AD0/sprockets%2F3a04499d3e714b9540fdd0be441c48db differ
+diff --git a/tmp/cache/assets/D3A/CB0/sprockets%2F6b9b033b9eed494e61fb0c309b783b11 b/tmp/cache/assets/D3A/CB0/sprockets%2F6b9b033b9eed494e61fb0c309b783b11
+index 28c054a..f4809da 100644
+Binary files a/tmp/cache/assets/D3A/CB0/sprockets%2F6b9b033b9eed494e61fb0c309b783b11 and b/tmp/cache/assets/D3A/CB0/sprockets%2F6b9b033b9eed494e61fb0c309b783b11 differ
+diff --git a/tmp/cache/assets/D3D/B40/sprockets%2F21406004788a5cbe2d9496cfb4ccef61 b/tmp/cache/assets/D3D/B40/sprockets%2F21406004788a5cbe2d9496cfb4ccef61
+index ab0b3a9..354310f 100644
+Binary files a/tmp/cache/assets/D3D/B40/sprockets%2F21406004788a5cbe2d9496cfb4ccef61 and b/tmp/cache/assets/D3D/B40/sprockets%2F21406004788a5cbe2d9496cfb4ccef61 differ
+diff --git a/tmp/cache/assets/D40/A60/sprockets%2F1996758152d39f85fe0b4ac7b44aaa1b b/tmp/cache/assets/D40/A60/sprockets%2F1996758152d39f85fe0b4ac7b44aaa1b
+index 89c51f8..75e5b0e 100644
+Binary files a/tmp/cache/assets/D40/A60/sprockets%2F1996758152d39f85fe0b4ac7b44aaa1b and b/tmp/cache/assets/D40/A60/sprockets%2F1996758152d39f85fe0b4ac7b44aaa1b differ
+diff --git a/tmp/cache/assets/D42/A50/sprockets%2F2c0b2f98a975be143d57fce703d4650f b/tmp/cache/assets/D42/A50/sprockets%2F2c0b2f98a975be143d57fce703d4650f
+index 901de2d..7aa65d1 100644
+Binary files a/tmp/cache/assets/D42/A50/sprockets%2F2c0b2f98a975be143d57fce703d4650f and b/tmp/cache/assets/D42/A50/sprockets%2F2c0b2f98a975be143d57fce703d4650f differ
+diff --git a/tmp/cache/assets/D44/590/sprockets%2F163d5386098a1fd9ca1c4748cd0a79eb b/tmp/cache/assets/D44/590/sprockets%2F163d5386098a1fd9ca1c4748cd0a79eb
+index f1ad1f8..18b2472 100644
+Binary files a/tmp/cache/assets/D44/590/sprockets%2F163d5386098a1fd9ca1c4748cd0a79eb and b/tmp/cache/assets/D44/590/sprockets%2F163d5386098a1fd9ca1c4748cd0a79eb differ
+diff --git a/tmp/cache/assets/D44/880/sprockets%2F12f352ce8db901cf7bc5f94634e92a28 b/tmp/cache/assets/D44/880/sprockets%2F12f352ce8db901cf7bc5f94634e92a28
+index b6f3f9e..a2964e9 100644
+Binary files a/tmp/cache/assets/D44/880/sprockets%2F12f352ce8db901cf7bc5f94634e92a28 and b/tmp/cache/assets/D44/880/sprockets%2F12f352ce8db901cf7bc5f94634e92a28 differ
+diff --git a/tmp/cache/assets/D44/F40/sprockets%2F5bc06bdf9d7cf27740282153ff8ce631 b/tmp/cache/assets/D44/F40/sprockets%2F5bc06bdf9d7cf27740282153ff8ce631
+index 7ae30cc..687ffa2 100644
+Binary files a/tmp/cache/assets/D44/F40/sprockets%2F5bc06bdf9d7cf27740282153ff8ce631 and b/tmp/cache/assets/D44/F40/sprockets%2F5bc06bdf9d7cf27740282153ff8ce631 differ
+diff --git a/tmp/cache/assets/D46/140/sprockets%2F49236af13a40ec95fc2cab98a4698e09 b/tmp/cache/assets/D46/140/sprockets%2F49236af13a40ec95fc2cab98a4698e09
+index daa3e5d..3627454 100644
+Binary files a/tmp/cache/assets/D46/140/sprockets%2F49236af13a40ec95fc2cab98a4698e09 and b/tmp/cache/assets/D46/140/sprockets%2F49236af13a40ec95fc2cab98a4698e09 differ
+diff --git a/tmp/cache/assets/D4A/F80/sprockets%2Ff4e992313ce39f6ead2df321810895de b/tmp/cache/assets/D4A/F80/sprockets%2Ff4e992313ce39f6ead2df321810895de
+index f8ce376..c2896e9 100644
+Binary files a/tmp/cache/assets/D4A/F80/sprockets%2Ff4e992313ce39f6ead2df321810895de and b/tmp/cache/assets/D4A/F80/sprockets%2Ff4e992313ce39f6ead2df321810895de differ
+diff --git a/tmp/cache/assets/D4E/1B0/sprockets%2Ff7cbd26ba1d28d48de824f0e94586655 b/tmp/cache/assets/D4E/1B0/sprockets%2Ff7cbd26ba1d28d48de824f0e94586655
+deleted file mode 100644
+index 2fc7618..0000000
+Binary files a/tmp/cache/assets/D4E/1B0/sprockets%2Ff7cbd26ba1d28d48de824f0e94586655 and /dev/null differ
+diff --git a/tmp/cache/assets/D57/3D0/sprockets%2F342ed885b85daa1a1f40d3bb711d6c10 b/tmp/cache/assets/D57/3D0/sprockets%2F342ed885b85daa1a1f40d3bb711d6c10
+index b5b2846..5a5dee2 100644
+Binary files a/tmp/cache/assets/D57/3D0/sprockets%2F342ed885b85daa1a1f40d3bb711d6c10 and b/tmp/cache/assets/D57/3D0/sprockets%2F342ed885b85daa1a1f40d3bb711d6c10 differ
+diff --git a/tmp/cache/assets/D5A/EA0/sprockets%2Fd771ace226fc8215a3572e0aa35bb0d6 b/tmp/cache/assets/D5A/EA0/sprockets%2Fd771ace226fc8215a3572e0aa35bb0d6
+index 6d605c0..fea3b2e 100644
+Binary files a/tmp/cache/assets/D5A/EA0/sprockets%2Fd771ace226fc8215a3572e0aa35bb0d6 and b/tmp/cache/assets/D5A/EA0/sprockets%2Fd771ace226fc8215a3572e0aa35bb0d6 differ
+diff --git a/tmp/cache/assets/D66/E60/sprockets%2F85ae64edf528ce6e981889f3f3c285d9 b/tmp/cache/assets/D66/E60/sprockets%2F85ae64edf528ce6e981889f3f3c285d9
+deleted file mode 100644
+index 55c1d40..0000000
+Binary files a/tmp/cache/assets/D66/E60/sprockets%2F85ae64edf528ce6e981889f3f3c285d9 and /dev/null differ
+diff --git a/tmp/cache/assets/D6C/C90/sprockets%2F22ff0fa8667dcaaae018589c204e2b95 b/tmp/cache/assets/D6C/C90/sprockets%2F22ff0fa8667dcaaae018589c204e2b95
+index d5c76a9..6cc3f22 100644
+Binary files a/tmp/cache/assets/D6C/C90/sprockets%2F22ff0fa8667dcaaae018589c204e2b95 and b/tmp/cache/assets/D6C/C90/sprockets%2F22ff0fa8667dcaaae018589c204e2b95 differ
+diff --git a/tmp/cache/assets/D76/B60/sprockets%2F03ce76790b6e6b3dd2f44831f8fd4cc4 b/tmp/cache/assets/D76/B60/sprockets%2F03ce76790b6e6b3dd2f44831f8fd4cc4
+index dbf4739..85dc887 100644
+Binary files a/tmp/cache/assets/D76/B60/sprockets%2F03ce76790b6e6b3dd2f44831f8fd4cc4 and b/tmp/cache/assets/D76/B60/sprockets%2F03ce76790b6e6b3dd2f44831f8fd4cc4 differ
+diff --git a/tmp/cache/assets/D83/FE0/sprockets%2Fa70abbbdcf3f86952f5568669a2990ff b/tmp/cache/assets/D83/FE0/sprockets%2Fa70abbbdcf3f86952f5568669a2990ff
+index 44d5efd..c7422b9 100644
+Binary files a/tmp/cache/assets/D83/FE0/sprockets%2Fa70abbbdcf3f86952f5568669a2990ff and b/tmp/cache/assets/D83/FE0/sprockets%2Fa70abbbdcf3f86952f5568669a2990ff differ
+diff --git a/tmp/cache/assets/D89/BF0/sprockets%2Fa6ef4c0cc0807a120abc49ba5632c8f4 b/tmp/cache/assets/D89/BF0/sprockets%2Fa6ef4c0cc0807a120abc49ba5632c8f4
+index 881dec6..21e3e6b 100644
+Binary files a/tmp/cache/assets/D89/BF0/sprockets%2Fa6ef4c0cc0807a120abc49ba5632c8f4 and b/tmp/cache/assets/D89/BF0/sprockets%2Fa6ef4c0cc0807a120abc49ba5632c8f4 differ
+diff --git a/tmp/cache/assets/D8A/480/sprockets%2Fef7d4ed64894417fcaf81d4d916ef655 b/tmp/cache/assets/D8A/480/sprockets%2Fef7d4ed64894417fcaf81d4d916ef655
+index a933c1e..79b7d4e 100644
+Binary files a/tmp/cache/assets/D8A/480/sprockets%2Fef7d4ed64894417fcaf81d4d916ef655 and b/tmp/cache/assets/D8A/480/sprockets%2Fef7d4ed64894417fcaf81d4d916ef655 differ
+diff --git a/tmp/cache/assets/D8E/D80/sprockets%2Fcb76fdb6da67503a2d8a562b81b21cb2 b/tmp/cache/assets/D8E/D80/sprockets%2Fcb76fdb6da67503a2d8a562b81b21cb2
+index 1479710..4231b5a 100644
+Binary files a/tmp/cache/assets/D8E/D80/sprockets%2Fcb76fdb6da67503a2d8a562b81b21cb2 and b/tmp/cache/assets/D8E/D80/sprockets%2Fcb76fdb6da67503a2d8a562b81b21cb2 differ
+diff --git a/tmp/cache/assets/D91/5B0/sprockets%2F35ba7152704bc0cba9f1349f2ee8fa0d b/tmp/cache/assets/D91/5B0/sprockets%2F35ba7152704bc0cba9f1349f2ee8fa0d
+index d52d243..91faaf0 100644
+Binary files a/tmp/cache/assets/D91/5B0/sprockets%2F35ba7152704bc0cba9f1349f2ee8fa0d and b/tmp/cache/assets/D91/5B0/sprockets%2F35ba7152704bc0cba9f1349f2ee8fa0d differ
+diff --git a/tmp/cache/assets/D94/A00/sprockets%2Fa2a65b23ad4a91e5942c2d05dae97d5d b/tmp/cache/assets/D94/A00/sprockets%2Fa2a65b23ad4a91e5942c2d05dae97d5d
+index 5ee5361..062f1fa 100644
+Binary files a/tmp/cache/assets/D94/A00/sprockets%2Fa2a65b23ad4a91e5942c2d05dae97d5d and b/tmp/cache/assets/D94/A00/sprockets%2Fa2a65b23ad4a91e5942c2d05dae97d5d differ
+diff --git a/tmp/cache/assets/DA4/460/sprockets%2F977ead1d20bc9f7e1c191bd4348f9e3a b/tmp/cache/assets/DA4/460/sprockets%2F977ead1d20bc9f7e1c191bd4348f9e3a
+index bd11e42..9db2029 100644
+Binary files a/tmp/cache/assets/DA4/460/sprockets%2F977ead1d20bc9f7e1c191bd4348f9e3a and b/tmp/cache/assets/DA4/460/sprockets%2F977ead1d20bc9f7e1c191bd4348f9e3a differ
+diff --git a/tmp/cache/assets/DA6/5B0/sprockets%2Fcdf5f50d63c7aa0a5ee9573d619e077e b/tmp/cache/assets/DA6/5B0/sprockets%2Fcdf5f50d63c7aa0a5ee9573d619e077e
+index ad918be..cd01286 100644
+Binary files a/tmp/cache/assets/DA6/5B0/sprockets%2Fcdf5f50d63c7aa0a5ee9573d619e077e and b/tmp/cache/assets/DA6/5B0/sprockets%2Fcdf5f50d63c7aa0a5ee9573d619e077e differ
+diff --git a/tmp/cache/assets/DA6/780/sprockets%2F7b631d8e780af712caef5755b7dae8c3 b/tmp/cache/assets/DA6/780/sprockets%2F7b631d8e780af712caef5755b7dae8c3
+deleted file mode 100644
+index 61818eb..0000000
+Binary files a/tmp/cache/assets/DA6/780/sprockets%2F7b631d8e780af712caef5755b7dae8c3 and /dev/null differ
+diff --git a/tmp/cache/assets/DA7/1E0/sprockets%2Fd7ea80495958c0ae3895bec0f3a3cce6 b/tmp/cache/assets/DA7/1E0/sprockets%2Fd7ea80495958c0ae3895bec0f3a3cce6
+deleted file mode 100644
+index eebc117..0000000
+Binary files a/tmp/cache/assets/DA7/1E0/sprockets%2Fd7ea80495958c0ae3895bec0f3a3cce6 and /dev/null differ
+diff --git a/tmp/cache/assets/DA8/3D0/sprockets%2Fda0de7859632d25ded64870b64eddf3c b/tmp/cache/assets/DA8/3D0/sprockets%2Fda0de7859632d25ded64870b64eddf3c
+index aa600f7..b59d7f7 100644
+Binary files a/tmp/cache/assets/DA8/3D0/sprockets%2Fda0de7859632d25ded64870b64eddf3c and b/tmp/cache/assets/DA8/3D0/sprockets%2Fda0de7859632d25ded64870b64eddf3c differ
+diff --git a/tmp/cache/assets/DAD/B80/sprockets%2Fd399cee9d084350ddc66c4600e9b9ffa b/tmp/cache/assets/DAD/B80/sprockets%2Fd399cee9d084350ddc66c4600e9b9ffa
+index 76ca1a5..d52bffa 100644
+Binary files a/tmp/cache/assets/DAD/B80/sprockets%2Fd399cee9d084350ddc66c4600e9b9ffa and b/tmp/cache/assets/DAD/B80/sprockets%2Fd399cee9d084350ddc66c4600e9b9ffa differ
+diff --git a/tmp/cache/assets/DB4/9E0/sprockets%2F156cf458e668926b99bf4feac1ad9da5 b/tmp/cache/assets/DB4/9E0/sprockets%2F156cf458e668926b99bf4feac1ad9da5
+index 51a580f..f79150a 100644
+Binary files a/tmp/cache/assets/DB4/9E0/sprockets%2F156cf458e668926b99bf4feac1ad9da5 and b/tmp/cache/assets/DB4/9E0/sprockets%2F156cf458e668926b99bf4feac1ad9da5 differ
+diff --git a/tmp/cache/assets/DB7/1E0/sprockets%2F568b92adc999c2b32d9ee5656cff3a8d b/tmp/cache/assets/DB7/1E0/sprockets%2F568b92adc999c2b32d9ee5656cff3a8d
+deleted file mode 100644
+index 18236d5..0000000
+Binary files a/tmp/cache/assets/DB7/1E0/sprockets%2F568b92adc999c2b32d9ee5656cff3a8d and /dev/null differ
+diff --git a/tmp/cache/assets/DB7/B80/sprockets%2Fa11f42eb6ca8a32a3fff51d14e60a45c b/tmp/cache/assets/DB7/B80/sprockets%2Fa11f42eb6ca8a32a3fff51d14e60a45c
+index ab26c7d..b1eb96a 100644
+Binary files a/tmp/cache/assets/DB7/B80/sprockets%2Fa11f42eb6ca8a32a3fff51d14e60a45c and b/tmp/cache/assets/DB7/B80/sprockets%2Fa11f42eb6ca8a32a3fff51d14e60a45c differ
+diff --git a/tmp/cache/assets/DC2/9D0/sprockets%2Fbcaaa0c6f8647f48155d0b2de1f812cc b/tmp/cache/assets/DC2/9D0/sprockets%2Fbcaaa0c6f8647f48155d0b2de1f812cc
+index 5d519e7..214333c 100644
+Binary files a/tmp/cache/assets/DC2/9D0/sprockets%2Fbcaaa0c6f8647f48155d0b2de1f812cc and b/tmp/cache/assets/DC2/9D0/sprockets%2Fbcaaa0c6f8647f48155d0b2de1f812cc differ
+diff --git a/tmp/cache/assets/DC9/3A0/sprockets%2F0ceedad8bc945c2029529eb4fbf0931b b/tmp/cache/assets/DC9/3A0/sprockets%2F0ceedad8bc945c2029529eb4fbf0931b
+index e98159c..ad86cf2 100644
+Binary files a/tmp/cache/assets/DC9/3A0/sprockets%2F0ceedad8bc945c2029529eb4fbf0931b and b/tmp/cache/assets/DC9/3A0/sprockets%2F0ceedad8bc945c2029529eb4fbf0931b differ
+diff --git a/tmp/cache/assets/DCA/340/sprockets%2F7f8020deff9c16bdb4ab5b0f18e21d86 b/tmp/cache/assets/DCA/340/sprockets%2F7f8020deff9c16bdb4ab5b0f18e21d86
+deleted file mode 100644
+index 3f9fbd9..0000000
+Binary files a/tmp/cache/assets/DCA/340/sprockets%2F7f8020deff9c16bdb4ab5b0f18e21d86 and /dev/null differ
+diff --git a/tmp/cache/assets/DCF/920/sprockets%2F3c088db5ae1ded33eeb3498b6a8a7a46 b/tmp/cache/assets/DCF/920/sprockets%2F3c088db5ae1ded33eeb3498b6a8a7a46
+index 7b14c30..402108a 100644
+Binary files a/tmp/cache/assets/DCF/920/sprockets%2F3c088db5ae1ded33eeb3498b6a8a7a46 and b/tmp/cache/assets/DCF/920/sprockets%2F3c088db5ae1ded33eeb3498b6a8a7a46 differ
+diff --git a/tmp/cache/assets/DD1/170/sprockets%2F733d9d45bf534cf9de42fbe3f333c1ae b/tmp/cache/assets/DD1/170/sprockets%2F733d9d45bf534cf9de42fbe3f333c1ae
+index 823c48e..115a7a5 100644
+Binary files a/tmp/cache/assets/DD1/170/sprockets%2F733d9d45bf534cf9de42fbe3f333c1ae and b/tmp/cache/assets/DD1/170/sprockets%2F733d9d45bf534cf9de42fbe3f333c1ae differ
+diff --git a/tmp/cache/assets/DD1/530/sprockets%2F6aedbbdc465d930a983c017ec7e48c6b b/tmp/cache/assets/DD1/530/sprockets%2F6aedbbdc465d930a983c017ec7e48c6b
+index bf745a3..1cee0b2 100644
+Binary files a/tmp/cache/assets/DD1/530/sprockets%2F6aedbbdc465d930a983c017ec7e48c6b and b/tmp/cache/assets/DD1/530/sprockets%2F6aedbbdc465d930a983c017ec7e48c6b differ
+diff --git a/tmp/cache/assets/DD7/180/sprockets%2Fdd488beb5b2196dbdb1691b7e9d32dc9 b/tmp/cache/assets/DD7/180/sprockets%2Fdd488beb5b2196dbdb1691b7e9d32dc9
+index a406cea..9cb9607 100644
+Binary files a/tmp/cache/assets/DD7/180/sprockets%2Fdd488beb5b2196dbdb1691b7e9d32dc9 and b/tmp/cache/assets/DD7/180/sprockets%2Fdd488beb5b2196dbdb1691b7e9d32dc9 differ
+diff --git a/tmp/cache/assets/DDC/400/sprockets%2Fcffd775d018f68ce5dba1ee0d951a994 b/tmp/cache/assets/DDC/400/sprockets%2Fcffd775d018f68ce5dba1ee0d951a994
+deleted file mode 100644
+index 0d1199f..0000000
+Binary files a/tmp/cache/assets/DDC/400/sprockets%2Fcffd775d018f68ce5dba1ee0d951a994 and /dev/null differ
+diff --git a/tmp/cache/assets/DDE/D30/sprockets%2Fbfe629e44bcdac68d5e18d8f219e9a44 b/tmp/cache/assets/DDE/D30/sprockets%2Fbfe629e44bcdac68d5e18d8f219e9a44
+index 4dc48f1..a0d1e85 100644
+Binary files a/tmp/cache/assets/DDE/D30/sprockets%2Fbfe629e44bcdac68d5e18d8f219e9a44 and b/tmp/cache/assets/DDE/D30/sprockets%2Fbfe629e44bcdac68d5e18d8f219e9a44 differ
+diff --git a/tmp/cache/assets/DF4/650/sprockets%2Fd2df3c52904c9bacb06ebd0b7e58e5a3 b/tmp/cache/assets/DF4/650/sprockets%2Fd2df3c52904c9bacb06ebd0b7e58e5a3
+index 70cdb95..02a0c7e 100644
+Binary files a/tmp/cache/assets/DF4/650/sprockets%2Fd2df3c52904c9bacb06ebd0b7e58e5a3 and b/tmp/cache/assets/DF4/650/sprockets%2Fd2df3c52904c9bacb06ebd0b7e58e5a3 differ
+diff --git a/tmp/cache/assets/DF6/030/sprockets%2Fbaa0bce77aa50b027dd9ae1c59c9c893 b/tmp/cache/assets/DF6/030/sprockets%2Fbaa0bce77aa50b027dd9ae1c59c9c893
+deleted file mode 100644
+index 31f7376..0000000
+Binary files a/tmp/cache/assets/DF6/030/sprockets%2Fbaa0bce77aa50b027dd9ae1c59c9c893 and /dev/null differ
+diff --git a/tmp/cache/assets/DFB/870/sprockets%2Fbf1793a425d50adafabc9aea5c6996e1 b/tmp/cache/assets/DFB/870/sprockets%2Fbf1793a425d50adafabc9aea5c6996e1
+index 793c3ed..f08a849 100644
+Binary files a/tmp/cache/assets/DFB/870/sprockets%2Fbf1793a425d50adafabc9aea5c6996e1 and b/tmp/cache/assets/DFB/870/sprockets%2Fbf1793a425d50adafabc9aea5c6996e1 differ
+diff --git a/tmp/cache/assets/DFD/E10/sprockets%2Fe3abbf3f798e608bef10be21d52a8bd8 b/tmp/cache/assets/DFD/E10/sprockets%2Fe3abbf3f798e608bef10be21d52a8bd8
+index d51892f..de4f786 100644
+Binary files a/tmp/cache/assets/DFD/E10/sprockets%2Fe3abbf3f798e608bef10be21d52a8bd8 and b/tmp/cache/assets/DFD/E10/sprockets%2Fe3abbf3f798e608bef10be21d52a8bd8 differ
+diff --git a/tmp/cache/assets/DFF/990/sprockets%2Fe0b35cb60c8b7cede2fa6d9034948fdb b/tmp/cache/assets/DFF/990/sprockets%2Fe0b35cb60c8b7cede2fa6d9034948fdb
+index d1762be..ac14715 100644
+Binary files a/tmp/cache/assets/DFF/990/sprockets%2Fe0b35cb60c8b7cede2fa6d9034948fdb and b/tmp/cache/assets/DFF/990/sprockets%2Fe0b35cb60c8b7cede2fa6d9034948fdb differ
+diff --git a/tmp/cache/assets/E01/650/sprockets%2F356cb45ae6a91ab0d7bc39c9cec8f29c b/tmp/cache/assets/E01/650/sprockets%2F356cb45ae6a91ab0d7bc39c9cec8f29c
+index bf4c311..79f3a7b 100644
+Binary files a/tmp/cache/assets/E01/650/sprockets%2F356cb45ae6a91ab0d7bc39c9cec8f29c and b/tmp/cache/assets/E01/650/sprockets%2F356cb45ae6a91ab0d7bc39c9cec8f29c differ
+diff --git a/tmp/cache/assets/E03/670/sprockets%2F1f74e4d3e9bd7cd2eb269ac174a7fa8b b/tmp/cache/assets/E03/670/sprockets%2F1f74e4d3e9bd7cd2eb269ac174a7fa8b
+index b1b83b6..1f54521 100644
+Binary files a/tmp/cache/assets/E03/670/sprockets%2F1f74e4d3e9bd7cd2eb269ac174a7fa8b and b/tmp/cache/assets/E03/670/sprockets%2F1f74e4d3e9bd7cd2eb269ac174a7fa8b differ
+diff --git a/tmp/cache/assets/E04/890/sprockets%2F2f5173deea6c795b8fdde723bb4b63af b/tmp/cache/assets/E04/890/sprockets%2F2f5173deea6c795b8fdde723bb4b63af
+deleted file mode 100644
+index 6205974..0000000
+Binary files a/tmp/cache/assets/E04/890/sprockets%2F2f5173deea6c795b8fdde723bb4b63af and /dev/null differ
+diff --git a/tmp/cache/assets/E12/0A0/sprockets%2Feeb619b705efd7d948dce8eb0376b9be b/tmp/cache/assets/E12/0A0/sprockets%2Feeb619b705efd7d948dce8eb0376b9be
+deleted file mode 100644
+index ac190c1..0000000
+Binary files a/tmp/cache/assets/E12/0A0/sprockets%2Feeb619b705efd7d948dce8eb0376b9be and /dev/null differ
+diff --git a/tmp/cache/assets/E17/F60/sprockets%2Facad4bd6523fcaaac231e0ddb2d86745 b/tmp/cache/assets/E17/F60/sprockets%2Facad4bd6523fcaaac231e0ddb2d86745
+index 3e87361..49f9002 100644
+Binary files a/tmp/cache/assets/E17/F60/sprockets%2Facad4bd6523fcaaac231e0ddb2d86745 and b/tmp/cache/assets/E17/F60/sprockets%2Facad4bd6523fcaaac231e0ddb2d86745 differ
+diff --git a/tmp/cache/assets/E19/2A0/sprockets%2F10fcfbe6ebae11a40c8eac41939a1b9a b/tmp/cache/assets/E19/2A0/sprockets%2F10fcfbe6ebae11a40c8eac41939a1b9a
+index 61fca63..a82d086 100644
+Binary files a/tmp/cache/assets/E19/2A0/sprockets%2F10fcfbe6ebae11a40c8eac41939a1b9a and b/tmp/cache/assets/E19/2A0/sprockets%2F10fcfbe6ebae11a40c8eac41939a1b9a differ
+diff --git a/tmp/cache/assets/E25/4C0/sprockets%2Fde2fd9fd11c04a582cdbbe3d84a35ae6 b/tmp/cache/assets/E25/4C0/sprockets%2Fde2fd9fd11c04a582cdbbe3d84a35ae6
+deleted file mode 100644
+index 0dd80c2..0000000
+Binary files a/tmp/cache/assets/E25/4C0/sprockets%2Fde2fd9fd11c04a582cdbbe3d84a35ae6 and /dev/null differ
+diff --git a/tmp/cache/assets/E2D/CC0/sprockets%2Fcd018d16db89e7cab9f0a2c7c7be91ae b/tmp/cache/assets/E2D/CC0/sprockets%2Fcd018d16db89e7cab9f0a2c7c7be91ae
+deleted file mode 100644
+index 81ef8ce..0000000
+Binary files a/tmp/cache/assets/E2D/CC0/sprockets%2Fcd018d16db89e7cab9f0a2c7c7be91ae and /dev/null differ
+diff --git a/tmp/cache/assets/E3C/540/sprockets%2Fddad145a89d5671befe588d69cd5bcad b/tmp/cache/assets/E3C/540/sprockets%2Fddad145a89d5671befe588d69cd5bcad
+index 5f52cd8..57157e6 100644
+Binary files a/tmp/cache/assets/E3C/540/sprockets%2Fddad145a89d5671befe588d69cd5bcad and b/tmp/cache/assets/E3C/540/sprockets%2Fddad145a89d5671befe588d69cd5bcad differ
+diff --git a/tmp/cache/assets/E69/490/sprockets%2F1c89ab839ede609ebbcdd06cc55fdd7e b/tmp/cache/assets/E69/490/sprockets%2F1c89ab839ede609ebbcdd06cc55fdd7e
+index 60b66ee..a1c6bff 100644
+Binary files a/tmp/cache/assets/E69/490/sprockets%2F1c89ab839ede609ebbcdd06cc55fdd7e and b/tmp/cache/assets/E69/490/sprockets%2F1c89ab839ede609ebbcdd06cc55fdd7e differ
+diff --git a/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/channels.css.scssc b/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/channels.css.scssc
+deleted file mode 100644
+index 9923ed3..0000000
+Binary files a/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/channels.css.scssc and /dev/null differ
+diff --git a/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/feeds.css.scssc b/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/feeds.css.scssc
+deleted file mode 100644
+index 69204a5..0000000
+Binary files a/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/feeds.css.scssc and /dev/null differ
+diff --git a/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/languages.css.scssc b/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/languages.css.scssc
+deleted file mode 100644
+index 2c2c0bd..0000000
+Binary files a/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/languages.css.scssc and /dev/null differ
+diff --git a/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/videos.css.scssc b/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/videos.css.scssc
+deleted file mode 100644
+index 198b3fb..0000000
+Binary files a/tmp/cache/sass/1cd43f0867050d9ab30087a0bf9a0746849f031d/videos.css.scssc and /dev/null differ
+diff --git a/tmp/cache/sass/552b06c3547d36af30c6f47299dd77b32f4910d8/scaffolds.css.scssc b/tmp/cache/sass/552b06c3547d36af30c6f47299dd77b32f4910d8/scaffolds.css.scssc
+deleted file mode 100644
+index 7f1a5a8..0000000
+Binary files a/tmp/cache/sass/552b06c3547d36af30c6f47299dd77b32f4910d8/scaffolds.css.scssc and /dev/null differ
+diff --git a/tmp/cache/sass/552b06c3547d36af30c6f47299dd77b32f4910d8/users.css.scssc b/tmp/cache/sass/552b06c3547d36af30c6f47299dd77b32f4910d8/users.css.scssc
+deleted file mode 100644
+index 5a8d11a..0000000
+Binary files a/tmp/cache/sass/552b06c3547d36af30c6f47299dd77b32f4910d8/users.css.scssc and /dev/null differ
+diff --git a/tmp/pids/server.pid b/tmp/pids/server.pid
+deleted file mode 100644
+index de0ea2b..0000000
+--- a/tmp/pids/server.pid
++++ /dev/null
+@@ -1 +0,0 @@
+-4193
+\ No newline at end of file

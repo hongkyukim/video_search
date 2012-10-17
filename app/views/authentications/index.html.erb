@@ -2,6 +2,7 @@
 <% if current_user %>
 Signed in as <em><%= current_user.email %></em>
 <% end %>
+
 <% if @authentications %>
  <% unless @authentications.empty? %>
   <p><strong>You can sign in to this account using:</strong></p>

@@ -75,7 +75,11 @@ gem 'delayed_job_active_record'
 ### mail -- use interceptor   2.4.4       error2.1.3
 gem "mail", "2.4.4"
 
+gem 'http_accept_language'
 
+
+###gem 'will_paginate', '3.0.pre2'
+gem 'will_paginate'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -7,9 +7,10 @@ class RegistrationsController < Devise::RegistrationsController
       super
       session[:omniauth] = nil unless @user.new_record?
 
+      @hostaddress = ActionMailer::Base.default_url_options[:host]
+
       UserMailer.registration_confirmation(@user).deliver
-debugger
-      
+###debugger
     ##else
     ##  flash[:alert] = I18n.t("registration_disabled")
     ##  redirect_to action: :new

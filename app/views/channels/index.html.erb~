@@ -13,15 +13,33 @@ google_ad_height = 90;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 
-
+<p>
 <%= form_tag channels_path, :method => 'get' do %>
-  <p>
+  
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search channels", :name => nil %>
-  </p>
+  
 <% end %>
 
+<% if false %>
+<!--<%= f.select :language,   Language.all.collect {|p| [ p.name, p.shortname ] } %>-->
+<!-- <%= text_field_tag :language, params[:language] %>--->
+<!--<p><%= link_to "Advanced Search", new_search_path %></p>-->
+<%= debug(@languages) %>
+ <%= select_tag :language, @languages.collect {|p| [ p.name, p.shortname ] }  %>
 
+ :multiple => true,:include_blank => true,
+<% end %>
+
+<% if false %>
+<%= form_tag channels_path, :method => 'get' do %>
+ 
+    <%= select_tag :language, options_from_collection_for_select(@languages, "id", "name"),  :prompt => "All" %>
+    <%= submit_tag "Set Language", :name => nil %>
+ 
+<% end %>
+<% end %>
+ </p>
 
 
 <% if true %>
@@ -57,10 +75,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	<% end %>
        
  <% end %>
+ <br />
+ <%= will_paginate @channels %>
+
+
 </div>
 
 
 <% else %>
+
+
 <% if @channels %>
 <table>
 	  <tr>
@@ -119,8 +143,9 @@ There is no channels.
       <% end %>
 <% end %>
 
+
 <!-- Place this tag where you want the +1 button to render. -->
-<div class="g-plusone" data-annotation="inline" data-width="300"></div>
+<div class="g-plusone" data-size="small" data-annotation="inline" data-width="300"></div>
 
 <!-- Place this tag after the last +1 button tag. -->
 <script type="text/javascript">

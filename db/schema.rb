@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121010180006) do
+ActiveRecord::Schema.define(:version => 20121017014215) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(:version => 20121010180006) do
     t.string   "uid"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "ch_searches", :force => true do |t|
+    t.string   "keywords"
+    t.string   "channel_type"
+    t.string   "tags"
+    t.string   "categories"
+    t.string   "language"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "channels", :force => true do |t|
@@ -88,6 +98,16 @@ ActiveRecord::Schema.define(:version => 20121010180006) do
 
   add_index "pages", ["permalink"], :name => "index_pages_on_permalink"
 
+  create_table "searches", :force => true do |t|
+    t.string   "keywords"
+    t.string   "channel_type"
+    t.string   "tags"
+    t.string   "categories"
+    t.string   "language"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "",    :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "",    :null => false
@@ -106,6 +126,7 @@ ActiveRecord::Schema.define(:version => 20121010180006) do
     t.boolean  "remember_me"
     t.integer  "payment"
     t.datetime "reset_password_sent_at"
+    t.string   "language"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

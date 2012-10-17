@@ -1,6 +1,9 @@
+require 'http_accept_language'
+
 class ChannelsController < InheritedResources::Base
   before_filter :authenticate_user!, :except => [:show, :index, :videos]
   load_and_authorize_resource
+  helper_method :sort_column, :sort_direction
 
   def index
     ## provide all channels
@@ -19,7 +22,14 @@ class ChannelsController < InheritedResources::Base
     ###channels.each { |c|    raise false if c.thumbnail_url.blank? }
 
 
-    @channels = Channel.search(params[:search]).reverse
+    ###@channels = Channel.search(params[:search]).reverse
+    ###@products = Product.order(sort_column + ' ' + sort_direction).paginate(:per_page => 5, :page => params[:page])
+    ##@channels = Channel.search(params[:search]).reverse
+    ###@channels = Channel.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(:per_page => 3, :page => params[:page]).reverse
+
+    @channels = Channel.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(:per_page => 10,
+                           :page => params[:page]).reverse
+    @languages = Language.find(:all)
 
     if params[:loggedin] == 'yes' && current_user
         respond_to do |format|
@@ -65,6 +75,7 @@ class ChannelsController < InheritedResources::Base
     ##@user = User.find(params[:user_id])
     @user = User.find(params[:user_id])
     @channel = @user.channels.build
+    @user_language = get_user_language
 
     respond_to do |format|
       format.html # new.html.erb
@@ -89,9 +100,25 @@ class ChannelsController < InheritedResources::Base
     ### channel_type's default is public
     params[:channel][:channel_type] = "public" if params[:channel][:channel_type].nil?
 
+    ### set languages
+    ##params[:channel][:language] = Channel.find_preferred_language
+    ###renv = request.env["HTTP_ACCEPT_LANGUAGE"]
+
+    languages = request.user_preferred_languages
+
+    ###rhost = request.host
+
+    ###iavailable = I18n.available_locales
+
+    ###available = %w{en en-US nl-BE kr}
+    ###http_accept_language = env['http_accept_language']
+
+    ###preferred = request.preferred_language_from(available) # => 'nl-BE'
+
+    params[:channel][:language] = languages if params[:channel][:language].nil?
 
     ### set language and user_id
-    params[:channel][:language] = "en" if params[:channel][:language].nil?
+    ###params[:channel][:language] = "en" if params[:channel][:language].nil?
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
     
@@ -108,9 +135,12 @@ class ChannelsController < InheritedResources::Base
         ###@channel.querytime = Time.now;
         @channel.update_attributes({ "querytime" => DateTime.now, "thumbnail_url" => video.thumbnail_url})
 
-        format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
+        ###format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
+        ### create a channel and video list and then go to video list
+        format.html { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
         format.json { render json: @channel, status: :created, location: @channel }
-        format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
+        ###format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
+        format.mobile { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
       else
         format.html { render action: "new" }
         format.json { render json: @channel.errors, status: :unprocessable_entity }
@@ -179,5 +209,12 @@ class ChannelsController < InheritedResources::Base
     end
   end
 
+private
+  def sort_column
+    Channel.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
   
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end  
 end

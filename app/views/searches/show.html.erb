@@ -1,0 +1,30 @@
+<h1>Search Results</h1>
+
+<% if true %>
+<p>
+  <b>Keywords:</b> <%= @search.keywords %>
+</p>
+<p>
+  <b>Channel type:</b> <%= @search.channel_type %>
+</p>
+<p>
+  <b>Tags:</b>  <%= @search.tags %>
+</p>
+
+<p>
+  <b>Categories:</b>  <%= @search.categories %>
+</p>
+
+<p>
+  <b>Language:</b>   <%= @search.language %>
+</p>
+<% end %>
+
+<% if true %>
+
+<%= render @search.channels %>
+
+<% end %>
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>

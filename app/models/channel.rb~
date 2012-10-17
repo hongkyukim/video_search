@@ -1,4 +1,5 @@
 require 'camideo'
+require 'http_accept_language'
 
 class Channel < ActiveRecord::Base
   has_many :feeds, :dependent => :destroy
@@ -9,6 +10,17 @@ class Channel < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :channel_type, :tags, :categories, :language, :user_id, :querytime, :thumbnail_url
+
+  #scope_out :selected_channels do
+  #  {:conditions => ['people.birthdate < ?', 18.years.ago],
+  #   :order => 'people.birthdate asc' }
+  #end
+
+  ##scope :searched_channels,   ###:joins=> :repair_notes, do
+  ##             :conditions => ["channel_type = ?" 'selected2'] 
+                    ###:conditions => {'channel_type = ?', search  || 'channel_type = ?', 'selected2' }
+             
+  
 
   def self.check_registered?(channel, video)
     channel.videos.include?(video)
@@ -36,22 +48,29 @@ class Channel < ActiveRecord::Base
           search = search.downcase
           if search == 'selected'
               ###find_by_channel_type(search) -- error not array
-              find_by_sql("SELECT * FROM channels c WHERE c.channel_type = '#{search}' or c.channel_type = 'selected2' ")
+              ##find_by_sql("SELECT * FROM channels c WHERE c.channel_type = '#{search}' or c.channel_type = 'selected2' ").scoped
+              ##find_by_sql("SELECT * FROM channels c WHERE c.channel_type = '#{search}' or c.channel_type = 'selected2' ")
+              ###scope.searched_channels(search)
+              where('channel_type = ? OR channel_type = ? ', "%#{search}%", 'selected2')
           else
-              find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+              ###find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+              where('name LIKE ?', "%#{search}%")
           end
       else
-          find(:all)
+          ##find(:all)
+          scoped
       end
   end
 
+  def self.find_preferred_language
+     ###http_accept_language.user_preferred_languages # => [ 'nl-NL', 'nl-BE', 'nl', 'en-US', 'en' ]
+     available = %w{en en-US nl-BE}
+     env.http_accept_language.preferred_language_from(available) # => 'nl-BE'
+  end 
 
-  def search_camideo12345tmp(f)
-    sleep 10
-   ### search camideo: vimeo, dailymotion, ...
-    Camideo.get_OneVideoSearch_camideo(f)
-
+  def self.chsearch(keywords)
+    channels = order(:name)
+    channels = channels.where("name like ?", "%#{keywords}%") if keywords.present?
+    channels
   end
-
- 
 end

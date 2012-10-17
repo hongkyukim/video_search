@@ -9,12 +9,14 @@ class AuthenticationsController < InheritedResources::Base
 debugger
      authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
      if authentication
-        flash[:notice] = "Signed in successfully."
+        flash[:notice] = "Signed in successfully with auth."
 debugger
+        ### to authentication's user
         sign_in_and_redirect(:user, authentication.user)
      elsif current_user
+        ### to current user
         current_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
-        flash[:notice] = "Authentication successful."
+        flash[:notice] = "Authentication successful with current user."
 debugger
         redirect_to authentications_url
      else
@@ -24,12 +26,25 @@ debugger
         user.apply_omniauth(omniauth)
 debugger
 	if user.save
-	  flash[:notice] = "Signed in successfully."
+	  flash[:notice] = "Signed up and Signed in successfully."
 	  sign_in_and_redirect(:user, user)
 	else
           ### dont need extra key
 	  session[:omniauth] = omniauth.except('extra')
-	  redirect_to new_user_registration_url
+debugger
+          if user.email
+             new_user = User.find_by_email(user.email)
+             if new_user
+                 new_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
+                 flash[:notice] = "Authentication successful."
+debugger
+                 redirect_to authentications_url
+             else
+	         redirect_to new_user_registration_url
+             end 
+          else
+	     redirect_to new_user_registration_url
+          end
 	end
 debugger
         ###user.save(:validate => false)

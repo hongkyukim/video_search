@@ -1,0 +1,34 @@
+<h1>Search Results</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @ch_search.keywords %>
+</p>
+
+<p>
+  <b>Channel type:</b>
+  <%= @ch_search.channel_type %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @ch_search.tags %>
+</p>
+
+<p>
+  <b>Categories:</b>
+  <%= @ch_search.categories %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @ch_search.language %>
+</p>
+
+
+<% partial => @chsearch.channels %>
+
+<%= link_to 'Edit', edit_ch_search_path(@ch_search) %> |
+<%= link_to 'Back', ch_searches_path %>

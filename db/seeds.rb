@@ -12,5 +12,24 @@
 
 users = User.create([{email: 'admin@admin.com', password: 'admin123', password_confirmation: 'admin123', admin: true, payment: '1' }, {email: 'yunjakim3@gmail.com', password: 'admin123', password_confirmation: 'admin123', admin: false, payment: '1' }])
 
+languages = Language.create([ {name: 'English', fullname: 'english', shortname: 'en' },
+                              {name: 'Hindi', fullname: 'hindi india', shortname: 'hi' }, 
+                              {name: 'Korean', fullname: 'korean korea kr', shortname: 'ko' },
+                              {name: 'Japanese', fullname: 'japanese', shortname: 'jp' }, 
+                              {name: 'Chinese', fullname: 'China taiwan', shortname: 'zh' },
+                              {name: 'Portuguese', fullname: 'portuguese', shortname: 'pt' },
+                              {name: 'French', fullname: 'french', shortname: 'fr' },
+                              {name: 'Spanish', fullname: 'spanish', shortname: 'es' }
+                          ])
+
+searches = Search.create([ { language: 'en' },
+                              { language: 'hi' }, 
+                              { language: 'ko' },
+                              { language: 'jp' }, 
+                              { language: 'zh' },
+                              { language: 'pt' },
+                              { language: 'fr' },
+                              { language: 'es' }
+                          ])
 ### rake db:seed
 
