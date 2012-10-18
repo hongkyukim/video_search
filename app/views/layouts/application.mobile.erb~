@@ -100,12 +100,12 @@
                  <% else %>
                       <% if user_signed_in? %>
                         <% if current_page? user_channels_path(current_user) %>
-                           <%= link_to "Home", channels_path( :search => 'selected', :class => "button", :rel => "external" %>
+                           <%= link_to "Home", channels_path( :search => 'selected'), :class => "button", :rel => "external" %>
                         <% else %>
                            <%= link_to "My Channels", user_channels_path(current_user), :class => "button", :rel => "external" %>
                         <% end %>
                       <% else %>
-                           <%= link_to "Home", channels_path( :search => 'selected', :class => "button", :rel => "external" %>
+                           <%= link_to "Home", channels_path( :search => 'selected'), :class => "button", :rel => "external" %>
                       <% end %>
                  <% end %>
               <% else %>
