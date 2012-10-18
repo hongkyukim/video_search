@@ -51,9 +51,9 @@ private
   def mobile_device?
 	  ###debugger
 	  if session[:mobile_param]
-	    session[:mobile_param] == "1"
+	     session[:mobile_param] == "1"
 	  else
-	    request.user_agent =~ /Mobile|webOS|Android|Blackberry/
+	     request.user_agent =~ /Mobile|webOS|Android|Blackberry/
 	  end
   end
   helper_method :mobile_device?
