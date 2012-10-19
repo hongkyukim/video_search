@@ -4,7 +4,7 @@
     <ul>
       <%= link_to "Home", channels_path( :search => 'selected') %> 
       | <%= link_to 'All Channels', channels_path( :search => nil ) %>
-
+      | <%= link_to 'Set Languages', new_cookie_path %>
       <% if signed_in? %>
           <% if !(current_page?  channels_user_path(current_user) ) %>
              | <%= link_to "My Channels", channels_user_path(current_user) %>

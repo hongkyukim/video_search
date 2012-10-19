@@ -1,0 +1,12 @@
+<h1>Set languages</h1>
+
+<%= form_tag channels_path, :method => 'get' do %>
+ 
+    <%= select_tag :language, options_from_collection_for_select(@languages, "id", "name"),  :prompt => "All" %>
+    <%= submit_tag "Set Language", :name => nil %>
+ 
+<% end %>
+
+
+
+<%= link_to 'Back', languages_path %>

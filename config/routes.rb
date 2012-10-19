@@ -1,4 +1,8 @@
 LoginApp2::Application.routes.draw do
+  get "cookie/new"
+
+  get "cookie/assign"
+
   resources :searches
 
   ### added 10/04/2012
@@ -27,7 +31,11 @@ LoginApp2::Application.routes.draw do
       resources :channels
   end
 
-  resources :languages
+  resources :languages do
+      member do
+        post 'assign'
+      end
+  end
   
   ###redirect '/', :controller => 'channels', :action => 'index'
 

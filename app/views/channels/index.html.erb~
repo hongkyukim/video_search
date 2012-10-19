@@ -41,7 +41,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 <% if true %>
-
+<% if !@channels.nil? %>
 <div id="videoguide">
 
   <% @channels.each do |chan| %>
@@ -78,7 +78,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 </div>
-
+<% end %>
 
 <% else %>
 

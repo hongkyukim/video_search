@@ -51,7 +51,11 @@ class Channel < ActiveRecord::Base
               ##find_by_sql("SELECT * FROM channels c WHERE c.channel_type = '#{search}' or c.channel_type = 'selected2' ").scoped
               ##find_by_sql("SELECT * FROM channels c WHERE c.channel_type = '#{search}' or c.channel_type = 'selected2' ")
               ###scope.searched_channels(search)
-              where('channel_type = ? OR channel_type = ? ', "%#{search}%", 'selected2')
+              ###where('channel_type = ?', "selected")
+              ###where('channel_type = ? OR channel_type = ? ', "%#{search}%", 'selected2')
+
+              ### check selected abd selected2
+              where('channel_type LIKE ?', "%#{search}%")
           else
               ###find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
               where('name LIKE ?', "%#{search}%")

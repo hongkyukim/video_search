@@ -27,8 +27,16 @@ class ChannelsController < InheritedResources::Base
     ##@channels = Channel.search(params[:search]).reverse
     ###@channels = Channel.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(:per_page => 3, :page => params[:page]).reverse
 
-    @channels = Channel.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(:per_page => 10,
+    search_channels = Channel.search(params[:search])
+
+    if search_channels == 1 || search_channels.nil? || search_channels.count == 0
+         @channels = nil
+    else
+         @channels = search_channels.order(sort_column + ' ' + sort_direction).paginate(:per_page => 10,
                            :page => params[:page]).reverse
+    end
+
+
     @languages = Language.find(:all)
 
     if params[:loggedin] == 'yes' && current_user

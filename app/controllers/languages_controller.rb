@@ -3,4 +3,6 @@ class LanguagesController < InheritedResources::Base
   before_filter :authenticate_user!, :except => [:show, :index]
   ## authorization
   load_and_authorize_resource
+
+
 end
