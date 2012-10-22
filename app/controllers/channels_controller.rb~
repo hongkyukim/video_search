@@ -27,8 +27,12 @@ class ChannelsController < InheritedResources::Base
     ##@channels = Channel.search(params[:search]).reverse
     ###@channels = Channel.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(:per_page => 3, :page => params[:page]).reverse
 
-    search_channels = Channel.search(params[:search])
+    userlanguages = cookies[:user_languages] if cookies[:user_languages]
+###debugger
+    search_channels = Channel.search(params[:search], userlanguages)
 
+    search_channels_all = Channel.search(params[:search])
+debugger
     if search_channels == 1 || search_channels.nil? || search_channels.count == 0
          @channels = nil
     else

@@ -16,10 +16,10 @@ class User < ActiveRecord::Base
      ### when we use OpenID
      if omniauth['user_info']
          self.email = omniauth['user_info']['email'] if email.blank? && omniauth['user_info']
-debugger
+##debugger
      else
          self.email = omniauth['info']['email'] if email.blank? && omniauth['info']
-debugger
+##debugger
      end
      authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
   end

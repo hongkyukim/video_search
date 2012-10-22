@@ -7,15 +7,22 @@ class SessionsController < Devise::SessionsController
 
   def new
     resource = build_resource(nil, :unsafe => true)
+##debugger
     clean_up_passwords(resource)
+##debugger
     respond_with(resource, serialize_options(resource))
+##debugger
   end
 
   def create
+##debugger
     resource = warden.authenticate!(auth_options)
-    set_flash_message(:notice, :signed_in) if is_navigational_format?
+##debugger
+    ### set_flash_message(:notice, :signed_in) if is_navigational_format?
+    set_flash_message(:notice, :signed_in) 
+##debugger
     sign_in(resource_name, resource)
-
+##debugger
     if mobile_device?
        redirect_to user_channels_url(resource)
     else

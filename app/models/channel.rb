@@ -43,7 +43,17 @@ class Channel < ActiveRecord::Base
   ### search => nil   ---> all channels
   ### search => 'selected' ---> selected channels
   ### search => query ---> 
-  def self.search(search)
+  def self.search(search, userlanguages=nil)
+      ### filter with languages
+      ###userlanguages = cookies[:user_languages] if cookies[:user_languages]
+
+      ##if userlanguages && !userlanguages.blank?
+      ##    where('language LIKE ?', userlanguages) 
+      ##else
+      ##           where('language LIKE ?', userlanguages)    
+      ##end
+##debugger
+      
       if search
           search = search.downcase
           if search == 'selected'
@@ -64,6 +74,7 @@ class Channel < ActiveRecord::Base
           ##find(:all)
           scoped
       end
+
   end
 
   def self.find_preferred_language
