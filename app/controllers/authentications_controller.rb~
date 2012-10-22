@@ -6,38 +6,38 @@ class AuthenticationsController < InheritedResources::Base
 
   def create
      omniauth = request.env["omniauth.auth"]
-debugger
+
      authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
      if authentication
         flash[:notice] = "Signed in successfully with auth."
-debugger
+
         ### to authentication's user
         sign_in_and_redirect(:user, authentication.user)
      elsif current_user
         ### to current user
         current_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
         flash[:notice] = "Authentication successful with current user."
-debugger
+
         redirect_to authentications_url
      else
         user = User.new
         ###user.authentications.build(:provider => omniauth ['provider'], :uid => omniauth['uid'])
-debugger
+
         user.apply_omniauth(omniauth)
-debugger
+
 	if user.save
 	  flash[:notice] = "Signed up and Signed in successfully."
 	  sign_in_and_redirect(:user, user)
 	else
           ### dont need extra key
 	  session[:omniauth] = omniauth.except('extra')
-debugger
+
           if user.email
              new_user = User.find_by_email(user.email)
              if new_user
                  new_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
-                 flash[:notice] = "Authentication successful."
-debugger
+                 flash[:notice] = "Authentication successful with existing user."
+
                  redirect_to authentications_url
              else
 	         redirect_to new_user_registration_url
@@ -46,26 +46,26 @@ debugger
 	     redirect_to new_user_registration_url
           end
 	end
-debugger
+
         ###user.save(:validate => false)
         ###flash[:notice] = "Signed in successfully."
         ###sign_in_and_redirect(:user, user)
       end
-end
+  end
 
 
   def create4567
-  omniauth = request.env["omniauth.auth"]
-  authentication = Authentication.find_by_provder_and_uid(omniauth['provider'], omniauth['uid'])
-  if authentication
-    flash[:notice] = "Signed in successfully."
-    sign_in_and_redirect(:user, authentication.user)
-  else
-    current_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
-    flash[:notice] = "Authentication successful."
-    redirect_to authentications_url
+     omniauth = request.env["omniauth.auth"]
+     authentication = Authentication.find_by_provder_and_uid(omniauth['provider'], omniauth['uid'])
+     if authentication
+        flash[:notice] = "Signed in successfully."
+        sign_in_and_redirect(:user, authentication.user)
+     else
+        current_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
+        flash[:notice] = "Authentication successful."
+        redirect_to authentications_url
+     end
   end
-end
 
 
   def create12345
@@ -83,7 +83,7 @@ end
   
   def destroy
      @authentication = current_user.authentications.find(params[:id])
-debugger
+
      @authentication.destroy
      flash[:notice] = "Successfully destroyed authentication."
      redirect_to authentications_url

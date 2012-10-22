@@ -15192,3 +15192,1351 @@ Served asset /logo.png - 304 Not Modified (0ms)
 
 Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2012-10-21 23:02:20 -0700
 Served asset /facebook_32.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-22 12:29:34 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[36m (43.3ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (2.1ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (86.1ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (199.9ms)
+  Rendered layouts/_stylesheets.html.erb (78.8ms)
+  Rendered layouts/_header.html.erb (6.7ms)
+  Rendered layouts/_footer.html.erb (7.4ms)
+Completed 200 OK in 2929ms (Views: 1400.3ms | ActiveRecord: 1341.6ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:29:39 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:29:39 -0700
+Served asset /blueprint/print.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:29:39 -0700
+Served asset /custom.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:29:39 -0700
+Served asset /logo.png - 304 Not Modified (111ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-22 12:29:59 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (132.9ms)
+  Rendered layouts/_stylesheets.html.erb (4.5ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+Completed 200 OK in 209ms (Views: 205.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:30:00 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:30:00 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:30:00 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2012-10-22 12:30:00 -0700
+Served asset /facebook_32.png - 304 Not Modified (72ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:30:00 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2012-10-22 12:30:03 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-22 12:31:15 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')
+  [1m[36mChannel Load (1.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (0.7ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_stylesheets.html.erb (7.7ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (4.9ms)
+Completed 200 OK in 150ms (Views: 97.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:31:15 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:31:15 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:31:15 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:31:15 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-22 12:31:17 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_stylesheets.html.erb (4.8ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (4.3ms)
+Completed 200 OK in 156ms (Views: 154.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:31:17 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:31:17 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:31:17 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2012-10-22 12:31:17 -0700
+Served asset /facebook_32.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:31:17 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2012-10-22 12:31:21 -0700
+
+
+Started GET "/auth/facebook/callback?state=694465b36bb92757e787e24c313a431212fbed61bd9f0fcd&code=AQCbpTp1yy5ZuQo_S7y9zIROjILzWpsOn-xaJvW32BdiJ8HSWp5rFwOa1keBhL4DLTI3VHcuBbvs6vhQutvZxOZ6QcBGDCebid-AaQ9QyjKbqq_r4QWnaRGhl7Km-xnOTh7HPLFhgBF3iozdD-4VnmxXfsaeiaC7LKCcTgyovtIe0p_IXv_tvPhqbGXzFmFLXuem1__vcV_DMBxhPqnzsegt" for 127.0.0.1 at 2012-10-22 12:31:44 -0700
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"state"=>"694465b36bb92757e787e24c313a431212fbed61bd9f0fcd", "code"=>"AQCbpTp1yy5ZuQo_S7y9zIROjILzWpsOn-xaJvW32BdiJ8HSWp5rFwOa1keBhL4DLTI3VHcuBbvs6vhQutvZxOZ6QcBGDCebid-AaQ9QyjKbqq_r4QWnaRGhl7Km-xnOTh7HPLFhgBF3iozdD-4VnmxXfsaeiaC7LKCcTgyovtIe0p_IXv_tvPhqbGXzFmFLXuem1__vcV_DMBxhPqnzsegt", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (1.4ms)[0m  [1mSELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'facebook' AND "authentications"."uid" = '1722351527' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (49.5ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = 'hongkyukim@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (181.4ms)[0m  INSERT INTO "users" ("admin", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "language", "last_sign_in_at", "last_sign_in_ip", "password_salt", "payment", "remember_created_at", "remember_me", "remember_token", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"  [["admin", false], ["created_at", Mon, 22 Oct 2012 19:32:12 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "hongkyukim@yahoo.com"], ["encrypted_password", ""], ["language", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["password_salt", ""], ["payment", nil], ["remember_created_at", nil], ["remember_me", nil], ["remember_token", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Mon, 22 Oct 2012 19:32:12 UTC +00:00]]
+  [1m[36mSQL (31.2ms)[0m  [1mINSERT INTO "authentications" ("created_at", "provider", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 22 Oct 2012 19:32:12 UTC +00:00], ["provider", "facebook"], ["uid", "1722351527"], ["updated_at", Mon, 22 Oct 2012 19:32:12 UTC +00:00], ["user_id", 11]]
+  [1m[35m (38.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (43.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2012-10-22 19:32:12.459523', "current_sign_in_at" = '2012-10-22 19:32:12.459523', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2012-10-22 19:32:12.461956' WHERE "users"."id" = 11
+  [1m[36m (30.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 28032ms (ActiveRecord: 375.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-22 12:32:13 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (0.6ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+Redirected to http://localhost:3000/users/11/channels
+Completed 302 Found in 52ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/11/channels" for 127.0.0.1 at 2012-10-22 12:32:13 -0700
+Processing by UsersController#channels as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."user_id" = 11[0m
+  Rendered users/channels.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_stylesheets.html.erb (8.4ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (7.2ms)
+Completed 200 OK in 199ms (Views: 156.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:32:13 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:32:13 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:32:13 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:32:13 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/channels?search=selected" for 127.0.0.1 at 2012-10-22 12:37:43 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (0.6ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_stylesheets.html.erb (7.7ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (9.7ms)
+Completed 200 OK in 415ms (Views: 113.9ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:37:43 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:37:43 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:37:44 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:37:44 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/channels?search=selected" for 127.0.0.1 at 2012-10-22 12:37:50 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (0.6ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_stylesheets.html.erb (7.8ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (6.7ms)
+Completed 200 OK in 246ms (Views: 204.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:37:50 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:37:50 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:37:50 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:37:50 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-10-22 12:37:53 -0700
+Processing by ChannelsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mChannel Load (1.1ms)[0m  SELECT "channels".* FROM "channels" ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (0.6ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_stylesheets.html.erb (7.6ms)
+  Rendered layouts/_header.html.erb (100.1ms)
+  Rendered layouts/_footer.html.erb (10.9ms)
+Completed 200 OK in 269ms (Views: 222.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:37:53 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:37:53 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:37:53 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:37:53 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/11/channels" for 127.0.0.1 at 2012-10-22 12:38:00 -0700
+Processing by UsersController#channels as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."user_id" = 11[0m
+  Rendered users/channels.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_stylesheets.html.erb (7.4ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (6.6ms)
+Completed 200 OK in 158ms (Views: 96.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:01 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:01 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:01 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:38:01 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-10-22 12:38:08 -0700
+Processing by ChannelsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (0.6ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (127.8ms)
+  Rendered layouts/_stylesheets.html.erb (8.3ms)
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (6.6ms)
+Completed 200 OK in 274ms (Views: 227.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:08 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:08 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:09 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:38:09 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/11/channels" for 127.0.0.1 at 2012-10-22 12:38:15 -0700
+Processing by UsersController#channels as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."user_id" = 11[0m
+  Rendered users/channels.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_stylesheets.html.erb (7.4ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (7.3ms)
+Completed 200 OK in 136ms (Views: 97.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:15 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:15 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:15 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:38:15 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/11/channels/new" for 127.0.0.1 at 2012-10-22 12:38:19 -0700
+Processing by ChannelsController#new as HTML
+  Parameters: {"user_id"=>"11"}
+  [1m[35mUser Load (6.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/_form.html.erb (21.6ms)
+  Rendered channels/new.html.erb within layouts/application (47.8ms)
+  Rendered layouts/_stylesheets.html.erb (8.0ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (6.6ms)
+Completed 200 OK in 302ms (Views: 168.5ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:19 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:20 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:20 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:38:20 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/users/11/channels" for 127.0.0.1 at 2012-10-22 12:38:32 -0700
+Processing by ChannelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aQ47NYYmFYBa9kmz++L2uGoOweYMAICfVMnMyaixqtY=", "channel"=>{"name"=>"html5", "language"=>"en"}, "commit"=>"Create Channel", "user_id"=>"11"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mChannel Exists (0.6ms)[0m  SELECT 1 FROM "channels" WHERE "channels"."name" = 'html5' LIMIT 1
+  [1m[36mSQL (58.6ms)[0m  [1mINSERT INTO "channels" ("categories", "channel_type", "created_at", "language", "name", "querytime", "tags", "thumbnail_url", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["categories", nil], ["channel_type", "public"], ["created_at", Mon, 22 Oct 2012 19:38:33 UTC +00:00], ["language", "en"], ["name", "html5"], ["querytime", nil], ["tags", nil], ["thumbnail_url", nil], ["updated_at", Mon, 22 Oct 2012 19:38:33 UTC +00:00], ["user_id", 11]]
+  [1m[35m (24.7ms)[0m  COMMIT
+  [1m[36m (40.3ms)[0m  [1mSELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 7[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (25.0ms)[0m  [1mINSERT INTO "feeds" ("categories", "channel_id", "created_at", "feedtype", "keywords", "name", "options", "queries", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["categories", nil], ["channel_id", 7], ["created_at", Mon, 22 Oct 2012 19:38:33 UTC +00:00], ["feedtype", "public"], ["keywords", ""], ["name", "html5"], ["options", nil], ["queries", "html5"], ["tags", nil], ["updated_at", Mon, 22 Oct 2012 19:38:33 UTC +00:00]]
+  [1m[35m (27.2ms)[0m  COMMIT
+  [1m[36mVideo Load (87.8ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'siOHh0uzcuY'[0m
+new video inserted:  split_video_id[3] = siOHh0uzcuY
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (61.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:34 UTC +00:00], ["description", "Note: Higher quality version on Vimeo: vimeo.com Are you interested in HTML 5 and what's coming down the pipeline but haven't had time to read any articles yet? Brad Neuberg has put together an educational Introduction to HTML 5 video that goes over many of the major aspects of this new standard, including: * Web vector graphics with the Canvas tag and Scalable Vector Graphics (SVG) * The Geolocation API * HTML 5 Video * The HTML 5 Database and Application Cache * Web workers In the video we also crack open the HTML 5 YouTube Video prototype to show you some of the new HTML 5 tags, such as nav, article, etc. It's chock full of demos and sample source code."], ["duration", "00:41:55"], ["embedcode", "http://www.youtube.com/v/siOHh0uzcuY?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=siOHh0uzcuY&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/siOHh0uzcuY/default.jpg"], ["title", "Introduction to HTML 5"], ["updated_at", Mon, 22 Oct 2012 19:38:34 UTC +00:00], ["views", nil], ["yt_video_id", "siOHh0uzcuY"]]
+  [1m[35m (24.6ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (24.6ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 156 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (6.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 156)
+  [1m[36m (26.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Mp0f0zTPLec'
+new video inserted:  split_video_id[3] = Mp0f0zTPLec
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Education Education"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Visit my website at thenewboston.com for all of my videos! I also do a podcast three nights a week. You can watch the live show at http on Tuesdays, Thursdays, and Saturdays from 8-9pm EST! Also, check out my other YouTube channel www.youtube.com"], ["duration", "00:04:17"], ["embedcode", "http://www.youtube.com/v/Mp0f0zTPLec?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=Mp0f0zTPLec&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/Mp0f0zTPLec/default.jpg"], ["title", "HTML5 Tutorial - 1 - Introduction"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "Mp0f0zTPLec"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 157 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 157)[0m
+  [1m[35m (2.6ms)[0m  COMMIT
+  [1m[36mVideo Load (1.0ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'mzPxo7Y6JyA'[0m
+new video inserted:  split_video_id[3] = mzPxo7Y6JyA
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Education Education"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "A brief overview of HTML5. Video by Topic Simple (www.topicsimple.com) Transcription So, if you have been paying attention to chatter on the internet these days, especially geeky chatter, you may have heard the term HTML5. Well what is that? HTML stands for, uhhh forget it, but its the behind the scenes coding language that makes us able to see stuff online. Since the original HTML was invented with the web over 20 years ago, it has gone through many updates, but its been more than a decade since the last one, and in web terms that's pretty much forever. I mean like 10 years ago we all still loved our digital watches. So HTML has been a few steps behind changes on the web for quite some time. For example, when video came along, there was no way to integrate it naturally into HTML, so different companies developed their own video players to work around it. These worked OK, but they all were all external plugins, meaning that you had to download them, and this was, well, annoying and potentially risky. HTML5 is adding capabilities to deal with this stuff - like video - right into its code, so that plugins hopefully won't be necessary. And there's plans to add a bunch more cool stuff that previously was tricky or even impossible to implement with HTML alone. The overall hope is that some day it will create a standard, consistent web experience across all devices and browsers. HTML5 is still being developed, and as of early 2012 isn't 100% finalized, but the browsers are <b>...</b>"], ["duration", "00:01:32"], ["embedcode", "http://www.youtube.com/v/mzPxo7Y6JyA?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=mzPxo7Y6JyA&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/mzPxo7Y6JyA/default.jpg"], ["title", "What is HTML5?"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "mzPxo7Y6JyA"]]
+  [1m[35m (6.5ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 158 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 158)
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.0ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'qzA60hHca9s'
+new video inserted:  split_video_id[3] = qzA60hHca9s
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Alex Russell, Ian Fette Mobile and desktop are converging on HTML5 as a strong, portable base for delivering rich experiences. Come learn about the future of HTML5, CSS, DOM, and JavaScript that will help you build better, richer apps even faster."], ["duration", "00:59:54"], ["embedcode", "http://www.youtube.com/v/qzA60hHca9s?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=qzA60hHca9s&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/qzA60hHca9s/default.jpg"], ["title", "Google I/O 2011: HTML5 & What's Next"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "qzA60hHca9s"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 159 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 159)[0m
+  [1m[35m (3.0ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'tYrND5hMY3A'[0m
+new video inserted:  split_video_id[3] = tYrND5hMY3A
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Please use this moderator link to ask questions: goo.gl Join us to chat with YouTube engineer Greg Schechter about HTML5 at YouTube and his Google I/O 2012 presentation entitled \"HTML5 at YouTube: Stories from the Front Line\" goo.gl"], ["duration", "00:45:36"], ["embedcode", "http://www.youtube.com/v/tYrND5hMY3A?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=tYrND5hMY3A&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/tYrND5hMY3A/default.jpg"], ["title", "YouTube Developers Live: HTML5 at YouTube"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "tYrND5hMY3A"]]
+  [1m[35m (6.6ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 160 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 160)
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'lcD9CF0bxyk'
+new video inserted:  split_video_id[3] = lcD9CF0bxyk
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "At the February 6, 2012 BayJax event at Yahoo!, Flickr Frontend Engineer Stephen Woods shared his hard-won advice for building responsive touch-based interfaces using HTML5, CSS, and JavaScript. He also revealed how Star Trek: The Next Generation predicted the need for instant user feedback in a touch-based UI and how Tivo's slow UI was made bearable by a simple \"bloop\" sound."], ["duration", "00:24:28"], ["embedcode", "http://www.youtube.com/v/lcD9CF0bxyk?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=lcD9CF0bxyk&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/lcD9CF0bxyk/default.jpg"], ["title", "Stephen Woods: Creating Responsive HTML5 Touch Interfaces"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "lcD9CF0bxyk"]]
+  [1m[36m (7.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 161 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 161)[0m
+  [1m[35m (3.2ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'X4posucC54g'[0m
+new video inserted:  split_video_id[3] = X4posucC54g
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "mobithinking.com - Everything you need to know about HTML5 and what it means for your mobile Website. In this video Dimitrios Kontarinis, vice president of innovation, Velti explains how HTML5 enables companies to deliver an app-like experience on the mobile Web. He explores the pros and cons of HTML5 and why HTML5 makes device detection even more important. He highlights some excellent best practice mobile sites and gives his vision for what the mobile sites of the future will hold. This video is brought to you by mobiThinking. Visit the site for practical advice and insight on mobile Web and mobile marketing from the world's top practitioners. Plus in-depth guides to the top ad networks, mobile agencies, the world's top mobile markets and a compendium of every mobile stat you will ever need. http"], ["duration", "00:05:21"], ["embedcode", "http://www.youtube.com/v/X4posucC54g?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=X4posucC54g&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/X4posucC54g/default.jpg"], ["title", "Why HTML5 changes everything, by Dimitrios Kontarinis, Velti in conversation with mobiThinking."], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "X4posucC54g"]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 162 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 162)
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'x4gJU8Mn8-4'
+new video inserted:  split_video_id[3] = x4gJU8Mn8-4
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Howto Howto & Style"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Use Adobe's new Edge software to create HTML5 animations and say goodbye to Flash! Download Adobe Edge here: labs.adobe.com View live example and download project files here: www.tinkernut.com"], ["duration", "00:03:57"], ["embedcode", "http://www.youtube.com/v/x4gJU8Mn8-4?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=x4gJU8Mn8-4&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/x4gJU8Mn8-4/default.jpg"], ["title", "Make Free HTML5 Animations"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "x4gJU8Mn8-4"]]
+  [1m[36m (6.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 163 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 163)[0m
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'YZsiD4M1Rjc'[0m
+new video inserted:  split_video_id[3] = YZsiD4M1Rjc
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "What is HTML5? If you havenapos;t heard of it by now, then you are for sure living under a rock. With the recent release of Amazons HTML5 kindle reader and linkedinapos;s new HTML5 interface, everyone from CNN to Foxnews is talking about it. So What is it? As a newb youapos;re still smarter than the average person. So this quick \"What is\" video will tell you.. Well.. What is HTML5?"], ["duration", "00:06:51"], ["embedcode", "http://www.youtube.com/v/YZsiD4M1Rjc?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=YZsiD4M1Rjc&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/YZsiD4M1Rjc/default.jpg"], ["title", "What Is HTML5?"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "YZsiD4M1Rjc"]]
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 164 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 164)
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '6EJ801el-I8'
+new video inserted:  split_video_id[3] = 6EJ801el-I8
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "For years we built web apps that far outpaced the capabilities of the browsers they ran in. Just as the browsers were catching up HTML5 came on the scene - video and audio, canvas, SVG, app cache, localStorage, @font-face, and more. Now the browsers are racing to stay ahead of the wave that's building as developers adopt these new capabilities. Is your HTML5 app going to ride the wave or be dashed on the rocks leaving users stranded? Learn which HTML5 features to seek out and which to avoid when it comes to building fast HTML5 web apps. This session will be live captioned."], ["duration", "01:02:07"], ["embedcode", "http://www.youtube.com/v/6EJ801el-I8?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=6EJ801el-I8&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/6EJ801el-I8/default.jpg"], ["title", "Google I/O 2012 - High Performance HTML5"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "6EJ801el-I8"]]
+  [1m[36m (6.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 165 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 165)[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'EdDc7sWjCL4'[0m
+new video inserted:  split_video_id[3] = EdDc7sWjCL4
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "San Francisco Java, PHP, and HTML5 user groups hosted an event on May 11th, 2010 on HTML5 with three amazing speakers: Brad Neuberg from Google, Giorgio Sardo from Microsoft, and Peter Lubbers from Kaazing. In this first of the three videos, Brad Neuberg from Google (formerly an HTML5 advocate and currently a Software Engineer on the Google Buzz team) explains why HTML5 matters - to consumers as well as developers! His overview of HTML5 included SVG/Canvas rendering, CSS transforms, app-cache, local databases, web workers, and much more. He also identified the scope and practical implications of the changes that are coming along with HTML5 support in modern browsers. This event was organized by Marakana, Michael Tougeron from Gamespot, and Bruno Terkaly from Microsoft. Microsoft was the host and Marakana, Gamespot, Medallia, TEKsystems, and Guidewire Software sponsored the event. marakana.com"], ["duration", "00:50:44"], ["embedcode", "http://www.youtube.com/v/EdDc7sWjCL4?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=EdDc7sWjCL4&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/EdDc7sWjCL4/default.jpg"], ["title", "Learn About HTML5 and the Future of the Web"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "EdDc7sWjCL4"]]
+  [1m[35m (6.6ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 166 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 166)
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'feML6qwyWGs'
+new video inserted:  split_video_id[3] = feML6qwyWGs
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Howto Howto & Style"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "HTML5 - Part 2 - www.youtube.com"], ["duration", "00:14:09"], ["embedcode", "http://www.youtube.com/v/feML6qwyWGs?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=feML6qwyWGs&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/feML6qwyWGs/default.jpg"], ["title", "HTML5 - Part 1 - How to make a website from scratch"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "feML6qwyWGs"]]
+  [1m[36m (6.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 167 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 167)[0m
+  [1m[35m (9.2ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'hvvexW0QHSQ'[0m
+new video inserted:  split_video_id[3] = hvvexW0QHSQ
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Education Education"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Learn how to create a website from start to finish. We start designing our website in Photoshop using the 960.gs framework, eventually making our way to Notepad to put our designs to work. Music by Dan-O at DanoSongs.com I have already done a tutorial series on creating a website, but that was a very basic take on HTML and CSS. Learn the Basics of HTML and CSS: www.youtube.com Website: www.awfulmedia.com Twitter www.twitter.com"], ["duration", "00:14:23"], ["embedcode", "http://www.youtube.com/v/hvvexW0QHSQ?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=hvvexW0QHSQ&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/hvvexW0QHSQ/default.jpg"], ["title", "Website Design Tutorial: Photoshop to HTML5 and CSS the Right Way - Part V"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "hvvexW0QHSQ"]]
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.9ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 168 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 168)
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'r7xnKSPWTjo'
+new video inserted:  split_video_id[3] = r7xnKSPWTjo
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Education Education"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "HTML5 has been quite the buzzword for a while now and as developers we are stuck in between a massive demand and a lack of technical support. Devices and hardware that promised to be the bright future of HTML5 are not allowing us to do the things we want to. In this talk Chris Heilmann of Mozilla will show how we can juggle our demands and move forward towards a world where HTML5 is not a cool \"nice to have\" but the standard it set out to be. There is a lot to be defined and many great things brewing - we just need to push where movement is needed rather than going in lots of different directions."], ["duration", "00:53:18"], ["embedcode", "http://www.youtube.com/v/r7xnKSPWTjo?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=r7xnKSPWTjo&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/r7xnKSPWTjo/default.jpg"], ["title", "Broken promises of HTML5 - HTML5DevCon San Francisco"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "r7xnKSPWTjo"]]
+  [1m[36m (6.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 169 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 169)[0m
+  [1m[35m (3.1ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '1x6ed_ZbL6w'[0m
+new video inserted:  split_video_id[3] = 1x6ed_ZbL6w
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Howto Howto & Style"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "This overview describes the new features of HTML5, and how it can help create rich content within various browsers. Watch more at www.lynda.com This specific tutorial is a single movie from chapter one of the HTML5 for Flash Developers course presented by lynda.com author Lee Brimelow. The complete HTML5 for Flash Developers course has a total duration of 3 hours and 16 minutes, and shows Flash developers how to create dynamic content in the browser using HTML5, CSS, and other related technologies. HTML5 for Flash Developers table of contents: Introduction 1. Overview of HTML5 2. Transitioning from ActionScript to JavaScript 3. The Canvas Element 4. DOM Animation 5. Using CSS3 6. Incorporating Audio and Video 7. Incorporating 3D with WebGL 8. Useful Tools and Frameworks Conclusion"], ["duration", "00:05:27"], ["embedcode", "http://www.youtube.com/v/1x6ed_ZbL6w?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=1x6ed_ZbL6w&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/1x6ed_ZbL6w/default.jpg"], ["title", "What is HTML5? | lynda.com overview"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "1x6ed_ZbL6w"]]
+  [1m[35m (6.6ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 170 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 170)
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'q_O9_C2ZjoA'
+new video inserted:  split_video_id[3] = q_O9_C2ZjoA
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Paul Irish, from the Chrome Developer Relations team, walks through smart techniques to improve the performance of your app. He describes CSS reflows and how to avoid them, hardware accelerated CSS, animation optimization, web workers, benchmarking and build scripts."], ["duration", "00:28:40"], ["embedcode", "http://www.youtube.com/v/q_O9_C2ZjoA?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=q_O9_C2ZjoA&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/q_O9_C2ZjoA/default.jpg"], ["title", "HTML5, CSS3, and DOM Performance"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "q_O9_C2ZjoA"]]
+  [1m[36m (6.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 171 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 171)[0m
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bzOjbGx5kwc'[0m
+new video inserted:  split_video_id[3] = bzOjbGx5kwc
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Adobe VP Paul Gubbay briefly demonstrates making an animation in Adobe Edge; turning it into an app using PhoneGap; converting Flash Professional animation to HTML5; running CSS Shaders; and exporting \"liquid layouts\" from InDesign to HTML-based publications."], ["duration", "00:12:34"], ["embedcode", "http://www.youtube.com/v/bzOjbGx5kwc?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=bzOjbGx5kwc&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/bzOjbGx5kwc/default.jpg"], ["title", "Adobe Advances in HTML5"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "bzOjbGx5kwc"]]
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 172 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 172)
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Prkyd5n0P7k'
+new video inserted:  split_video_id[3] = Prkyd5n0P7k
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Colton McAnlis This session will present GRITS, a player vs. player shooter game, built entirely using Google technologies. In this talk, we'll walk through building an HTML5 canvas engine, serving the content, networking using Websockets, using NodeJS, social integration and more. Attendees to this session will walk away with a big-picture view of all the Google technologies that are relevant to web gaming, a deep understanding of how to get started with them, and have the ability to see them live, in action with the source code to the published game. For all I/O 2012 sessions, go to developers.google.com"], ["duration", "00:51:41"], ["embedcode", "http://www.youtube.com/v/Prkyd5n0P7k?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=Prkyd5n0P7k&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/Prkyd5n0P7k/default.jpg"], ["title", "Google I/O 2012 - GRITS: PvP Gaming with HTML5"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "Prkyd5n0P7k"]]
+  [1m[36m (6.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 173 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 173)[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bwOhfoewMYs'[0m
+new video inserted:  split_video_id[3] = bwOhfoewMYs
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Alex Danilo Innovative new features such as CSS Regions, Exclusions, Shaders, Compositing, and the Shadow DOM bring powerful capabilities to modern browsers. See demos and code and learn about the status of these new standards. Get an early look at the development workflow enabled by Adobe Shadow and learn about the open source project \"Brackets\", which is working to create a code editor for the web built entirely with web technologies. For all I/O 2012 sessions, go to developers.google.com"], ["duration", "01:01:10"], ["embedcode", "http://www.youtube.com/v/bwOhfoewMYs?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=bwOhfoewMYs&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/bwOhfoewMYs/default.jpg"], ["title", "Google I/O 2012 - New Web Tools and Advanced CSS/HTML5 Features from Adobe & Google"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "bwOhfoewMYs"]]
+  [1m[35m (6.6ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 174 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 174)
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'QcU_exb_biY'
+new video inserted:  split_video_id[3] = QcU_exb_biY
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "HTML5 overview and why you need it now. Thanks to our awesome friends from docstoc who are responsible for producing this content!"], ["duration", "00:02:24"], ["embedcode", "http://www.youtube.com/v/QcU_exb_biY?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=QcU_exb_biY&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/QcU_exb_biY/default.jpg"], ["title", "What is HTML5 & 5 Reasons to Use it"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "QcU_exb_biY"]]
+  [1m[36m (29.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 175 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 175)[0m
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Qr_gXgdB5Fs'[0m
+new video inserted:  split_video_id[3] = Qr_gXgdB5Fs
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Education Education"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "A Screencast of the HTML5 Presentation, delivered at Google Campus, London on 31st July 2012 by Tareq Fadel. The presentation showcases a lot of the new technologies emerging from HTML5 and how they are used today on the web to deliver rich media applications. Looking at the use of HTML5, CSS3 and JavaScript for desktop and mobile use. Presented by Tareq Fadel (twitter.com and Academy Class (www.academyclass.com)"], ["duration", "01:33:18"], ["embedcode", "http://www.youtube.com/v/Qr_gXgdB5Fs?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=Qr_gXgdB5Fs&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/Qr_gXgdB5Fs/default.jpg"], ["title", "HTML5: What's all the fuss about?"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "Qr_gXgdB5Fs"]]
+  [1m[35m (4.9ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 176 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 176)
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.2ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'X3Se49aJb2c'
+new video inserted:  split_video_id[3] = X3Se49aJb2c
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "Are you tired of little toy examples for individual HTML5/JS features? I am. So I set out to create a single app that weaves together all the most powerful JavaScript features of HTML5 (and friends!). What I built is an real-time, multi-player, cooperative/competitive game called \"We Puzzle It!\". This talk will show the code and motivations behind the game, illustrating practical uses for the various advanced HTML5 JavaScript APIs. Topics include: Web sockets Web workers Canvas Drag & Drop Local file access Audio/Video History Localstorage/sessionstorage ** Check out more educational content on open source software at marakana.com ** Head to http for more info on the event"], ["duration", "00:32:05"], ["embedcode", "http://www.youtube.com/v/X3Se49aJb2c?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=X3Se49aJb2c&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/X3Se49aJb2c/default.jpg"], ["title", "HTML5 JavaScript On Crack - HTML5 Dev Conf"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "X3Se49aJb2c"]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 177 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 177)[0m
+  [1m[35m (3.2ms)[0m  COMMIT
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'vErRfUFKn98'[0m
+new video inserted:  split_video_id[3] = vErRfUFKn98
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["description", "David Griffiths and Brett McLaughlin talk about HTML5, why it's important, and why it is deserves a series of O'Reilly Breakdowns."], ["duration", "00:05:08"], ["embedcode", "http://www.youtube.com/v/vErRfUFKn98?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=vErRfUFKn98&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/vErRfUFKn98/default.jpg"], ["title", "Why HTML5 O'Reilly Breakdowns?"], ["updated_at", Mon, 22 Oct 2012 19:38:35 UTC +00:00], ["views", nil], ["yt_video_id", "vErRfUFKn98"]]
+  [1m[35m (4.3ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 178 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 178)
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.2ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Kfi3uRJS6hA'
+new video inserted:  split_video_id[3] = Kfi3uRJS6hA
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Education Education"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:36 UTC +00:00], ["description", "Visit my website at thenewboston.com for all of my videos! My Google+ - https My Second YouTube Channel - www.youtube.com"], ["duration", "00:08:02"], ["embedcode", "http://www.youtube.com/v/Kfi3uRJS6hA?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=Kfi3uRJS6hA&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/Kfi3uRJS6hA/default.jpg"], ["title", "HTML5 Tutorial - 44 - Drag and Drop"], ["updated_at", Mon, 22 Oct 2012 19:38:36 UTC +00:00], ["views", nil], ["yt_video_id", "Kfi3uRJS6hA"]]
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 179 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 179)[0m
+  [1m[35m (3.2ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Pm6Ch4qoNe8'[0m
+new video inserted:  split_video_id[3] = Pm6Ch4qoNe8
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:36 UTC +00:00], ["description", "Kyle Simpson, senior software engineer at Zynga and co-author of O'Reilly's HTML5 Cookbook, discusses the building of a multiplayer online game that weaves together several advanced API's. Some of the main topics include: canvas appCache localStorage/sessionStorage History API Web Sockets Web Workers Local Files ** check out marakana.com for more educational videos and resources on open source developement"], ["duration", "00:42:22"], ["embedcode", "http://www.youtube.com/v/Pm6Ch4qoNe8?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=Pm6Ch4qoNe8&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/Pm6Ch4qoNe8/default.jpg"], ["title", "Advanced HTML5 JavaScript: Down 'n Dirty"], ["updated_at", Mon, 22 Oct 2012 19:38:36 UTC +00:00], ["views", nil], ["yt_video_id", "Pm6Ch4qoNe8"]]
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 180 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 180)
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '19372180'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", nil], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:39 UTC +00:00], ["description", "Conductor (2011) by Alexander Chen. Video capture. View live at: http://www.mta.me<br /><br />Conductor turns the New York subway system into an interactive string instrument. Using the MTA&#39;s actual subway schedule, the piece begins in realtime by spawning trains which departed in the last minute, then continues accelerating through a 24 hour loop. The visuals are based on Massimo Vignelli&#39;s 1972 diagram.<br /><br />More details at:<br />http://blog.chenalexander.com/2011/conductor-mta/<br /><br />http://www.mta.me<br />http://www.chenalexander.com<br />http://twitter.com/alexanderchen"], ["duration", "00:03:23"], ["embedcode", "http://player.vimeo.com/video/19372180"], ["is_complete", nil], ["keywords", nil], ["linkurl", "http://vimeo.com/19372180"], ["provider", "vimeo"], ["thumbnail_url", "http://b.vimeocdn.com/ts/122/747/122747711_200.jpg"], ["title", "Conductor: www.mta.me"], ["updated_at", Mon, 22 Oct 2012 19:38:39 UTC +00:00], ["views", 324925], ["yt_video_id", "19372180"]]
+  [1m[36m (21.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 181 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 181)[0m
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36mVideo Load (1.0ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '31179423'[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", nil], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:39 UTC +00:00], ["description", "Baroque.me (2011) by Alexander Chen. Video capture. http://www.baroque.me visualizes the first Prelude from Bach&#39;s Cello Suites. Using the math behind string length and pitch, it came from a simple idea: what if all the notes were drawn as strings? Instead of a stream of classical notation on a page, this interactive project highlights the music&#39;s underlying structure and subtle shifts.<br /><br />Grab and interact: http://www.baroque.me<br />More details at: http://blog.chenalexander.com/2011/baroque-bach-cello/<br /><br />Built in: HTML5 Canvas, Javascript, SoundManager<br />Made while a resident at Eyebeam (http://eyebeam.org)<br /><br />http://www.chenalexander.com<br />http://www.twitter.com/alexanderchen"], ["duration", "00:02:57"], ["embedcode", "http://player.vimeo.com/video/31179423"], ["is_complete", nil], ["keywords", nil], ["linkurl", "http://vimeo.com/31179423"], ["provider", "vimeo"], ["thumbnail_url", "http://b.vimeocdn.com/ts/209/922/209922239_200.jpg"], ["title", "Baroque.me: J.S. Bach - Cello Suite No. 1 - Prelude"], ["updated_at", Mon, 22 Oct 2012 19:38:39 UTC +00:00], ["views", 217327], ["yt_video_id", "31179423"]]
+  [1m[35m (13.5ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 182 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 182)
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.0ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '17180651'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", nil], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:40 UTC +00:00], ["description", "Kinect + Computer Vision + Javascript<br /><br />DepthJS is a web browser extension that allows any web page to interact with the Microsoft Kinect via Javascript.<br /><br />Find out more at http://depthjs.media.mit.edu<br /><br />Navigating the web is only one application of the framework we built - that is, we envision all sorts of applications that run in the browser, from games to specific utilities for specific sites. The great part is that now web developers who specialize in Javascript can work with the Kinect without having to learn any special languages or code. We believe this will allow a new set of interactions beyond what we first developed.<br /><br />DepthJS is open source under the AGPL license. http://github.com/doug/depthjs<br /><br />Created by (in alphabetical order)<br />Aaron Zinman - http://web.media.mit.edu/~azinman<br />Doug Fritz - http://www.dougfritz.com<br />Greg Elliott - http://gregtelliott.com<br />Roy Shilkrot - http://www.morethantechnical.com/<br /><br />We are students in:<br />Fluid Interfaces Group - http://fluid.media.mit.edu<br />Information Ecology Group - http://eco.media.mit.edu"], ["duration", "00:01:23"], ["embedcode", "http://player.vimeo.com/video/17180651"], ["is_complete", nil], ["keywords", nil], ["linkurl", "http://vimeo.com/17180651"], ["provider", "vimeo"], ["thumbnail_url", "http://b.vimeocdn.com/ts/106/362/106362522_200.jpg"], ["title", "DepthJS"], ["updated_at", Mon, 22 Oct 2012 19:38:40 UTC +00:00], ["views", 473152], ["yt_video_id", "17180651"]]
+  [1m[36m (4.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 183 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 183)[0m
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '6691519'[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", nil], ["continue", nil], ["created_at", Mon, 22 Oct 2012 19:38:40 UTC +00:00], ["description", "Are you interested in HTML 5 and what&#39;s coming down the pipeline but haven&#39;t had time to read any articles yet? I&#39;ve put together an educational \"Introduction to HTML 5\" video that goes over many of the major aspects of this new standard, including:<br /><br />* Web vector graphics with the Canvas tag and Scalable Vector Graphics (SVG)<br />* The Geolocation API<br />* HTML 5 Video<br />* The HTML 5 Database and Application Cache<br />* Web workers<br /><br />The video is chock full of demos and sample source code.<br /><br />(Note to moderators: HTML 5 is a public open web standard. I&#39;m helping to educate web developers and raise awareness of this open web standard)."], ["duration", "00:41:55"], ["embedcode", "http://player.vimeo.com/video/6691519"], ["is_complete", nil], ["keywords", nil], ["linkurl", "http://vimeo.com/6691519"], ["provider", "vimeo"], ["thumbnail_url", "http://b.vimeocdn.com/ts/262/217/26221756_200.jpg"], ["title", "Introduction to HTML 5"], ["updated_at", Mon, 22 Oct 2012 19:38:40 UTC +00:00], ["views", 99292], ["yt_video_id", "6691519"]]
+  [1m[35m (38.6ms)[0m  COMMIT
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 184 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 184)
+  [1m[36m (27.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.0ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '6353874'
+  [1m[36mVideo Load (0.9ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '45274844'[0m
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '17095170'
+  [1m[36mVideo Load (0.9ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '21636708'[0m
+  [1m[35mVideo Load (1.0ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '22397786'
+  [1m[36mVideo Load (1.0ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '37974749'[0m
+  [1m[35mVideo Load (2.2ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mChannel Exists (0.7ms)[0m  SELECT 1 FROM "channels" WHERE ("channels"."name" = 'html5' AND "channels"."id" != 7) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "channels" SET "querytime" = '2012-10-22 19:38:40.000000', "thumbnail_url" = 'http://i.ytimg.com/vi/siOHh0uzcuY/default.jpg', "updated_at" = '2012-10-22 19:38:40.898975' WHERE "channels"."id" = 7[0m
+  [1m[35m (8.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/channels/7/videos
+Completed 302 Found in 7931ms (ActiveRecord: 965.5ms)
+
+
+Started GET "/channels/7/videos" for 127.0.0.1 at 2012-10-22 12:38:41 -0700
+Processing by ChannelsController#videos as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mChannel Load (1.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mVideo Load (2.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7[0m
+  Rendered channels/videos.html.erb within layouts/application (159.9ms)
+  Rendered layouts/_stylesheets.html.erb (8.2ms)
+  Rendered layouts/_header.html.erb (8.9ms)
+  Rendered layouts/_footer.html.erb (6.7ms)
+Completed 200 OK in 321ms (Views: 279.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:41 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:41 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:41 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:38:41 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-10-22 12:38:54 -0700
+Processing by ChannelsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mChannel Load (1.2ms)[0m  SELECT "channels".* FROM "channels" ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (1.8ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (131.2ms)
+  Rendered layouts/_stylesheets.html.erb (11.2ms)
+  Rendered layouts/_header.html.erb (7.1ms)
+  Rendered layouts/_footer.html.erb (6.6ms)
+Completed 200 OK in 289ms (Views: 232.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:55 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:55 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:55 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:38:55 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/11/channels" for 127.0.0.1 at 2012-10-22 12:38:59 -0700
+Processing by UsersController#channels as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."user_id" = 11[0m
+  [1m[35mVideo Load (26.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  Rendered users/channels.html.erb within layouts/application (225.1ms)
+  Rendered layouts/_stylesheets.html.erb (8.0ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (7.4ms)
+Completed 200 OK in 378ms (Views: 297.1ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:59 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:59 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:38:59 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:38:59 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2012-10-22 12:39:15 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-22 12:39:16 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (0.9ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (0.6ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_stylesheets.html.erb (8.1ms)
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (6.3ms)
+Completed 200 OK in 267ms (Views: 120.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:39:16 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:39:16 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:39:16 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:39:16 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-22 12:39:43 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_stylesheets.html.erb (9.9ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (5.5ms)
+Completed 200 OK in 121ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:39:43 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:39:44 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:39:44 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2012-10-22 12:39:44 -0700
+Served asset /facebook_32.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:39:44 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2012-10-22 12:39:47 -0700
+
+
+Started GET "/auth/facebook/callback?state=3ce7070ca2ad586fa96502f7e1b58f1eda55fa21fdc147b3&code=AQAJ20d5SsR_JuHtW-tx8VY_K-DENhgnPaOKRHBFPdFtaIFDH4ZHuCoGG22oR1nrMPmSjxoXCnBLjnftdxqhisp5zXKIruJMhR5sjs5zeRPp_TD5Z6vwP7o8sxgg-L5yz94Fi8-EMeUACk7mu2lisafF3W9fi5gYVa07GztCbHgqY4wuaxn4OQI8FiIAIF0LrkW4QIa3K-NNnS8lzspRQotj" for 127.0.0.1 at 2012-10-22 12:40:01 -0700
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"state"=>"3ce7070ca2ad586fa96502f7e1b58f1eda55fa21fdc147b3", "code"=>"AQAJ20d5SsR_JuHtW-tx8VY_K-DENhgnPaOKRHBFPdFtaIFDH4ZHuCoGG22oR1nrMPmSjxoXCnBLjnftdxqhisp5zXKIruJMhR5sjs5zeRPp_TD5Z6vwP7o8sxgg-L5yz94Fi8-EMeUACk7mu2lisafF3W9fi5gYVa07GztCbHgqY4wuaxn4OQI8FiIAIF0LrkW4QIa3K-NNnS8lzspRQotj", "provider"=>"facebook"}
+  [1m[35mAuthentication Load (0.8ms)[0m  SELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'facebook' AND "authentications"."uid" = '1722351527' LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2012-10-22 19:40:04.390376', "sign_in_count" = 2, "updated_at" = '2012-10-22 19:40:04.393763' WHERE "users"."id" = 11[0m
+  [1m[35m (22.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 25.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-22 12:40:04 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT "languages".* FROM "languages" 
+Redirected to http://localhost:3000/users/11/channels
+Completed 302 Found in 41ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/11/channels" for 127.0.0.1 at 2012-10-22 12:40:04 -0700
+Processing by UsersController#channels as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."user_id" = 11
+  [1m[36mVideo Load (3.0ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  Rendered users/channels.html.erb within layouts/application (26.3ms)
+  Rendered layouts/_stylesheets.html.erb (7.6ms)
+  Rendered layouts/_header.html.erb (9.0ms)
+  Rendered layouts/_footer.html.erb (10.2ms)
+Completed 200 OK in 164ms (Views: 123.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:40:04 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:40:04 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:40:04 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:40:04 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2012-10-22 12:40:12 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-22 12:40:12 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[35m (12.0ms)[0m  SELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')
+  [1m[36mChannel Load (1.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (0.7ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_stylesheets.html.erb (7.7ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (8.1ms)
+Completed 200 OK in 273ms (Views: 117.4ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:40:13 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:40:13 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:40:13 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:40:13 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/channels?search=selected" for 127.0.0.1 at 2012-10-22 12:40:38 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected"}
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (0.6ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_stylesheets.html.erb (7.6ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (5.8ms)
+Completed 200 OK in 149ms (Views: 104.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:40:38 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:40:38 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:40:38 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:40:39 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-22 12:43:22 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_stylesheets.html.erb (7.6ms)
+  Rendered layouts/_header.html.erb (8.2ms)
+  Rendered layouts/_footer.html.erb (4.9ms)
+Completed 200 OK in 130ms (Views: 122.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:23 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:23 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:23 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2012-10-22 12:43:23 -0700
+Served asset /facebook_32.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:43:23 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-10-22 12:43:26 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.8ms)
+  Rendered users/new.html.erb within layouts/application (48.4ms)
+  Rendered layouts/_stylesheets.html.erb (7.5ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (102.6ms)
+Completed 200 OK in 302ms (Views: 256.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:26 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:26 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:26 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:43:26 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-22 12:43:28 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_stylesheets.html.erb (7.6ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (4.8ms)
+Completed 200 OK in 113ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:28 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:28 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:28 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:43:28 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2012-10-22 12:43:28 -0700
+Served asset /facebook_32.png - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2012-10-22 12:43:32 -0700
+
+
+Started GET "/auth/facebook/callback?state=2c184c0c0f3db44c38bc0d23645adbb14b73ddeca7f4d4b1&code=AQB36OZu0SjDZ_J9RU5yYSwUxGITdBpYMCIWtnUcfwolil9FxGfeGOJInaoKWJVzcO88gOSpo1CGA2Pq9wPh-r2-AWyqAELWd24wzaYdH4pX1RHcpluD4XJaL4wHBKTckVcQWA1nvYW05rTUHI5Co7ljJAfg_bHiCy_Xs7vORaqdz_DO6g7Eqymj1pDNVtbSC8nOGe5BAJInQsrBiIKoD0Ud" for 127.0.0.1 at 2012-10-22 12:43:33 -0700
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"state"=>"2c184c0c0f3db44c38bc0d23645adbb14b73ddeca7f4d4b1", "code"=>"AQB36OZu0SjDZ_J9RU5yYSwUxGITdBpYMCIWtnUcfwolil9FxGfeGOJInaoKWJVzcO88gOSpo1CGA2Pq9wPh-r2-AWyqAELWd24wzaYdH4pX1RHcpluD4XJaL4wHBKTckVcQWA1nvYW05rTUHI5Co7ljJAfg_bHiCy_Xs7vORaqdz_DO6g7Eqymj1pDNVtbSC8nOGe5BAJInQsrBiIKoD0Ud", "provider"=>"facebook"}
+  [1m[35mAuthentication Load (0.7ms)[0m  SELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'facebook' AND "authentications"."uid" = '1722351527' LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2012-10-22 19:40:04.390376', "current_sign_in_at" = '2012-10-22 19:43:34.595770', "sign_in_count" = 3, "updated_at" = '2012-10-22 19:43:34.597856' WHERE "users"."id" = 11[0m
+  [1m[35m (23.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 25.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-22 12:43:34 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')
+  [1m[36mChannel Load (1.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT "languages".* FROM "languages" 
+Redirected to http://localhost:3000/users/11/channels
+Completed 302 Found in 44ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users/11/channels" for 127.0.0.1 at 2012-10-22 12:43:34 -0700
+Processing by UsersController#channels as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "11"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."user_id" = 11
+  [1m[36mVideo Load (1.9ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  Rendered users/channels.html.erb within layouts/application (25.6ms)
+  Rendered layouts/_stylesheets.html.erb (7.8ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (8.6ms)
+Completed 200 OK in 275ms (Views: 234.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:35 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:35 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:35 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:43:35 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2012-10-22 12:43:39 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-22 12:43:39 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_stylesheets.html.erb (10.7ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (5.3ms)
+Completed 200 OK in 152ms (Views: 107.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:39 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:39 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:43:39 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:43:39 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-22 12:44:13 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_stylesheets.html.erb (8.1ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (7.1ms)
+Completed 200 OK in 219ms (Views: 215.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:44:13 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:44:13 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:44:13 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:44:13 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2012-10-22 12:44:13 -0700
+Served asset /facebook_32.png - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2012-10-22 12:44:16 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-22 12:45:07 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (0.9ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (0.8ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_stylesheets.html.erb (7.4ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (5.3ms)
+Completed 200 OK in 174ms (Views: 106.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:45:07 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:45:07 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:45:07 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:45:07 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-22 12:45:10 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_stylesheets.html.erb (8.1ms)
+  Rendered layouts/_header.html.erb (8.4ms)
+  Rendered layouts/_footer.html.erb (5.0ms)
+Completed 200 OK in 220ms (Views: 214.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-22 12:45:10 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-22 12:45:10 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-22 12:45:10 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2012-10-22 12:45:10 -0700
+Served asset /facebook_32.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-22 12:45:10 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2012-10-22 12:45:12 -0700
