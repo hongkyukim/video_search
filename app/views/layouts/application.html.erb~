@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VideoTouch</title>
+  <!--<title>VideoTouch</title>-->
+  <title><%= h(yield(:title) || "Untitled") %></title>
 
   <!--<%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag 'mobile' if mobile_device? %>-->

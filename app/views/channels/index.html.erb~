@@ -1,3 +1,4 @@
+<% title "All Channels" %>
 
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-0949416212566989";
@@ -43,7 +44,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <% if true %>
 <% if !@channels.nil? %>
 <div id="videoguide">
-
+ 
   <% @channels.each do |chan| %>
 
      <td>
