@@ -9,13 +9,24 @@
     <%= stylesheet_link_tag  "/jqtouch/jqtouch.min.css", "/jqtouch/themes/apple/theme.min.css", "/jqtouch/mobile.css" %>
     <%= javascript_include_tag "/jqtouch/jquery.1.3.2.min.js", "/jqtouch/jqtouch.min.js", "mobile" %>
     <!--<%= javascript_include_tag "/jqtouch/jqtouch.min.js", "mobile" %>-->
-   <%= yield(:head) %>
+    <%= yield(:head) %>
    
     <style type="text/css" media="screen">
          in video, out video {
              display none;
          }
     </style>
+
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-0949416212566989";
+/* android home */
+google_ad_slot = "5719225101";
+google_ad_width = 320;
+google_ad_height = 50;
+//-->
+</script>
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
