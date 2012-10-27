@@ -14,6 +14,8 @@ class Video < ActiveRecord::Base
   scope :completes,   where(:is_complete => true)
   scope :incompletes, where(:is_complete => false)
 
+  MaxCount = 10; ### 10
+
   def create_comment(comment)
     begin
       comments.create(:comment => comment)
@@ -116,8 +118,9 @@ class Video < ActiveRecord::Base
         res = yt_session.videos_by(video_yt_options(f)) ###f.queries)
     end
 
+    curCount = 0;
     ### search thru youtube
-    res.videos.each { |v| add_video(v, channel_id) }
+    res.videos.each { |v| curCount = add_video(v, channel_id, curCount) }
 
    
     
@@ -132,7 +135,7 @@ class Video < ActiveRecord::Base
 
   end
 
-  def self.add_video(v, channel_id)
+  def self.add_video(v, channel_id, curCounter)
 
     return if v.title.empty?
     return if v.description.nil?
@@ -153,9 +156,15 @@ class Video < ActiveRecord::Base
 
     
     if mvideo.empty?
+
+       if MaxCount < curCounter
+          return curCounter
+       end
+       curCounter += 1
+
        ###debugger
-       logger.info 'new video inserted:  split_video_id[3] = ' + split_video_id[3]
-       logger.info 'new video inserted: provider =  ' + prov
+       ##logger.info 'new video inserted:  split_video_id[3] = ' + split_video_id[3]
+       ##logger.info 'new video inserted: provider =  ' + prov
        ##
        ##thumbnail_url has   v.thumbnails[0].url for thumbnails jpg
        
@@ -188,6 +197,7 @@ class Video < ActiveRecord::Base
        @channel = Channel.find_by_id(channel_id)
        mvideo.each { |m| Channel.video_add(@channel, m) }
     end 
+    curCounter
   end
 
   private

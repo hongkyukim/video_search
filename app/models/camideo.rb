@@ -64,12 +64,12 @@ class Camideo < ActiveRecord::Base
 
   def self.get_OneVideoSearch_camideo(f)
        ### dm search is not good
-       ###self.get_OneVideoSearch(f, 'dailymotion')
+     self.get_OneVideoSearch(f, 'dailymotion')
        ### vimeo is good
-     ###self.get_OneVideoSearch(f, 'vimeo')
+     self.get_OneVideoSearch(f, 'vimeo')
        ##self.get_OneVideoSearch(f, 'myspace')     ## error
-       ##self.get_OneVideoSearch(f, 'metacafe')
-       ##self.get_OneVideoSearch(f, 'soundcloud')
+     self.get_OneVideoSearch(f, 'metacafe')
+     self.get_OneVideoSearch(f, 'soundcloud')
        ###self.get_OneVideoSearch(f, 'youtube')
   end
 
@@ -120,6 +120,9 @@ class Camideo < ActiveRecord::Base
         url = url + "&filters=featured&limit=5&page=1"
     end
 
+    ### vimeo example "http://www.camideo.com/api/?key=0...e1&source=vimeo&q=tiger+attack 
+    ###    +human&response=json&page=1&sort=most_played&page=1&per_page=5&summary_response=1&full_response=1"
+
      ###"http://www.camideo.com/api/?key=0a6e4aa28d539dd51821182be34028e1&source=youtube&q=chocolate&response=json&page=1"
      #####response = Net::HTTP.get_response("example.com","/?search=thing&format=json")
      ###response = Net::HTTP.get_response(url, parameters)
@@ -131,21 +134,42 @@ class Camideo < ActiveRecord::Base
 
      ###buffer = open(url).read
     buffer = open(URI.encode(url), "UserAgent" => "Ruby-Wget").read
+
     if ( !buffer )
          ### error
          logger.info 'Alert camideo: provider ' + provider + ' buffer is empty'
+
         return
     end
-    response = JSON.parse(buffer)
- debugger 
-    if response.has_key? 'Error'
-          raise "web service error in JSON.parse"
+
+    if ( buffer.include? "Fatal error" )
+         ### error
+         logger.info 'Alert camideo: provider ' + provider + ' Fatal error'
+
+        return
     end
 
-    if ( response &&  response['Camideo']['Error'] )
-         ### error
-         logger.info 'Alert camideo: ' + provider + ' failed:'
-         return
+
+
+    ### Uncaught exception 'VimeoAPIException' with message 'Search rate limit exceeded'
+    response = JSON.parse(buffer)
+    if response
+	    if response.has_key? 'Error'
+		  raise "web service error in JSON.parse"
+	    end
+
+	    if ( response['Camideo'] && response['Camideo']['Error'] )
+		 ### error
+		 logger.info 'Alert camideo: ' + provider + ' failed:'
+
+		 return
+            else
+
+                 return
+	    end
+    else
+
+            return
     end
 
     curCount = 0;
