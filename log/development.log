@@ -17394,3 +17394,839 @@ Served asset /custom.css - 304 Not Modified (0ms)
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-23 17:22:13 -0700
 Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-26 16:51:43 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[36m (43.3ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (2.2ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (11.0ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (192.2ms)
+  Rendered layouts/_stylesheets.html.erb (78.8ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (7.5ms)
+Completed 200 OK in 2939ms (Views: 1400.3ms | ActiveRecord: 1277.3ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 16:51:48 -0700
+Served asset /blueprint/screen.css - 200 OK (18ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 16:51:48 -0700
+Served asset /blueprint/print.css - 200 OK (6ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 16:51:48 -0700
+Served asset /custom.css - 200 OK (7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-10-26 16:51:48 -0700
+Served asset /logo.png - 200 OK (186ms)
+
+
+Started GET "/channels/1/videos" for 127.0.0.1 at 2012-10-26 16:51:50 -0700
+Processing by ChannelsController#videos as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (37.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35m (39.9ms)[0m  SELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 1
+  [1m[36mFeed Load (0.8ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 1[0m
+  [1m[35mVideo Load (200.8ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'NWtjhpt5jOE'
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (28.6ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 1 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'T0kzdu_wTM0'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 2 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'tU9pkFsdYpg'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.2ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'UHPdIeLtzCM'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 4 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'cOA_OfvlwtM'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 5 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'eXGoHFDtsgE'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 9 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'epj13fuba3U'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 6 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'JBwnzXPAgXg'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'jYQq15Wl8cc'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.7ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 8 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '59Smxe8eGFw'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 13 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'anCdfGF9MQE'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (1.0ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 11 LIMIT 1
+  [1m[36mVideo Load (1.4ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '5dZ8PXABC30'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (1.0ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 12 LIMIT 1[0m
+  [1m[35mVideo Load (1.3ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'yZUjZDUu9Mo'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 17 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'IbbVxkMRqXA'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 18 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'pgNt77Z3r2k'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 15 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'BYJzuxetGTo'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 14 LIMIT 1[0m
+  [1m[35mVideo Load (1.4ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Aff1eFbQVHw'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.9ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 16 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '0G-3SqXydZc'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (1.1ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 24 LIMIT 1[0m
+  [1m[35mVideo Load (1.5ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'iaLbEFSPiw8'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.9ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 10 LIMIT 1
+  [1m[36mVideo Load (1.3ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'R8z1OuAYmZE'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (1.0ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 20 LIMIT 1[0m
+  [1m[35mVideo Load (1.5ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bH_tg3UgoOY'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 19 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'BvvdOOTeJUk'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 22 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'NeDwhk-Snb8'
+new video inserted:  split_video_id[3] = NeDwhk-Snb8
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (248.3ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Animals Pets & Animals"], ["continue", nil], ["created_at", Fri, 26 Oct 2012 23:51:53 UTC +00:00], ["description", "dame nature you scared!"], ["duration", "00:01:42"], ["embedcode", "http://www.youtube.com/v/NeDwhk-Snb8?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=NeDwhk-Snb8&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/NeDwhk-Snb8/default.jpg"], ["title", "White Tigers Attack Zookeeper"], ["updated_at", Fri, 26 Oct 2012 23:51:53 UTC +00:00], ["views", nil], ["yt_video_id", "NeDwhk-Snb8"]]
+  [1m[36m (38.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 185 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (23.2ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (1, 185)[0m
+  [1m[35m (31.0ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'DWpo74Ba1aA'[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1
+  [1m[36mVideo Exists (0.7ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 21 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'NHx5RMTivaQ'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 1 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1 AND "videos"."id" = 25 LIMIT 1
+Alert camideo: vimeo failed:
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mChannel Exists (0.7ms)[0m  SELECT 1 FROM "channels" WHERE ("channels"."name" = 'tiger attack human' AND "channels"."id" != 1) LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mUPDATE "channels" SET "querytime" = '2012-10-26 23:51:54.000000', "updated_at" = '2012-10-26 23:51:54.586137' WHERE "channels"."id" = 1[0m
+  [1m[35m (38.6ms)[0m  COMMIT
+  [1m[36mChannel Load (0.5ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mVideo Load (2.8ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+  Rendered channels/videos.html.erb within layouts/application (123.2ms)
+  Rendered layouts/_stylesheets.html.erb (4.7ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (3.7ms)
+Completed 200 OK in 4266ms (Views: 201.3ms | ActiveRecord: 755.8ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 16:51:54 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 16:51:54 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 16:51:54 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/videos/185" for 127.0.0.1 at 2012-10-26 16:51:58 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"185"}
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "185"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1
+  Rendered videos/show.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_stylesheets.html.erb (4.7ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 198ms (Views: 176.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 16:51:58 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 16:51:58 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 16:51:58 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-10-26 17:05:19 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mChannel Load (1.1ms)[0m  SELECT "channels".* FROM "channels" ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (0.8ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_stylesheets.html.erb (4.5ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (4.3ms)
+Completed 200 OK in 125ms (Views: 78.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:20 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:20 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:20 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/channels/1/videos" for 127.0.0.1 at 2012-10-26 17:05:21 -0700
+Processing by ChannelsController#videos as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36mVideo Load (2.2ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  Rendered channels/videos.html.erb within layouts/application (127.2ms)
+  Rendered layouts/_stylesheets.html.erb (4.6ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (2.8ms)
+Completed 200 OK in 222ms (Views: 185.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:21 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:21 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:22 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/videos/55" for 127.0.0.1 at 2012-10-26 17:05:23 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[35mVideo Load (0.7ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "55"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m
+  Rendered videos/show.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_stylesheets.html.erb (4.7ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (3.8ms)
+Completed 200 OK in 80ms (Views: 57.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:23 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:23 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:23 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/videos/25" for 127.0.0.1 at 2012-10-26 17:05:29 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mVideo Load (0.8ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "25"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m
+  Rendered videos/show.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_stylesheets.html.erb (4.7ms)
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (3.7ms)
+Completed 200 OK in 88ms (Views: 64.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:29 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:29 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:29 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-10-26 17:05:35 -0700
+Processing by ChannelsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "channels" 
+  [1m[36mChannel Load (1.1ms)[0m  [1mSELECT "channels".* FROM "channels" ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (0.5ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (24.4ms)
+  Rendered layouts/_stylesheets.html.erb (4.4ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (89.7ms)
+Completed 200 OK in 211ms (Views: 172.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:36 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:36 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 17:05:36 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/channels/6/videos" for 127.0.0.1 at 2012-10-26 17:05:38 -0700
+Processing by ChannelsController#videos as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mChannel Load (0.5ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 6[0m
+  [1m[35mFeed Load (0.6ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 6
+  [1m[36mVideo Load (39.8ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'F5B6inKoJxQ'[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 6 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 6 AND "videos"."id" = 155 LIMIT 1[0m
+Completed 500 Internal Server Error in 755ms
+
+JSON::ParserError (757: unexpected token at '<br />
+<b>Fatal error</b>:  Uncaught exception 'VimeoAPIException' with message 'Search rate limit exceeded' in /home/souvik/public_html/camideo/api/vimeo/vimeo.php:239
+Stack trace:
+#0 /home/souvik/public_html/camideo/api/vimeo/vimeo.php(275): phpVimeo-&gt;_request('vimeo.videos.se...', Array, 'GET', 'http://vimeo.co...', true)
+#1 /home/souvik/public_html/camideo/api/vimeo-header.php(38): phpVimeo-&gt;call('vimeo.videos.se...', Array)
+#2 /home/souvik/public_html/camideo/api/vimeo-json.php(5): include('/home/souvik/pu...')
+#3 /home/souvik/public_html/camideo/api/index.php(51): include('/home/souvik/pu...')
+#4 {main}
+  thrown in <b>/home/souvik/public_html/camideo/api/vimeo/vimeo.php</b> on line <b>239</b><br />
+'):
+  app/models/camideo.rb:139:in `get_OneVideoSearch'
+  app/models/camideo.rb:69:in `get_OneVideoSearch_camideo'
+  app/models/feed.rb:24:in `search_camideo'
+  app/models/video.rb:130:in `get_OneVideoSearch'
+  app/models/feed.rb:17:in `block in make_firstfeed'
+  app/models/feed.rb:17:in `make_firstfeed'
+  app/controllers/channels_controller.rb:212:in `videos'
+
+
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.5ms)
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.5ms)
+
+
+Started GET "/channels/5/videos" for 127.0.0.1 at 2012-10-26 17:06:36 -0700
+Processing by ChannelsController#videos as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 5
+  [1m[36mFeed Load (0.7ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 5[0m
+  [1m[35mVideo Load (1.2ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'QBPc7RK8a0Q'
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.9ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 130 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Hn52cJAVXbY'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 131 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'xCf950nbCVY'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (1.0ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 137 LIMIT 1
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '9RtvrM-6RWs'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 136 LIMIT 1[0m
+  [1m[35mVideo Load (1.2ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'sRS5rbLIwbE'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 132 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '2Q7b4ubdwNk'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (1.1ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 133 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Gugp_pwaoZQ'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 134 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'OlppcKSI198'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 135 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'qCX9jBL5f-E'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 139 LIMIT 1
+  [1m[36mVideo Load (1.3ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'k_bXcGn9HiY'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (1.0ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 142 LIMIT 1[0m
+  [1m[35mVideo Load (1.4ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'R59Kqdgw-ko'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.9ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 141 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '30MAR4ZcaR4'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 138 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'm2QQFG9_C-w'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 145 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'vH8IeyWZoWU'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 147 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'L0-1B4qgd2s'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 140 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'CRCYiI6n5jE'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 143 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'nQM11QqIzDA'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 146 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'xxJu25-y14U'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 144 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'cP5wxiOjQr8'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 151 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'q2ZW0EvMzSM'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 150 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'hyq3EFARLNA'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 149 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '0Af39Hf5lZQ'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 148 LIMIT 1[0m
+  [1m[35mVideo Load (1.2ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'V4Efv7IT28E'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (1.3ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 153 LIMIT 1
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'mw4ZORGREqQ'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 152 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'qVaVp12WI0A'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 5 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 5 AND "videos"."id" = 154 LIMIT 1
+Completed 500 Internal Server Error in 1788ms
+
+JSON::ParserError (757: unexpected token at '<br />
+<b>Fatal error</b>:  Uncaught exception 'VimeoAPIException' with message 'Search rate limit exceeded' in /home/souvik/public_html/camideo/api/vimeo/vimeo.php:239
+Stack trace:
+#0 /home/souvik/public_html/camideo/api/vimeo/vimeo.php(275): phpVimeo-&gt;_request('vimeo.videos.se...', Array, 'GET', 'http://vimeo.co...', true)
+#1 /home/souvik/public_html/camideo/api/vimeo-header.php(38): phpVimeo-&gt;call('vimeo.videos.se...', Array)
+#2 /home/souvik/public_html/camideo/api/vimeo-json.php(5): include('/home/souvik/pu...')
+#3 /home/souvik/public_html/camideo/api/index.php(51): include('/home/souvik/pu...')
+#4 {main}
+  thrown in <b>/home/souvik/public_html/camideo/api/vimeo/vimeo.php</b> on line <b>239</b><br />
+'):
+  app/models/camideo.rb:139:in `get_OneVideoSearch'
+  app/models/camideo.rb:69:in `get_OneVideoSearch_camideo'
+  app/models/feed.rb:24:in `search_camideo'
+  app/models/video.rb:130:in `get_OneVideoSearch'
+  app/models/feed.rb:17:in `block in make_firstfeed'
+  app/models/feed.rb:17:in `make_firstfeed'
+  app/controllers/channels_controller.rb:212:in `videos'
+
+
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.7ms)
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/channels/6/videos" for 127.0.0.1 at 2012-10-26 17:09:55 -0700
+Processing by ChannelsController#videos as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mChannel Load (0.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 6[0m
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 6
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'F5B6inKoJxQ'[0m
+  [1m[35mChannel Load (0.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 6 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 6 AND "videos"."id" = 155 LIMIT 1[0m
+Completed 500 Internal Server Error in 1197ms
+
+JSON::ParserError (757: unexpected token at '<br />
+<b>Fatal error</b>:  Uncaught exception 'VimeoAPIException' with message 'Search rate limit exceeded' in /home/souvik/public_html/camideo/api/vimeo/vimeo.php:239
+Stack trace:
+#0 /home/souvik/public_html/camideo/api/vimeo/vimeo.php(275): phpVimeo-&gt;_request('vimeo.videos.se...', Array, 'GET', 'http://vimeo.co...', true)
+#1 /home/souvik/public_html/camideo/api/vimeo-header.php(38): phpVimeo-&gt;call('vimeo.videos.se...', Array)
+#2 /home/souvik/public_html/camideo/api/vimeo-json.php(5): include('/home/souvik/pu...')
+#3 /home/souvik/public_html/camideo/api/index.php(51): include('/home/souvik/pu...')
+#4 {main}
+  thrown in <b>/home/souvik/public_html/camideo/api/vimeo/vimeo.php</b> on line <b>239</b><br />
+'):
+  app/models/camideo.rb:139:in `get_OneVideoSearch'
+  app/models/camideo.rb:69:in `get_OneVideoSearch_camideo'
+  app/models/feed.rb:24:in `search_camideo'
+  app/models/video.rb:130:in `get_OneVideoSearch'
+  app/models/feed.rb:17:in `block in make_firstfeed'
+  app/models/feed.rb:17:in `make_firstfeed'
+  app/controllers/channels_controller.rb:212:in `videos'
+
+
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/channels/7/videos" for 127.0.0.1 at 2012-10-26 17:10:16 -0700
+Processing by ChannelsController#videos as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mChannel Load (0.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 7
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 7[0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'siOHh0uzcuY'
+  [1m[36mChannel Load (0.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 156 LIMIT 1
+  [1m[36mVideo Load (1.2ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Mp0f0zTPLec'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 157 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'mzPxo7Y6JyA'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (1.0ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 158 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'qzA60hHca9s'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 159 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'tYrND5hMY3A'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 160 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'lcD9CF0bxyk'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 161 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'EdDc7sWjCL4'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 166 LIMIT 1
+  [1m[36mVideo Load (1.4ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'x4gJU8Mn8-4'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 163 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '6EJ801el-I8'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (1.1ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 165 LIMIT 1
+  [1m[36mVideo Load (1.4ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '1x6ed_ZbL6w'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (1.0ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 170 LIMIT 1[0m
+  [1m[35mVideo Load (1.3ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'q_O9_C2ZjoA'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 171 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bzOjbGx5kwc'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 172 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'GmRLoDeRgDY'
+new video inserted:  split_video_id[3] = GmRLoDeRgDY
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Education Education"], ["continue", nil], ["created_at", Sat, 27 Oct 2012 00:10:18 UTC +00:00], ["description", "HTML5 for Beginners - 01 What Is HTML5 - 1"], ["duration", "00:07:48"], ["embedcode", "http://www.youtube.com/v/GmRLoDeRgDY?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=GmRLoDeRgDY&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/GmRLoDeRgDY/default.jpg"], ["title", "HTML5 for Beginners - 01 What Is HTML5 - 1"], ["updated_at", Sat, 27 Oct 2012 00:10:18 UTC +00:00], ["views", nil], ["yt_video_id", "GmRLoDeRgDY"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (1.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 186 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 186)[0m
+  [1m[35m (3.0ms)[0m  COMMIT
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'feML6qwyWGs'[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 167 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'QcU_exb_biY'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 175 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'vErRfUFKn98'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 178 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bwOhfoewMYs'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 174 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Prkyd5n0P7k'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 173 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Qr_gXgdB5Fs'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 176 LIMIT 1
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '_NSJd_0BkF0'[0m
+new video inserted:  split_video_id[3] = _NSJd_0BkF0
+new video inserted: provider =  youtube
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", "Education Education"], ["continue", nil], ["created_at", Sat, 27 Oct 2012 00:10:18 UTC +00:00], ["description", "Transform HTML Into HTML5 Featuring Aquent's Summer of Learning instructor, Jim Webb By the end of this webcast, you'll understand the collection of technologies known loosely as HTML5, and what you can start using today. We'll focus on HTML specifically, and you'll update an older page to use new HTML5 syntax. You'll know how to avoid problems with older browsers, and the benefits of using HTML5 at all. REMINDER: This is a fast-paced webcast, designed for an audience with existing HTML, CSS and Javascript knowledge. If you have specific questions about this content, please join our forum at thesummeroflearning.com"], ["duration", "00:27:57"], ["embedcode", "http://www.youtube.com/v/_NSJd_0BkF0?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=_NSJd_0BkF0&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/_NSJd_0BkF0/default.jpg"], ["title", "Webcast: Transform HTML Into HTML5"], ["updated_at", Sat, 27 Oct 2012 00:10:18 UTC +00:00], ["views", nil], ["yt_video_id", "_NSJd_0BkF0"]]
+  [1m[35m (7.2ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (1.0ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 187 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 187)
+  [1m[36m (5.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'X3Se49aJb2c'
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 177 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Kfi3uRJS6hA'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 179 LIMIT 1[0m
+  [1m[35mVideo Load (1.4ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Pm6Ch4qoNe8'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 180 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'YZsiD4M1Rjc'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 164 LIMIT 1[0m
+  [1m[35mVideo Load (1.0ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'uOToJW4x2GE'
+new video inserted:  split_video_id[3] = uOToJW4x2GE
+new video inserted: provider =  youtube
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", "Tech Science & Technology"], ["continue", nil], ["created_at", Sat, 27 Oct 2012 00:10:18 UTC +00:00], ["description", "Recursos: www.bextlan.com Slide: bextlan.com"], ["duration", "02:31:21"], ["embedcode", "http://www.youtube.com/v/uOToJW4x2GE?version=3&f=videos&d=ASfU7UaVmS185GXdQoHbdJUO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata"], ["is_complete", nil], ["keywords", []], ["linkurl", "http://www.youtube.com/watch?v=uOToJW4x2GE&feature=youtube_gdata"], ["provider", "youtube"], ["thumbnail_url", "http://i.ytimg.com/vi/uOToJW4x2GE/default.jpg"], ["title", "Taller de HTML5 Responsive Web Design"], ["updated_at", Sat, 27 Oct 2012 00:10:18 UTC +00:00], ["views", nil], ["yt_video_id", "uOToJW4x2GE"]]
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 188 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 188)[0m
+  [1m[35m (7.1ms)[0m  COMMIT
+Completed 500 Internal Server Error in 2300ms
+
+JSON::ParserError (757: unexpected token at '<br />
+<b>Fatal error</b>:  Uncaught exception 'VimeoAPIException' with message 'Search rate limit exceeded' in /home/souvik/public_html/camideo/api/vimeo/vimeo.php:239
+Stack trace:
+#0 /home/souvik/public_html/camideo/api/vimeo/vimeo.php(275): phpVimeo-&gt;_request('vimeo.videos.se...', Array, 'GET', 'http://vimeo.co...', true)
+#1 /home/souvik/public_html/camideo/api/vimeo-header.php(38): phpVimeo-&gt;call('vimeo.videos.se...', Array)
+#2 /home/souvik/public_html/camideo/api/vimeo-json.php(5): include('/home/souvik/pu...')
+#3 /home/souvik/public_html/camideo/api/index.php(51): include('/home/souvik/pu...')
+#4 {main}
+  thrown in <b>/home/souvik/public_html/camideo/api/vimeo/vimeo.php</b> on line <b>239</b><br />
+'):
+  app/models/camideo.rb:139:in `get_OneVideoSearch'
+  app/models/camideo.rb:69:in `get_OneVideoSearch_camideo'
+  app/models/feed.rb:24:in `search_camideo'
+  app/models/video.rb:130:in `get_OneVideoSearch'
+  app/models/feed.rb:17:in `block in make_firstfeed'
+  app/models/feed.rb:17:in `make_firstfeed'
+  app/controllers/channels_controller.rb:212:in `videos'
+
+
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.9ms)
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/hong/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/channels/6/videos" for 127.0.0.1 at 2012-10-26 17:12:38 -0700
+Processing by ChannelsController#videos as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mChannel Load (0.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 6[0m
+  [1m[35mFeed Load (0.7ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 6
+  [1m[36mVideo Load (1.4ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'F5B6inKoJxQ'[0m
+  [1m[35mChannel Load (0.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 6 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 6 AND "videos"."id" = 155 LIMIT 1[0m
+Alert camideo: vimeo failed:
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mChannel Exists (0.6ms)[0m  [1mSELECT 1 FROM "channels" WHERE ("channels"."name" = 'gmic sv china' AND "channels"."id" != 6) LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  UPDATE "channels" SET "querytime" = '2012-10-27 00:12:39.000000', "updated_at" = '2012-10-27 00:12:39.490745' WHERE "channels"."id" = 6
+  [1m[36m (24.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 6[0m
+  Rendered channels/videos.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_stylesheets.html.erb (4.7ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 1168ms (Views: 61.7ms | ActiveRecord: 54.9ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 17:12:39 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 17:12:39 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 17:12:39 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/channels/7/videos" for 127.0.0.1 at 2012-10-26 17:13:02 -0700
+Processing by ChannelsController#videos as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "feeds" WHERE "feeds"."channel_id" = 7
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."channel_id" = 7[0m
+  [1m[35mVideo Load (1.3ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'siOHh0uzcuY'
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 156 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Mp0f0zTPLec'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 157 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'mzPxo7Y6JyA'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (1.3ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 158 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'qzA60hHca9s'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (1.1ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 159 LIMIT 1[0m
+  [1m[35mVideo Load (1.5ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'tYrND5hMY3A'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (1.1ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 160 LIMIT 1
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'lcD9CF0bxyk'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (1.1ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 161 LIMIT 1[0m
+  [1m[35mVideo Load (1.5ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'EdDc7sWjCL4'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (1.0ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 166 LIMIT 1
+  [1m[36mVideo Load (1.3ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'x4gJU8Mn8-4'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 163 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '6EJ801el-I8'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 165 LIMIT 1
+  [1m[36mVideo Load (1.2ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '1x6ed_ZbL6w'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 170 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'q_O9_C2ZjoA'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 171 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bzOjbGx5kwc'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 172 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'GmRLoDeRgDY'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 186 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'feML6qwyWGs'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 167 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'QcU_exb_biY'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (1.0ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 175 LIMIT 1
+  [1m[36mVideo Load (1.4ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'vErRfUFKn98'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 178 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'bwOhfoewMYs'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 174 LIMIT 1
+  [1m[36mVideo Load (1.2ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Prkyd5n0P7k'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 173 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Qr_gXgdB5Fs'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 176 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = '_NSJd_0BkF0'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 187 LIMIT 1[0m
+  [1m[35mVideo Load (1.1ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'X3Se49aJb2c'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.9ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 177 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Kfi3uRJS6hA'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (1.1ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 179 LIMIT 1[0m
+  [1m[35mVideo Load (1.6ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'Pm6Ch4qoNe8'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (1.1ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 180 LIMIT 1
+  [1m[36mVideo Load (1.5ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'YZsiD4M1Rjc'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (1.2ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 164 LIMIT 1[0m
+  [1m[35mVideo Load (1.5ms)[0m  SELECT * FROM videos v WHERE v.provider = 'youtube' and v.yt_video_id = 'uOToJW4x2GE'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (1.1ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 188 LIMIT 1
+  [1m[36mVideo Load (1.1ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '19372180'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.9ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 181 LIMIT 1[0m
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '31179423'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 182 LIMIT 1
+  [1m[36mVideo Load (0.9ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '17180651'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 183 LIMIT 1[0m
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '6353874'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", nil], ["continue", nil], ["created_at", Sat, 27 Oct 2012 00:13:04 UTC +00:00], ["description", "A teaser for the upcoming homepage redesign of http://www.jqtouch.com/. jQTouch allows you to create native looking mobile apps with just HTML, CSS, and jQuery. View the project at http://code.google.com/p/jqtouch/"], ["duration", "00:01:44"], ["embedcode", "http://player.vimeo.com/video/6353874"], ["is_complete", nil], ["keywords", nil], ["linkurl", "http://vimeo.com/6353874"], ["provider", "vimeo"], ["thumbnail_url", "http://b.vimeocdn.com/ts/236/795/23679548_200.jpg"], ["title", "jQTouch Preview"], ["updated_at", Sat, 27 Oct 2012 00:13:04 UTC +00:00], ["views", 2466597], ["yt_video_id", "6353874"]]
+  [1m[36m (29.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 189 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 189)[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+  [1m[36mVideo Load (1.3ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '6691519'[0m
+  [1m[35mChannel Load (1.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 184 LIMIT 1[0m
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '45274844'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", nil], ["continue", nil], ["created_at", Sat, 27 Oct 2012 00:13:05 UTC +00:00], ["description", "An html 5 bomb, to blow up the web. Javascript +  CSS transform.<br />Work best in Safari. Chrome is distant second. Firefox is way behind.<br />Try it yourself at : http://fontbomb.ilex.ca, code here : https://github.com/plehoux/fontBomb"], ["duration", "00:00:48"], ["embedcode", "http://player.vimeo.com/video/45274844"], ["is_complete", nil], ["keywords", nil], ["linkurl", "http://vimeo.com/45274844"], ["provider", "vimeo"], ["thumbnail_url", "http://b.vimeocdn.com/ts/314/777/314777083_200.jpg"], ["title", "fontBomb - Stylishly destroy the web"], ["updated_at", Sat, 27 Oct 2012 00:13:05 UTC +00:00], ["views", 185780], ["yt_video_id", "45274844"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 190 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 190)[0m
+  [1m[35m (7.2ms)[0m  COMMIT
+  [1m[36mVideo Load (0.9ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '17095170'[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (21.1ms)[0m  [1mINSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["categories", nil], ["continue", nil], ["created_at", Sat, 27 Oct 2012 00:13:05 UTC +00:00], ["description", "A simple Open Frameworks application using the MS Kinect depth sensing camera via libfreenect and ofxKinect.<br /><br />The computer searches for my manboobs and draws a bra or pasties on top. Music is played when titties are detected.<br /><br />I&#39;m using OpenCV on the depth image. I look for a person-sized blob and use it&#39;s centroid to approximate a search box wherein to detect 2 boobs. The bra or pasties are drawn using the centroids of these boob blobs.  A third blob detector is used to look for the hand to change between bras.<br /><br />The second half of the video shows a projection mapping of the bras/pasties onto my chest. This is all running in realtime and in low light conditions with a bad background. Yes, the Kinect sensor is pretty awesome!<br /><br />Music: Hot Stuff by Donna Summer<br /><br />See also: http://danomatika.com/blog/kinect-titty-tracker/<br /><br />EDIT: Picked up by Kotaku: http://kotaku.com/5697172/kinect-hacked-to-track-breasts-or-at-least-man+boobs<br />EDIT2: Now on Reddit: http://www.reddit.com/r/programming/comments/eaixc/way_better_than_the_games_kinect_titty_tracker/<br />EDIT3: On Slashdong: http://www.slashdong.org/2010/11/28/kinect-sex/<br />EDIT4: Now on Australian news: http://www.theage.com.au/digital-life/digital-life-news/hackers-kinect-games-to-the-bedroom-20101202-18hce.html<br />EDIT5: On Blistered Thumbs Show and Trailer (Part 2): http://www.blisteredthumbs.net/2011/01/titty-tracking-your-moms-flagpole-and-more/"], ["duration", "00:02:51"], ["embedcode", "http://player.vimeo.com/video/17095170"], ["is_complete", nil], ["keywords", nil], ["linkurl", "http://vimeo.com/17095170"], ["provider", "vimeo"], ["thumbnail_url", "http://b.vimeocdn.com/ts/105/703/105703915_200.jpg"], ["title", "Kinect Titty Tracker"], ["updated_at", Sat, 27 Oct 2012 00:13:05 UTC +00:00], ["views", 161789], ["yt_video_id", "17095170"]]
+  [1m[35m (23.3ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Exists (0.8ms)[0m  SELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 191 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 191)
+  [1m[36m (7.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mVideo Load (0.9ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '21636708'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "videos" ("categories", "continue", "created_at", "description", "duration", "embedcode", "is_complete", "keywords", "linkurl", "provider", "thumbnail_url", "title", "updated_at", "views", "yt_video_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["categories", nil], ["continue", nil], ["created_at", Sat, 27 Oct 2012 00:13:06 UTC +00:00], ["description", "Jolicloud is a cloud desktop that makes it easy to manage your Web apps, files and services all in one place."], ["duration", "00:01:33"], ["embedcode", "http://player.vimeo.com/video/21636708"], ["is_complete", nil], ["keywords", nil], ["linkurl", "http://vimeo.com/21636708"], ["provider", "vimeo"], ["thumbnail_url", "http://b.vimeocdn.com/ts/139/312/139312179_200.jpg"], ["title", "Jolicloud Video Tour"], ["updated_at", Sat, 27 Oct 2012 00:13:06 UTC +00:00], ["views", 176928], ["yt_video_id", "21636708"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mChannel Load (0.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = 7 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mVideo Exists (0.8ms)[0m  [1mSELECT 1 FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7 AND "videos"."id" = 192 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "channels_videos" ("channel_id", "video_id") VALUES (7, 192)[0m
+  [1m[35m (7.1ms)[0m  COMMIT
+  [1m[36mVideo Load (0.9ms)[0m  [1mSELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '22397786'[0m
+  [1m[35mVideo Load (1.2ms)[0m  SELECT * FROM videos v WHERE v.provider = 'vimeo' and v.yt_video_id = '37974749'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mChannel Exists (0.5ms)[0m  SELECT 1 FROM "channels" WHERE ("channels"."name" = 'html5' AND "channels"."id" != 7) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "channels" SET "querytime" = '2012-10-27 00:13:06.000000', "updated_at" = '2012-10-27 00:13:06.195340' WHERE "channels"."id" = 7[0m
+  [1m[35m (6.5ms)[0m  COMMIT
+  [1m[36mChannel Load (0.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mVideo Load (2.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 7
+  Rendered channels/videos.html.erb within layouts/application (145.4ms)
+  Rendered layouts/_stylesheets.html.erb (5.4ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (3.9ms)
+Completed 200 OK in 3965ms (Views: 200.4ms | ActiveRecord: 201.7ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 17:13:06 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 17:13:06 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 17:13:06 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/videos/192" for 127.0.0.1 at 2012-10-26 17:13:23 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"192"}
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "192"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1
+  Rendered videos/show.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_stylesheets.html.erb (5.1ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 166ms (Views: 146.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-10-26 17:13:23 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-10-26 17:13:23 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-10-26 17:13:23 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
