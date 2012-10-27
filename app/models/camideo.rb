@@ -64,12 +64,12 @@ class Camideo < ActiveRecord::Base
 
   def self.get_OneVideoSearch_camideo(f)
        ### dm search is not good
-     self.get_OneVideoSearch(f, 'dailymotion')
+     ##self.get_OneVideoSearch(f, 'dailymotion')
        ### vimeo is good
      self.get_OneVideoSearch(f, 'vimeo')
        ##self.get_OneVideoSearch(f, 'myspace')     ## error
-     self.get_OneVideoSearch(f, 'metacafe')
-     self.get_OneVideoSearch(f, 'soundcloud')
+     ##self.get_OneVideoSearch(f, 'metacafe')
+     ##self.get_OneVideoSearch(f, 'soundcloud')
        ###self.get_OneVideoSearch(f, 'youtube')
   end
 
