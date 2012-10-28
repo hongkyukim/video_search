@@ -14,7 +14,7 @@ class Video < ActiveRecord::Base
   scope :completes,   where(:is_complete => true)
   scope :incompletes, where(:is_complete => false)
 
-  MaxCount = 10; ### 10
+  MaxCount = 1; ### 10
 
   def create_comment(comment)
     begin

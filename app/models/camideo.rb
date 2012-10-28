@@ -4,11 +4,16 @@ require 'json'
 
 class Camideo < ActiveRecord::Base
 
-  Camideo_API_KEY = '0a6e4aa28d539dd51821182be34028e1'
+  ### hongkyukim@yahoo.com    10/27/2012 limit exceeded
+  ### Camideo_API_KEY = '0a6e4aa28d539dd51821182be34028e1'
+
+  ### videotouch.tv@gmail.com
+  Camideo_API_KEY = '76a6c14f3a87c5449956f7d1a4da9dff'
+
   Provider_list = 'youtube'
   Provider = 'youtube'
   ###3logger = Logger.new(STDOUT)
-  MaxCount = 3;
+  MaxCount = 6;  ### 3
 
   def create_comment(comment)
     begin
@@ -64,12 +69,13 @@ class Camideo < ActiveRecord::Base
 
   def self.get_OneVideoSearch_camideo(f)
        ### dm search is not good
-     ##self.get_OneVideoSearch(f, 'dailymotion')
+       ### self.get_OneVideoSearch(f, 'dailymotion')
+
        ### vimeo is good
      self.get_OneVideoSearch(f, 'vimeo')
        ##self.get_OneVideoSearch(f, 'myspace')     ## error
-     ##self.get_OneVideoSearch(f, 'metacafe')
-     ##self.get_OneVideoSearch(f, 'soundcloud')
+       ##self.get_OneVideoSearch(f, 'metacafe')
+       ###self.get_OneVideoSearch(f, 'soundcloud')
        ###self.get_OneVideoSearch(f, 'youtube')
   end
 
@@ -107,7 +113,7 @@ class Camideo < ActiveRecord::Base
 
     url = "http://www.camideo.com/api/?key=" + Camideo_API_KEY + "&source=" + provider + "&q=" + queries + "&response=json&page=1"
 
-
+###debugger
     ### vimeo
     ### &per_page=1&summaty_response=1&full_response=1
     if provider == 'vimeo'
@@ -138,14 +144,14 @@ class Camideo < ActiveRecord::Base
     if ( !buffer )
          ### error
          logger.info 'Alert camideo: provider ' + provider + ' buffer is empty'
-
+##debugger
         return
     end
 
     if ( buffer.include? "Fatal error" )
          ### error
          logger.info 'Alert camideo: provider ' + provider + ' Fatal error'
-
+##debugger
         return
     end
 
@@ -153,6 +159,7 @@ class Camideo < ActiveRecord::Base
 
     ### Uncaught exception 'VimeoAPIException' with message 'Search rate limit exceeded'
     response = JSON.parse(buffer)
+##debugger
     if response
 	    if response.has_key? 'Error'
 		  raise "web service error in JSON.parse"
@@ -163,10 +170,9 @@ class Camideo < ActiveRecord::Base
 		 logger.info 'Alert camideo: ' + provider + ' failed:'
 
 		 return
-            else
-
-                 return
 	    end
+
+            ### Its ok. continue
     else
 
             return
