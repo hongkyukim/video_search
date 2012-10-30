@@ -27,6 +27,13 @@
 <% end %>
 </ul>
 
+
+<% if user_signed_in? %>
+      <ul><li><%= link_to "Create New Channel", new_user_channel_path(current_user) %></li></ul>
+<% else %>
+      <ul><li><%= link_to "Create New Channel", new_user_sessionl_path %></li></ul>
+<% end %>
+
 <h5>Channels:</h5>                   
   <ul class="rounded">
   <% for chan in @channels %>
@@ -45,7 +52,7 @@
 <!--<ul><li class="arrow"><%= link_to "Add New channel", new_channel_path %></li></ul>-->
 
 <% if user_signed_in? %>
-      <ul><li><%= link_to "Create My New Channel", new_user_channel_path(current_user) %></li></ul>
+      <ul><li><%= link_to "Create New Channel", new_user_channel_path(current_user) %></li></ul>
       <ul><li><%= link_to "Go To My Channels", channels_user_path(current_user) %></li></ul>
       <% if params[:search] != 'selected' %>
           <ul><li><%= link_to "Go To Home", channels_path( :search => 'selected') %></li></ul>

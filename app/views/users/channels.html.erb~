@@ -12,7 +12,8 @@ google_ad_height = 90;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 
-<h1>My channels</h1>
+<%= link_to "Create New Channel", new_user_channel_path(@user) %>
+
   <% if @channels.count == 0 %>      
       <h5>Your own channels are not created yet. Please create your own channel.</h5>
        <%= link_to 'Create New Channel', new_user_channel_path(@user) %>
@@ -63,7 +64,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <% else %>
 
 <div id="videoguide">
-
+<em>My channels:</em>
   <% @channels.each do |chan| %>
 
      <td>
@@ -105,3 +106,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 Signed in as <em><%= @user.email %></em> <%= link_to 'Password Change', edit_user_path(@user) %>
 | <%= link_to 'User Sign Out', destroy_user_session_path, :method => :delete %>
 
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="small" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

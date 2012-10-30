@@ -14,11 +14,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 <p>
 <%= form_tag channels_path, :method => 'get' do %>
-  
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search channels", :name => nil %>
-  
 <% end %>
+
+<% if user_signed_in? %>
+      <%= link_to "Create New Channel", new_user_channel_path(current_user) %>
+<% else %>
+      <%= link_to "Create New Channel", new_user_session_path %>
+<% end %>
+
 
 <% if false %>
 <!--<%= f.select :language,   Language.all.collect {|p| [ p.name, p.shortname ] } %>-->
@@ -43,8 +48,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 <% if true %>
 <% if !@channels.nil? %>
+
 <div id="videoguide">
- 
+<em>Channel List:</em>
   <% @channels.each do |chan| %>
 
      <td>
@@ -135,7 +141,7 @@ There is no channels.
 <!--<%= link_to 'New Channel', new_channel_path %>-->
 
 <% if user_signed_in? %>
-      <%= link_to "Add My New Channel", new_user_channel_path(current_user) %>
+      <%= link_to "Create New Channel", new_user_channel_path(current_user) %>
       | <%= link_to "Go To My Channels", channels_user_path(current_user) %>
       <% if current_user.admin? %>
          | <%= link_to "View Users", users_path %>

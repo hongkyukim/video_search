@@ -27,6 +27,13 @@
 <% end %>
 </ul>
 
+
+<% if user_signed_in? %>
+      <ul><li><%= link_to "Create New Channel", new_user_channel_path(current_user) %></li></ul>
+<% else %>
+      <ul><li><%= link_to "Create New Channel", new_user_sessionl_path %></li></ul>
+<% end %>
+
 <h5>Channels:</h5>                   
   <ul class="rounded">
   <% for chan in @channels %>
