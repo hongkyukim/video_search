@@ -1,1 +1,3 @@
-$.jQTouch({});
+$.jQTouch({
+
+});
