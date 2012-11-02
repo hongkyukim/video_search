@@ -33544,3 +33544,437 @@ Completed 200 OK in 144ms (Views: 142.3ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/mobile.js?body=1" for 127.0.0.1 at 2012-10-30 00:17:04 -0700
 Served asset /mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-02 10:14:23 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[36m (76.4ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (2.2ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (78.3ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (195.1ms)
+  Rendered layouts/_stylesheets.html.erb (97.2ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (7.7ms)
+Completed 200 OK in 2922ms (Views: 1365.9ms | ActiveRecord: 1392.8ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 10:14:27 -0700
+Served asset /blueprint/screen.css - 200 OK (4ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 10:14:27 -0700
+Served asset /blueprint/print.css - 200 OK (6ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 10:14:27 -0700
+Served asset /custom.css - 200 OK (5ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-11-02 10:14:27 -0700
+Served asset /logo.png - 200 OK (170ms)
+
+
+Started GET "/channels?search=selected" for 127.0.0.1 at 2012-11-02 10:16:54 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected"}
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')
+  [1m[36mChannel Load (0.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (0.5ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (88.3ms)
+  Rendered layouts/_stylesheets.html.erb (4.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+Completed 200 OK in 183ms (Views: 145.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 10:16:54 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 10:16:54 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 10:16:54 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-11-02 10:17:02 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mChannel Load (0.8ms)[0m  SELECT "channels".* FROM "channels" ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mLanguage Load (0.7ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (144.0ms)
+  Rendered layouts/_stylesheets.html.erb (4.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (89.8ms)
+Completed 200 OK in 324ms (Views: 287.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 10:17:03 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 10:17:03 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 10:17:03 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-11-02 10:23:35 -0700
+Processing by ChannelsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mChannel Load (1.0ms)[0m  SELECT "channels".* FROM "channels" ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (30.2ms)
+  Rendered layouts/_stylesheets.html.erb (4.7ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (4.8ms)
+Completed 200 OK in 121ms (Views: 83.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 10:23:35 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 10:23:35 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 10:23:35 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-11-02 10:23:35 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-02 10:39:52 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')[0m
+  [1m[35mChannel Load (0.9ms)[0m  SELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mLanguage Load (1.0ms)[0m  [1mSELECT "languages".* FROM "languages" [0m
+  Rendered channels/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_stylesheets.html.erb (4.9ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (3.4ms)
+Completed 200 OK in 216ms (Views: 160.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 10:39:52 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 10:39:52 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 10:39:52 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-11-02 10:39:52 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-02 14:32:03 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[35m (572.1ms)[0m  SELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')
+  [1m[36mChannel Load (42.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (1.4ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (63.5ms)
+  Rendered layouts/_stylesheets.html.erb (44.8ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (13.7ms)
+Completed 200 OK in 3522ms (Views: 630.1ms | ActiveRecord: 615.5ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:11 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (46ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:11 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:11 -0700
+Served asset /custom.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-11-02 14:32:11 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-11-02 14:32:17 -0700
+Processing by SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (4.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (82.0ms)
+  Rendered layouts/_stylesheets.html.erb (7.8ms)
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (6.1ms)
+Completed 200 OK in 210ms (Views: 204.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:19 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:19 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:19 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2012-11-02 14:32:19 -0700
+Served asset /facebook_32.png - 200 OK (114ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-11-02 14:32:19 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-11-02 14:32:29 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M3yeM3OJV8ZJ5TWbQ1eNHwSdlWKpQcfggOZsWz1nAT8=", "user"=>{"email"=>"yun@kim.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (218.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'yun@kim.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (73.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2012-10-30 06:15:36.187404', "current_sign_in_at" = '2012-11-02 21:32:30.352642', "sign_in_count" = 35, "updated_at" = '2012-11-02 21:32:30.356509' WHERE "users"."id" = 3[0m
+  [1m[35m (275.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 2512ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-02 14:32:31 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[36mUser Load (42.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35m (3.8ms)[0m  SELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')
+  [1m[36mChannel Load (1.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (0.8ms)[0m  SELECT "languages".* FROM "languages" 
+Redirected to http://localhost:3000/users/3/channels
+Completed 302 Found in 109ms (ActiveRecord: 48.5ms)
+
+
+Started GET "/users/3/channels" for 127.0.0.1 at 2012-11-02 14:32:31 -0700
+Processing by UsersController#channels as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m
+  [1m[35mChannel Load (22.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."user_id" = 3
+  [1m[36mVideo Load (275.2ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mEXPLAIN (18.0ms)[0m  EXPLAIN SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+EXPLAIN for: SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1
+                                 QUERY PLAN
+----------------------------------------------------------------------------
+ Hash Join  (cost=6.04..45.53 rows=27 width=1250)
+   Hash Cond: (videos.id = channels_videos.video_id)
+   ->  Seq Scan on videos  (cost=0.00..37.48 rows=348 width=1250)
+   ->  Hash  (cost=5.70..5.70 rows=27 width=4)
+         ->  Seq Scan on channels_videos  (cost=0.00..5.70 rows=27 width=4)
+               Filter: (channel_id = 1)
+(6 rows)
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (4.4ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.8ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 18
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (3.5ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 10
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (1.7ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 15
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 13
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.2ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 11
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (3.0ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 9
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.2ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 8
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.8ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 12
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (1.8ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 29
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 28
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.0ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 27
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.6ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 26
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.0ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 24
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 23
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (1.9ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (1.8ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 19
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mVideo Load (2.1ms)[0m  SELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 17
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered users/channels.html.erb within layouts/application (1669.1ms)
+  Rendered layouts/_stylesheets.html.erb (7.8ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (7.2ms)
+Completed 200 OK in 2510ms (Views: 1285.8ms | ActiveRecord: 514.1ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:34 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:34 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:34 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-11-02 14:32:34 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at 2012-11-02 14:32:39 -0700
+Processing by ChannelsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mChannel Load (2.6ms)[0m  SELECT "channels".* FROM "channels" ORDER BY name asc LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "channels" [0m
+  [1m[35mLanguage Load (0.8ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (199.4ms)
+  Rendered layouts/_stylesheets.html.erb (9.5ms)
+  Rendered layouts/_header.html.erb (5.8ms)
+  Rendered layouts/_footer.html.erb (7.4ms)
+Completed 200 OK in 380ms (Views: 308.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:40 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:40 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:40 -0700
+Served asset /custom.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-11-02 14:32:40 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/3/channels" for 127.0.0.1 at 2012-11-02 14:32:45 -0700
+Processing by UsersController#channels as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m
+  [1m[35mChannel Load (1.3ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."user_id" = 3
+  [1m[36mVideo Load (3.3ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (3.9ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (2.6ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 18[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (3.0ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 10[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 15[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (3.2ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 13[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 11[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (3.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 9[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.9ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 8[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (2.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 29[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 28[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 27[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (2.1ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 26[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.7ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 24[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.9ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 23[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 19[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mVideo Load (1.6ms)[0m  [1mSELECT "videos".* FROM "videos" INNER JOIN "channels_videos" ON "videos"."id" = "channels_videos"."video_id" WHERE "channels_videos"."channel_id" = 17[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered users/channels.html.erb within layouts/application (379.8ms)
+  Rendered layouts/_stylesheets.html.erb (8.7ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (6.6ms)
+Completed 200 OK in 520ms (Views: 428.1ms | ActiveRecord: 44.9ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:45 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:45 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 14:32:45 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-11-02 14:32:45 -0700
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2012-11-02 14:33:03 -0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 120ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-02 14:33:03 -0700
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+  [1m[35m (3.0ms)[0m  SELECT COUNT(*) FROM "channels" WHERE (channel_type LIKE '%selected%')
+  [1m[36mChannel Load (4.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE (channel_type LIKE '%selected%') ORDER BY name asc LIMIT 10 OFFSET 0[0m
+  [1m[35mLanguage Load (0.8ms)[0m  SELECT "languages".* FROM "languages" 
+  Rendered channels/index.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_stylesheets.html.erb (7.7ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (5.8ms)
+Completed 200 OK in 278ms (Views: 221.9ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-11-02 14:33:03 -0700
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-11-02 14:33:04 -0700
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-11-02 14:33:04 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-11-02 14:33:04 -0700
+Served asset /logo.png - 304 Not Modified (0ms)

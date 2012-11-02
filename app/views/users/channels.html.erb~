@@ -12,13 +12,13 @@ google_ad_height = 90;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 
-<%= link_to "Create New Channel", new_user_channel_path(@user) %>
+
 
   <% if @channels.count == 0 %>      
       <h5>Your own channels are not created yet. Please create your own channel.</h5>
-       <%= link_to 'Create New Channel', new_user_channel_path(@user) %>
   <% end %> 
 
+<%= link_to "Create New Channel", new_user_channel_path(@user) %>
 
 <% if false %>
 <table>

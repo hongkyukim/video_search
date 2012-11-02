@@ -65,6 +65,7 @@ class Channel < ActiveRecord::Base
               ###where('channel_type = ? OR channel_type = ? ', "%#{search}%", 'selected2')
 
               ### check selected abd selected2
+
               where('channel_type LIKE ?', "%#{search}%")
           else
               ###find(:all, :conditions => ['name LIKE ?', "%#{search}%"])

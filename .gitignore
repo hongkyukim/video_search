@@ -6,3 +6,4 @@ gitignore
 /db/*~
 /log/*.log
 /tmp
+out
