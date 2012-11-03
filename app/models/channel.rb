@@ -69,7 +69,15 @@ class Channel < ActiveRecord::Base
               where('channel_type LIKE ?', "%#{search}%")
           else
               ###find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-              where('name LIKE ?', "%#{search}%")
+              
+              ###where('name LIKE ?', "%#{search}%")
+
+              ### consider non-ordering keywords: dont care ordering
+              tmp_channels = order(:name)
+              search.split(/\s\s*/).each do |x| 
+                  tmp_channels = tmp_channels.where('name LIKE ?', "%#{x}%")
+              end
+              tmp_channels
           end
       else
           ##find(:all)

@@ -145,7 +145,9 @@ class ChannelsController < InheritedResources::Base
         video = @channel.videos[0]
 
         ###@channel.querytime = Time.now;
-        @channel.update_attributes({ "querytime" => DateTime.now, "thumbnail_url" => video.thumbnail_url})
+        if video 
+          @channel.update_attributes({ "querytime" => DateTime.now, "thumbnail_url" => video.thumbnail_url})
+        end
 
         ###format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
         ### create a channel and video list and then go to video list
