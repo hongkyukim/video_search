@@ -1,6 +1,10 @@
 <header>
-  <%= link_to logo, root_path %>
-  
+  <!--<%= link_to logo, root_path %>-->
+  <nav2 class="round">
+    <ul>
+       <%= current_language_name %><%= " VideoTouch.TV" %>  
+    </ul>
+  </nav2>
   <nav class="round">
     <ul>
       <%= link_to "Home", channels_path( :search => 'selected') %> 

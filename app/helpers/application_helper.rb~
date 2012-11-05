@@ -20,4 +20,16 @@ module ApplicationHelper
     direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
     link_to title, params.merge(:sort => column, :direction => direction, :page => nil), {:class => css_class}
   end
+
+  def current_language_name
+    userlanguage = cookies[:user_languages] if cookies[:user_languages]
+    newlanguage = Language.find_by_shortname(userlanguage);
+
+    if newlanguage
+       @cur_language_name = newlanguage.name
+    else
+       @cur_language_name = 'English'
+    end
+  end
+
 end

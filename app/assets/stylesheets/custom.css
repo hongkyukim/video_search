@@ -75,6 +75,40 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Navigation 2 added by HKIM 11/05/2012*/
+
+nav2 {
+  float: left;
+  background: white;
+  padding: 0 0.7em;
+  white-space: nowrap;
+}
+
+nav2 ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav2 ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav2 ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav2 ul li a:visited {
+  color: #09c;
+}
+
+nav2 ul li a:hover {
+  text-decoration: underline;
+}
+
+
 /* Sign up button */
 
 a.signup_button {

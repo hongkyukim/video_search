@@ -89,7 +89,11 @@ class ChannelsController < InheritedResources::Base
     @channel = @user.channels.build
     @user_language = get_user_language
 
-    userlanguage = cookies[:user_languages] if cookies[:user_languages]
+    if cookies[:user_languages]
+       userlanguage = cookies[:user_languages]
+    else
+       userlanguage = "en"
+    end 
     current_language = Language.find_by_shortname(userlanguage);
 
     if current_language
@@ -112,7 +116,12 @@ class ChannelsController < InheritedResources::Base
     @channel = Channel.find(params[:id])
     @user = User.find(@channel.user_id)
 
-    userlanguage = cookies[:user_languages] if cookies[:user_languages]
+    if cookies[:user_languages]
+       userlanguage = cookies[:user_languages]
+    else
+       userlanguage = "en"
+    end 
+
     current_language = Language.find_by_shortname(userlanguage);
 
     if current_language
@@ -153,7 +162,11 @@ class ChannelsController < InheritedResources::Base
     params[:channel][:language] = languages if params[:channel][:language].nil?
 
     ### set language and user_id
-    userlanguage = cookies[:user_languages] if cookies[:user_languages]
+    if cookies[:user_languages]
+       userlanguage = cookies[:user_languages] 
+    else
+       userlanguage = "en"
+    end
     current_language = Language.find_by_shortname(userlanguage);
 
     if current_language
