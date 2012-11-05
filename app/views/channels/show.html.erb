@@ -1,5 +1,9 @@
 <% title 'Channel Info' %>
-
+<% if true %>
+     Current default language is <%= @cur_language_name %>.<br />
+     Do you want to change language? <%= link_to 'Set Default Language', cookie_new_path %>
+<% end %>
+<br /><br />
 <p>
   <b>Channel Name:</b>
   <%= @channel.name %>

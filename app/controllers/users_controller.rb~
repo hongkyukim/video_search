@@ -106,7 +106,11 @@ class UsersController < ApplicationController
  # Display all channels of an user
   def channels
     @user = User.find(params[:id])
-    @channels = @user.channels.reverse
+    ### consider languages
+    userlanguages = cookies[:user_languages] if cookies[:user_languages]
+    tmp_channels = @user.channels.where('language LIKE ?', "%#{userlanguages}%")
+    @channels = tmp_channels.reverse
+
     @show_delete = 1 if params[:delete_options]
 
     respond_to do |format|

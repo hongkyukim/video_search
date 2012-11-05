@@ -89,6 +89,17 @@ class ChannelsController < InheritedResources::Base
     @channel = @user.channels.build
     @user_language = get_user_language
 
+    userlanguage = cookies[:user_languages] if cookies[:user_languages]
+    current_language = Language.find_by_shortname(userlanguage);
+
+    if current_language
+       @cur_language_name = current_language.name
+       @cur_language_shortname = current_language.shortname
+    else
+       @cur_language_name = 'English'
+       @cur_language_shortname = 'en'
+    end
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @channel }
@@ -100,6 +111,18 @@ class ChannelsController < InheritedResources::Base
     ##@user = User.find(params[:user_id])
     @channel = Channel.find(params[:id])
     @user = User.find(@channel.user_id)
+
+    userlanguage = cookies[:user_languages] if cookies[:user_languages]
+    current_language = Language.find_by_shortname(userlanguage);
+
+    if current_language
+       @cur_language_name = current_language.name
+       @cur_language_shortname = current_language.shortname
+    else
+       @cur_language_name = 'English'
+       @cur_language_shortname = 'en'
+    end
+
   end
 
   def create
@@ -130,7 +153,18 @@ class ChannelsController < InheritedResources::Base
     params[:channel][:language] = languages if params[:channel][:language].nil?
 
     ### set language and user_id
-    ###params[:channel][:language] = "en" if params[:channel][:language].nil?
+    userlanguage = cookies[:user_languages] if cookies[:user_languages]
+    current_language = Language.find_by_shortname(userlanguage);
+
+    if current_language
+       cur_language_name = current_language.name
+       cur_language_shortname = current_language.shortname
+    else
+       cur_language_name = 'English'
+       cur_language_shortname = 'en'
+    end
+
+    params[:channel][:language] = cur_language_shortname
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
     

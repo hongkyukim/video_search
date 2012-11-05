@@ -1,5 +1,10 @@
-<h1>New channel</h1>
+<% if true %>
+     Current default language is <%= @cur_language_name %>.<br />
+     Do you want to change language? <%= link_to 'Set Default Language', cookie_new_path %>
+<% end %>
+<br /><br />
+<h1>Create New Channel</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', channels_path %>
+<%= link_to 'Back To All Channels', channels_path %>

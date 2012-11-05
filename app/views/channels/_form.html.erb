@@ -16,10 +16,12 @@
     <%= f.text_field :name, :placeholder => "Type several keywords" %>
   </div>
 
-  <div class="field">
-    <%= f.label :language %><br />
-    <%= f.select :language,   Language.all.collect {|p| [ p.name, p.shortname ] } %>
-  </div>
+  <% if false %>
+     <div class="field">
+        <%= f.label :language %> <br />
+        <%= f.select :language, Language.all.collect {|p| [ p.name, p.shortname ] }, :include_blank => @cur_language_name %>
+     </div>
+  <% end %>
 
 <% if user_signed_in? %>
 <% if current_user.admin? %>

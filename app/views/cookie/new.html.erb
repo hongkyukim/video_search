@@ -1,9 +1,12 @@
-<h1>Set default languages</h1>
 
-<% if @user_languages %>
-   Current language setting is <%= @user_languages %>
+
+<% if @current_language %>
+   Current default language is <%= @current_language.name %>.
+<% else %>
+   Current default language is not set.
 <% end %>
-
+<br /><br />
+<h3>Set default language</h3>
 <%= form_tag cookie_assign_path, :method => 'get' do %>
     <%= select_tag :language, options_from_collection_for_select(@languages, "shortname", "name"),
                    :prompt => "All", :placeholder => @user_languages %>

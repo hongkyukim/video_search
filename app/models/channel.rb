@@ -53,7 +53,8 @@ class Channel < ActiveRecord::Base
       ##           where('language LIKE ?', userlanguages)    
       ##end
 ##debugger
-      
+
+      tmp_channels = where('language LIKE ?', "%#{userlanguages}%")
       if search
           search = search.downcase
           if search == 'selected'
@@ -66,24 +67,29 @@ class Channel < ActiveRecord::Base
 
               ### check selected abd selected2
 
-              where('channel_type LIKE ?', "%#{search}%")
+              tmp_channels = tmp_channels.where('channel_type LIKE ?', "%#{search}%")
           else
               ###find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
               
               ###where('name LIKE ?', "%#{search}%")
 
               ### consider non-ordering keywords: dont care ordering
-              tmp_channels = order(:name)
+              tmp_channels = tmp_channels.order(:name)
+
+              if userlanguages
+                 tmp_channels = tmp_channels.where('language LIKE ?', "%#{userlanguages}%")
+
+              end
               search.split(/\s\s*/).each do |x| 
                   tmp_channels = tmp_channels.where('name LIKE ?', "%#{x}%")
               end
               tmp_channels
           end
-      else
-          ##find(:all)
-          scoped
+      ##else
+          ##########################find(:all)
+          ##scoped
       end
-
+      tmp_channels
   end
 
   def self.find_preferred_language

@@ -1,6 +1,13 @@
+<% if true %>
+     Current default language is <%= @cur_language_name %>.<br />
+     Do you want to change language? <%= link_to 'Set Default Language', cookie_new_path %>
+<% end %>
+<br /><br />
+
 <h1>Editing channel</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @channel %> |
-<%= link_to 'Back', channels_path %>
+<%= link_to 'Back To Channel', channels_path %> |
+<%= link_to 'Back To My Channels', user_channels_path(@user) %>

@@ -15,10 +15,13 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
   <% if @channels.count == 0 %>      
-      <h5>Your own channels are not created yet. Please create your own channel.</h5>
+      <h5><em>Channels are not created yet.</em></h5>
+  <% else %>
+      <%= link_to "Create New Channel", new_user_channel_path(@user) %>
+      <br />
+      <em>My channels:</em>
   <% end %> 
 
-<%= link_to "Create New Channel", new_user_channel_path(@user) %>
 
 <% if false %>
 <table>
@@ -64,9 +67,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <% else %>
 
 <div id="videoguide">
-<em>My channels:</em>
   <% @channels.each do |chan| %>
-
      <td>
 	<a href="/channels/<%= chan.id %>/videos">
          <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "110x75" if chan.thumbnail_url %></div></a> </td>
