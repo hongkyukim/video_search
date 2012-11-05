@@ -53,9 +53,9 @@ class Channel < ActiveRecord::Base
       ##           where('language LIKE ?', userlanguages)    
       ##end
 ##debugger
-      emptylanguages = nil;
+      emptylanguages = "";
       if userlanguages == "en"
-          tmp_channels = where('language LIKE ?' && 'language LIKE ?', "%#{userlanguages}%", "%#{emptylanguages}%")
+          tmp_channels = where('language LIKE ? or language LIKE ?', "%#{userlanguages}%", "%#{emptylanguages}%")
       else
           tmp_channels = where('language LIKE ?', "%#{userlanguages}%")
       end

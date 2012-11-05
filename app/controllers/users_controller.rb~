@@ -107,8 +107,17 @@ class UsersController < ApplicationController
   def channels
     @user = User.find(params[:id])
     ### consider languages
-    userlanguages = cookies[:user_languages] if cookies[:user_languages]
-    tmp_channels = @user.channels.where('language LIKE ?', "%#{userlanguages}%")
+    if cookies[:user_languages]
+       userlanguages = cookies[:user_languages] 
+    else
+       userlanguages = "en"
+    end
+    emptylanguages = ""
+    if userlanguages == "en"
+       tmp_channels = @user.channels.where('language LIKE ? or language LIKE ?', "%#{userlanguages}%", "%#{emptylanguages}%")
+    else 
+       tmp_channels = @user.channels.where('language LIKE ?', "%#{userlanguages}%")
+    end
     @channels = tmp_channels.reverse
 
     @show_delete = 1 if params[:delete_options]
