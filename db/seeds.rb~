@@ -19,7 +19,13 @@ languages = Language.create([ {name: 'English', fullname: 'english', shortname: 
                               {name: 'Chinese', fullname: 'China taiwan', shortname: 'zh' },
                               {name: 'Portuguese', fullname: 'portuguese', shortname: 'pt' },
                               {name: 'French', fullname: 'french', shortname: 'fr' },
-                              {name: 'Spanish', fullname: 'spanish', shortname: 'es' }
+                              {name: 'Spanish', fullname: 'spanish', shortname: 'es' },
+                              {name: 'German', fullname: 'german', shortname: 'de' },
+                              {name: 'Greek', fullname: 'greek', shortname: 'gr' },
+                              {name: 'Arabic', fullname: 'arabic', shortname: 'ar' },
+                              {name: 'Indonesian', fullname: 'indonesian', shortname: 'id' },
+                              {name: 'Russian', fullname: 'russian', shortname: 'ru' },
+                              {name: 'Malay', fullname: 'malaysia', shortname: 'ms' }
                           ])
 
 searches = Search.create([ { language: 'en' },
@@ -29,7 +35,13 @@ searches = Search.create([ { language: 'en' },
                               { language: 'zh' },
                               { language: 'pt' },
                               { language: 'fr' },
-                              { language: 'es' }
+                              { language: 'es' },
+                              { language: 'de' },
+                              { language: 'gr' }, 
+                              { language: 'ar' },
+                              { language: 'id' },
+                              { language: 'ru' },
+                              { language: 'ms' }
                           ])
 ### rake db:seed
 

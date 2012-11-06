@@ -2,16 +2,15 @@
   <!--<%= link_to logo, root_path %>-->
   <nav2 class="round">
     <ul>
-       <%= current_language_name %><%= "VideoTouch.TV" %>  
+       <%= current_language_name %><%= " VideoTouch.TV" %>  
     </ul>
   </nav2>
   <nav class="round">
     <ul>
       <%= link_to "Home", channels_path( :search => 'selected') %> 
       | <%= link_to 'All Channels', channels_path( :search => nil ) %>
- 
+      | <%= link_to 'Set Languages', cookie_new_path %>
       <% if signed_in? %>
-          | <%= link_to 'Set Languages', cookie_new_path %>
           <% if !(current_page?  channels_user_path(current_user) ) %>
              | <%= link_to "My Channels", channels_user_path(current_user) %>
           <% end %>

@@ -114,7 +114,7 @@ class UsersController < ApplicationController
     end
     emptylanguages = ""
     if userlanguages == "en"
-       tmp_channels = @user.channels.where('language LIKE ? or language LIKE ?', "%#{userlanguages}%", "%#{emptylanguages}%")
+       tmp_channels = @user.channels.where('language LIKE ? or language LIKE ?', "%#{userlanguages}%", "")
     else 
        tmp_channels = @user.channels.where('language LIKE ?', "%#{userlanguages}%")
     end

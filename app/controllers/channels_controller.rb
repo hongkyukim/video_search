@@ -26,8 +26,11 @@ class ChannelsController < InheritedResources::Base
     ###@products = Product.order(sort_column + ' ' + sort_direction).paginate(:per_page => 5, :page => params[:page])
     ##@channels = Channel.search(params[:search]).reverse
     ###@channels = Channel.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(:per_page => 3, :page => params[:page]).reverse
-
-    userlanguages = cookies[:user_languages] if cookies[:user_languages]
+    if cookies[:user_languages]
+       userlanguages = cookies[:user_languages] 
+    else
+       userlanguages = "en"
+    end
 ###debugger
     search_channels = Channel.search(params[:search], userlanguages)
 

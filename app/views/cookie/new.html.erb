@@ -9,8 +9,9 @@
 <h3>Set default language</h3>
 <%= form_tag cookie_assign_path, :method => 'get' do %>
     <%= select_tag :language, options_from_collection_for_select(@languages, "shortname", "name"),
-                   :prompt => "All", :placeholder => @user_languages %>
+                    :placeholder => @user_languages %>
     <%= submit_tag "Set Language", :name => nil, :placeholder => @user_languages %>
 <% end %>
 
 <%= link_to 'Go to All Channels', channels_path %>
+<!--:prompt => "All",-->

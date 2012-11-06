@@ -1,5 +1,5 @@
 class Search < ActiveRecord::Base
-
+  validates :language, :presence => true, :uniqueness => true, :length => { :maximum => 256 }
   def channels
     @channels ||= find_channels
   end
