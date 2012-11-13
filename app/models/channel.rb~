@@ -43,7 +43,7 @@ class Channel < ActiveRecord::Base
   ### search => nil   ---> all channels
   ### search => 'selected' ---> selected channels
   ### search => query ---> 
-  def self.search(search, userlanguages=nil)
+  def self.search(search, categories_search, userlanguages=nil)
       ### filter with languages
       ###userlanguages = cookies[:user_languages] if cookies[:user_languages]
 
@@ -93,6 +93,11 @@ class Channel < ActiveRecord::Base
           ##########################find(:all)
           ##scoped
       end
+      if categories_search
+          categories_search = categories_search.downcase
+          tmp_channels = tmp_channels.where('categories LIKE ?', "%#{categories_search}%")
+      end
+
       tmp_channels
   end
 

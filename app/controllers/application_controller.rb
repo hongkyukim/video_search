@@ -20,6 +20,25 @@ class ApplicationController < ActionController::Base
                :password =>  YouTubeITConfig.password , :dev_key => YouTubeITConfig.dev_key)
   end
 
+  ### get default language
+  def get_cur_language
+    if cookies[:user_languages]
+       userlanguage = cookies[:user_languages] 
+    else
+       userlanguage = "en"
+    end
+    current_language = Language.find_by_shortname(userlanguage);
+
+    if current_language
+       cur_language_name = current_language.name
+       cur_language_shortname = current_language.shortname
+    else
+       cur_language_name = 'English'
+       cur_language_shortname = 'en'
+    end
+    [cur_language_name, cur_language_shortname]
+  end
+
 private
 
   ##def current_user

@@ -6,8 +6,12 @@ class Feed < ActiveRecord::Base
 
   ## create first query feed of channel
   def self.make_firstfeed(channel)
-     feedoptions = {"name"=>channel.name, "feedtype"=>channel.channel_type, "queries"=>channel.name,
-                                 "options"=>channel.tags, "keywords"=>"", "channel_id"=>channel.id}
+     feedoptions = {"name"=>channel.name,
+                    "feedtype"=>channel.channel_type,
+                    "queries"=>channel.name,
+                    "options"=>channel.tags,
+                    "keywords"=>channel.categories,
+                    "channel_id"=>channel.id}
      if channel.feeds.count == 0
          @feed = channel.feeds.build(feedoptions)
          if @feed.save
@@ -21,6 +25,7 @@ class Feed < ActiveRecord::Base
   ### search video using camideo
   def search_camideo
      ### search camideo: vimeo, dailymotion, ...
+
     Camideo.get_OneVideoSearch_camideo(self)
 
   end

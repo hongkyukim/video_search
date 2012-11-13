@@ -22,7 +22,11 @@ module ApplicationHelper
   end
 
   def current_language_name
-    userlanguage = cookies[:user_languages] if cookies[:user_languages]
+    if cookies[:user_languages]
+       userlanguage = cookies[:user_languages] 
+    else
+       userlanguage = "en"
+    end
     newlanguage = Language.find_by_shortname(userlanguage);
 
     if newlanguage
@@ -31,5 +35,4 @@ module ApplicationHelper
        @cur_language_name = 'English'
     end
   end
-
 end

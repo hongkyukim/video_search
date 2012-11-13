@@ -14,7 +14,7 @@ class Video < ActiveRecord::Base
   scope :completes,   where(:is_complete => true)
   scope :incompletes, where(:is_complete => false)
 
-  MaxCount = 1; ### 10
+  MaxCount = 10; ### 10
 
   def create_comment(comment)
     begin
@@ -61,7 +61,7 @@ class Video < ActiveRecord::Base
 
     @feeds = Feed.all
     ###request = YouTubeIt::Request::VideoSearch.new(:query => "penguin", :duration => "short")
-    ##request = YouTubeIt::Request::VideoSearch.new(:query => "penguin", :duration => "short")
+    ###request = YouTubeIt::Request::VideoSearch.new(:query => "penguin", :duration => "short")
     
     ##response = yt_session.videos_by(:query => "korea news kbs mbc")        #####(request.url)
     ####Debug(response)
@@ -69,11 +69,7 @@ class Video < ActiveRecord::Base
 
     @feeds.each { |f|
         ###response = yt_session.videos_by(:query => f.queries, :max_results => 3, :time => :today) ###f.queries)
-
         get_OneVideoSearch(f) 
-
- 
-
     }
 
     ###return     ###YouTubeIt::Parser::VideosFeedParser.new(response).parse
@@ -101,29 +97,49 @@ class Video < ActiveRecord::Base
         ### :time => :today, :max_results => 30, :page => 2  
 	case f.options
 	when 'most_viewed'
-            res = yt_session.videos_by(:most_viewed, :max_results => 10, :page => 1 )
+            res = yt_session.videos_by(:most_viewed, :max_results => 25, :page => 1 )
 	when 'most_popular'
-            res = yt_session.videos_by(:most_popular, :max_results => 10, :page => 1)
+            res = yt_session.videos_by(:most_popular, :max_results => 25, :page => 1)
 	when 'top_rated'
-            res = yt_session.videos_by(:top_rated, :max_results => 10, :page => 1)
+            res = yt_session.videos_by(:top_rated, :max_results => 25, :page => 1)
 	when 'recently_featured'
-            res = yt_session.videos_by(:recently_featured, :max_results => 10, :page => 1)
+            res = yt_session.videos_by(:recently_featured, :max_results => 25, :page => 1)
 	when 'top_favorites'
-            res = yt_session.videos_by(:top_favorites, :max_results => 10, :page => 1)
+            res = yt_session.videos_by(:top_favorites, :max_results => 25, :page => 1)
 	else
-	    logger.alert "Alert: This option #{f.options} is not supported."
+            begin
+	         ###logger.debug "Alert: This option #{f.options} is not supported."
+                 res = yt_session.videos_by(video_yt_options(f))
+                 ###res = yt_session.videos_by(:query => "lion", :time => :month)
+
+            rescue => e
+               ##case e
+               ##when OpenURI::HTTPError
+                  logger.error "Error: #{e.message} "
+                  logger.debug e.message
+		    
+               ##end
+               
+            end
+
 	end
 
     else
-        res = yt_session.videos_by(video_yt_options(f)) ###f.queries)
+        begin
+            res = yt_session.videos_by(video_yt_options(f)) ###f.queries)
+        rescue => e
+                  logger.error "Error: #{e.message} "
+                  logger.debug "Debug: #{e.message} "
+        end
     end
 
     curCount = 0;
     ### search thru youtube
-    res.videos.each { |v| curCount = add_video(v, channel_id, curCount) }
-
+    if res
+       res.videos.each { |v| curCount = add_video(v, channel_id, curCount) }
+    end
    
-    
+
     ### search camideo: vimeo, dailymotion, ...
     ### original function Camideo.get_OneVideoSearch_camideo(f)
 
@@ -131,7 +147,7 @@ class Video < ActiveRecord::Base
     ### f.delay(queue: "feed_quieries", priority: 28, run_at: 15.seconds.from_now).search_camideo
     ### run more search without delayed_job
     f.search_camideo
-
+    ###Camideo.get_OneVideoSearch_camideo(f)
 
   end
 
@@ -151,7 +167,7 @@ class Video < ActiveRecord::Base
     split_video_id = v.video_id.split(/:/);
     return if split_video_id[3].empty?
 
-    ###debugger
+##debugger
     mvideo = Video.find_by_sql("SELECT * FROM videos v WHERE v.provider = '#{prov}' and v.yt_video_id = '#{split_video_id[3]}'")
 
     
@@ -216,15 +232,15 @@ class Video < ActiveRecord::Base
       if str.nil? || str == ""
          return opts
       end
-      ###debugger
+
       str.split(',').each do |x| 
          v,k = x.split(/\s*=>\s*/)
          ###opts[v] ||= []
-         opts[v] = k
-      end
-      ###debugger
 
-      opts
+         opts[ eval(v)] = eval(k)
+      end
+###debugger
       ###f.options == "" ? opts : opts.merge(eval(f.options))
+      opts
     end
 end

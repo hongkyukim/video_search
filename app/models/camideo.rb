@@ -1,14 +1,14 @@
 require 'open-uri'
 require 'json'
 ####require 'logger'
+include ApplicationHelper
 
 class Camideo < ActiveRecord::Base
-
   ### hongkyukim@yahoo.com    10/27/2012 limit exceeded
-  ### Camideo_API_KEY = '0a6e4aa28d539dd51821182be34028e1'
+  Camideo_API_KEY = '0a6e4aa28d539dd51821182be34028e1'
 
   ### videotouch.tv@gmail.com
-  Camideo_API_KEY = '76a6c14f3a87c5449956f7d1a4da9dff'
+  ####Camideo_API_KEY = '76a6c14f3a87c5449956f7d1a4da9dff'
 
   Provider_list = 'youtube'
   Provider = 'youtube'
@@ -68,8 +68,9 @@ class Camideo < ActiveRecord::Base
   ### dailymotion  ->  keyword search does not work
 
   def self.get_OneVideoSearch_camideo(f)
+
        ### dm search is not good
-       ### self.get_OneVideoSearch(f, 'dailymotion')
+     self.get_OneVideoSearch(f, 'dailymotion')
 
        ### vimeo is good
      self.get_OneVideoSearch(f, 'vimeo')
@@ -110,10 +111,15 @@ class Camideo < ActiveRecord::Base
     ###res = yt_session.videos_by(video_ytoptions(f)) ###f.queries)
 
     queries = self.query_options(f)
+    ### get default language:    ##language     + "&language=" + 
+    @channel = Channel.find(channel_id);
+    cur_language = Language.find_by_shortname(@channel.language)
 
-    url = "http://www.camideo.com/api/?key=" + Camideo_API_KEY + "&source=" + provider + "&q=" + queries + "&response=json&page=1"
+    url = "http://www.camideo.com/api/?key=" + Camideo_API_KEY + "&source=" + provider + "&q=" + queries + "&response=json&page=1" 
 
-###debugger
+    ###     + "&language=" + cur_language.name    ---------->>>> failed
+    ###  ERROR with &language=Korean
+
     ### vimeo
     ### &per_page=1&summaty_response=1&full_response=1
     if provider == 'vimeo'
@@ -124,6 +130,7 @@ class Camideo < ActiveRecord::Base
     ### &per_page=1&summaty_response=1&full_response=1
     if provider == 'dailymotion'
         url = url + "&filters=featured&limit=5&page=1"
+        ###ERROR   url = url + "&language=" + cur_language.name
     end
 
     ### vimeo example "http://www.camideo.com/api/?key=0...e1&source=vimeo&q=tiger+attack 
@@ -143,14 +150,14 @@ class Camideo < ActiveRecord::Base
 
     if ( !buffer )
          ### error
-         logger.info 'Alert camideo: provider ' + provider + ' buffer is empty'
+         logger.info '+++++++Alert camideo: provider ' + provider + ' buffer is empty'
 ##debugger
         return
     end
 
     if ( buffer.include? "Fatal error" )
          ### error
-         logger.info 'Alert camideo: provider ' + provider + ' Fatal error'
+         logger.info '+++++++Alert camideo: provider ' + provider + ' Fatal error'
 ##debugger
         return
     end
@@ -159,7 +166,7 @@ class Camideo < ActiveRecord::Base
 
     ### Uncaught exception 'VimeoAPIException' with message 'Search rate limit exceeded'
     response = JSON.parse(buffer)
-##debugger
+###debugger
     if response
 	    if response.has_key? 'Error'
 		  raise "web service error in JSON.parse"
@@ -167,8 +174,7 @@ class Camideo < ActiveRecord::Base
 
 	    if ( response['Camideo'] && response['Camideo']['Error'] )
 		 ### error
-		 logger.info 'Alert camideo: ' + provider + ' failed:'
-
+		 logger.info '+++++++Alert camideo: ' + provider + ' failed:'
 		 return
 	    end
 
@@ -293,3 +299,6 @@ class Camideo < ActiveRecord::Base
       qstr
     end
 end
+
+
+

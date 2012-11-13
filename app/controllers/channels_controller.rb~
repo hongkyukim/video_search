@@ -26,12 +26,15 @@ class ChannelsController < InheritedResources::Base
     ###@products = Product.order(sort_column + ' ' + sort_direction).paginate(:per_page => 5, :page => params[:page])
     ##@channels = Channel.search(params[:search]).reverse
     ###@channels = Channel.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(:per_page => 3, :page => params[:page]).reverse
-
-    userlanguages = cookies[:user_languages] if cookies[:user_languages]
+    if cookies[:user_languages]
+       userlanguages = cookies[:user_languages] 
+    else
+       userlanguages = "en"
+    end
 ###debugger
-    search_channels = Channel.search(params[:search], userlanguages)
+    search_channels = Channel.search(params[:search], params[:categories_search], userlanguages)
 
-    search_channels_all = Channel.search(params[:search])
+    search_channels_all = Channel.search(params[:search], params[:categories_search])
 ##debugger
     if search_channels == 1 || search_channels.nil? || search_channels.count == 0
          @channels = nil
@@ -88,20 +91,14 @@ class ChannelsController < InheritedResources::Base
     @user = User.find(params[:user_id])
     @channel = @user.channels.build
     @user_language = get_user_language
-
-    if cookies[:user_languages]
-       userlanguage = cookies[:user_languages]
+    ### get current default language
+    @cur_language_name, @cur_language_shortname = get_cur_language
+    ### 
+    ### param has string, advanced_new is integer
+    if params[:advanced_new] == '1'
+        @advanced_new = 1 
     else
-       userlanguage = "en"
-    end 
-    current_language = Language.find_by_shortname(userlanguage);
-
-    if current_language
-       @cur_language_name = current_language.name
-       @cur_language_shortname = current_language.shortname
-    else
-       @cur_language_name = 'English'
-       @cur_language_shortname = 'en'
+        @advanced_new = 0
     end
 
     respond_to do |format|
@@ -116,22 +113,7 @@ class ChannelsController < InheritedResources::Base
     @channel = Channel.find(params[:id])
     @user = User.find(@channel.user_id)
 
-    if cookies[:user_languages]
-       userlanguage = cookies[:user_languages]
-    else
-       userlanguage = "en"
-    end 
-
-    current_language = Language.find_by_shortname(userlanguage);
-
-    if current_language
-       @cur_language_name = current_language.name
-       @cur_language_shortname = current_language.shortname
-    else
-       @cur_language_name = 'English'
-       @cur_language_shortname = 'en'
-    end
-
+    @cur_language_name, @cur_language_shortname = get_cur_language
   end
 
   def create
@@ -162,26 +144,13 @@ class ChannelsController < InheritedResources::Base
     params[:channel][:language] = languages if params[:channel][:language].nil?
 
     ### set language and user_id
-    if cookies[:user_languages]
-       userlanguage = cookies[:user_languages] 
-    else
-       userlanguage = "en"
-    end
-    current_language = Language.find_by_shortname(userlanguage);
-
-    if current_language
-       cur_language_name = current_language.name
-       cur_language_shortname = current_language.shortname
-    else
-       cur_language_name = 'English'
-       cur_language_shortname = 'en'
-    end
+    cur_language_name, cur_language_shortname = get_cur_language
 
     params[:channel][:language] = cur_language_shortname
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
     
-
+debugger
     respond_to do |format|
       if @channel.save
         ## create the first query feed of this channel automatically
@@ -194,14 +163,21 @@ class ChannelsController < InheritedResources::Base
         ###@channel.querytime = Time.now;
         if video 
           @channel.update_attributes({ "querytime" => DateTime.now, "thumbnail_url" => video.thumbnail_url})
+          ###format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
+          ### create a channel and video list and then go to video list
+          format.html { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
+          format.json { render json: @channel, status: :created, location: @channel }
+          ###format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
+          format.mobile { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
+        else
+           ### no videos
+           @channel.destroy
+           format.html { redirect_to new_user_channel_path(@user), :advanced_new => '0', notice: 'Channel was not successfully created. There are no videos.' }
+           format.json { render json: @channel.errors, status: :unprocessable_entity }
+           format.mobile { render action: "new", notice: 'Channel was not successfully created. There are no videos.' }
         end
 
-        ###format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
-        ### create a channel and video list and then go to video list
-        format.html { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
-        format.json { render json: @channel, status: :created, location: @channel }
-        ###format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
-        format.mobile { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
+
       else
         format.html { render action: "new" }
         format.json { render json: @channel.errors, status: :unprocessable_entity }
@@ -277,5 +253,26 @@ private
   
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
-  end  
+  end 
+
+  ### get default language
+  def get_cur_language
+    if cookies[:user_languages]
+       userlanguage = cookies[:user_languages] 
+    else
+       userlanguage = "en"
+    end
+    current_language = Language.find_by_shortname(userlanguage);
+
+    if current_language
+       cur_language_name = current_language.name
+       cur_language_shortname = current_language.shortname
+    else
+       cur_language_name = 'English'
+       cur_language_shortname = 'en'
+    end
+    [cur_language_name, cur_language_shortname]
+  end
+
+ 
 end

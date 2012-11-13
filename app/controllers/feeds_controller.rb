@@ -58,7 +58,7 @@ class FeedsController < InheritedResources::Base
     @feed = @channel.feeds.build(params[:feed])
     ### check duplication
     dup_feeds = @channel.feeds.find_by_name(@feed.name)
-   
+debugger
     respond_to do |format|
       if dup_feeds 
 

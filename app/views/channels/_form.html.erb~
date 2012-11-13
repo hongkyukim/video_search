@@ -24,26 +24,48 @@
   <% end %>
 
 <% if user_signed_in? %>
-<% if current_user.admin? %>
+<% if @advanced_new == 1 %>
 
-  <div class="field">
-    <%= f.label :channel_type %><br />
-    <%= f.text_field :channel_type, :placeholder => "not used" %>
-  </div>
-  <div class="field">
-    <%= f.label :tags %><br />
-    <%= f.text_field :tags, :placeholder => ":time => :today" %>
-  </div>
+ <% if current_user.admin? %>
+    <div class="field">
+      <%= f.label :channel_type %><br />
+      <%= f.select :channel_type, [['Not Used', ''], ['selected', 'selected'], ['public', 'public'], ['private', 'private']] %>
+    </div>
+    <div class="field">
+      <%= f.label :tags %><br />
+      <%= f.select :tags, [['Not Used', ''], ['Most Viewed', 'most_viewed'], ['Most Popular', 'most_popular'],
+                   ['Top Rated', 'top_rated'], ['Recently Featured', 'recently_featured'],
+                   ['Top Favorites', 'top_favorites'], 
+                   ['today', ':time => :today'], ['today max5 page1', ':time => :today, :max_results => 5, :page => 1'],
+                   ['week', ':time => :this_week'], ['week max5 page1', ':time => :this_week, :max_results => 5, :page => 1'],
+                   ['month', ':time => :this_month'],['month max5 page1', ':time => :this_month, :max_results => 5, :page => 1'] ]  %>
+    </div>
+ <% else %>
+    <div class="field">
+      <%= f.label :channel_type %><br />
+      <%= f.select :channel_type, [['Not Used', ''], ['public', 'public'], ['private', 'private']] %>
+    </div>
+    <div class="field">
+      <%= f.label :tags %><br />
+      <%= f.select :tags, [['Not Used', ''], 
+                ['today', ':time => :today'], ['today max5 page1', ':time => :today, :max_results => 5, :page => 1'],
+                ['week', ':time => :this_week'], ['week max5 page1', ':time => :this_week, :max_results => 5, :page => 1'],
+                ['month', ':time => :this_month'], ['month max5 page1', ':time => :this_month, :max_results => 5, :page => 1'] ]  %>
+    </div>
+
+ <% end %>
+
   <div class="field">
     <%= f.label :categories %><br />
-    <%= f.text_field :categories, :placeholder => "Type categories" %>
+    <%= f.select :categories, [['Type categories', ''], ['News', 'news'], ['Drama', 'drama'], ['Sports', 'sports'], ['Tech', 'tech'], ['Politics', 'politics'], ['Others', 'others']] %>
   </div>
 
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id, :placeholder => current_user.id %>
-  </div>
-
+  <% if current_user.admin? %>
+     <div class="field">
+        <%= f.label :user_id %><br />
+        <%= f.number_field :user_id, :placeholder => current_user.id %>
+     </div>
+  <% end %>
 <% end %>
 <% end %>
 

@@ -24,5 +24,16 @@
 
     </ul>
   </nav>
-
+  <br />
+  <nav2 class="round">
+    <ul>
+       <%= link_to "All", channels_path( :search => '') %>
+       | <%= link_to "Selected", channels_path( :search => 'selected') %>
+       | <%= link_to "News", channels_path( :categories_search => 'news') %>
+       | <%= link_to "Sports", channels_path( :categories_search => 'sports') %>
+       | <%= link_to "Drama", channels_path( :categories_search => 'drama') %>
+       | <%= link_to "Tech", channels_path( :categories_search => 'tech') %>
+       | <%= link_to "Others", channels_path( :categories_search => 'others') %>
+    </ul>
+  </nav2>
 </header>
