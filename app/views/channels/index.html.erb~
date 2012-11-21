@@ -13,7 +13,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 
 <p>
-<%= form_tag channels_path, :method => 'get' do %>
+<%= form_tag channels_path, :method => 'get', :remote => true do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search channels", :name => nil %>
 <% end %>

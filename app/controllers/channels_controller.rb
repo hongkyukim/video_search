@@ -150,7 +150,7 @@ class ChannelsController < InheritedResources::Base
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
     
-debugger
+#debugger
     respond_to do |format|
       if @channel.save
         ## create the first query feed of this channel automatically

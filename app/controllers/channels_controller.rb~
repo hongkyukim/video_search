@@ -150,7 +150,7 @@ class ChannelsController < InheritedResources::Base
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
     
-debugger
+#debugger
     respond_to do |format|
       if @channel.save
         ## create the first query feed of this channel automatically
@@ -255,24 +255,7 @@ private
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end 
 
-  ### get default language
-  def get_cur_language
-    if cookies[:user_languages]
-       userlanguage = cookies[:user_languages] 
-    else
-       userlanguage = "en"
-    end
-    current_language = Language.find_by_shortname(userlanguage);
 
-    if current_language
-       cur_language_name = current_language.name
-       cur_language_shortname = current_language.shortname
-    else
-       cur_language_name = 'English'
-       cur_language_shortname = 'en'
-    end
-    [cur_language_name, cur_language_shortname]
-  end
 
  
 end
