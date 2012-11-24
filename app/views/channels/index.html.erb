@@ -13,7 +13,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 
 <p>
-<%= form_tag channels_path, :method => 'get', :remote => true do %>
+<%= form_tag channels_path, :method => 'get', :id => "channels_search" do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search channels", :name => nil %>
 <% end %>
@@ -45,98 +45,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <% end %>
  </p>
 
-
-<% if true %>
-<% if !@channels.nil? %>
-
-<div id="videoguide">
-<em>Channel List:</em>
-  <% @channels.each do |chan| %>
-
-     <td>
-	<a href="/channels/<%= chan.id %>/videos">
-         <div class="channel-image"><%= image_tag chan.thumbnail_url, :size => "110x75" if chan.thumbnail_url %></div></a>  </td>
-
-     <td>
-	 <div class="post-channeltitle"><%= link_to h(chan.name), videos_channel_path(chan) %></div>
-         <div class="post-channelid"> <i>#<%= chan.id %></i> <em><%= chan.language %></em> <i><%= Time.parse(chan.created_at.to_s).strftime("Created on %m/%d/%Y")%></i></div>
-         <div class="post-channelid2"><%= link_to 'Show Videos ', videos_channel_path(chan) %> </div>
-     </td>
-
-
-	 <% if user_signed_in? %>
-	    <% if current_user.admin? %>
-
-                <% if can? :update, chan %>
-                    <td><div class="post-channelid2"><%= link_to 'Show', channel_path(chan) %></div></td>
-                    <td><div class="post-channelid2"><%= link_to 'Edit', edit_channel_path(chan) %></div></td>
-                <% end %>
-                <% if @show_delete %>
-		        <% if can? :destroy, chan %>
-		             <td><div class="post-channelid2"><%= button_to 'Destroy', chan, confirm: 'Are you sure?', method: :delete %></div></td>
-		        <% end %>
-                <% end %>
-	    <% end %>
-	<% end %>
-       
- <% end %>
- <br />
- <%= will_paginate @channels %>
-
-
-</div>
-<% end %>
-
-<% else %>
-
-
-<% if @channels %>
-<table>
-	  <tr>
-	    <th>Name</th>
-	    <th>Videos</th>
-	    <th></th>
-	    <th></th>
-	  </tr>
-
-     <% for channel in @channels %>
-	  <tr>
-	    <td><%= channel.name %></td>
-	    <td><%= link_to 'Show Videos ', videos_channel_path(channel) %></td>
-
-	<% if false %>
-	    <td><%= link_to 'Show', channel_path(channel) %></td>
-	    <% if can? :update, channel %>
-		<td><%= link_to 'Edit', edit_channel_path(channel) %></td>
-	    <% end %>
-	<% end %>
-
-	    <% if user_signed_in? %>
-	    <% if current_user.admin? %>
-
-                <% if can? :update, channel %>
-                    <td><%= link_to 'Edit', edit_channel_path(channel) %></td>
-                <% end %>
-
-		<% if can? :destroy, channel %>
-		    <td><%= link_to 'Destroy', channel, confirm: 'Are you sure?', method: :delete %></td>
-		<% end %>
-	    <% end %>
-	    <% end %>
-	  </tr>
-    <% end %>
-
-</table>
-
-
-<% else %>
-There is no channels.
-<% end %>
-<% end %>
-
-
-
-<br />
+<div id="channels"><%= render 'channels' %></div>
 
 <!--<%= link_to 'New Channel', new_channel_path %>-->
 

@@ -48,15 +48,19 @@ class ChannelsController < InheritedResources::Base
 
     if params[:loggedin] == 'yes' && current_user
         respond_to do |format|
+           format.js
            format.html { redirect_to user_channels_path(current_user) }
            format.json { render json: user_channels_path(current_user) }
            format.mobile { redirect_to user_channels_path(current_user) }
+
         end
     else
 
 	respond_to do |format|
+           format.js
 	   format.html # index.html.erb
 	   format.json { render json: @channels }
+
 	end
     end
   end
