@@ -21,7 +21,7 @@ group :production do
   ##gem 'activerecord-postgresql-adapter', '>= 0'
   ##gem 'therubyracer-heroku', '0.8.1.pre3'
 
-  gem "pg", "~> 0.11.0"
+  ##gem "pg", "~> 0.11.0"
   
 end
 
