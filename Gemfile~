@@ -6,7 +6,7 @@ group :development, :test do
   ##gem 'activerecord-postgresql-adapter'
   ##gem 'therubyracer-heroku', '0.8.1.pre3'
 
-  gem "pg", "~> 0.11.0"
+  ##gem "pg", "~> 0.11.0"
 end
 
 gem 'rails', '3.2.1'
@@ -14,7 +14,7 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
+gem "pg", "~> 0.11.0"
 
 group :production do
   ##gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
