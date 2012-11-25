@@ -14,8 +14,6 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-##gem "pg", "~> 0.11.0"
-
 group :production do
   ##gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
   ##gem 'activerecord-postgresql-adapter', '>= 0'
@@ -54,8 +52,6 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end

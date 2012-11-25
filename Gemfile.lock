@@ -189,7 +189,6 @@ GEM
       notifier
     therubyracer (0.10.1)
       libv8 (~> 3.3.10)
-    therubyracer-heroku (0.8.1.pre3)
     thin (1.4.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -240,7 +239,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   test_notifier
   therubyracer
-  therubyracer-heroku (= 0.8.1.pre3)
   thin
   uglifier (>= 1.0.3)
   will_paginate

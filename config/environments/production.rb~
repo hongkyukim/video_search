@@ -1,6 +1,6 @@
 LoginApp2::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-
+config.assets.precompile += %w( bootstrap.css )
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -47,7 +47,7 @@ LoginApp2::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-
+config.assets.precompile += %w( blueprint/screen.css )
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
