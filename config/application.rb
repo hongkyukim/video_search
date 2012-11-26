@@ -9,6 +9,8 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 
   ###for heroku:  config.assets.initialize_on_precompile = false
+  ### 11/25/2012 comment out this
+  config.assets.initialize_on_precompile = false
 end
 
 module LoginApp2

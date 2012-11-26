@@ -7,3 +7,4 @@ gitignore
 /log/*.log
 /tmp
 out
+/public/assets
