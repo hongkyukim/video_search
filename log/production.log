@@ -1,0 +1,456 @@
+Compiled jquery.js  (4ms)  (pid 5484)
+Compiled jquery_ujs.js  (0ms)  (pid 5484)
+Compiled authentications.js  (168ms)  (pid 5484)
+Compiled ch_searches.js  (1ms)  (pid 5484)
+Compiled channels.js  (1ms)  (pid 5484)
+Compiled cookie.js  (1ms)  (pid 5484)
+Compiled feeds.js  (1ms)  (pid 5484)
+Compiled languages.js  (1ms)  (pid 5484)
+Compiled mobile.js  (0ms)  (pid 5484)
+Compiled pages.js  (1ms)  (pid 5484)
+Compiled registrations.js  (1ms)  (pid 5484)
+Compiled searches.js  (1ms)  (pid 5484)
+Compiled users.js  (1ms)  (pid 5484)
+Compiled videos.js  (1ms)  (pid 5484)
+Compiled application.js  (373ms)  (pid 5484)
+Compiled authentications.css  (178ms)  (pid 5484)
+Compiled blueprint/ie.css  (0ms)  (pid 5484)
+Compiled blueprint/plugins/buttons/screen.css  (0ms)  (pid 5484)
+Compiled blueprint/plugins/fancy-type/screen.css  (0ms)  (pid 5484)
+Compiled blueprint/plugins/link-icons/screen.css  (0ms)  (pid 5484)
+Compiled blueprint/plugins/rtl/screen.css  (0ms)  (pid 5484)
+Compiled blueprint/print.css  (0ms)  (pid 5484)
+Compiled blueprint/screen.css  (0ms)  (pid 5484)
+Compiled blueprint/src/forms.css  (0ms)  (pid 5484)
+Compiled blueprint/src/grid.css  (0ms)  (pid 5484)
+Compiled blueprint/src/ie.css  (0ms)  (pid 5484)
+Compiled blueprint/src/print.css  (0ms)  (pid 5484)
+Compiled blueprint/src/reset.css  (0ms)  (pid 5484)
+Compiled blueprint/src/typography.css  (0ms)  (pid 5484)
+Compiled ch_searches.css  (2ms)  (pid 5484)
+Compiled channels.css  (2ms)  (pid 5484)
+Compiled cookie.css  (2ms)  (pid 5484)
+Compiled custom.css  (0ms)  (pid 5484)
+Compiled feeds.css  (2ms)  (pid 5484)
+Compiled languages.css  (2ms)  (pid 5484)
+Compiled registrations.css  (2ms)  (pid 5484)
+Compiled scaffolds.css  (25ms)  (pid 5484)
+Compiled searches.css  (2ms)  (pid 5484)
+Compiled users.css  (2ms)  (pid 5484)
+Compiled videos.css  (2ms)  (pid 5484)
+Compiled application.css  (505ms)  (pid 5484)
+Compiled jquery.js  (3ms)  (pid 5517)
+Compiled jquery_ujs.js  (0ms)  (pid 5517)
+Compiled authentications.js  (167ms)  (pid 5517)
+Compiled ch_searches.js  (1ms)  (pid 5517)
+Compiled channels.js  (1ms)  (pid 5517)
+Compiled cookie.js  (1ms)  (pid 5517)
+Compiled feeds.js  (1ms)  (pid 5517)
+Compiled languages.js  (1ms)  (pid 5517)
+Compiled mobile.js  (0ms)  (pid 5517)
+Compiled pages.js  (1ms)  (pid 5517)
+Compiled registrations.js  (1ms)  (pid 5517)
+Compiled searches.js  (1ms)  (pid 5517)
+Compiled users.js  (1ms)  (pid 5517)
+Compiled videos.js  (1ms)  (pid 5517)
+Compiled application.js  (368ms)  (pid 5517)
+Compiled authentications.css  (178ms)  (pid 5517)
+Compiled blueprint/ie.css  (0ms)  (pid 5517)
+Compiled blueprint/plugins/buttons/screen.css  (0ms)  (pid 5517)
+Compiled blueprint/plugins/fancy-type/screen.css  (0ms)  (pid 5517)
+Compiled blueprint/plugins/link-icons/screen.css  (0ms)  (pid 5517)
+Compiled blueprint/plugins/rtl/screen.css  (0ms)  (pid 5517)
+Compiled blueprint/print.css  (0ms)  (pid 5517)
+Compiled blueprint/screen.css  (0ms)  (pid 5517)
+Compiled blueprint/src/forms.css  (0ms)  (pid 5517)
+Compiled blueprint/src/grid.css  (0ms)  (pid 5517)
+Compiled blueprint/src/ie.css  (0ms)  (pid 5517)
+Compiled blueprint/src/print.css  (0ms)  (pid 5517)
+Compiled blueprint/src/reset.css  (0ms)  (pid 5517)
+Compiled blueprint/src/typography.css  (0ms)  (pid 5517)
+Compiled ch_searches.css  (2ms)  (pid 5517)
+Compiled channels.css  (2ms)  (pid 5517)
+Compiled cookie.css  (2ms)  (pid 5517)
+Compiled custom.css  (0ms)  (pid 5517)
+Compiled feeds.css  (2ms)  (pid 5517)
+Compiled languages.css  (2ms)  (pid 5517)
+Compiled registrations.css  (2ms)  (pid 5517)
+Compiled scaffolds.css  (24ms)  (pid 5517)
+Compiled searches.css  (2ms)  (pid 5517)
+Compiled users.css  (2ms)  (pid 5517)
+Compiled videos.css  (2ms)  (pid 5517)
+Compiled application.css  (501ms)  (pid 5517)
+Compiled jquery.js  (2ms)  (pid 5597)
+Compiled jquery_ujs.js  (62ms)  (pid 5597)
+Compiled authentications.js  (168ms)  (pid 5597)
+Compiled ch_searches.js  (1ms)  (pid 5597)
+Compiled channels.js  (1ms)  (pid 5597)
+Compiled cookie.js  (1ms)  (pid 5597)
+Compiled feeds.js  (1ms)  (pid 5597)
+Compiled languages.js  (1ms)  (pid 5597)
+Compiled mobile.js  (0ms)  (pid 5597)
+Compiled pages.js  (1ms)  (pid 5597)
+Compiled registrations.js  (1ms)  (pid 5597)
+Compiled searches.js  (1ms)  (pid 5597)
+Compiled users.js  (1ms)  (pid 5597)
+Compiled videos.js  (0ms)  (pid 5597)
+Compiled application.js  (394ms)  (pid 5597)
+Compiled authentications.css  (275ms)  (pid 5597)
+Compiled blueprint/ie.css  (0ms)  (pid 5597)
+Compiled blueprint/plugins/buttons/screen.css  (0ms)  (pid 5597)
+Compiled blueprint/plugins/fancy-type/screen.css  (0ms)  (pid 5597)
+Compiled blueprint/plugins/link-icons/screen.css  (0ms)  (pid 5597)
+Compiled blueprint/plugins/rtl/screen.css  (0ms)  (pid 5597)
+Compiled blueprint/print.css  (0ms)  (pid 5597)
+Compiled blueprint/screen.css  (0ms)  (pid 5597)
+Compiled blueprint/src/forms.css  (0ms)  (pid 5597)
+Compiled blueprint/src/grid.css  (0ms)  (pid 5597)
+Compiled blueprint/src/ie.css  (0ms)  (pid 5597)
+Compiled blueprint/src/print.css  (0ms)  (pid 5597)
+Compiled blueprint/src/reset.css  (0ms)  (pid 5597)
+Compiled blueprint/src/typography.css  (0ms)  (pid 5597)
+Compiled ch_searches.css  (3ms)  (pid 5597)
+Compiled channels.css  (2ms)  (pid 5597)
+Compiled cookie.css  (2ms)  (pid 5597)
+Compiled custom.css  (0ms)  (pid 5597)
+Compiled feeds.css  (2ms)  (pid 5597)
+Compiled languages.css  (2ms)  (pid 5597)
+Compiled registrations.css  (2ms)  (pid 5597)
+Compiled scaffolds.css  (34ms)  (pid 5597)
+Compiled searches.css  (3ms)  (pid 5597)
+Compiled users.css  (2ms)  (pid 5597)
+Compiled videos.css  (2ms)  (pid 5597)
+Compiled application.css  (821ms)  (pid 5597)
+Compiled jquery.js  (3ms)  (pid 5641)
+Compiled jquery_ujs.js  (0ms)  (pid 5641)
+Compiled authentications.js  (166ms)  (pid 5641)
+Compiled ch_searches.js  (1ms)  (pid 5641)
+Compiled channels.js  (1ms)  (pid 5641)
+Compiled cookie.js  (1ms)  (pid 5641)
+Compiled feeds.js  (1ms)  (pid 5641)
+Compiled languages.js  (0ms)  (pid 5641)
+Compiled mobile.js  (0ms)  (pid 5641)
+Compiled pages.js  (1ms)  (pid 5641)
+Compiled registrations.js  (0ms)  (pid 5641)
+Compiled searches.js  (0ms)  (pid 5641)
+Compiled users.js  (0ms)  (pid 5641)
+Compiled videos.js  (0ms)  (pid 5641)
+Compiled application.js  (368ms)  (pid 5641)
+Compiled authentications.css  (178ms)  (pid 5641)
+Compiled blueprint/ie.css  (0ms)  (pid 5641)
+Compiled blueprint/plugins/buttons/screen.css  (0ms)  (pid 5641)
+Compiled blueprint/plugins/fancy-type/screen.css  (0ms)  (pid 5641)
+Compiled blueprint/plugins/link-icons/screen.css  (0ms)  (pid 5641)
+Compiled blueprint/plugins/rtl/screen.css  (0ms)  (pid 5641)
+Compiled blueprint/print.css  (0ms)  (pid 5641)
+Compiled blueprint/screen.css  (0ms)  (pid 5641)
+Compiled blueprint/src/forms.css  (0ms)  (pid 5641)
+Compiled blueprint/src/grid.css  (61ms)  (pid 5641)
+Compiled blueprint/src/ie.css  (0ms)  (pid 5641)
+Compiled blueprint/src/print.css  (0ms)  (pid 5641)
+Compiled blueprint/src/reset.css  (0ms)  (pid 5641)
+Compiled blueprint/src/typography.css  (0ms)  (pid 5641)
+Compiled ch_searches.css  (2ms)  (pid 5641)
+Compiled channels.css  (2ms)  (pid 5641)
+Compiled cookie.css  (2ms)  (pid 5641)
+Compiled custom.css  (0ms)  (pid 5641)
+Compiled feeds.css  (2ms)  (pid 5641)
+Compiled languages.css  (2ms)  (pid 5641)
+Compiled registrations.css  (2ms)  (pid 5641)
+Compiled scaffolds.css  (24ms)  (pid 5641)
+Compiled searches.css  (2ms)  (pid 5641)
+Compiled users.css  (2ms)  (pid 5641)
+Compiled videos.css  (2ms)  (pid 5641)
+Compiled application.css  (566ms)  (pid 5641)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 14:56:47 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 62ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
+Compiled jquery.js  (5ms)  (pid 5752)
+Compiled jquery_ujs.js  (1ms)  (pid 5752)
+Compiled authentications.js  (204ms)  (pid 5752)
+Compiled ch_searches.js  (2ms)  (pid 5752)
+Compiled channels.js  (1ms)  (pid 5752)
+Compiled cookie.js  (1ms)  (pid 5752)
+Compiled feeds.js  (1ms)  (pid 5752)
+Compiled languages.js  (1ms)  (pid 5752)
+Compiled mobile.js  (0ms)  (pid 5752)
+Compiled pages.js  (1ms)  (pid 5752)
+Compiled registrations.js  (1ms)  (pid 5752)
+Compiled searches.js  (1ms)  (pid 5752)
+Compiled users.js  (1ms)  (pid 5752)
+Compiled videos.js  (1ms)  (pid 5752)
+Compiled application.js  (438ms)  (pid 5752)
+Compiled authentications.css  (380ms)  (pid 5752)
+Compiled blueprint/ie.css  (0ms)  (pid 5752)
+Compiled blueprint/plugins/buttons/screen.css  (0ms)  (pid 5752)
+Compiled blueprint/plugins/fancy-type/screen.css  (0ms)  (pid 5752)
+Compiled blueprint/plugins/link-icons/screen.css  (0ms)  (pid 5752)
+Compiled blueprint/plugins/rtl/screen.css  (0ms)  (pid 5752)
+Compiled blueprint/print.css  (0ms)  (pid 5752)
+Compiled blueprint/screen.css  (0ms)  (pid 5752)
+Compiled blueprint/src/forms.css  (0ms)  (pid 5752)
+Compiled blueprint/src/grid.css  (63ms)  (pid 5752)
+Compiled blueprint/src/ie.css  (0ms)  (pid 5752)
+Compiled blueprint/src/print.css  (0ms)  (pid 5752)
+Compiled blueprint/src/reset.css  (0ms)  (pid 5752)
+Compiled blueprint/src/typography.css  (0ms)  (pid 5752)
+Compiled ch_searches.css  (2ms)  (pid 5752)
+Compiled channels.css  (2ms)  (pid 5752)
+Compiled cookie.css  (2ms)  (pid 5752)
+Compiled custom.css  (0ms)  (pid 5752)
+Compiled feeds.css  (2ms)  (pid 5752)
+Compiled languages.css  (2ms)  (pid 5752)
+Compiled registrations.css  (2ms)  (pid 5752)
+Compiled scaffolds.css  (26ms)  (pid 5752)
+Compiled searches.css  (3ms)  (pid 5752)
+Compiled users.css  (3ms)  (pid 5752)
+Compiled videos.css  (2ms)  (pid 5752)
+Compiled application.css  (797ms)  (pid 5752)
+Compiled jquery.js  (3ms)  (pid 5856)
+Compiled jquery_ujs.js  (63ms)  (pid 5856)
+Compiled authentications.js  (169ms)  (pid 5856)
+Compiled ch_searches.js  (1ms)  (pid 5856)
+Compiled channels.js  (1ms)  (pid 5856)
+Compiled cookie.js  (1ms)  (pid 5856)
+Compiled feeds.js  (1ms)  (pid 5856)
+Compiled languages.js  (1ms)  (pid 5856)
+Compiled mobile.js  (0ms)  (pid 5856)
+Compiled pages.js  (1ms)  (pid 5856)
+Compiled registrations.js  (0ms)  (pid 5856)
+Compiled searches.js  (1ms)  (pid 5856)
+Compiled users.js  (1ms)  (pid 5856)
+Compiled videos.js  (0ms)  (pid 5856)
+Compiled application.js  (370ms)  (pid 5856)
+Compiled authentications.css  (180ms)  (pid 5856)
+Compiled blueprint/ie.css  (0ms)  (pid 5856)
+Compiled blueprint/plugins/buttons/screen.css  (0ms)  (pid 5856)
+Compiled blueprint/plugins/fancy-type/screen.css  (0ms)  (pid 5856)
+Compiled blueprint/plugins/link-icons/screen.css  (0ms)  (pid 5856)
+Compiled blueprint/plugins/rtl/screen.css  (0ms)  (pid 5856)
+Compiled blueprint/print.css  (0ms)  (pid 5856)
+Compiled blueprint/screen.css  (0ms)  (pid 5856)
+Compiled blueprint/src/forms.css  (0ms)  (pid 5856)
+Compiled blueprint/src/grid.css  (0ms)  (pid 5856)
+Compiled blueprint/src/ie.css  (0ms)  (pid 5856)
+Compiled blueprint/src/print.css  (0ms)  (pid 5856)
+Compiled blueprint/src/reset.css  (0ms)  (pid 5856)
+Compiled blueprint/src/typography.css  (0ms)  (pid 5856)
+Compiled ch_searches.css  (2ms)  (pid 5856)
+Compiled channels.css  (2ms)  (pid 5856)
+Compiled cookie.css  (2ms)  (pid 5856)
+Compiled custom.css  (0ms)  (pid 5856)
+Compiled feeds.css  (2ms)  (pid 5856)
+Compiled languages.css  (2ms)  (pid 5856)
+Compiled registrations.css  (2ms)  (pid 5856)
+Compiled scaffolds.css  (24ms)  (pid 5856)
+Compiled searches.css  (2ms)  (pid 5856)
+Compiled users.css  (2ms)  (pid 5856)
+Compiled videos.css  (2ms)  (pid 5856)
+Compiled application.css  (567ms)  (pid 5856)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 15:08:38 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 15:08:39 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 11ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 15:08:41 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 15:18:07 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 15:18:10 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 15:26:57 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 15:27:01 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 15:27:03 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-26 15:27:03 -0800
+Processing by ChannelsController#index as HTML
+  Parameters: {"search"=>"selected", "loggedin"=>"yes"}
+Completed 500 Internal Server Error in 9ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "users" does not exist
+LINE 4:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+):
+  app/models/ability.rb:5:in `new'
+  app/models/ability.rb:5:in `initialize'
+
+
