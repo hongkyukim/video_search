@@ -32,7 +32,7 @@ production:
   adapter: postgresql
   encoding: utf8
   database: vg_production
-  username: hongkyukim
+  username: hong
   password: 
 
 

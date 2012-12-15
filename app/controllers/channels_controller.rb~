@@ -39,8 +39,12 @@ class ChannelsController < InheritedResources::Base
     if search_channels == 1 || search_channels.nil? || search_channels.count == 0
          @channels = nil
     else
-         @channels = search_channels.order(sort_column + ' ' + sort_direction).paginate(:per_page => 10,
+         if mobile_device?
+              @channels = search_channels.order(sort_column + ' ' + sort_direction).reverse
+         else
+              @channels = search_channels.order(sort_column + ' ' + sort_direction).paginate(:per_page => 10,
                            :page => params[:page]).reverse
+         end
     end
 
 
@@ -154,8 +158,8 @@ class ChannelsController < InheritedResources::Base
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
     
-#debugger
-    respond_to do |format|
+debugger
+    
       if @channel.save
         ## create the first query feed of this channel automatically
 
@@ -169,25 +173,37 @@ class ChannelsController < InheritedResources::Base
           @channel.update_attributes({ "querytime" => DateTime.now, "thumbnail_url" => video.thumbnail_url})
           ###format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
           ### create a channel and video list and then go to video list
+debugger
+         respond_to do |format|
           format.html { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
-          format.json { render json: @channel, status: :created, location: @channel }
+          format.json { redirect_to user_channels_path(@user), notice: 'Channel was successfully created with Json.' }
+          ###format.html { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
+          ####format.json { render json: @channel, status: :created, location: @channel }
           ###format.mobile { redirect_to user_channels_path(@user), notice: 'Channel was successfully created.' }
           format.mobile { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
+         end
+
         else
            ### no videos
            @channel.destroy
+
+          respond_to do |format|
            format.html { redirect_to new_user_channel_path(@user), :advanced_new => '0', notice: 'Channel was not successfully created. There are no videos.' }
            format.json { render json: @channel.errors, status: :unprocessable_entity }
            format.mobile { render action: "new", notice: 'Channel was not successfully created. There are no videos.' }
+          end
+
         end
 
 
       else
+       respond_to do |format|
         format.html { render action: "new" }
         format.json { render json: @channel.errors, status: :unprocessable_entity }
         format.mobile { render action: "new" }
+       end
       end
-    end
+    
   end
 
   def update
