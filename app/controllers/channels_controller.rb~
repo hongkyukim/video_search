@@ -158,7 +158,7 @@ class ChannelsController < InheritedResources::Base
     params[:channel][:user_id] = @user.id if params[:channel][:user_id].nil?
     @channel = @user.channels.build(params[:channel])
     
-debugger
+##debugger
     
       if @channel.save
         ## create the first query feed of this channel automatically
@@ -173,7 +173,7 @@ debugger
           @channel.update_attributes({ "querytime" => DateTime.now, "thumbnail_url" => video.thumbnail_url})
           ###format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
           ### create a channel and video list and then go to video list
-debugger
+##debugger
          respond_to do |format|
           format.html { redirect_to videos_channel_path(@channel), notice: 'Channel was successfully created.' }
           format.json { redirect_to user_channels_path(@user), notice: 'Channel was successfully created with Json.' }
